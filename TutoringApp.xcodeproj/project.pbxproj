@@ -7,21 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D35A39A1F0F2343669150775 /* Pods_TutoringApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E9EF858C29422DD5C83F01 /* Pods_TutoringApp.framework */; };
+		EDCDC009226E391D007051E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC008226E391C007051E3 /* GoogleService-Info.plist */; };
+		EDCDC00B226E3A76007051E3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00A226E3A76007051E3 /* Student.swift */; };
+		EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00C226E3A82007051E3 /* Teacher.swift */; };
+		EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00E226E3A93007051E3 /* StudentController.swift */; };
+		EDCDC011226E3A9C007051E3 /* TeacherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC010226E3A9C007051E3 /* TeacherController.swift */; };
+		EDCDC01B226E3CD9007051E3 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC01A226E3CD9007051E3 /* HomeTab.storyboard */; };
+		EDCDC01D226E3CF4007051E3 /* SearchTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC01C226E3CF4007051E3 /* SearchTab.storyboard */; };
+		EDCDC021226E3D52007051E3 /* MessagingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */; };
+		EDCDC023226E3D86007051E3 /* Connections.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC022226E3D86007051E3 /* Connections.storyboard */; };
+		EDCDC025226E3DCC007051E3 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC024226E3DCC007051E3 /* ProfileTab.storyboard */; };
 		EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9BB20226E1A8300314FFB /* AppDelegate.swift */; };
-		EDE9BB23226E1A8300314FFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9BB22226E1A8300314FFB /* ViewController.swift */; };
 		EDE9BB26226E1A8300314FFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE9BB24226E1A8300314FFB /* Main.storyboard */; };
 		EDE9BB28226E1A8300314FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE9BB27226E1A8300314FFB /* Assets.xcassets */; };
 		EDE9BB2B226E1A8400314FFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE9BB29226E1A8400314FFB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B312D90D4A5E7F6F68641AA3 /* Pods-TutoringApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutoringApp.release.xcconfig"; path = "Target Support Files/Pods-TutoringApp/Pods-TutoringApp.release.xcconfig"; sourceTree = "<group>"; };
+		EC13F81A0DBC0A1276F075E8 /* Pods-TutoringApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutoringApp.debug.xcconfig"; path = "Target Support Files/Pods-TutoringApp/Pods-TutoringApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EDCDC008226E391C007051E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EDCDC00A226E3A76007051E3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		EDCDC00C226E3A82007051E3 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		EDCDC00E226E3A93007051E3 /* StudentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentController.swift; sourceTree = "<group>"; };
+		EDCDC010226E3A9C007051E3 /* TeacherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherController.swift; sourceTree = "<group>"; };
+		EDCDC01A226E3CD9007051E3 /* HomeTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
+		EDCDC01C226E3CF4007051E3 /* SearchTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchTab.storyboard; sourceTree = "<group>"; };
+		EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MessagingTab.storyboard; sourceTree = "<group>"; };
+		EDCDC022226E3D86007051E3 /* Connections.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Connections.storyboard; sourceTree = "<group>"; };
+		EDCDC024226E3DCC007051E3 /* ProfileTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		EDE9BB1D226E1A8300314FFB /* TutoringApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutoringApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE9BB20226E1A8300314FFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDE9BB22226E1A8300314FFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDE9BB25226E1A8300314FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDE9BB27226E1A8300314FFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDE9BB2A226E1A8400314FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDE9BB2C226E1A8400314FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3E9EF858C29422DD5C83F01 /* Pods_TutoringApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutoringApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +51,72 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35A39A1F0F2343669150775 /* Pods_TutoringApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65C73CAF4F33486652817D0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3E9EF858C29422DD5C83F01 /* Pods_TutoringApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85441DBA891654F9517BB347 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC13F81A0DBC0A1276F075E8 /* Pods-TutoringApp.debug.xcconfig */,
+				B312D90D4A5E7F6F68641AA3 /* Pods-TutoringApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EDCDC026226E3E33007051E3 /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = HomeTab;
+			sourceTree = "<group>";
+		};
+		EDCDC027226E3E3B007051E3 /* SearchTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SearchTab;
+			sourceTree = "<group>";
+		};
+		EDCDC028226E3E43007051E3 /* MessagingTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MessagingTab;
+			sourceTree = "<group>";
+		};
+		EDCDC029226E3E4C007051E3 /* ConnectionsTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ConnectionsTab;
+			sourceTree = "<group>";
+		};
+		EDCDC02A226E3E5A007051E3 /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileTab;
+			sourceTree = "<group>";
+		};
 		EDE9BB14226E1A8300314FFB = {
 			isa = PBXGroup;
 			children = (
 				EDE9BB1F226E1A8300314FFB /* TutoringApp */,
 				EDE9BB1E226E1A8300314FFB /* Products */,
+				85441DBA891654F9517BB347 /* Pods */,
+				65C73CAF4F33486652817D0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +131,84 @@
 		EDE9BB1F226E1A8300314FFB /* TutoringApp */ = {
 			isa = PBXGroup;
 			children = (
+				EDE9BB33226E1D7100314FFB /* Models */,
+				EDE9BB38226E1DA000314FFB /* Views */,
+				EDE9BB34226E1D7600314FFB /* Controllers */,
+				EDE9BB37226E1D8F00314FFB /* Storyboards */,
+				EDE9BB32226E1D6700314FFB /* Resources */,
+			);
+			path = TutoringApp;
+			sourceTree = "<group>";
+		};
+		EDE9BB32226E1D6700314FFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				EDE9BB20226E1A8300314FFB /* AppDelegate.swift */,
-				EDE9BB22226E1A8300314FFB /* ViewController.swift */,
-				EDE9BB24226E1A8300314FFB /* Main.storyboard */,
+				EDCDC008226E391C007051E3 /* GoogleService-Info.plist */,
 				EDE9BB27226E1A8300314FFB /* Assets.xcassets */,
 				EDE9BB29226E1A8400314FFB /* LaunchScreen.storyboard */,
 				EDE9BB2C226E1A8400314FFB /* Info.plist */,
 			);
-			path = TutoringApp;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDE9BB33226E1D7100314FFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDCDC00A226E3A76007051E3 /* Student.swift */,
+				EDCDC00C226E3A82007051E3 /* Teacher.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EDE9BB34226E1D7600314FFB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDE9BB36226E1D8400314FFB /* ViewControllers */,
+				EDE9BB35226E1D7C00314FFB /* ModelControllers */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EDE9BB35226E1D7C00314FFB /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDCDC00E226E3A93007051E3 /* StudentController.swift */,
+				EDCDC010226E3A9C007051E3 /* TeacherController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		EDE9BB36226E1D8400314FFB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDCDC02A226E3E5A007051E3 /* ProfileTab */,
+				EDCDC029226E3E4C007051E3 /* ConnectionsTab */,
+				EDCDC028226E3E43007051E3 /* MessagingTab */,
+				EDCDC027226E3E3B007051E3 /* SearchTab */,
+				EDCDC026226E3E33007051E3 /* HomeTab */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EDE9BB37226E1D8F00314FFB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EDCDC024226E3DCC007051E3 /* ProfileTab.storyboard */,
+				EDCDC022226E3D86007051E3 /* Connections.storyboard */,
+				EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */,
+				EDCDC01C226E3CF4007051E3 /* SearchTab.storyboard */,
+				EDCDC01A226E3CD9007051E3 /* HomeTab.storyboard */,
+				EDE9BB24226E1A8300314FFB /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		EDE9BB38226E1DA000314FFB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDE9BB2F226E1A8400314FFB /* Build configuration list for PBXNativeTarget "TutoringApp" */;
 			buildPhases = (
+				7EE2EA5A42C2588A79A62B98 /* [CP] Check Pods Manifest.lock */,
 				EDE9BB19226E1A8300314FFB /* Sources */,
 				EDE9BB1A226E1A8300314FFB /* Frameworks */,
 				EDE9BB1B226E1A8300314FFB /* Resources */,
+				B7B584082849A0F19A2A1699 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,7 +271,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCDC023226E3D86007051E3 /* Connections.storyboard in Resources */,
+				EDCDC021226E3D52007051E3 /* MessagingTab.storyboard in Resources */,
 				EDE9BB2B226E1A8400314FFB /* LaunchScreen.storyboard in Resources */,
+				EDCDC025226E3DCC007051E3 /* ProfileTab.storyboard in Resources */,
+				EDCDC009226E391D007051E3 /* GoogleService-Info.plist in Resources */,
+				EDCDC01D226E3CF4007051E3 /* SearchTab.storyboard in Resources */,
+				EDCDC01B226E3CD9007051E3 /* HomeTab.storyboard in Resources */,
 				EDE9BB28226E1A8300314FFB /* Assets.xcassets in Resources */,
 				EDE9BB26226E1A8300314FFB /* Main.storyboard in Resources */,
 			);
@@ -130,13 +285,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7EE2EA5A42C2588A79A62B98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TutoringApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7B584082849A0F19A2A1699 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TutoringApp/Pods-TutoringApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TutoringApp/Pods-TutoringApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EDE9BB19226E1A8300314FFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE9BB23226E1A8300314FFB /* ViewController.swift in Sources */,
+				EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */,
+				EDCDC011226E3A9C007051E3 /* TeacherController.swift in Sources */,
+				EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */,
 				EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */,
+				EDCDC00B226E3A76007051E3 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +491,12 @@
 		};
 		EDE9BB30226E1A8400314FFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC13F81A0DBC0A1276F075E8 /* Pods-TutoringApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4C65R2UFW;
-				INFOPLIST_FILE = TutoringApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TutoringApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +510,12 @@
 		};
 		EDE9BB31226E1A8400314FFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B312D90D4A5E7F6F68641AA3 /* Pods-TutoringApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4C65R2UFW;
-				INFOPLIST_FILE = TutoringApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TutoringApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
