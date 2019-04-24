@@ -9,6 +9,39 @@
 import Foundation
 import Firebase
 
-class Student {
+struct Student {
     
+    var name: String
+    var email: String
+    var messages: [String]
+    var connections: [String]
+    let firebaseUID: String
+    var recentSearches: [String]
+    var tasks: [String]
+    
+    var dictionary: [String: Any] {
+        return [
+            "name" : name,
+            "email" : email,
+            "messages" : messages,
+            "connections" : connections,
+            "firebaseUID" : firebaseUID,
+            "recentSearches" : recentSearches,
+            "tasks" : tasks
+        ]
+    }
+}
+
+extension Student {
+    init?(dictionary: [String: Any]) {
+        guard let name = dictionary["name"] as? String,
+            let email = dictionary["email"] as? String,
+            let messages = dictionary["messages"] as? [String],
+            let connections = dictionary["connections"] as? [String],
+            let firebaseUID = dictionary["firebaseUID"] as? String,
+            let recentSearches = dictionary["recentSearches"] as? [String],
+            let tasks = dictionary["tasks"] as? [String]
+            else { return nil }
+        self.init(name: name, email: email, messages: messages, connections: connections, firebaseUID: firebaseUID, recentSearches: recentSearches, tasks: tasks)
+    }
 }
