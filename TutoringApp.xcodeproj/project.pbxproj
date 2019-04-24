@@ -145,7 +145,6 @@
 			children = (
 				EDE9BB20226E1A8300314FFB /* AppDelegate.swift */,
 				EDCDC008226E391C007051E3 /* GoogleService-Info.plist */,
-				EDE9BB24226E1A8300314FFB /* Main.storyboard */,
 				EDE9BB27226E1A8300314FFB /* Assets.xcassets */,
 				EDE9BB29226E1A8400314FFB /* LaunchScreen.storyboard */,
 				EDE9BB2C226E1A8400314FFB /* Info.plist */,
@@ -496,7 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T4C65R2UFW;
+				DEVELOPMENT_TEAM = Q7U6J583A3;
 				INFOPLIST_FILE = "$(SRCROOT)/TutoringApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,7 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T4C65R2UFW;
+				DEVELOPMENT_TEAM = Q7U6J583A3;
 				INFOPLIST_FILE = "$(SRCROOT)/TutoringApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
