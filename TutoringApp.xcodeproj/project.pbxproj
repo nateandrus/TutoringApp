@@ -24,6 +24,9 @@
 		EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00E226E3A93007051E3 /* StudentController.swift */; };
 		EDCDC011226E3A9C007051E3 /* TeacherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC010226E3A9C007051E3 /* TeacherController.swift */; };
 		EDCDC021226E3D52007051E3 /* MessagingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */; };
+		EDD3053722725FF700F19A20 /* TeacherHomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD3053622725FF700F19A20 /* TeacherHomeTab.storyboard */; };
+		EDD305392272602C00F19A20 /* TeacherMessaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD305382272602C00F19A20 /* TeacherMessaging.storyboard */; };
+		EDD3053B2272605700F19A20 /* TeacherProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD3053A2272605700F19A20 /* TeacherProfile.storyboard */; };
 		EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9BB20226E1A8300314FFB /* AppDelegate.swift */; };
 		EDE9BB26226E1A8300314FFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE9BB24226E1A8300314FFB /* Main.storyboard */; };
 		EDE9BB28226E1A8300314FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE9BB27226E1A8300314FFB /* Assets.xcassets */; };
@@ -49,6 +52,9 @@
 		EDCDC00E226E3A93007051E3 /* StudentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentController.swift; sourceTree = "<group>"; };
 		EDCDC010226E3A9C007051E3 /* TeacherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherController.swift; sourceTree = "<group>"; };
 		EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MessagingTab.storyboard; sourceTree = "<group>"; };
+		EDD3053622725FF700F19A20 /* TeacherHomeTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherHomeTab.storyboard; sourceTree = "<group>"; };
+		EDD305382272602C00F19A20 /* TeacherMessaging.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherMessaging.storyboard; sourceTree = "<group>"; };
+		EDD3053A2272605700F19A20 /* TeacherProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherProfile.storyboard; sourceTree = "<group>"; };
 		EDE9BB1D226E1A8300314FFB /* TutoringApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutoringApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE9BB20226E1A8300314FFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE9BB25226E1A8300314FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -222,6 +228,9 @@
 		EDE9BB37226E1D8F00314FFB /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				EDD3053A2272605700F19A20 /* TeacherProfile.storyboard */,
+				EDD305382272602C00F19A20 /* TeacherMessaging.storyboard */,
+				EDD3053622725FF700F19A20 /* TeacherHomeTab.storyboard */,
 				ED0DD7BF22723E6F004DBE00 /* StudentProfile.storyboard */,
 				ED0DD7BD22723E36004DBE00 /* StudentHomeTab.storyboard */,
 				EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */,
@@ -301,7 +310,10 @@
 				EDE9BB2B226E1A8400314FFB /* LaunchScreen.storyboard in Resources */,
 				EDCDC009226E391D007051E3 /* GoogleService-Info.plist in Resources */,
 				ED0DD7BE22723E36004DBE00 /* StudentHomeTab.storyboard in Resources */,
+				EDD3053722725FF700F19A20 /* TeacherHomeTab.storyboard in Resources */,
 				EDE9BB28226E1A8300314FFB /* Assets.xcassets in Resources */,
+				EDD305392272602C00F19A20 /* TeacherMessaging.storyboard in Resources */,
+				EDD3053B2272605700F19A20 /* TeacherProfile.storyboard in Resources */,
 				ED0DD7C022723E6F004DBE00 /* StudentProfile.storyboard in Resources */,
 				EDE9BB26226E1A8300314FFB /* Main.storyboard in Resources */,
 			);
