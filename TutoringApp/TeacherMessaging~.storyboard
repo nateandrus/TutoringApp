@@ -1105,8 +1105,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="5be-B4-07a" kind="relationship" relationship="viewControllers" id="oeB-Qy-Baa"/>
-                        <segue destination="FCl-zt-b3q" kind="relationship" relationship="viewControllers" id="cEi-uG-wz9"/>
-                        <segue destination="AJ2-x1-Skb" kind="relationship" relationship="viewControllers" id="dxN-eu-WQ8"/>
+                        <segue destination="nJr-kT-b1t" kind="relationship" relationship="viewControllers" id="cEi-uG-wz9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRT-gP-bpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1335,25 +1334,21 @@
             </objects>
             <point key="canvasLocation" x="840" y="13"/>
         </scene>
-        <!--TeacherMessaging-->
-        <scene sceneID="U1Y-a0-9Z5">
+        <!--Item-->
+        <scene sceneID="HA6-uh-2zO">
             <objects>
-                <viewControllerPlaceholder storyboardName="TeacherMessaging" id="FCl-zt-b3q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="n5c-s4-1Uv"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IXA-3M-igl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="nJr-kT-b1t" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="clO-CC-iei">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kfi-u1-vvq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="PJT-fc-a7P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsI-60-cmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="288"/>
-        </scene>
-        <!--TeacherProfile-->
-        <scene sceneID="Pwz-nE-KKE">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TeacherProfile" id="AJ2-x1-Skb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Iui-Xp-cvt"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SrJ-ga-epg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="862" y="545"/>
+            <point key="canvasLocation" x="1442" y="265"/>
         </scene>
     </scenes>
     <resources>
