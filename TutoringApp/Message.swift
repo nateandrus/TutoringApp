@@ -11,16 +11,16 @@ import Foundation
 struct Message {
     
     let messageText: String
-    let toUserID: String
     let fromUserID: String
     let timestamp: Double
+    let senderName: String
     
     var dictionary: [String: Any] {
         return [
             "messageText" : messageText,
-            "toUserID" : toUserID,
             "fromUserID" : fromUserID,
-            "timestamp" : timestamp
+            "timestamp" : timestamp,
+            "senderName" : senderName
         ]
     }
 }
@@ -28,10 +28,10 @@ struct Message {
 extension Message {
     init?(dictionary: [String: Any]) {
         guard let messageText = dictionary["messageText"] as? String,
-            let toUserID = dictionary["toUserID"] as? String,
             let fromUserID = dictionary["fromUserID"] as? String,
-            let timestamp = dictionary["timestamp"] as? Double
+            let timestamp = dictionary["timestamp"] as? Double,
+            let senderName = dictionary["senderName"] as? String
             else { return nil }
-        self.init(messageText: messageText, toUserID: toUserID, fromUserID: fromUserID, timestamp: timestamp)
+        self.init(messageText: messageText, fromUserID: fromUserID, timestamp: timestamp, senderName: senderName)
     }
 }
