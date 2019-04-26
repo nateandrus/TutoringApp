@@ -13,7 +13,7 @@
         <!--Learn more, do more-->
         <scene sceneID="xfU-XT-VNQ">
             <objects>
-                <viewController id="OeC-6Q-eHf" sceneMemberID="viewController">
+                <viewController id="OeC-6Q-eHf" customClass="StudentHomeViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N7h-Gg-Cv1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,21 +145,36 @@
                         <viewLayoutGuide key="safeArea" id="Wnn-Q3-0jb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Learn more, do more" id="35W-TS-eu8"/>
+                    <connections>
+                        <outlet property="accountingButton" destination="VUP-a9-aiQ" id="COp-pk-UlX"/>
+                        <outlet property="businessManagementButton" destination="07d-rU-p75" id="inS-ZE-K9e"/>
+                        <outlet property="economicsButton" destination="OJ9-Sg-evX" id="12O-SF-Hct"/>
+                        <outlet property="entrepreneurshipButton" destination="ncP-9K-Qgf" id="VYg-og-XeB"/>
+                        <outlet property="iosDevelopmentButton" destination="3if-BR-tsF" id="LTm-qu-ndh"/>
+                        <outlet property="javascriptButton" destination="DNb-gn-X4k" id="m8h-L9-fcv"/>
+                        <outlet property="marketingButton" destination="s1g-Eb-2xa" id="GSn-ky-Wfr"/>
+                        <outlet property="productManagementButton" destination="9wn-8I-8ik" id="NJ7-0x-Kxf"/>
+                        <outlet property="pythonButton" destination="2Ir-MU-BHy" id="KU0-uF-Pey"/>
+                        <outlet property="searchBar" destination="zmP-wN-v1D" id="44T-Xp-l47"/>
+                        <outlet property="softwareEngineerButton" destination="Ioq-QB-qD8" id="DoF-wD-HfK"/>
+                        <outlet property="uxDesignButton" destination="rRL-NI-eUU" id="Pht-he-fti"/>
+                        <outlet property="webDevelopmentButton" destination="T4O-ms-ej7" id="x0L-Lh-8fa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SuB-eQ-fhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2058" y="-447"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Student Search Table View Controller-->
         <scene sceneID="G2T-fi-MLv">
             <objects>
-                <tableViewController id="Xys-HD-yL4" sceneMemberID="viewController">
+                <tableViewController id="Xys-HD-yL4" customClass="StudentSearchTableViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lHH-Ie-j7X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="138" id="bO4-eK-HrW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="138" id="bO4-eK-HrW" customClass="StudentSearchTableViewCell" customModule="TutoringApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bO4-eK-HrW" id="HU3-8m-Akd">
@@ -201,6 +216,11 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="introLabel" destination="zwY-uH-pEk" id="VcF-0m-C46"/>
+                                    <outlet property="locationLabel" destination="4WM-mU-7RZ" id="ANK-AB-FrM"/>
+                                    <outlet property="nameLabel" destination="pK6-zP-eW1" id="x9y-3c-jGt"/>
+                                    <outlet property="priceLabel" destination="ua1-aV-8nN" id="5cd-KE-nKR"/>
+                                    <outlet property="profileImage" destination="fzp-X5-CoO" id="Rkg-ih-ZHz"/>
                                     <segue destination="Suh-bi-QIA" kind="show" id="08o-5J-KcJ"/>
                                 </connections>
                             </tableViewCell>
@@ -213,24 +233,31 @@
                     <navigationItem key="navigationItem" id="1TR-Va-lzp">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="aww-QO-U4d">
-                            <rect key="frame" x="146.5" y="7.5" width="121" height="29"/>
+                            <rect key="frame" x="146.5" y="7" width="121" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="First"/>
-                                <segment title="Second"/>
+                                <segment title="Online"/>
+                                <segment title="Local"/>
                             </segments>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="4xW-Sr-tRr"/>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="4xW-Sr-tRr">
+                            <connections>
+                                <action selector="filterButtonTapped:" destination="Xys-HD-yL4" id="FE2-tM-5D6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="aww-QO-U4d" id="1KL-Da-SkO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8J-CX-y9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2877" y="-447"/>
         </scene>
-        <!--View Controller-->
+        <!--Student Teacher Profile View Controller-->
         <scene sceneID="WmW-iF-aJ9">
             <objects>
-                <viewController id="Suh-bi-QIA" sceneMemberID="viewController">
+                <viewController id="Suh-bi-QIA" customClass="StudentTeacherProfileViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M7W-8i-OLu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,6 +383,9 @@
                                                 <rect key="frame" x="149" y="909" width="113" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Send a Message"/>
+                                                <connections>
+                                                    <action selector="sendMessageButtonTapped:" destination="Suh-bi-QIA" eventType="touchUpInside" id="Be3-04-ggW"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Afternoon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTp-aM-ZQL">
                                                 <rect key="frame" x="328" y="645" width="77" height="21"/>
@@ -439,16 +469,33 @@
                         <viewLayoutGuide key="safeArea" id="eTZ-db-KLL"/>
                     </view>
                     <size key="freeformSize" width="414" height="1100"/>
+                    <connections>
+                        <outlet property="aboutMeTextView" destination="hHd-pQ-GJO" id="UaL-I9-T9s"/>
+                        <outlet property="fridayTimeLabel" destination="1ny-94-7WD" id="Xiu-At-pe7"/>
+                        <outlet property="linkedInLabel" destination="adw-7F-7p7" id="D31-7g-oNe"/>
+                        <outlet property="locationLabel" destination="bVM-pe-KQj" id="WFL-Mz-Yhk"/>
+                        <outlet property="mondayTimeLabel" destination="OTp-aM-ZQL" id="kvV-Wc-Bpn"/>
+                        <outlet property="nameLabel" destination="JSV-PI-fLd" id="KwQ-2q-bCu"/>
+                        <outlet property="priceLabel" destination="jHS-GJ-903" id="A3a-gK-hPu"/>
+                        <outlet property="profileImage" destination="8zm-as-dAr" id="cjc-DY-ebx"/>
+                        <outlet property="qualificationsTextView" destination="RUP-n3-oEK" id="MJY-sb-z4a"/>
+                        <outlet property="saturdayTimeLabel" destination="0Ya-tW-gws" id="D8q-DC-H1j"/>
+                        <outlet property="sendMessageButton" destination="ymh-Js-zU1" id="djS-Kd-bTh"/>
+                        <outlet property="sundayTimeLabel" destination="sA8-0a-C7q" id="jXS-YN-VLe"/>
+                        <outlet property="thursdayTimeLabel" destination="qOG-AI-oDj" id="6xo-Ds-hu8"/>
+                        <outlet property="tuesdayTimeLabel" destination="JG6-Gl-0lx" id="u1B-ex-dyF"/>
+                        <outlet property="wednesdayTimeLabel" destination="Lgm-1p-2gh" id="e13-B7-KEx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HdQ-g0-lHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3647.826086956522" y="-447.32142857142856"/>
         </scene>
-        <!--Item-->
+        <!--Home/Search-->
         <scene sceneID="pYK-f3-a0a">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RRc-z5-GGv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aZg-ce-caL"/>
+                    <tabBarItem key="tabBarItem" title="Home/Search" id="aZg-ce-caL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LKY-gZ-xPs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

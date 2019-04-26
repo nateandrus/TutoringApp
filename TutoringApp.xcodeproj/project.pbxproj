@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B999328D227376D700C1565E /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999328C227376D700C1565E /* StudentProfileViewController.swift */; };
+		B999328F2273781A00C1565E /* StudentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999328E2273781A00C1565E /* StudentHomeViewController.swift */; };
+		B999329122737BBF00C1565E /* StudentSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329022737BBF00C1565E /* StudentSearchTableViewController.swift */; };
+		B999329322737CBB00C1565E /* StudentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329222737CBB00C1565E /* StudentSearchTableViewCell.swift */; };
+		B999329522737DE400C1565E /* StudentTeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329422737DE400C1565E /* StudentTeacherProfileViewController.swift */; };
+		B999329A227380A700C1565E /* TeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9993299227380A700C1565E /* TeacherProfileViewController.swift */; };
+		B999329C227381B200C1565E /* TeacherEditSubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329B227381B200C1565E /* TeacherEditSubjectsViewController.swift */; };
+		B999329E2273841000C1565E /* TeacherEditPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329D2273841000C1565E /* TeacherEditPreferencesViewController.swift */; };
 		D35A39A1F0F2343669150775 /* Pods_TutoringApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E9EF858C29422DD5C83F01 /* Pods_TutoringApp.framework */; };
 		ED0DD7B02270B5EC004DBE00 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DD7AF2270B5EC004DBE00 /* Task.swift */; };
 		ED0DD7B22270B76B004DBE00 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DD7B12270B76B004DBE00 /* TaskController.swift */; };
@@ -24,7 +32,6 @@
 		EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00E226E3A93007051E3 /* StudentController.swift */; };
 		EDCDC011226E3A9C007051E3 /* TeacherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC010226E3A9C007051E3 /* TeacherController.swift */; };
 		EDCDC021226E3D52007051E3 /* MessagingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */; };
-		EDD3053722725FF700F19A20 /* TeacherHomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD3053622725FF700F19A20 /* TeacherHomeTab.storyboard */; };
 		EDD305392272602C00F19A20 /* TeacherMessaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD305382272602C00F19A20 /* TeacherMessaging.storyboard */; };
 		EDD3053B2272605700F19A20 /* TeacherProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD3053A2272605700F19A20 /* TeacherProfile.storyboard */; };
 		EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9BB20226E1A8300314FFB /* AppDelegate.swift */; };
@@ -35,6 +42,14 @@
 
 /* Begin PBXFileReference section */
 		B312D90D4A5E7F6F68641AA3 /* Pods-TutoringApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutoringApp.release.xcconfig"; path = "Target Support Files/Pods-TutoringApp/Pods-TutoringApp.release.xcconfig"; sourceTree = "<group>"; };
+		B999328C227376D700C1565E /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
+		B999328E2273781A00C1565E /* StudentHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentHomeViewController.swift; path = TutoringApp/StudentHomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		B999329022737BBF00C1565E /* StudentSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentSearchTableViewController.swift; path = TutoringApp/StudentSearchTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		B999329222737CBB00C1565E /* StudentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentSearchTableViewCell.swift; path = TutoringApp/StudentSearchTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		B999329422737DE400C1565E /* StudentTeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentTeacherProfileViewController.swift; path = TutoringApp/StudentTeacherProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		B9993299227380A700C1565E /* TeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileViewController.swift; sourceTree = "<group>"; };
+		B999329B227381B200C1565E /* TeacherEditSubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherEditSubjectsViewController.swift; sourceTree = "<group>"; };
+		B999329D2273841000C1565E /* TeacherEditPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherEditPreferencesViewController.swift; sourceTree = "<group>"; };
 		EC13F81A0DBC0A1276F075E8 /* Pods-TutoringApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutoringApp.debug.xcconfig"; path = "Target Support Files/Pods-TutoringApp/Pods-TutoringApp.debug.xcconfig"; sourceTree = "<group>"; };
 		ED0DD7AF2270B5EC004DBE00 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		ED0DD7B12270B76B004DBE00 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
@@ -52,7 +67,6 @@
 		EDCDC00E226E3A93007051E3 /* StudentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentController.swift; sourceTree = "<group>"; };
 		EDCDC010226E3A9C007051E3 /* TeacherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherController.swift; sourceTree = "<group>"; };
 		EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MessagingTab.storyboard; sourceTree = "<group>"; };
-		EDD3053622725FF700F19A20 /* TeacherHomeTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherHomeTab.storyboard; sourceTree = "<group>"; };
 		EDD305382272602C00F19A20 /* TeacherMessaging.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherMessaging.storyboard; sourceTree = "<group>"; };
 		EDD3053A2272605700F19A20 /* TeacherProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherProfile.storyboard; sourceTree = "<group>"; };
 		EDE9BB1D226E1A8300314FFB /* TutoringApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutoringApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +107,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B99932962273803500C1565E /* MessagingTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MessagingTab;
+			sourceTree = "<group>";
+		};
+		B99932982273805600C1565E /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+				B9993299227380A700C1565E /* TeacherProfileViewController.swift */,
+				B999329B227381B200C1565E /* TeacherEditSubjectsViewController.swift */,
+				B999329D2273841000C1565E /* TeacherEditPreferencesViewController.swift */,
+			);
+			name = ProfileTab;
+			sourceTree = "<group>";
+		};
 		ED0DD7C222723EC7004DBE00 /* StudentViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +137,8 @@
 		ED0DD7C322723ED7004DBE00 /* TeacherViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B99932982273805600C1565E /* ProfileTab */,
+				B99932962273803500C1565E /* MessagingTab */,
 			);
 			name = TeacherViewControllers;
 			sourceTree = "<group>";
@@ -113,6 +146,9 @@
 		ED0DD7C422723EE2004DBE00 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
+				B999328E2273781A00C1565E /* StudentHomeViewController.swift */,
+				B999329022737BBF00C1565E /* StudentSearchTableViewController.swift */,
+				B999329422737DE400C1565E /* StudentTeacherProfileViewController.swift */,
 			);
 			path = HomeTab;
 			sourceTree = "<group>";
@@ -120,6 +156,7 @@
 		ED0DD7C522723EEA004DBE00 /* ProfileTab */ = {
 			isa = PBXGroup;
 			children = (
+				B999328C227376D700C1565E /* StudentProfileViewController.swift */,
 			);
 			name = ProfileTab;
 			sourceTree = "<group>";
@@ -230,7 +267,6 @@
 			children = (
 				EDD3053A2272605700F19A20 /* TeacherProfile.storyboard */,
 				EDD305382272602C00F19A20 /* TeacherMessaging.storyboard */,
-				EDD3053622725FF700F19A20 /* TeacherHomeTab.storyboard */,
 				ED0DD7BF22723E6F004DBE00 /* StudentProfile.storyboard */,
 				ED0DD7BD22723E36004DBE00 /* StudentHomeTab.storyboard */,
 				EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */,
@@ -242,6 +278,7 @@
 		EDE9BB38226E1DA000314FFB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B999329222737CBB00C1565E /* StudentSearchTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,7 +347,6 @@
 				EDE9BB2B226E1A8400314FFB /* LaunchScreen.storyboard in Resources */,
 				EDCDC009226E391D007051E3 /* GoogleService-Info.plist in Resources */,
 				ED0DD7BE22723E36004DBE00 /* StudentHomeTab.storyboard in Resources */,
-				EDD3053722725FF700F19A20 /* TeacherHomeTab.storyboard in Resources */,
 				EDE9BB28226E1A8300314FFB /* Assets.xcassets in Resources */,
 				EDD305392272602C00F19A20 /* TeacherMessaging.storyboard in Resources */,
 				EDD3053B2272605700F19A20 /* TeacherProfile.storyboard in Resources */,
@@ -393,16 +429,24 @@
 			files = (
 				ED0DD7B22270B76B004DBE00 /* TaskController.swift in Sources */,
 				EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */,
+				B999329C227381B200C1565E /* TeacherEditSubjectsViewController.swift in Sources */,
+				B999329E2273841000C1565E /* TeacherEditPreferencesViewController.swift in Sources */,
+				B999329322737CBB00C1565E /* StudentSearchTableViewCell.swift in Sources */,
+				B999328F2273781A00C1565E /* StudentHomeViewController.swift in Sources */,
 				ED0DD7B62270F4F1004DBE00 /* MessageDetailViewController.swift in Sources */,
 				EDCDC011226E3A9C007051E3 /* TeacherController.swift in Sources */,
+				B999329122737BBF00C1565E /* StudentSearchTableViewController.swift in Sources */,
 				ED0DD7B82270FABD004DBE00 /* Chat.swift in Sources */,
 				ED1B70A2226FA69100EB31F7 /* MessageController.swift in Sources */,
+				B999329522737DE400C1565E /* StudentTeacherProfileViewController.swift in Sources */,
 				ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */,
 				EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */,
 				ED1B70A0226FA2BE00EB31F7 /* Message.swift in Sources */,
 				ED0DD7B02270B5EC004DBE00 /* Task.swift in Sources */,
 				EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */,
 				ED0DD7BA2270FCD4004DBE00 /* ChatController.swift in Sources */,
+				B999328D227376D700C1565E /* StudentProfileViewController.swift in Sources */,
+				B999329A227380A700C1565E /* TeacherProfileViewController.swift in Sources */,
 				EDCDC00B226E3A76007051E3 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
