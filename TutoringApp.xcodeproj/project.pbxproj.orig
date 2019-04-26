@@ -180,6 +180,14 @@
 		ED1B70AD2270A3B900EB31F7 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				EDD3053C22726F7400F19A20 /* MainLoginViewController.swift */,
+				EDD3053E22726F9800F19A20 /* ChooseCreateViewController.swift */,
+				EDD3054022726FB000F19A20 /* BecomeMentorViewController.swift */,
+				EDD3054222726FBC00F19A20 /* BecomeMenteeViewController.swift */,
+				EDD3054622726FFB00F19A20 /* SubjectsViewController.swift */,
+				EDD305482272700F00F19A20 /* PreferencesViewController.swift */,
+				EDD3054A2272701E00F19A20 /* BiographyViewController.swift */,
+				EDD3054C2272703600F19A20 /* DriversLicenseViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -444,25 +452,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED0DD7B22270B76B004DBE00 /* TaskController.swift in Sources */,
+				EDD3054322726FBC00F19A20 /* BecomeMenteeViewController.swift in Sources */,
 				EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */,
 				B999329C227381B200C1565E /* TeacherEditSubjectsViewController.swift in Sources */,
 				B999329E2273841000C1565E /* TeacherEditPreferencesViewController.swift in Sources */,
 				B999329322737CBB00C1565E /* StudentSearchTableViewCell.swift in Sources */,
 				B999328F2273781A00C1565E /* StudentHomeViewController.swift in Sources */,
 				ED0DD7B62270F4F1004DBE00 /* MessageDetailViewController.swift in Sources */,
+				EDD3054B2272701E00F19A20 /* BiographyViewController.swift in Sources */,
 				EDCDC011226E3A9C007051E3 /* TeacherController.swift in Sources */,
+<<<<<<< HEAD
 				B999329122737BBF00C1565E /* StudentSearchTableViewController.swift in Sources */,
+				ED0DD7B82270FABD004DBE00 /* Chat.swift in Sources */,
+				ED1B70A2226FA69100EB31F7 /* MessageController.swift in Sources */,
+				B999329522737DE400C1565E /* StudentTeacherProfileViewController.swift in Sources */,
+=======
 				EDD3054722726FFB00F19A20 /* SubjectsViewController.swift in Sources */,
 				EDD3054122726FB000F19A20 /* BecomeMentorViewController.swift in Sources */,
 				ED0DD7B82270FABD004DBE00 /* Chat.swift in Sources */,
 				ED1B70A2226FA69100EB31F7 /* MessageController.swift in Sources */,
-				B999329522737DE400C1565E /* StudentTeacherProfileViewController.swift in Sources */,
 				EDD3053F22726F9800F19A20 /* ChooseCreateViewController.swift in Sources */,
+>>>>>>> nathan
 				ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */,
 				EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */,
+				EDD305492272700F00F19A20 /* PreferencesViewController.swift in Sources */,
 				ED1B70A0226FA2BE00EB31F7 /* Message.swift in Sources */,
 				ED0DD7B02270B5EC004DBE00 /* Task.swift in Sources */,
+				EDD3054D2272703600F19A20 /* DriversLicenseViewController.swift in Sources */,
 				EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */,
+				EDD3053D22726F7400F19A20 /* MainLoginViewController.swift in Sources */,
 				ED0DD7BA2270FCD4004DBE00 /* ChatController.swift in Sources */,
 				B999328D227376D700C1565E /* StudentProfileViewController.swift in Sources */,
 				B999329A227380A700C1565E /* TeacherProfileViewController.swift in Sources */,

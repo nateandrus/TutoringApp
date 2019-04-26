@@ -1473,6 +1473,19 @@
             </objects>
             <point key="canvasLocation" x="1055" y="-193"/>
         </scene>
+<<<<<<< HEAD
+=======
+        <!--TeacherHomeTab-->
+        <scene sceneID="Y2P-Tg-2cy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TeacherHomeTab" id="5be-B4-07a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5DA-BJ-BEW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDZ-Eg-pEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="-44"/>
+        </scene>
+>>>>>>> nathan
         <!--TeacherMessaging-->
         <scene sceneID="U1Y-a0-9Z5">
             <objects>
@@ -1667,7 +1680,11 @@
         <image name="unchecked" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
+        <segue reference="eYJ-15-NcS"/>
+=======
         <segue reference="6Hu-mG-0o2"/>
+>>>>>>> nathan
         <segue reference="9Zd-t5-A7O"/>
         <segue reference="abm-y5-OFv"/>
         <segue reference="C9W-ue-4JO"/>
