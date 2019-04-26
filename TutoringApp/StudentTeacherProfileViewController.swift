@@ -28,6 +28,8 @@ class StudentTeacherProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sendMessageButton.layer.cornerRadius = sendMessageButton.frame.height / 2
 
         // Do any additional setup after loading the view.
     }
