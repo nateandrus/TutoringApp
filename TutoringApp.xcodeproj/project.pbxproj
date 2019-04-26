@@ -34,14 +34,14 @@
 		EDCDC021226E3D52007051E3 /* MessagingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */; };
 		EDD305392272602C00F19A20 /* TeacherMessaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD305382272602C00F19A20 /* TeacherMessaging.storyboard */; };
 		EDD3053B2272605700F19A20 /* TeacherProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD3053A2272605700F19A20 /* TeacherProfile.storyboard */; };
-		EDD3053D22726F7400F19A20 /* MainLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3053C22726F7400F19A20 /* MainLoginViewController.swift */; };
-		EDD3053F22726F9800F19A20 /* ChooseCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3053E22726F9800F19A20 /* ChooseCreateViewController.swift */; };
-		EDD3054122726FB000F19A20 /* BecomeMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3054022726FB000F19A20 /* BecomeMentorViewController.swift */; };
-		EDD3054322726FBC00F19A20 /* BecomeMenteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3054222726FBC00F19A20 /* BecomeMenteeViewController.swift */; };
-		EDD3054722726FFB00F19A20 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3054622726FFB00F19A20 /* SubjectsViewController.swift */; };
-		EDD305492272700F00F19A20 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD305482272700F00F19A20 /* PreferencesViewController.swift */; };
-		EDD3054B2272701E00F19A20 /* BiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3054A2272701E00F19A20 /* BiographyViewController.swift */; };
-		EDD3054D2272703600F19A20 /* DriversLicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3054C2272703600F19A20 /* DriversLicenseViewController.swift */; };
+		EDD3055722739BE500F19A20 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3054F22739BE400F19A20 /* PreferencesViewController.swift */; };
+		EDD3055822739BE500F19A20 /* MainLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3055022739BE500F19A20 /* MainLoginViewController.swift */; };
+		EDD3055922739BE500F19A20 /* DriversLicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3055122739BE500F19A20 /* DriversLicenseViewController.swift */; };
+		EDD3055A22739BE500F19A20 /* BiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3055222739BE500F19A20 /* BiographyViewController.swift */; };
+		EDD3055B22739BE500F19A20 /* BecomeMenteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3055322739BE500F19A20 /* BecomeMenteeViewController.swift */; };
+		EDD3055C22739BE500F19A20 /* ChooseCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3055422739BE500F19A20 /* ChooseCreateViewController.swift */; };
+		EDD3055D22739BE500F19A20 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3055522739BE500F19A20 /* SubjectsViewController.swift */; };
+		EDD3055E22739BE500F19A20 /* BecomeMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3055622739BE500F19A20 /* BecomeMentorViewController.swift */; };
 		EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9BB20226E1A8300314FFB /* AppDelegate.swift */; };
 		EDE9BB26226E1A8300314FFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE9BB24226E1A8300314FFB /* Main.storyboard */; };
 		EDE9BB28226E1A8300314FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE9BB27226E1A8300314FFB /* Assets.xcassets */; };
@@ -77,14 +77,17 @@
 		EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MessagingTab.storyboard; sourceTree = "<group>"; };
 		EDD305382272602C00F19A20 /* TeacherMessaging.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherMessaging.storyboard; sourceTree = "<group>"; };
 		EDD3053A2272605700F19A20 /* TeacherProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherProfile.storyboard; sourceTree = "<group>"; };
-		EDD3053C22726F7400F19A20 /* MainLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLoginViewController.swift; sourceTree = "<group>"; };
 		EDD3053E22726F9800F19A20 /* ChooseCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCreateViewController.swift; sourceTree = "<group>"; };
 		EDD3054022726FB000F19A20 /* BecomeMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BecomeMentorViewController.swift; sourceTree = "<group>"; };
-		EDD3054222726FBC00F19A20 /* BecomeMenteeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BecomeMenteeViewController.swift; sourceTree = "<group>"; };
 		EDD3054622726FFB00F19A20 /* SubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
-		EDD305482272700F00F19A20 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
-		EDD3054A2272701E00F19A20 /* BiographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyViewController.swift; sourceTree = "<group>"; };
-		EDD3054C2272703600F19A20 /* DriversLicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversLicenseViewController.swift; sourceTree = "<group>"; };
+		EDD3054F22739BE400F19A20 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		EDD3055022739BE500F19A20 /* MainLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLoginViewController.swift; sourceTree = "<group>"; };
+		EDD3055122739BE500F19A20 /* DriversLicenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversLicenseViewController.swift; sourceTree = "<group>"; };
+		EDD3055222739BE500F19A20 /* BiographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiographyViewController.swift; sourceTree = "<group>"; };
+		EDD3055322739BE500F19A20 /* BecomeMenteeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BecomeMenteeViewController.swift; sourceTree = "<group>"; };
+		EDD3055422739BE500F19A20 /* ChooseCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCreateViewController.swift; sourceTree = "<group>"; };
+		EDD3055522739BE500F19A20 /* SubjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
+		EDD3055622739BE500F19A20 /* BecomeMentorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BecomeMentorViewController.swift; sourceTree = "<group>"; };
 		EDE9BB1D226E1A8300314FFB /* TutoringApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutoringApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE9BB20226E1A8300314FFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE9BB25226E1A8300314FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,6 +183,14 @@
 		ED1B70AD2270A3B900EB31F7 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				EDD3055322739BE500F19A20 /* BecomeMenteeViewController.swift */,
+				EDD3055622739BE500F19A20 /* BecomeMentorViewController.swift */,
+				EDD3055222739BE500F19A20 /* BiographyViewController.swift */,
+				EDD3055422739BE500F19A20 /* ChooseCreateViewController.swift */,
+				EDD3055122739BE500F19A20 /* DriversLicenseViewController.swift */,
+				EDD3055022739BE500F19A20 /* MainLoginViewController.swift */,
+				EDD3054F22739BE400F19A20 /* PreferencesViewController.swift */,
+				EDD3055522739BE500F19A20 /* SubjectsViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -193,6 +204,16 @@
 			name = MessagingTab;
 			sourceTree = "<group>";
 		};
+		EDD3054E22739B7700F19A20 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				EDD3054622726FFB00F19A20 /* SubjectsViewController.swift */,
+				EDD3054022726FB000F19A20 /* BecomeMentorViewController.swift */,
+				EDD3053E22726F9800F19A20 /* ChooseCreateViewController.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		EDE9BB14226E1A8300314FFB = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +221,7 @@
 				EDE9BB1E226E1A8300314FFB /* Products */,
 				85441DBA891654F9517BB347 /* Pods */,
 				65C73CAF4F33486652817D0D /* Frameworks */,
+				EDD3054E22739B7700F19A20 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -443,21 +465,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD3055A22739BE500F19A20 /* BiographyViewController.swift in Sources */,
+				EDD3055722739BE500F19A20 /* PreferencesViewController.swift in Sources */,
+				EDD3055922739BE500F19A20 /* DriversLicenseViewController.swift in Sources */,
 				ED0DD7B22270B76B004DBE00 /* TaskController.swift in Sources */,
 				EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */,
 				B999329C227381B200C1565E /* TeacherEditSubjectsViewController.swift in Sources */,
+				EDD3055C22739BE500F19A20 /* ChooseCreateViewController.swift in Sources */,
 				B999329E2273841000C1565E /* TeacherEditPreferencesViewController.swift in Sources */,
 				B999329322737CBB00C1565E /* StudentSearchTableViewCell.swift in Sources */,
 				B999328F2273781A00C1565E /* StudentHomeViewController.swift in Sources */,
+				EDD3055822739BE500F19A20 /* MainLoginViewController.swift in Sources */,
+				EDD3055D22739BE500F19A20 /* SubjectsViewController.swift in Sources */,
 				ED0DD7B62270F4F1004DBE00 /* MessageDetailViewController.swift in Sources */,
 				EDCDC011226E3A9C007051E3 /* TeacherController.swift in Sources */,
 				B999329122737BBF00C1565E /* StudentSearchTableViewController.swift in Sources */,
-				EDD3054722726FFB00F19A20 /* SubjectsViewController.swift in Sources */,
-				EDD3054122726FB000F19A20 /* BecomeMentorViewController.swift in Sources */,
 				ED0DD7B82270FABD004DBE00 /* Chat.swift in Sources */,
 				ED1B70A2226FA69100EB31F7 /* MessageController.swift in Sources */,
 				B999329522737DE400C1565E /* StudentTeacherProfileViewController.swift in Sources */,
-				EDD3053F22726F9800F19A20 /* ChooseCreateViewController.swift in Sources */,
+				EDD3055E22739BE500F19A20 /* BecomeMentorViewController.swift in Sources */,
 				ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */,
 				EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */,
 				ED1B70A0226FA2BE00EB31F7 /* Message.swift in Sources */,
@@ -467,6 +493,7 @@
 				B999328D227376D700C1565E /* StudentProfileViewController.swift in Sources */,
 				B999329A227380A700C1565E /* TeacherProfileViewController.swift in Sources */,
 				EDCDC00B226E3A76007051E3 /* Student.swift in Sources */,
+				EDD3055B22739BE500F19A20 /* BecomeMenteeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
