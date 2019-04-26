@@ -30,6 +30,21 @@ class StudentHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //navigationController?.navigationBar.isHidden = true
+        searchBar.layer.cornerRadius = 50
+        businessManagementButton.layer.cornerRadius = businessManagementButton.frame.height / 2
+        accountingButton.layer.cornerRadius = accountingButton.frame.height / 2
+        marketingButton.layer.cornerRadius = marketingButton.frame.height / 2
+        productManagementButton.layer.cornerRadius = productManagementButton.frame.height / 2
+        entrepreneurshipButton.layer.cornerRadius = entrepreneurshipButton.frame.height / 2
+        economicsButton.layer.cornerRadius = economicsButton.frame.height / 2
+        webDevelopmentButton.layer.cornerRadius = webDevelopmentButton.frame.height / 2
+        uxDesignButton.layer.cornerRadius = uxDesignButton.frame.height / 2
+        iosDevelopmentButton.layer.cornerRadius = iosDevelopmentButton.frame.height / 2
+        javascriptButton.layer.cornerRadius = javascriptButton.frame.height / 2
+        pythonButton.layer.cornerRadius = pythonButton.frame.height / 2
+        softwareEngineerButton.layer.cornerRadius = softwareEngineerButton.frame.height / 2
+        
         // Do any additional setup after loading the view.
     }
     

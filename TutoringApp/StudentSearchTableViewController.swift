@@ -11,18 +11,26 @@ import UIKit
 class StudentSearchTableViewController: UITableViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        segmentedControl.layer.cornerRadius = 6
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        segmentedControl.index(ofAccessibilityElement: 0)
+        segmentedControl.index(ofAccessibilityElement: 1)
     }
 
     // MARK: - Table view data source

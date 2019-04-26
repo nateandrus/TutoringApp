@@ -93,7 +93,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="changeBiographyButton" destination="i4n-o4-QJe" id="fRp-5o-4rX"/>
                         <outlet property="changePasswordButton" destination="93I-73-TlK" id="jIc-i0-016"/>
+                        <outlet property="changePreferencesButton" destination="yBi-ZQ-0ye" id="vRC-7s-xhd"/>
+                        <outlet property="changeSubjectsButton" destination="3ML-Jh-ioc" id="7kD-RT-NaA"/>
                         <outlet property="emailLabel" destination="0cA-xA-Ww0" id="3fW-VA-1H6"/>
                         <outlet property="nameLabel" destination="rbQ-YV-SuF" id="Plm-LW-Enq"/>
                         <outlet property="profileImage" destination="1E2-2R-zDQ" id="n6i-Sm-OZ1"/>
@@ -151,6 +154,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Change Subjects"/>
                                 <connections>
+                                    <action selector="changeSubjectsButton:" destination="yUG-ee-cG6" eventType="touchUpInside" id="erw-Sw-9nt"/>
                                     <action selector="changeSubjectsButtonTapped:" destination="8Nx-eQ-XWu" eventType="touchUpInside" id="h71-iv-9ar"/>
                                 </connections>
                             </button>
@@ -314,13 +318,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssk-QL-aOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yUG-ee-cG6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3148" y="-398"/>
         </scene>
-        <!--View Controller-->
+        <!--Teacher Edit Biography View Controller-->
         <scene sceneID="mnN-00-ERX">
             <objects>
-                <viewController id="SMK-w8-HcQ" sceneMemberID="viewController">
+                <viewController id="SMK-w8-HcQ" customClass="TeacherEditBiographyViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JCO-Id-TqT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -374,24 +379,36 @@
                                                 <rect key="frame" x="126" y="90" width="123" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Change Password"/>
+                                                <connections>
+                                                    <action selector="changePasswordButtonTapped:" destination="SMK-w8-HcQ" eventType="touchUpInside" id="jdE-j9-7og"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rh8-YN-Al5">
                                                 <rect key="frame" x="20" y="173" width="374" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Change Subjects"/>
+                                                <connections>
+                                                    <action selector="changeSubjectsButtonTapped:" destination="SMK-w8-HcQ" eventType="touchUpInside" id="5JM-37-6VL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgx-lJ-QML">
                                                 <rect key="frame" x="20" y="211" width="374" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Change Preferences"/>
+                                                <connections>
+                                                    <action selector="changePreferencesButtonTapped:" destination="SMK-w8-HcQ" eventType="touchUpInside" id="Bjv-Qc-lf0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7z-LN-0Oa">
                                                 <rect key="frame" x="20" y="249" width="374" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Change Biography"/>
+                                                <connections>
+                                                    <action selector="changeBiographyButtonTapped:" destination="SMK-w8-HcQ" eventType="touchUpInside" id="osj-Zp-EhX"/>
+                                                </connections>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n9T-qg-72f">
                                                 <rect key="frame" x="20" y="316" width="374" height="128"/>
@@ -449,6 +466,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Save Changes"/>
+                                                <connections>
+                                                    <action selector="saveChangesButtonTapped:" destination="SMK-w8-HcQ" eventType="touchUpInside" id="Tib-TA-STv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -476,9 +496,26 @@
                         <viewLayoutGuide key="safeArea" id="Whs-67-PR7"/>
                     </view>
                     <navigationItem key="navigationItem" id="cI5-6u-eBY">
-                        <barButtonItem key="rightBarButtonItem" title="Settings Gear" id="qJH-7W-C5E"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings Gear" id="qJH-7W-C5E">
+                            <connections>
+                                <action selector="settingsButtonTapped:" destination="SMK-w8-HcQ" id="nsg-dj-dRe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="960"/>
+                    <connections>
+                        <outlet property="aboutYouTextView" destination="n9T-qg-72f" id="ILd-Wg-0EQ"/>
+                        <outlet property="changeBiographyButton" destination="R7z-LN-0Oa" id="qSu-Z3-5sV"/>
+                        <outlet property="changePasswordButton" destination="fl2-2y-1WX" id="ktM-Ny-Bg0"/>
+                        <outlet property="changePreferencesButton" destination="pgx-lJ-QML" id="VC3-K1-PiG"/>
+                        <outlet property="changeSubjectsButton" destination="rh8-YN-Al5" id="GAo-yn-gqT"/>
+                        <outlet property="emailLabel" destination="81r-Uw-0Sc" id="sSN-Ts-OS3"/>
+                        <outlet property="nameLabel" destination="0Pf-j7-qpk" id="K59-HH-Nbj"/>
+                        <outlet property="profileImage" destination="I1h-3y-wSs" id="dn9-f7-3RI"/>
+                        <outlet property="qualificationsTextView" destination="zTT-6B-TR0" id="yFD-ql-SVO"/>
+                        <outlet property="saveChangesButton" destination="1vT-id-Mh2" id="LJr-1x-SVh"/>
+                        <outlet property="settingsButton" destination="qJH-7W-C5E" id="063-c8-ErQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9t-23-mhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
