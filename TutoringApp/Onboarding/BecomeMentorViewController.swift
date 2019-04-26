@@ -24,6 +24,13 @@ class BecomeMentorViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
+    var profileImage: UIImage? {
+        didSet {
+            profileImageView.image = profileImage
+            changePhotoButton.setTitle("", for: .normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         formatKeyboard()
@@ -32,35 +39,102 @@ class BecomeMentorViewController: UIViewController {
     }
     
     @IBAction func changePhotoButtonTapped(_ sender: UIButton) {
+        presentImagePickerActionSheet()
     }
     
     @IBAction func nextStepButtonTapped(_ sender: UIButton) {
+        guard let password = passwordTextField.text, !password.isEmpty,
+            let confirmPassword = confirmPasswordTextfield.text, !confirmPassword.isEmpty else {
+                alertController()
+                return
+        }
     }
     
+    func alertController() {
+        let alertController = UIAlertController(title: "Something isn't right", message: "For some reason we aren't able to take you to the next page, make sure all of the fields are filled out and the passwords match.", preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(okayAction)
+        present(alertController, animated: true)
+    }
     func formatKeyboard() {
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
             guard let userInfo = notification.userInfo,
                 let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-            
             self.bottomConstraint.constant += keyboardFrame.height
             self.view.layoutSubviews()
-            
             let frameInContentView = self.nameTextField.convert(self.nameTextField.bounds, to: self.contentView)
-            
             let offSetPoint = CGPoint(x: self.contentView.frame.origin.x, y: frameInContentView.origin.y - frameInContentView.height)
-            
             self.scroll.setContentOffset(offSetPoint, animated: true)
         }
-        
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
             self.bottomConstraint.constant = 0
         }
     }
     
-    
-    
-    // MARK: - Navigation
+    //MARK: - Navigation
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "toSubjectsVC" {
+            guard let nameText = nameTextField.text, !nameText.isEmpty,
+            let emailText = emailTextField.text, !emailText.isEmpty,
+            let passwordText = passwordTextField.text, !passwordText.isEmpty,
+            let confirmPassword = confirmPasswordTextfield.text, !confirmPassword.isEmpty,
+            let location = cityTextField.text, !location.isEmpty,
+            let dateOfBirth = DateOfBirthTextField.text, !dateOfBirth.isEmpty
+                else { return false }
+        }
+        return true
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "toSubjectsVC" {
+            guard let nameText = nameTextField.text, !nameText.isEmpty,
+                let emailText = emailTextField.text, !emailText.isEmpty,
+                let passwordText = passwordTextField.text, !passwordText.isEmpty,
+                let confirmPassword = confirmPasswordTextfield.text, !confirmPassword.isEmpty,
+                let location = cityTextField.text, !location.isEmpty,
+                let dateOfBirth = DateOfBirthTextField.text, !dateOfBirth.isEmpty else { return }
+            if let destinationVC = segue.destination as? SubjectsViewController {
+                destinationVC.nameLandingPad = nameText
+                destinationVC.email = emailText
+                destinationVC.location = location
+                destinationVC.dateOfBirth = dateOfBirth
+                destinationVC.profileImage = profileImageView.image
+            }
+        }
+    }
+}
+
+///MARK: - UIImagePickerDelegate
+extension BecomeMentorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        if let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            profileImage = photo
+        }
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func presentImagePickerActionSheet() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        let actionSheet = UIAlertController(title: "Select a Photo", message: nil, preferredStyle: .actionSheet)
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            actionSheet.popoverPresentationController?.sourceView = self.view
+            actionSheet.popoverPresentationController?.sourceRect = CGRect(x: 50, y: self.view.frame.height - 100, width: self.view.frame.width - 100, height: 100)
+            actionSheet.addAction(UIAlertAction(title: "Photos", style: .default, handler: { (_) in
+                imagePickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
+                self.present(imagePickerController, animated: true, completion: nil)
+            }))
+        }
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            actionSheet.popoverPresentationController?.sourceView = self.view
+            actionSheet.popoverPresentationController?.sourceRect = CGRect(x: 50, y: self.view.frame.height - 100, width: self.view.frame.width - 100, height: 100)
+            actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (_) in
+                imagePickerController.sourceType = UIImagePickerController.SourceType.camera
+                self.present(imagePickerController, animated: true, completion: nil)
+            }))
+        }
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(actionSheet, animated: true)
     }
 }
