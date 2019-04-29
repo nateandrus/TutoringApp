@@ -163,6 +163,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="PxK-Ue-TyG" kind="show" id="W9Z-mG-kys"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

@@ -50,7 +50,7 @@ class DriversLicenseViewController: UIViewController {
         guard let name = nameLandingPad, let email = email, let location = location, let dateOfBirth = dateOfBirth, let subjects = subjectsLanding, let costPerHour = costPerHour, let schedulePref = schedulePreference, let meetingPref = meetingPreference, let aboutMe = aboutMe, let qualifications = qualifications, let linkedInLink = linkedIn, let userFirebaseUID = userFirebaseUID
             else { return }
         
-        TeacherController.shared.createTeacher(name: name, email: email, location: location, dateOfBirth: dateOfBirth, subjects: subjects, costPerHour: costPerHour, schedulePreference: schedulePref, meetingPreference: meetingPref, aboutMe: aboutMe, qualifications: qualifications, linkedInLink: linkedInLink, userFirebaseUID: userFirebaseUID, profileImage: profileImage) { (success) in
+        TeacherController.shared.createTeacher(name: name, email: email, location: location, messages: [], dateOfBirth: dateOfBirth, subjects: subjects, costPerHour: costPerHour, schedulePreference: schedulePref, meetingPreference: meetingPref, aboutMe: aboutMe, qualifications: qualifications, linkedInLink: linkedInLink, userFirebaseUID: userFirebaseUID, profileImage: profileImage) { (success) in
             if success {
                 let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TeacherTabBar")
                 self.present(mainVC, animated: true)

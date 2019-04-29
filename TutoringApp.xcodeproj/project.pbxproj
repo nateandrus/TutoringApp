@@ -14,8 +14,6 @@
 		B999329522737DE400C1565E /* StudentTeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329422737DE400C1565E /* StudentTeacherProfileViewController.swift */; };
 		B999329E2273841000C1565E /* TeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329D2273841000C1565E /* TeacherProfileViewController.swift */; };
 		D35A39A1F0F2343669150775 /* Pods_TutoringApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E9EF858C29422DD5C83F01 /* Pods_TutoringApp.framework */; };
-		ED0DD7B02270B5EC004DBE00 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DD7AF2270B5EC004DBE00 /* Task.swift */; };
-		ED0DD7B22270B76B004DBE00 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DD7B12270B76B004DBE00 /* TaskController.swift */; };
 		ED0DD7B62270F4F1004DBE00 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DD7B52270F4F1004DBE00 /* MessageDetailViewController.swift */; };
 		ED0DD7B82270FABD004DBE00 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DD7B72270FABD004DBE00 /* Chat.swift */; };
 		ED0DD7BA2270FCD4004DBE00 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DD7B92270FCD4004DBE00 /* ChatController.swift */; };
@@ -26,6 +24,7 @@
 		ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B70A7226FACF600EB31F7 /* MainMessagingTableViewController.swift */; };
 		ED8AA39C227784F900C477AF /* TeacherMessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39B227784F900C477AF /* TeacherMessageDetailViewController.swift */; };
 		ED8AA39E2277851100C477AF /* TeacherMessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39D2277851100C477AF /* TeacherMessagingTableViewController.swift */; };
+		ED8AA3A02277B10C00C477AF /* PhotoResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */; };
 		EDCDC009226E391D007051E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC008226E391C007051E3 /* GoogleService-Info.plist */; };
 		EDCDC00B226E3A76007051E3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00A226E3A76007051E3 /* Student.swift */; };
 		EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00C226E3A82007051E3 /* Teacher.swift */; };
@@ -57,8 +56,6 @@
 		B999329422737DE400C1565E /* StudentTeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentTeacherProfileViewController.swift; path = TutoringApp/StudentTeacherProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		B999329D2273841000C1565E /* TeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileViewController.swift; sourceTree = "<group>"; };
 		EC13F81A0DBC0A1276F075E8 /* Pods-TutoringApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutoringApp.debug.xcconfig"; path = "Target Support Files/Pods-TutoringApp/Pods-TutoringApp.debug.xcconfig"; sourceTree = "<group>"; };
-		ED0DD7AF2270B5EC004DBE00 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		ED0DD7B12270B76B004DBE00 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		ED0DD7B52270F4F1004DBE00 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
 		ED0DD7B72270FABD004DBE00 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		ED0DD7B92270FCD4004DBE00 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
@@ -69,6 +66,7 @@
 		ED1B70A7226FACF600EB31F7 /* MainMessagingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagingTableViewController.swift; sourceTree = "<group>"; };
 		ED8AA39B227784F900C477AF /* TeacherMessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMessageDetailViewController.swift; sourceTree = "<group>"; };
 		ED8AA39D2277851100C477AF /* TeacherMessagingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMessagingTableViewController.swift; sourceTree = "<group>"; };
+		ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResizer.swift; sourceTree = "<group>"; };
 		EDCDC008226E391C007051E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDCDC00A226E3A76007051E3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EDCDC00C226E3A82007051E3 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
@@ -250,6 +248,7 @@
 			children = (
 				EDE9BB20226E1A8300314FFB /* AppDelegate.swift */,
 				EDCDC008226E391C007051E3 /* GoogleService-Info.plist */,
+				ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */,
 				EDE9BB27226E1A8300314FFB /* Assets.xcassets */,
 				EDE9BB29226E1A8400314FFB /* LaunchScreen.storyboard */,
 				EDE9BB2C226E1A8400314FFB /* Info.plist */,
@@ -262,7 +261,6 @@
 			children = (
 				EDCDC00A226E3A76007051E3 /* Student.swift */,
 				EDCDC00C226E3A82007051E3 /* Teacher.swift */,
-				ED0DD7AF2270B5EC004DBE00 /* Task.swift */,
 				ED1B709F226FA2BE00EB31F7 /* Message.swift */,
 				ED0DD7B72270FABD004DBE00 /* Chat.swift */,
 			);
@@ -285,7 +283,6 @@
 				EDCDC010226E3A9C007051E3 /* TeacherController.swift */,
 				ED1B70A1226FA69000EB31F7 /* MessageController.swift */,
 				ED0DD7B92270FCD4004DBE00 /* ChatController.swift */,
-				ED0DD7B12270B76B004DBE00 /* TaskController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -468,7 +465,6 @@
 				EDD3055A22739BE500F19A20 /* BiographyViewController.swift in Sources */,
 				EDD3055722739BE500F19A20 /* PreferencesViewController.swift in Sources */,
 				EDD3055922739BE500F19A20 /* DriversLicenseViewController.swift in Sources */,
-				ED0DD7B22270B76B004DBE00 /* TaskController.swift in Sources */,
 				ED8AA39E2277851100C477AF /* TeacherMessagingTableViewController.swift in Sources */,
 				EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */,
 				EDD3055C22739BE500F19A20 /* ChooseCreateViewController.swift in Sources */,
@@ -488,8 +484,8 @@
 				ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */,
 				EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */,
 				ED1B70A0226FA2BE00EB31F7 /* Message.swift in Sources */,
-				ED0DD7B02270B5EC004DBE00 /* Task.swift in Sources */,
 				EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */,
+				ED8AA3A02277B10C00C477AF /* PhotoResizer.swift in Sources */,
 				ED0DD7BA2270FCD4004DBE00 /* ChatController.swift in Sources */,
 				B999328D227376D700C1565E /* StudentProfileViewController.swift in Sources */,
 				EDCDC00B226E3A76007051E3 /* Student.swift in Sources */,

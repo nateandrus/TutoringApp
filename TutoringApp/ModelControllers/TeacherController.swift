@@ -30,25 +30,32 @@ class TeacherController {
         }
     }
     
-    func createTeacher(name: String, email: String, location: String, dateOfBirth: String, subjects: [String], costPerHour: String, schedulePreference: [String], meetingPreference: String, aboutMe: String, qualifications: String, linkedInLink: String, userFirebaseUID: String, profileImage: UIImage?, completion: @escaping (Bool) -> Void) {
+    func createTeacher(name: String, email: String, location: String, messages: [DocumentReference], dateOfBirth: String, subjects: [String], costPerHour: String, schedulePreference: [String], meetingPreference: String, aboutMe: String, qualifications: String, linkedInLink: String, userFirebaseUID: String, profileImage: UIImage?, completion: @escaping (Bool) -> Void) {
         
-        let newTeacher = Teacher(name: name, email: email, messages: nil, firebaseUID: userFirebaseUID, linkedINLink: linkedInLink, costForTime: costPerHour, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: profileImage)
+        let docRef = teacherRef.document()
         
-        let docData: [String: Any] = [
-            "name" : name,
-            "email" : email,
-            "location": location,
-            "dateOfBirth" : dateOfBirth,
-            "subjects" : subjects,
-            "costPerHour" : costPerHour,
-            "schedulePreference" : schedulePreference,
-            "meetingPreference": meetingPreference,
-            "aboutMe" : aboutMe,
-            "qualifications" : qualifications,
-            "linkedInLink" : linkedInLink,
-            "userFirebaseUID" : userFirebaseUID
-        ]
-        Firestore.firestore().collection("teachers").document(userFirebaseUID).setData(docData) { err in
+        if let image = profileImage {
+            let resizedImage = PhotoResizer.ResizeImage(image: image, targetSize: CGSize(width: 400, height: 400))
+            let storage = Storage.storage().reference().child(userFirebaseUID)
+            guard let uploadData = resizedImage.pngData() else { return }
+            print(resizedImage.size)
+            storage.putData(uploadData, metadata: nil) { (metaData, error) in
+                if let error = error {
+                    print("\(error.localizedDescription)🤬🤬🤬🤬🤬")
+                    return
+                }
+                storage.downloadURL(completion: {(url, error) in
+                    if let error = error {
+                        print("\(error.localizedDescription)🤬🤬🤬🤬🤬🤬")
+                        return
+                    }
+                })
+            }
+        }
+        
+        let newTeacher = Teacher(name: name, email: email, messages: messages, firebaseUID: userFirebaseUID, linkedINLink: linkedInLink, costForTime: costPerHour, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: profileImage, selfDocRef: docRef)
+        
+        Firestore.firestore().collection("teachers").document(userFirebaseUID).setData(newTeacher.dictionary) { err in
             if let error = err {
                 print("Error writing document: \(error.localizedDescription)💩💩💩💩💩💩")
                 completion(false)

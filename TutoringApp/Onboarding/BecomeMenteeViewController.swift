@@ -26,7 +26,7 @@ class BecomeMenteeViewController: UIViewController {
     @IBAction func createButtonTapped(_ sender: UIButton) {
         guard let name = nameTextField.text, !name.isEmpty, let email = emailTextField.text, !email.isEmpty, passwordTextField.text == confirmPasswordTextField.text, let password = confirmPasswordTextField.text
             else {alertController(); return }
-        StudentController.shared.createStudent(name: name, email: email, password: password) { (success) in
+        StudentController.shared.createStudent(name: name, email: email, password: password, messages: []) { (success) in
             if success {
                 let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StudentTabBar")
                 self.present(mainVC, animated: true)

@@ -71,7 +71,6 @@ class MainMessagingTableViewController: UITableViewController {
 }
 
 extension MessageDetailViewController: UITextFieldDelegate {
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
     
     }

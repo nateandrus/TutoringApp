@@ -25,6 +25,7 @@ struct Teacher {
     var meetingPref: String
     var aboutMe: String
     var profileImage: UIImage?
+    var selfDocRef: DocumentReference
     
     var dictionary: [String: Any] {
         return [
@@ -41,7 +42,8 @@ struct Teacher {
             "schedulePreference" : schedulePref,
             "profileImage" : profileImage,
             "subjects" : subjects,
-            "dateOfBirth" : dateOfBirth
+            "dateOfBirth" : dateOfBirth,
+            "selfDocRef" : selfDocRef
         ]
     }
 }
@@ -59,15 +61,14 @@ extension Teacher {
             let meetingPreference = dictionary["meetingPreference"] as? String,
             let schedulePreference = dictionary["schedulePreference"] as? [String],
             let subjects = dictionary["subjects"] as? [String],
-            let dateOfBirth = dictionary["dateOfBirth"] as? String
+            let dateOfBirth = dictionary["dateOfBirth"] as? String,
+            let selfDocRef = dictionary["selfDocRef"] as? DocumentReference
             else { return nil }
-        
         
         let messages = dictionary["messages"] as? [DocumentReference]
         let profileImage = dictionary["profileImage"] as? UIImage
         
-        
-        self.init(name: name, email: email, messages: messages, firebaseUID: firebaseUID, linkedINLink: linkedInLink, costForTime: costForTime, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: profileImage)
+        self.init(name: name, email: email, messages: messages, firebaseUID: firebaseUID, linkedINLink: linkedInLink, costForTime: costForTime, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: profileImage, selfDocRef: selfDocRef)
     }
 }
 
