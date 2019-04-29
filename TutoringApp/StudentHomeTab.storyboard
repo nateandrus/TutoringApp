@@ -365,7 +365,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="4xW-Sr-tRr">
                             <connections>
                                 <action selector="filterButtonTapped:" destination="Xys-HD-yL4" id="FE2-tM-5D6"/>
-                                <segue destination="Suh-bi-QIA" kind="show" id="h0v-e6-Xyc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -678,7 +677,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="08o-5J-KcJ"/>
         <segue reference="nld-89-a8R"/>
     </inferredMetricsTieBreakers>
 </document>

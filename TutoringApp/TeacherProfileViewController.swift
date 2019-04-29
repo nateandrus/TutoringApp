@@ -32,6 +32,7 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var softwareEngineerButton: UIButton!
     
     @IBOutlet weak var changePreferencesButton: UIButton!
+    @IBOutlet weak var preferencesStackView: UIStackView!
     @IBOutlet weak var priceTextfield: UITextField!
     @IBOutlet weak var mondayMorningButton: UIButton!
     @IBOutlet weak var mondayAfternoonButton: UIButton!
@@ -59,6 +60,7 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var bothButton: UIButton!
     
     @IBOutlet weak var changeBiographyButton: UIButton!
+    @IBOutlet weak var biographyStackView: UIStackView!
     @IBOutlet weak var aboutYouTextView: UITextView!
     @IBOutlet weak var qualificationsTextView: UITextView!
     
@@ -90,9 +92,17 @@ class TeacherProfileViewController: UIViewController {
     var online: Bool = false
     var both: Bool = false
     
+    var meetingPreference: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         subjectsStackView.isHidden = true
+        preferencesStackView.isHidden = true
+        biographyStackView.isHidden = true
+        
+        localButton.backgroundColor = .lightGray
+        onlineButton.backgroundColor = .lightGray
+        bothButton.backgroundColor = .lightGray
     }
     
     /*
@@ -112,8 +122,15 @@ class TeacherProfileViewController: UIViewController {
     }
     
     @IBAction func changeSubjectsButtonTapped(_ sender: Any) {
-        UIView.animate(withDuration: 0.3) {
+        if self.subjectsStackView.isHidden == true {
+        UIView.animate(withDuration: 4.0) {
             self.subjectsStackView.isHidden = false
+            }
+        } else {
+            UIView.animate(withDuration: 4.0) {
+                self.subjectsStackView.isHidden = true
+            }
+            
         }
     }
     
@@ -143,7 +160,14 @@ class TeacherProfileViewController: UIViewController {
     }
     
     @IBAction func changePreferencesButtonTapped(_ sender: Any) {
-        UIView.animate(withDuration: 0.3) {
+        if self.preferencesStackView.isHidden == true {
+            UIView.animate(withDuration: 3.0) {
+                self.preferencesStackView.isHidden = false
+            }
+        } else {
+            UIView.animate(withDuration: 3.0) {
+                self.preferencesStackView.isHidden = true
+            }
             
         }
     }
@@ -367,45 +391,27 @@ class TeacherProfileViewController: UIViewController {
     }
     
     @IBAction func localButtonTapped(_ sender: Any) {
-        if local == false && online == true {
-            turnOffPreference(button: onlineButton)
-            turnOnPreference(button: bothButton)
-            local = false
-            online = false
-            both = true
-        } else if local == false {
-            turnOnPreference(button: localButton)
-            local = true
-        } else {
-            turnOffPreference(button: localButton)
-            local = false
-        }
+        turnOnPreference(button: localButton)
+        turnOffPreference(button: onlineButton)
+        turnOffPreference(button: bothButton)
+        self.meetingPreference = "Local"
+        print(meetingPreference)
     }
     
     @IBAction func onlineButtonTapped(_ sender: Any) {
-        if local == false && online == true {
-            turnOffPreference(button: localButton)
-            turnOnPreference(button: bothButton)
-            local = false
-            online = false
-            both = true
-        } else if online == false {
-            turnOnPreference(button: onlineButton)
-            online = true
-        } else {
-            turnOffPreference(button: onlineButton)
-            online = false
-        }
+        turnOnPreference(button: onlineButton)
+        turnOffPreference(button: localButton)
+        turnOffPreference(button: bothButton)
+        self.meetingPreference = "Online"
+        print(meetingPreference)
     }
     
     @IBAction func bothButtonTapped(_ sender: Any) {
-        if both == false {
-            turnOnPreference(button: bothButton)
-            both = true
-        } else {
-            turnOffPreference(button: bothButton)
-            both = false
-        }
+        turnOnPreference(button: bothButton)
+        turnOffPreference(button: localButton)
+        turnOffPreference(button: onlineButton)
+        self.meetingPreference = "Both"
+        print(meetingPreference)
     }
     
     func turnOnPreference(button: UIButton) {
@@ -420,7 +426,14 @@ class TeacherProfileViewController: UIViewController {
     }
     
     @IBAction func changeBiographyButtonTapped(_ sender: Any) {
-        UIView.animate(withDuration: 0.3) {
+        if self.biographyStackView.isHidden == true {
+            UIView.animate(withDuration: 3.0) {
+                self.biographyStackView.isHidden = false
+            }
+        } else {
+            UIView.animate(withDuration: 3.0) {
+                self.biographyStackView.isHidden = true
+            }
             
         }
     }
