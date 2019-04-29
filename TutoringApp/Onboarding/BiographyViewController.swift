@@ -19,6 +19,18 @@ class BiographyViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
+    //LandingPads
+    var nameLandingPad: String?
+    var email: String?
+    var profileImage: UIImage?
+    var location: String?
+    var dateOfBirth: String?
+    var subjectsLanding: [String]?
+    var costPerHour: String?
+    var schedulePreference: [String]?
+    var meetingPreference: String?
+    var userFirebaseUID: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         formatKeyboard()
@@ -43,6 +55,39 @@ class BiographyViewController: UIViewController {
     }
     
     // MARK: - Navigation
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "toLicenseVC" {
+            guard let qualifications = qualificationsTextView.text, !qualifications.isEmpty, let experiences = aboutMeTextView.text, !experiences.isEmpty else {
+                alertController()
+                return false
+            }
+        }
+        return true
+    }
+    func alertController() {
+        let alertController = UIAlertController(title: "You shall not pass!", message: "Looks like you are missing some information on this page, it is important that mentees are able to see your experience and qualifications!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toLicenseVC" {
+            guard let name = nameLandingPad, let email = email, let location = location, let dateofBirth = dateOfBirth, let subjects = subjectsLanding, let costPerHour = costPerHour, let meetingPreference = meetingPreference, let schedulePreference = schedulePreference, let aboutMe = aboutMeTextView.text, let qualifications = qualificationsTextView.text, let userFirebaseUID = userFirebaseUID else { return }
+            if let destinationVC = segue.destination as? DriversLicenseViewController {
+                destinationVC.nameLandingPad = name
+                destinationVC.email = email
+                destinationVC.location = location
+                destinationVC.dateOfBirth = dateofBirth
+                destinationVC.profileImage = profileImage
+                destinationVC.subjectsLanding = subjects
+                destinationVC.costPerHour = costPerHour
+                destinationVC.meetingPreference = meetingPreference
+                destinationVC.schedulePreference = schedulePreference
+                destinationVC.aboutMe = aboutMe
+                destinationVC.qualifications = qualifications
+                destinationVC.linkedIn = linkedInTextField.text
+                destinationVC.userFirebaseUID = userFirebaseUID
+            }
+        }
     }
 }

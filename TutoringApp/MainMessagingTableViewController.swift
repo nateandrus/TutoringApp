@@ -30,25 +30,25 @@ class MainMessagingTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == popoverTableView {
-            guard let connections = StudentController.shared.currentUser?.connections else { return 0 }
-            return connections.count
-        } else {
+//        if tableView == popoverTableView {
+//            guard let connections = StudentController.shared.currentUser?.connections else { return 0 }
+//            return connections.count
+//        } else {
             return ChatController.shared.chats.count
-        }
+//        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == popoverTableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "connectionCell", for: indexPath)
-            cell.textLabel?.text = StudentController.shared.currentUser?.connections[indexPath.row]
-            return cell
-        } else {
+//        if tableView == popoverTableView {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "connectionCell", for: indexPath)
+//            cell.textLabel?.text = StudentController.shared.currentUser?.connections[indexPath.row]
+//            return cell
+//        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath)
             let index = ChatController.shared.chats[indexPath.row]
             
             return cell
-        }
+//        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

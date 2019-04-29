@@ -6,32 +6,42 @@
 //  Copyright © 2019 Nathan Andrus. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Firebase
 
 struct Teacher {
     
     var name: String
     var email: String
-    var messages: [String]
-    var connections: [String]
+    var messages: [DocumentReference]?
     let firebaseUID: String
-    let linkedINLink: String
+    let linkedINLink: String?
     var costForTime: String
     var qualifications: String
-    var experience: String
+    var location: String
+    var dateOfBirth: String
+    var subjects: [String]
+    var schedulePref: [String]
+    var meetingPref: String
+    var aboutMe: String
+    var profileImage: UIImage?
     
     var dictionary: [String: Any] {
         return [
             "name" : name,
             "email" : email,
             "messages" : messages,
-            "connections" : connections,
-            "firebaseUID" : firebaseUID,
-            "linkedINLink" : linkedINLink,
-            "costForTime" : costForTime,
+            "aboutMe" : aboutMe,
+            "userFirebaseUID" : firebaseUID,
+            "linkedInLink" : linkedINLink,
+            "costPerHour" : costForTime,
             "qualifications" : qualifications,
-            "experience" : experience
+            "location" : location,
+            "meetingPreference" : meetingPref,
+            "schedulePreference" : schedulePref,
+            "profileImage" : profileImage,
+            "subjects" : subjects,
+            "dateOfBirth" : dateOfBirth
         ]
     }
 }
@@ -40,15 +50,24 @@ extension Teacher {
     init?(dictionary: [String: Any]) {
         guard let name = dictionary["name"] as? String,
             let email = dictionary["email"] as? String,
-            let messages = dictionary["messages"] as? [String],
-            let connections = dictionary["connections"] as? [String],
-            let firebaseUID = dictionary["firebaseUID"] as? String,
+            let aboutMe = dictionary["aboutMe"] as? String,
+            let firebaseUID = dictionary["userFirebaseUID"] as? String,
             let linkedInLink = dictionary["linkedInLink"] as? String,
-            let costForTime = dictionary["costForTime"] as? String,
+            let costForTime = dictionary["costPerHour"] as? String,
             let qualifications = dictionary["qualifications"] as? String,
-            let experience = dictionary["experience"] as? String
+            let location = dictionary["location"] as? String,
+            let meetingPreference = dictionary["meetingPreference"] as? String,
+            let schedulePreference = dictionary["schedulePreference"] as? [String],
+            let subjects = dictionary["subjects"] as? [String],
+            let dateOfBirth = dictionary["dateOfBirth"] as? String
             else { return nil }
-        self.init(name: name, email: email, messages: messages, connections: connections, firebaseUID: firebaseUID, linkedINLink: linkedInLink, costForTime: costForTime, qualifications: qualifications, experience: experience)
+        
+        
+        let messages = dictionary["messages"] as? [DocumentReference]
+        let profileImage = dictionary["profileImage"] as? UIImage
+        
+        
+        self.init(name: name, email: email, messages: messages, firebaseUID: firebaseUID, linkedINLink: linkedInLink, costForTime: costForTime, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: profileImage)
     }
 }
 

@@ -90,6 +90,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GNd-T1-NZR"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SNR-Rg-b9e"/>
                     <connections>
                         <outlet property="emailTextField" destination="azC-p2-SNc" id="fTw-uj-zeK"/>
                         <outlet property="loginButton" destination="teL-nJ-2rF" id="gMm-VO-YWV"/>
@@ -98,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddE-WE-dKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1297" y="-1586"/>
+            <point key="canvasLocation" x="-386.95652173913044" y="-1586.3839285714284"/>
         </scene>
         <!--Choose Create View Controller-->
         <scene sceneID="qYl-VF-c6s">
@@ -162,9 +163,6 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="PxK-Ue-TyG" kind="show" id="r4t-VZ-50J"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -188,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74C-xi-Lj1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-504.34782608695656" y="-1586.3839285714284"/>
+            <point key="canvasLocation" x="405.79710144927537" y="-1586.3839285714284"/>
         </scene>
         <!--Become Mentee View Controller-->
         <scene sceneID="g3y-yx-axH">
@@ -199,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="pCJ-ms-xff">
-                                <rect key="frame" x="0.0" y="197" width="414" height="502"/>
+                                <rect key="frame" x="0.0" y="280" width="414" height="336.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Become a Mentee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrb-jb-AsQ">
                                         <rect key="frame" x="117.5" y="0.0" width="179.5" height="26.5"/>
@@ -207,15 +205,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2qX-ai-t2d">
-                                        <rect key="frame" x="145" y="67.5" width="124" height="124.5"/>
-                                        <color key="backgroundColor" red="0.87129614639999997" green="0.87129614639999997" blue="0.87129614639999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="2qX-ai-t2d" secondAttribute="height" multiplier="1:1" id="h2V-cj-PGn"/>
-                                        </constraints>
-                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="rOz-vI-YdK">
-                                        <rect key="frame" x="20.5" y="233" width="373" height="198"/>
+                                        <rect key="frame" x="20.5" y="67.5" width="373" height="198"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-jw-WyQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="30"/>
@@ -244,7 +235,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRA-jd-lta">
-                                        <rect key="frame" x="20.5" y="472" width="373" height="30"/>
+                                        <rect key="frame" x="20.5" y="306.5" width="373" height="30"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Create account">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -256,7 +247,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="rOz-vI-YdK" firstAttribute="width" secondItem="pCJ-ms-xff" secondAttribute="width" multiplier="0.9" id="4dz-z4-svS"/>
-                                    <constraint firstItem="2qX-ai-t2d" firstAttribute="width" secondItem="pCJ-ms-xff" secondAttribute="width" multiplier="0.3" id="cFC-q3-i2d"/>
                                     <constraint firstItem="gRA-jd-lta" firstAttribute="width" secondItem="rOz-vI-YdK" secondAttribute="width" id="jjn-aS-OJs"/>
                                 </constraints>
                             </stackView>
@@ -270,28 +260,15 @@
                                     <segue destination="kSy-hP-lGT" kind="show" id="Uyc-ue-tQ7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3b-ok-y9B">
-                                <rect key="frame" x="145" y="264.5" width="124" height="124.5"/>
-                                <state key="normal" title="Change photo">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeProfileImageView:" destination="oCa-TH-XIo" eventType="touchUpInside" id="AIM-IJ-2BE"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="t3b-ok-y9B" firstAttribute="trailing" secondItem="2qX-ai-t2d" secondAttribute="trailing" id="8Zv-T2-NRh"/>
                             <constraint firstItem="pCJ-ms-xff" firstAttribute="centerX" secondItem="cLC-cd-AnN" secondAttribute="centerX" id="9fE-vk-r8P"/>
                             <constraint firstItem="pCJ-ms-xff" firstAttribute="centerY" secondItem="cLC-cd-AnN" secondAttribute="centerY" id="IH2-jY-92V"/>
                             <constraint firstItem="wIb-9l-rbL" firstAttribute="width" secondItem="wIb-9l-rbL" secondAttribute="height" multiplier="1:1" id="JXF-lX-g2m"/>
-                            <constraint firstItem="t3b-ok-y9B" firstAttribute="bottom" secondItem="2qX-ai-t2d" secondAttribute="bottom" id="LQh-k7-vRg"/>
                             <constraint firstItem="pCJ-ms-xff" firstAttribute="width" secondItem="cLC-cd-AnN" secondAttribute="width" id="NZH-mm-ebw"/>
-                            <constraint firstItem="t3b-ok-y9B" firstAttribute="top" secondItem="2qX-ai-t2d" secondAttribute="top" id="OzP-ao-V1y"/>
                             <constraint firstItem="wIb-9l-rbL" firstAttribute="leading" secondItem="AKK-D7-rm1" secondAttribute="leading" constant="16" id="XN9-nh-bPV"/>
                             <constraint firstItem="wIb-9l-rbL" firstAttribute="top" secondItem="AKK-D7-rm1" secondAttribute="top" constant="16" id="lC7-1M-lL0"/>
-                            <constraint firstItem="t3b-ok-y9B" firstAttribute="leading" secondItem="2qX-ai-t2d" secondAttribute="leading" id="uBJ-xt-Yix"/>
                             <constraint firstItem="AKK-D7-rm1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wIb-9l-rbL" secondAttribute="trailing" symbolic="YES" id="xdv-2F-wgM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AKK-D7-rm1"/>
@@ -302,17 +279,16 @@
                         <outlet property="emailTextField" destination="Voo-1D-mIT" id="gib-gw-abG"/>
                         <outlet property="nameTextField" destination="Y6f-jw-WyQ" id="CL6-do-XuJ"/>
                         <outlet property="passwordTextField" destination="Qer-Mw-6Wf" id="xRV-Kq-ZnZ"/>
-                        <outlet property="profileImageView" destination="2qX-ai-t2d" id="h7m-z3-Z9Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zal-Sj-35S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261" y="-1242"/>
+            <point key="canvasLocation" x="1171.0144927536232" y="-1242.1875"/>
         </scene>
         <!--Subjects View Controller-->
         <scene sceneID="VZU-CA-YLU">
             <objects>
-                <viewController id="c9g-P9-pUf" customClass="SubjectsViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="subjectsVC" id="c9g-P9-pUf" customClass="SubjectsViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUd-6g-Chr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -538,7 +514,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tFP-Z4-Kmw" kind="show" id="Ibe-oR-FtS"/>
+                                    <segue destination="tFP-Z4-Kmw" kind="show" identifier="toPreferences" id="Ibe-oR-FtS"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="RUx-bk-loM">
@@ -597,7 +573,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOL-TK-uEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="-1959"/>
+            <point key="canvasLocation" x="1950.7246376811595" y="-1959.375"/>
         </scene>
         <!--Preferences View Controller-->
         <scene sceneID="eye-ql-N0u">
@@ -1080,7 +1056,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ScU-N8-WRX" kind="show" id="9Zd-t5-A7O"/>
+                                    <segue destination="ScU-N8-WRX" kind="show" identifier="toBiography" id="9Zd-t5-A7O"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kD0-xQ-Srw">
@@ -1146,7 +1122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0y-md-U8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="-1959"/>
+            <point key="canvasLocation" x="2700" y="-1959.375"/>
         </scene>
         <!--Biography View Controller-->
         <scene sceneID="wFB-7I-ieb">
@@ -1283,7 +1259,7 @@
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="WOO-Fc-p5v" kind="show" id="xby-MN-RsH"/>
+                                                            <segue destination="WOO-Fc-p5v" kind="show" identifier="toLicenseVC" id="xby-MN-RsH"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1345,7 +1321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ftt-ye-eef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2564" y="-1959"/>
+            <point key="canvasLocation" x="3473.913043478261" y="-1959.375"/>
         </scene>
         <!--Drivers License View Controller-->
         <scene sceneID="QoG-ob-DG3">
@@ -1404,6 +1380,9 @@
                                 <state key="normal" title="✚">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addLicensePhotoButtonTapped:" destination="WOO-Fc-p5v" eventType="touchUpInside" id="G5K-ty-caH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1437,7 +1416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqN-he-Jy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3313.04347826087" y="-1957.3660714285713"/>
+            <point key="canvasLocation" x="4223.188405797102" y="-1957.3660714285713"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="drs-f9-cj4">
@@ -1615,7 +1594,6 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="nextStepButtonTapped:" destination="GBE-ww-esG" eventType="touchUpInside" id="twX-fW-krj"/>
-                                                            <segue destination="c9g-P9-pUf" kind="show" identifier="toSubjectsVC" id="qVs-eP-rd2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1693,17 +1671,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Em9-Da-aeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261" y="-1959"/>
+            <point key="canvasLocation" x="1171.0144927536232" y="-1959.375"/>
         </scene>
     </scenes>
     <resources>
         <image name="unchecked" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eYJ-15-NcS"/>
+        <segue reference="6Hu-mG-0o2"/>
         <segue reference="9Zd-t5-A7O"/>
         <segue reference="Ibe-oR-FtS"/>
-        <segue reference="qVs-eP-rd2"/>
         <segue reference="azB-NG-dQR"/>
     </inferredMetricsTieBreakers>
 </document>

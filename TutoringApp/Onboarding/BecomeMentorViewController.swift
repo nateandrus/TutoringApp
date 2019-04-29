@@ -44,9 +44,30 @@ class BecomeMentorViewController: UIViewController {
     
     @IBAction func nextStepButtonTapped(_ sender: UIButton) {
         guard let password = passwordTextField.text, !password.isEmpty,
-            let confirmPassword = confirmPasswordTextfield.text, !confirmPassword.isEmpty else {
+            passwordTextField.text == confirmPasswordTextfield.text, let name = nameTextField.text, !name.isEmpty, let email = emailTextField.text, !email.isEmpty else {
                 alertController()
                 return
+        }
+        TeacherController.shared.createAuthorizedTeacherUser(email: email, password: password) { (userFirebaseUID, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                self.errorAlertController(error: error.localizedDescription)
+                return
+            }
+            guard let nameText = self.nameTextField.text, !nameText.isEmpty,
+                let emailText = self.emailTextField.text, !emailText.isEmpty,
+                let passwordText = self.passwordTextField.text, !passwordText.isEmpty,
+                let confirmPassword = self.confirmPasswordTextfield.text, !confirmPassword.isEmpty,
+                let location = self.cityTextField.text, !location.isEmpty,
+                let dateOfBirth = self.DateOfBirthTextField.text, !dateOfBirth.isEmpty, let userFirebaseUID = userFirebaseUID, let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "subjectsVC") as? SubjectsViewController else { return }
+            
+            destinationVC.nameLandingPad = nameText
+            destinationVC.email = emailText
+            destinationVC.location = location
+            destinationVC.dateOfBirth = dateOfBirth
+            destinationVC.profileImage = self.profileImageView.image
+            destinationVC.userFirebaseUID = userFirebaseUID
+            self.present(destinationVC, animated: true)
         }
     }
     
@@ -54,6 +75,12 @@ class BecomeMentorViewController: UIViewController {
         let alertController = UIAlertController(title: "Something isn't right", message: "For some reason we aren't able to take you to the next page, make sure all of the fields are filled out and the passwords match.", preferredStyle: .alert)
         let okayAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         alertController.addAction(okayAction)
+        present(alertController, animated: true)
+    }
+    func errorAlertController(error: String) {
+        let alertController = UIAlertController(title: "Problem signing in", message: error, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
         present(alertController, animated: true)
     }
     func formatKeyboard() {
@@ -72,35 +99,36 @@ class BecomeMentorViewController: UIViewController {
     }
     
     //MARK: - Navigation
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "toSubjectsVC" {
-            guard let nameText = nameTextField.text, !nameText.isEmpty,
-            let emailText = emailTextField.text, !emailText.isEmpty,
-            let passwordText = passwordTextField.text, !passwordText.isEmpty,
-            let confirmPassword = confirmPasswordTextfield.text, !confirmPassword.isEmpty,
-            let location = cityTextField.text, !location.isEmpty,
-            let dateOfBirth = DateOfBirthTextField.text, !dateOfBirth.isEmpty
-                else { return false }
-        }
-        return true
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toSubjectsVC" {
-            guard let nameText = nameTextField.text, !nameText.isEmpty,
-                let emailText = emailTextField.text, !emailText.isEmpty,
-                let passwordText = passwordTextField.text, !passwordText.isEmpty,
-                let confirmPassword = confirmPasswordTextfield.text, !confirmPassword.isEmpty,
-                let location = cityTextField.text, !location.isEmpty,
-                let dateOfBirth = DateOfBirthTextField.text, !dateOfBirth.isEmpty else { return }
-            if let destinationVC = segue.destination as? SubjectsViewController {
-                destinationVC.nameLandingPad = nameText
-                destinationVC.email = emailText
-                destinationVC.location = location
-                destinationVC.dateOfBirth = dateOfBirth
-                destinationVC.profileImage = profileImageView.image
-            }
-        }
-    }
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if identifier == "toSubjectsVC" {
+//            guard let nameText = nameTextField.text, !nameText.isEmpty,
+//            let emailText = emailTextField.text, !emailText.isEmpty,
+//            let passwordText = passwordTextField.text, !passwordText.isEmpty,
+//            let confirmPassword = confirmPasswordTextfield.text, !confirmPassword.isEmpty,
+//            let location = cityTextField.text, !location.isEmpty,
+//            let dateOfBirth = DateOfBirthTextField.text, !dateOfBirth.isEmpty
+//                else { return false }
+//        }
+//        return true
+//    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "toSubjectsVC" {
+//            guard let nameText = nameTextField.text, !nameText.isEmpty,
+//                let emailText = emailTextField.text, !emailText.isEmpty,
+//                let passwordText = passwordTextField.text, !passwordText.isEmpty,
+//                let confirmPassword = confirmPasswordTextfield.text, !confirmPassword.isEmpty,
+//                let location = cityTextField.text, !location.isEmpty,
+//                let dateOfBirth = DateOfBirthTextField.text, !dateOfBirth.isEmpty, let userFirebaseUID = userFirebaseUID else { return }
+//            if let destinationVC = segue.destination as? SubjectsViewController {
+//                destinationVC.nameLandingPad = nameText
+//                destinationVC.email = emailText
+//                destinationVC.location = location
+//                destinationVC.dateOfBirth = dateOfBirth
+//                destinationVC.profileImage = profileImageView.image
+//                destinationVC.userFirebaseUID = userFirebaseUID
+//            }
+//        }
+//    }
 }
 
 ///MARK: - UIImagePickerDelegate
