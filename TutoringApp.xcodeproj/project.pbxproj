@@ -27,6 +27,8 @@
 		ED1B70A0226FA2BE00EB31F7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B709F226FA2BE00EB31F7 /* Message.swift */; };
 		ED1B70A2226FA69100EB31F7 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B70A1226FA69000EB31F7 /* MessageController.swift */; };
 		ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B70A7226FACF600EB31F7 /* MainMessagingTableViewController.swift */; };
+		ED8AA39C227784F900C477AF /* TeacherMessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39B227784F900C477AF /* TeacherMessageDetailViewController.swift */; };
+		ED8AA39E2277851100C477AF /* TeacherMessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39D2277851100C477AF /* TeacherMessagingTableViewController.swift */; };
 		EDCDC009226E391D007051E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC008226E391C007051E3 /* GoogleService-Info.plist */; };
 		EDCDC00B226E3A76007051E3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00A226E3A76007051E3 /* Student.swift */; };
 		EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00C226E3A82007051E3 /* Teacher.swift */; };
@@ -71,6 +73,8 @@
 		ED1B709F226FA2BE00EB31F7 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED1B70A1226FA69000EB31F7 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		ED1B70A7226FACF600EB31F7 /* MainMessagingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagingTableViewController.swift; sourceTree = "<group>"; };
+		ED8AA39B227784F900C477AF /* TeacherMessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMessageDetailViewController.swift; sourceTree = "<group>"; };
+		ED8AA39D2277851100C477AF /* TeacherMessagingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMessagingTableViewController.swift; sourceTree = "<group>"; };
 		EDCDC008226E391C007051E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDCDC00A226E3A76007051E3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EDCDC00C226E3A82007051E3 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 		B99932962273803500C1565E /* MessagingTab */ = {
 			isa = PBXGroup;
 			children = (
+				ED8AA39B227784F900C477AF /* TeacherMessageDetailViewController.swift */,
+				ED8AA39D2277851100C477AF /* TeacherMessagingTableViewController.swift */,
 			);
 			name = MessagingTab;
 			sourceTree = "<group>";
@@ -473,12 +479,14 @@
 				EDD3055722739BE500F19A20 /* PreferencesViewController.swift in Sources */,
 				EDD3055922739BE500F19A20 /* DriversLicenseViewController.swift in Sources */,
 				ED0DD7B22270B76B004DBE00 /* TaskController.swift in Sources */,
+				ED8AA39E2277851100C477AF /* TeacherMessagingTableViewController.swift in Sources */,
 				EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */,
 				B999329C227381B200C1565E /* TeacherEditSubjectsViewController.swift in Sources */,
 				EDD3055C22739BE500F19A20 /* ChooseCreateViewController.swift in Sources */,
 				B999329E2273841000C1565E /* TeacherEditPreferencesViewController.swift in Sources */,
 				B999329322737CBB00C1565E /* StudentSearchTableViewCell.swift in Sources */,
 				B999328F2273781A00C1565E /* StudentHomeViewController.swift in Sources */,
+				ED8AA39C227784F900C477AF /* TeacherMessageDetailViewController.swift in Sources */,
 				EDD3055822739BE500F19A20 /* MainLoginViewController.swift in Sources */,
 				EDD3055D22739BE500F19A20 /* SubjectsViewController.swift in Sources */,
 				ED0DD7B62270F4F1004DBE00 /* MessageDetailViewController.swift in Sources */,

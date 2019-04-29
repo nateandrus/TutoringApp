@@ -15,7 +15,6 @@ class StudentController {
     
     //Firebase References
     let studentRef = Firestore.firestore().collection("students")
-    let teacherRef = Firestore.firestore().collection("teachers")
     
     var currentUser: Student?
     
@@ -38,6 +37,36 @@ class StudentController {
                     completion(false)
                 } else {
                     print("Document successfully written!")
+                    completion(true)
+                }
+            }
+        }
+    }
+    
+    func loginUser(email: String, password: String, completion: @escaping (String?, Error?) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { (authData, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(nil, error)
+                return
+            }
+            guard let authData = authData else { completion(nil, error); return }
+            let firebaseUID = authData.user.uid
+            completion(firebaseUID, nil)
+        }
+    }
+    
+    func initializeStudent(firebaseUID: String, completion: @escaping (Bool) -> Void) {
+        studentRef.document(firebaseUID).getDocument { (docSnapshot, error) in
+            if let error = error {
+                print("Could not find a teacher with that userID: \(error.localizedDescription)")
+                completion(false)
+                return
+            } else {
+                guard let docSnapshot = docSnapshot else { completion(false); return }
+                if docSnapshot.exists {
+                    let student = Student(dictionary: docSnapshot.data()!)
+                    self.currentUser = student
                     completion(true)
                 }
             }
