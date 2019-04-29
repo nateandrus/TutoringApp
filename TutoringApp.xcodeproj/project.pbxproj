@@ -12,10 +12,7 @@
 		B999329122737BBF00C1565E /* StudentSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329022737BBF00C1565E /* StudentSearchTableViewController.swift */; };
 		B999329322737CBB00C1565E /* StudentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329222737CBB00C1565E /* StudentSearchTableViewCell.swift */; };
 		B999329522737DE400C1565E /* StudentTeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329422737DE400C1565E /* StudentTeacherProfileViewController.swift */; };
-		B999329A227380A700C1565E /* TeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9993299227380A700C1565E /* TeacherProfileViewController.swift */; };
-		B999329C227381B200C1565E /* TeacherEditSubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329B227381B200C1565E /* TeacherEditSubjectsViewController.swift */; };
-		B999329E2273841000C1565E /* TeacherEditPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329D2273841000C1565E /* TeacherEditPreferencesViewController.swift */; };
-		B99932A02273A20800C1565E /* TeacherEditBiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329F2273A20800C1565E /* TeacherEditBiographyViewController.swift */; };
+		B999329E2273841000C1565E /* TeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329D2273841000C1565E /* TeacherProfileViewController.swift */; };
 		D35A39A1F0F2343669150775 /* Pods_TutoringApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E9EF858C29422DD5C83F01 /* Pods_TutoringApp.framework */; };
 		ED0DD7B02270B5EC004DBE00 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DD7AF2270B5EC004DBE00 /* Task.swift */; };
 		ED0DD7B22270B76B004DBE00 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DD7B12270B76B004DBE00 /* TaskController.swift */; };
@@ -56,10 +53,7 @@
 		B999329022737BBF00C1565E /* StudentSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentSearchTableViewController.swift; path = TutoringApp/StudentSearchTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		B999329222737CBB00C1565E /* StudentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentSearchTableViewCell.swift; path = TutoringApp/StudentSearchTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		B999329422737DE400C1565E /* StudentTeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentTeacherProfileViewController.swift; path = TutoringApp/StudentTeacherProfileViewController.swift; sourceTree = SOURCE_ROOT; };
-		B9993299227380A700C1565E /* TeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileViewController.swift; sourceTree = "<group>"; };
-		B999329B227381B200C1565E /* TeacherEditSubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherEditSubjectsViewController.swift; sourceTree = "<group>"; };
-		B999329D2273841000C1565E /* TeacherEditPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherEditPreferencesViewController.swift; sourceTree = "<group>"; };
-		B999329F2273A20800C1565E /* TeacherEditBiographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherEditBiographyViewController.swift; sourceTree = "<group>"; };
+		B999329D2273841000C1565E /* TeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileViewController.swift; sourceTree = "<group>"; };
 		EC13F81A0DBC0A1276F075E8 /* Pods-TutoringApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutoringApp.debug.xcconfig"; path = "Target Support Files/Pods-TutoringApp/Pods-TutoringApp.debug.xcconfig"; sourceTree = "<group>"; };
 		ED0DD7AF2270B5EC004DBE00 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		ED0DD7B12270B76B004DBE00 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
@@ -138,10 +132,7 @@
 		B99932982273805600C1565E /* ProfileTab */ = {
 			isa = PBXGroup;
 			children = (
-				B9993299227380A700C1565E /* TeacherProfileViewController.swift */,
-				B999329B227381B200C1565E /* TeacherEditSubjectsViewController.swift */,
-				B999329D2273841000C1565E /* TeacherEditPreferencesViewController.swift */,
-				B999329F2273A20800C1565E /* TeacherEditBiographyViewController.swift */,
+				B999329D2273841000C1565E /* TeacherProfileViewController.swift */,
 			);
 			name = ProfileTab;
 			sourceTree = "<group>";
@@ -469,14 +460,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD3055A22739BE500F19A20 /* BiographyViewController.swift in Sources */,
-				B99932A02273A20800C1565E /* TeacherEditBiographyViewController.swift in Sources */,
 				EDD3055722739BE500F19A20 /* PreferencesViewController.swift in Sources */,
 				EDD3055922739BE500F19A20 /* DriversLicenseViewController.swift in Sources */,
 				ED0DD7B22270B76B004DBE00 /* TaskController.swift in Sources */,
 				EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */,
-				B999329C227381B200C1565E /* TeacherEditSubjectsViewController.swift in Sources */,
 				EDD3055C22739BE500F19A20 /* ChooseCreateViewController.swift in Sources */,
-				B999329E2273841000C1565E /* TeacherEditPreferencesViewController.swift in Sources */,
+				B999329E2273841000C1565E /* TeacherProfileViewController.swift in Sources */,
 				B999329322737CBB00C1565E /* StudentSearchTableViewCell.swift in Sources */,
 				B999328F2273781A00C1565E /* StudentHomeViewController.swift in Sources */,
 				EDD3055822739BE500F19A20 /* MainLoginViewController.swift in Sources */,
@@ -495,7 +484,6 @@
 				EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */,
 				ED0DD7BA2270FCD4004DBE00 /* ChatController.swift in Sources */,
 				B999328D227376D700C1565E /* StudentProfileViewController.swift in Sources */,
-				B999329A227380A700C1565E /* TeacherProfileViewController.swift in Sources */,
 				EDCDC00B226E3A76007051E3 /* Student.swift in Sources */,
 				EDD3055B22739BE500F19A20 /* BecomeMenteeViewController.swift in Sources */,
 			);
