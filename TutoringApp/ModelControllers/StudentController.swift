@@ -18,7 +18,7 @@ class StudentController {
     
     var currentUser: Student?
     
-    func createStudent(name: String, email: String, password: String, completion: @escaping (Bool) -> Void) {
+    func createStudent(name: String, email: String, password: String, messages: [DocumentReference], completion: @escaping (Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (authData, error) in
             if let error = error {
                 print("\(error.localizedDescription)💩💩💩💩💩💩")
@@ -27,11 +27,12 @@ class StudentController {
             }
             guard let authdata = authData else { completion(false); return }
             let studentUID = authdata.user.uid
-            self.studentRef.document(studentUID).setData([
-                "name" : name ,
-                "email" : email ,
-                "firebaseUID" : studentUID
-            ]) { err in
+            
+            let docRef = self.studentRef.document()
+            
+            let newStudent = Student(name: name, email: email, firebaseUID: studentUID, messageRefs: [], recentSearches: [], profileImage: nil, selfDocRef: docRef)
+            
+            self.studentRef.document(studentUID).setData(newStudent.dictionary) { err in
                 if let err = err {
                     print("Error writing document: \(err)")
                     completion(false)
