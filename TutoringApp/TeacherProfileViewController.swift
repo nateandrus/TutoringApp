@@ -365,11 +365,11 @@ class TeacherProfileViewController: UIViewController {
     
     @IBAction func changeSubjectsButtonTapped(_ sender: Any) {
         if self.subjectsStackView.isHidden == true {
-        UIView.animate(withDuration: 5.0) {
+        UIView.animate(withDuration: 0.3) {
             self.subjectsStackView.isHidden = false
             }
         } else {
-            UIView.animate(withDuration: 5.0) {
+            UIView.animate(withDuration: 0.3) {
                 self.subjectsStackView.isHidden = true
             }
             
@@ -535,11 +535,11 @@ class TeacherProfileViewController: UIViewController {
     
     @IBAction func changePreferencesButtonTapped(_ sender: Any) {
         if self.preferencesStackView.isHidden == true {
-            UIView.animate(withDuration: 5.0) {
+            UIView.animate(withDuration: 0.3) {
                 self.preferencesStackView.isHidden = false
             }
         } else {
-            UIView.animate(withDuration: 5.0) {
+            UIView.animate(withDuration: 0.3) {
                 self.preferencesStackView.isHidden = true
             }
             
