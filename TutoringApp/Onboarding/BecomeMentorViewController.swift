@@ -97,38 +97,6 @@ class BecomeMentorViewController: UIViewController {
             self.bottomConstraint.constant = 0
         }
     }
-    
-    //MARK: - Navigation
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        if identifier == "toSubjectsVC" {
-//            guard let nameText = nameTextField.text, !nameText.isEmpty,
-//            let emailText = emailTextField.text, !emailText.isEmpty,
-//            let passwordText = passwordTextField.text, !passwordText.isEmpty,
-//            let confirmPassword = confirmPasswordTextfield.text, !confirmPassword.isEmpty,
-//            let location = cityTextField.text, !location.isEmpty,
-//            let dateOfBirth = DateOfBirthTextField.text, !dateOfBirth.isEmpty
-//                else { return false }
-//        }
-//        return true
-//    }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toSubjectsVC" {
-//            guard let nameText = nameTextField.text, !nameText.isEmpty,
-//                let emailText = emailTextField.text, !emailText.isEmpty,
-//                let passwordText = passwordTextField.text, !passwordText.isEmpty,
-//                let confirmPassword = confirmPasswordTextfield.text, !confirmPassword.isEmpty,
-//                let location = cityTextField.text, !location.isEmpty,
-//                let dateOfBirth = DateOfBirthTextField.text, !dateOfBirth.isEmpty, let userFirebaseUID = userFirebaseUID else { return }
-//            if let destinationVC = segue.destination as? SubjectsViewController {
-//                destinationVC.nameLandingPad = nameText
-//                destinationVC.email = emailText
-//                destinationVC.location = location
-//                destinationVC.dateOfBirth = dateOfBirth
-//                destinationVC.profileImage = profileImageView.image
-//                destinationVC.userFirebaseUID = userFirebaseUID
-//            }
-//        }
-//    }
 }
 
 ///MARK: - UIImagePickerDelegate
