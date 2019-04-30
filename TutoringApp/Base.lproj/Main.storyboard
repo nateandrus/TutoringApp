@@ -1488,20 +1488,20 @@
             </objects>
             <point key="canvasLocation" x="1055" y="-193"/>
         </scene>
-        <!--TeacherMessaging-->
+        <!--TeacherMessagingg-->
         <scene sceneID="U1Y-a0-9Z5">
             <objects>
-                <viewControllerPlaceholder storyboardName="TeacherMessaging" id="FCl-zt-b3q" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TeacherMessagingg" id="FCl-zt-b3q" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="n5c-s4-1Uv"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXA-3M-igl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1086" y="-54"/>
         </scene>
-        <!--TeacherProfile-->
+        <!--TeacherProfile2-->
         <scene sceneID="Pwz-nE-KKE">
             <objects>
-                <viewControllerPlaceholder storyboardName="TeacherProfile" id="AJ2-x1-Skb" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TeacherProfile2" id="AJ2-x1-Skb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Iui-Xp-cvt"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrJ-ga-epg" userLabel="First Responder" sceneMemberID="firstResponder"/>
