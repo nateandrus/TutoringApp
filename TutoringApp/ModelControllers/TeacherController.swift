@@ -39,7 +39,7 @@ class TeacherController {
             let storage = Storage.storage().reference().child(userFirebaseUID)
             guard let uploadData = resizedImage.pngData() else { return }
             print(resizedImage.size)
-            storage.putData(uploadData, metadata: nil) { (metaData, error) in
+            storage.putData(uploadData, metadata: nil) {(metaData, error) in
                 if let error = error {
                     print("\(error.localizedDescription)🤬🤬🤬🤬🤬")
                     return
@@ -53,7 +53,7 @@ class TeacherController {
             }
         }
         
-        let newTeacher = Teacher(name: name, email: email, messages: messages, firebaseUID: userFirebaseUID, linkedINLink: linkedInLink, costForTime: costPerHour, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: profileImage, selfDocRef: docRef)
+        let newTeacher = Teacher(name: name, email: email, messages: messages, firebaseUID: userFirebaseUID, linkedINLink: linkedInLink, costForTime: costPerHour, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: nil, profileImageURL: userFirebaseUID, selfDocRef: docRef)
         
         Firestore.firestore().collection("teachers").document(userFirebaseUID).setData(newTeacher.dictionary) { err in
             if let error = err {
