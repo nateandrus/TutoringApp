@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseAuth
 
 class StudentController {
     
@@ -28,9 +29,11 @@ class StudentController {
             guard let authdata = authData else { completion(false); return }
             let studentUID = authdata.user.uid
             
-            let docRef = self.studentRef.document()
+            let docRef = self.studentRef.document(studentUID)
             
             let newStudent = Student(name: name, email: email, firebaseUID: studentUID, messageRefs: [], recentSearches: [], profileImage: nil, selfDocRef: docRef)
+            
+            self.currentUser = newStudent
             
             self.studentRef.document(studentUID).setData(newStudent.dictionary) { err in
                 if let err = err {
@@ -74,7 +77,73 @@ class StudentController {
         }
     }
     
-    func deleteStudent() {
+    func signOutStudent(completion: @escaping (Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            print("SUCCESS LOGGING OUT")
+            completion(true)
+        } catch let error {
+            print("Failed to log out with error, \(error.localizedDescription) ❌❌❌❌❌❌")
+            completion(false)
+        }
+    }
+    
+    func changeProfilePicture(userFirebaseUID: String, profileImage: UIImage?) {
+        if let image = profileImage {
+            let resizedImage = PhotoResizer.ResizeImage(image: image, targetSize: CGSize(width: 400, height: 400))
+            let storage = Storage.storage().reference().child(userFirebaseUID)
+            guard let uploadData = resizedImage.pngData() else { return }
+            print(resizedImage.size)
+            storage.putData(uploadData, metadata: nil) {(metaData, error) in
+                if let error = error {
+                    print("\(error.localizedDescription)🤬🤬🤬🤬🤬")
+                    return
+                }
+                storage.downloadURL(completion: {(url, error) in
+                    if let error = error {
+                        print("\(error.localizedDescription)🤬🤬🤬🤬🤬🤬")
+                        return
+                    }
+                })
+            }
+        }
+    }
+    
+    func updatePassword(email: String, completion: @escaping (Bool) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                print("FAILED TO SEND AN EMAIL TO THE USER \(error.localizedDescription) ❌❌❌❌❌❌")
+                completion(false)
+                return
+            } else {
+                print("SUCCESS SENDING THE EMAIL TO USER ✅✅✅✅✅✅")
+                completion(true)
+            }
+        }
+    }
+    
+//    func updateEmail(email: String, completion: @escaping (Bool) -> Void) {
+//        Auth.auth().currentUser?.updateEmail(to: email) { (error) in
+//            if let error = error {
+//                print("FAILED TO UPDATE USERS EMAIL \(error.localizedDescription) ❌❌❌❌❌❌")
+//                completion(false)
+//                return
+//            } else {
+//                print("SUCCESS UPDATING USERS EMAIL ✅✅✅✅✅✅")
+//                completion(true)
+//            }
+//        }
+//    }
+    
+    func deleteStudent(user: User, completion: @escaping (Bool) -> Void) {
+        
+        user.delete { (error) in
+            if let error = error {
+                print("THERE WAS AN ERROR DELETING THE USER \(error.localizedDescription) ❌❌❌❌❌❌")
+            } else {
+                print("SUCCESS DELETING USER ✅✅✅✅✅✅")
+            }
+        }
     }
     
     func addConnection() {
@@ -88,3 +157,4 @@ class StudentController {
     }
     
 }
+
