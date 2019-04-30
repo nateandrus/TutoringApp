@@ -71,6 +71,18 @@ class TeacherProfileViewController: UIViewController {
     var schedulePreference: [String] = []
     var meetingPreference: String = ""
     
+    var changedProfileImage: UIImage? {
+        didSet {
+            profileImage.image = changedProfileImage
+            guard let user = TeacherController.shared.currentUser, let newImage = changedProfileImage else { return }
+            TeacherController.shared.changeProfileImage(userFirebaseUID: user.firebaseUID, newImage: newImage) { (success) in
+                if success {
+                    print("Success uploading photo to firebase storage")
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         subjectsStackView.isHidden = true
@@ -82,6 +94,11 @@ class TeacherProfileViewController: UIViewController {
         
         guard let user = TeacherController.shared.currentUser
             else { return }
+        TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
+            guard let image = image else { return }
+            self.profileImage.image = image
+        }
+        
         priceTextfield.text = user.costForTime
         meetingPreference = user.meetingPref
         nameLabel.text = user.name
@@ -322,7 +339,7 @@ class TeacherProfileViewController: UIViewController {
             })
         }
         let changeProfileImageAction = UIAlertAction(title: "Change profile image", style: .default) { (_) in
-            
+            self.presentImagePickerActionSheet()
         }
         let logoutAction = UIAlertAction(title: "Logout", style: .default) { (_) in
             TeacherController.shared.logoutTeacher(completion: { (success) in
@@ -815,5 +832,41 @@ class TeacherProfileViewController: UIViewController {
                 }
             }
         }
+    }
+}
+
+///MARK: - UIImagePickerDelegate
+extension TeacherProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        if let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            changedProfileImage = photo
+        }
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func presentImagePickerActionSheet() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        let actionSheet = UIAlertController(title: "Select a Photo", message: nil, preferredStyle: .actionSheet)
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            actionSheet.popoverPresentationController?.sourceView = self.view
+            actionSheet.popoverPresentationController?.sourceRect = CGRect(x: 50, y: self.view.frame.height - 100, width: self.view.frame.width - 100, height: 100)
+            actionSheet.addAction(UIAlertAction(title: "Photos", style: .default, handler: { (_) in
+                imagePickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
+                self.present(imagePickerController, animated: true, completion: nil)
+            }))
+        }
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            actionSheet.popoverPresentationController?.sourceView = self.view
+            actionSheet.popoverPresentationController?.sourceRect = CGRect(x: 50, y: self.view.frame.height - 100, width: self.view.frame.width - 100, height: 100)
+            actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (_) in
+                imagePickerController.sourceType = UIImagePickerController.SourceType.camera
+                self.present(imagePickerController, animated: true, completion: nil)
+            }))
+        }
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(actionSheet, animated: true)
     }
 }
