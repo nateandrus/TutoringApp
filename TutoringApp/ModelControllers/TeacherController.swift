@@ -32,7 +32,7 @@ class TeacherController {
     
     func createTeacher(name: String, email: String, location: String, messages: [DocumentReference], dateOfBirth: String, subjects: [String], costPerHour: String, schedulePreference: [String], meetingPreference: String, aboutMe: String, qualifications: String, linkedInLink: String, userFirebaseUID: String, profileImage: UIImage?, completion: @escaping (Bool) -> Void) {
         
-        let docRef = teacherRef.document()
+        let docRef = teacherRef.document(userFirebaseUID)
         
         if let image = profileImage {
             let resizedImage = PhotoResizer.ResizeImage(image: image, targetSize: CGSize(width: 400, height: 400))
@@ -84,12 +84,56 @@ class TeacherController {
         }
     }
     
-    func deleteTeacher() {
+    func updateTeacher(teacherDocRef: DocumentReference, subjects: [String], costPerHour: String, schedulePreference: [String], meetingPreference: String, aboutMe: String, qualifications: String, completion: @escaping (Bool) -> Void) {
         
+        let docData: [String: Any] = [
+            "subjects" : subjects,
+            "costPerHour" : costPerHour,
+            "schedulePreference" : schedulePreference,
+            "meetingPreference" : meetingPreference,
+            "aboutMe" : aboutMe,
+            "qualifications" : qualifications
+            ]
+        
+        teacherDocRef.updateData(docData) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(false)
+                return
+            } else {
+                completion(true)
+            }
+        }
+    }
+    
+    func deleteTeacher() {
+    }
+    
+    func logoutTeacher(completion: @escaping (Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            print("success logging out user!")
+            completion(true)
+            return
+        } catch {
+            print(error.localizedDescription)
+            completion(false)
+            return
+        }
+    }
+    
+    func changePassword(email: String, completion: @escaping (Bool) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(false)
+                return
+            }
+            completion(true)
+        }
     }
     
     func searchStudentWithID(withStudentID: DocumentReference, completion: @escaping (Student?) -> Void) {
-        
     }
     
 }

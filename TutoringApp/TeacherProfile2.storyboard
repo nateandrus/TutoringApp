@@ -48,29 +48,26 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TB6-mC-eVg">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="TB6-mC-eVg" secondAttribute="height" multiplier="1:1" id="MtS-V8-Hql"/>
+                                                            <constraint firstAttribute="height" constant="100" id="qIO-QT-Ss9"/>
+                                                        </constraints>
                                                     </imageView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="adT-w1-LYn">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="adT-w1-LYn">
                                                         <rect key="frame" x="108" y="0.0" width="274" height="100"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omd-UJ-0jF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name@name.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbj-N8-FOB">
-                                                                <rect key="frame" x="0.0" y="34.5" width="137.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="57" width="274" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIl-MD-MW0">
-                                                                <rect key="frame" x="0.0" y="69" width="123" height="31"/>
-                                                                <state key="normal" title="Change Password"/>
-                                                                <connections>
-                                                                    <action selector="changePasswordButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="p8f-NE-QgQ"/>
-                                                                </connections>
-                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -352,32 +349,16 @@
                                                                                             <action selector="tuesdayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="XjD-Jx-kQX"/>
                                                                                         </connections>
                                                                                     </button>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6P-mB-shd">
-                                                                                        <rect key="frame" x="0.0" y="100" width="50" height="50"/>
-                                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                                        <state key="normal" image="unchecked"/>
-                                                                                        <connections>
-                                                                                            <action selector="sundayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="AL4-OV-D8U"/>
-                                                                                        </connections>
-                                                                                    </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFW-6X-HKZ">
-                                                                                        <rect key="frame" x="0.0" y="150" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="100" width="50" height="50"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="wednesdayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="Gdb-UG-qiC"/>
                                                                                         </connections>
                                                                                     </button>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9an-zK-Tez">
-                                                                                        <rect key="frame" x="0.0" y="200" width="50" height="50"/>
-                                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                                        <state key="normal" image="unchecked"/>
-                                                                                        <connections>
-                                                                                            <action selector="saturdayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="I9G-L1-EnV"/>
-                                                                                        </connections>
-                                                                                    </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rE-X7-TEC">
-                                                                                        <rect key="frame" x="0.0" y="250" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="150" width="50" height="50"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
@@ -385,11 +366,27 @@
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pd4-qb-oe5">
-                                                                                        <rect key="frame" x="0.0" y="300" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="200" width="50" height="50"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="fridayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="BSo-OE-K9m"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9an-zK-Tez">
+                                                                                        <rect key="frame" x="0.0" y="250" width="50" height="50"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                                        <state key="normal" image="unchecked"/>
+                                                                                        <connections>
+                                                                                            <action selector="saturdayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="I9G-L1-EnV"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6P-mB-shd">
+                                                                                        <rect key="frame" x="0.0" y="300" width="50" height="50"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                                        <state key="normal" image="unchecked"/>
+                                                                                        <connections>
+                                                                                            <action selector="sundayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="AL4-OV-D8U"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                 </subviews>
@@ -576,6 +573,7 @@
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter text here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A8e-ze-q6U">
                                                                         <rect key="frame" x="0.0" y="28.5" width="382" height="128"/>
+                                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="382" id="8qp-Tm-ucr"/>
                                                                             <constraint firstAttribute="height" constant="128" id="XXu-tH-ngH"/>
@@ -615,6 +613,7 @@
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter text here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LCG-6b-Djy">
                                                                         <rect key="frame" x="4" y="28.5" width="374" height="128"/>
+                                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="374" id="Cpe-3x-BNs"/>
                                                                             <constraint firstAttribute="height" constant="128" id="jkA-l4-3Dw"/>
@@ -711,7 +710,6 @@
                         <outlet property="bothButton" destination="lXy-oa-KOI" id="zNl-xs-Tni"/>
                         <outlet property="businessManagementButton" destination="ZXM-Us-GK3" id="M67-WJ-ff9"/>
                         <outlet property="changeBiographyButton" destination="efi-GH-aki" id="Pnb-3G-kyv"/>
-                        <outlet property="changePasswordButton" destination="uIl-MD-MW0" id="5cz-Jb-8Kl"/>
                         <outlet property="changePreferencesButton" destination="z74-pP-mCB" id="0du-Bu-i30"/>
                         <outlet property="changeSubjectsButton" destination="dSo-Xa-cZb" id="w9N-9l-Msd"/>
                         <outlet property="economicsButton" destination="9vw-hu-JKc" id="kdC-ga-Fn3"/>
@@ -745,6 +743,7 @@
                         <outlet property="sundayAfternoonButton" destination="AwD-tD-a2F" id="Rh9-al-KDP"/>
                         <outlet property="sundayEveningButton" destination="aVh-JV-cFQ" id="vyS-nS-Nn7"/>
                         <outlet property="sundayMorningButton" destination="G6P-mB-shd" id="61z-Ns-5OA"/>
+                        <outlet property="teacherProfileScrollView" destination="sFT-XY-9Dc" id="YVE-9A-kcS"/>
                         <outlet property="thursdayAfternoonButton" destination="AJ6-zj-5ke" id="MHd-sb-c0G"/>
                         <outlet property="thursdayEveningButton" destination="5KK-g9-drp" id="0QC-eO-x0I"/>
                         <outlet property="thursdayMorningButton" destination="8rE-X7-TEC" id="Swc-sd-z4q"/>
