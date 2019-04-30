@@ -72,6 +72,7 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
         }
         
         let delete = UIAlertAction(title: "Delete Account", style: .destructive) { action in
+            self.deleteAlert()
             guard let user = Auth.auth().currentUser else { return }
             StudentController.shared.deleteStudent(user: user, completion: { (success) in
                 if success {
@@ -80,25 +81,24 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
             })
         }
         
-        //        let changeEmail = UIAlertAction(title: "Change Email", style: .default) { action in
-        //            guard let user = StudentController.shared.currentUser else { return }
-        //            StudentController.shared.updateEmail(email: user.email, completion: { (success) in
-        //                if success {
-        //                    print("SUCCESS SENDING UPDATE EMAIL VERIFICATION ✅✅✅✅✅✅")
-        //                } else {
-        //                    print("FAILED SENDING UPDATE EMAIL VERIFICATION ❌❌❌❌❌❌")
-        //                }
-        //            })
-        //        }
-        
         actionSheet.addAction(changePassword)
         actionSheet.addAction(changeProfilePicture)
         actionSheet.addAction(logOut)
         actionSheet.addAction(delete)
         actionSheet.addAction(cancel)
-        //actionSheet.addAction(changeEmail)
         
         present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func deleteAlert() {
+        let alert = UIAlertController(title: "Confirm Deletion", message: "Are you sure you want to delete your account?", preferredStyle: .alert)
+        let confirmDelete = UIAlertAction(title: "Delete", style: .destructive, handler: nil)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(confirmDelete)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true)
     }
     
     @IBAction func changeProfilePictureButtonTapped(_ sender: Any) {
@@ -115,9 +115,11 @@ extension StudentProfileViewController { //UIImagePickerControllerDelegate, UINa
             profileImage = photo
         }
     }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
     func presentImagePickerActionSheet() {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
