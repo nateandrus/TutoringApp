@@ -49,14 +49,57 @@ class StudentHomeViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toSoftwareEngineer" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "Software Development"
+        }
+        if segue.identifier == "toAccounting" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "Accounting"
+        }
+        if segue.identifier == "toPython" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "Python"
+        }
+        if segue.identifier == "toMarketing" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "Marketing"
+        }
+        if segue.identifier == "toEconomics" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "Economics"
+        }
+        if segue.identifier == "toEntrepreneurship" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "Entrepreneurship"
+        }
+        if segue.identifier == "toWebDevelopment" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "Web Development"
+        }
+        if segue.identifier == "toUXDesign" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "UX Design"
+        }
+        if segue.identifier == "toBusinessManagement" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "Business Management"
+        }
+        if segue.identifier == "toProductManagement" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "Product Management"
+        }
+        if segue.identifier == "toJavascript" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "Javascript"
+        }
+        if segue.identifier == "toIOSDevelopment" {
+            let destinationVC = segue.destination as? StudentSearchTableViewController
+            destinationVC?.subject = "iOS Development"
+        }
     }
-    */
-
 }

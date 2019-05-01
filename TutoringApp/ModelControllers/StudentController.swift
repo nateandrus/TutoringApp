@@ -19,6 +19,9 @@ class StudentController {
     
     var currentUser: Student?
     
+    //Source of Truth
+    var searchResults: [Teacher] = []
+    
     func createStudent(name: String, email: String, password: String, messages: [DocumentReference], completion: @escaping (Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (authData, error) in
             if let error = error {
@@ -122,18 +125,18 @@ class StudentController {
         }
     }
     
-//    func updateEmail(email: String, completion: @escaping (Bool) -> Void) {
-//        Auth.auth().currentUser?.updateEmail(to: email) { (error) in
-//            if let error = error {
-//                print("FAILED TO UPDATE USERS EMAIL \(error.localizedDescription) ❌❌❌❌❌❌")
-//                completion(false)
-//                return
-//            } else {
-//                print("SUCCESS UPDATING USERS EMAIL ✅✅✅✅✅✅")
-//                completion(true)
-//            }
-//        }
-//    }
+    //    func updateEmail(email: String, completion: @escaping (Bool) -> Void) {
+    //        Auth.auth().currentUser?.updateEmail(to: email) { (error) in
+    //            if let error = error {
+    //                print("FAILED TO UPDATE USERS EMAIL \(error.localizedDescription) ❌❌❌❌❌❌")
+    //                completion(false)
+    //                return
+    //            } else {
+    //                print("SUCCESS UPDATING USERS EMAIL ✅✅✅✅✅✅")
+    //                completion(true)
+    //            }
+    //        }
+    //    }
     
     func deleteStudent(user: User, student: Student, completion: @escaping (Bool) -> Void) {
         
@@ -157,8 +160,37 @@ class StudentController {
         }
     }
     
-    func searchTeacherWithID(withTeacherID: DocumentReference, completion: @escaping (Student?) -> Void) {
-        
+    func searchTeacherWithID(searchTerm: String, completion: @escaping ([Teacher]?) -> Void) {
+        Firestore.firestore().collection("teachers").whereField("name", isEqualTo: searchTerm).getDocuments { (snapshots, error) in
+            if let error = error {
+                print("THERE WAS AN ERROR SEARCHING FOR USER ❌❌❌❌❌❌")
+                completion(nil)
+                return
+            }
+            self.searchResults.removeAll()
+            
+            for document in snapshots!.documents {
+                guard let teacher = Teacher(dictionary: document.data()) else { return }
+                self.searchResults.append(teacher)
+            }
+        }
+    }
+    
+    func searchBySubject(subject: String, completion: @escaping (Bool) -> Void) {
+        Firestore.firestore().collection("teachers").whereField("subjects", arrayContains: subject).getDocuments { (snapshots, error) in
+            if let error = error {
+                print("THERE WAS AN ERROR SEARCHING FOR USER ❌❌❌❌❌❌")
+                completion(false)
+                return
+            }
+            self.searchResults.removeAll()
+            
+            for document in snapshots!.documents {
+                guard let teacher = Teacher(dictionary: document.data()) else { return }
+                self.searchResults.append(teacher)
+            }
+            completion(true)
+        }
     }
     
     func changeProfileImage(userFirebaseUID: String, newImage: UIImage, completion: @escaping (Bool) -> Void) {
@@ -206,3 +238,29 @@ class StudentController {
     
 }
 
+//po StudentController.shared.searchResults
+//▿ 1 element
+//    ▿ 0 : Teacher
+//- name : "johnny"
+//- email : "johnnyyy@gmail.com"
+//▿ messages : Optional<Array<FIRDocumentReference>>
+//- some : 0 elements
+//- firebaseUID : "gK8ihhAttlPOYWaOMtTed0DoZfu1"
+//▿ linkedINLink : Optional<String>
+//- some : "www.linkedin.com/johnnyyyyy"
+//- costForTime : "33"
+//- qualifications : "How goes it qualificationssssssssss"
+//- location : "highland, Utah "
+//- dateOfBirth : "may "
+//▿ subjects : 2 elements
+//- 0 : "Accounting"
+//- 1 : "Entrepreneurship"
+//▿ schedulePref : 2 elements
+//- 0 : "FridayAfternoon"
+//- 1 : "MondayEvening"
+//- meetingPref : "Both"
+//- aboutMe : "This is an about you johnnnnyyyyyy boy \t"
+//- profileImage : nil
+//▿ profileImageURL : Optional<String>
+//- some : "gK8ihhAttlPOYWaOMtTed0DoZfu1"
+//- selfDocRef : <FIRDocumentReference: 0x6000032e3ee0>
