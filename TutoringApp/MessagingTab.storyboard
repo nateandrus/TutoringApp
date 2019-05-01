@@ -118,7 +118,7 @@
         <!--(who?)-->
         <scene sceneID="ja1-Aq-Pxt">
             <objects>
-                <viewController id="Zeb-g0-eaL" customClass="MessageDetailViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="messagingScreen" id="Zeb-g0-eaL" customClass="MessageDetailViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eR8-Nt-vEh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
