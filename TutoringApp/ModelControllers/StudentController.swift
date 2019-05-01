@@ -135,25 +135,73 @@ class StudentController {
 //        }
 //    }
     
-    func deleteStudent(user: User, completion: @escaping (Bool) -> Void) {
+    func deleteStudent(user: User, student: Student, completion: @escaping (Bool) -> Void) {
         
         user.delete { (error) in
             if let error = error {
                 print("THERE WAS AN ERROR DELETING THE USER \(error.localizedDescription) ❌❌❌❌❌❌")
+                completion(false)
+                return
             } else {
-                print("SUCCESS DELETING USER ✅✅✅✅✅✅")
+                student.selfDocRef.delete(completion: { (error) in
+                    if let error = error {
+                        print("THERE WAS AN ERROR DELETING THE USER \(error.localizedDescription) ❌❌❌❌❌❌")
+                        completion(false)
+                        return
+                    } else {
+                        print("SUCCESS DELETING USER ✅✅✅✅✅✅")
+                        completion(true)
+                    }
+                })
             }
         }
     }
     
-    func addConnection() {
-    }
-    
-    func removeConnection() {
-    }
-    
     func searchTeacherWithID(withTeacherID: DocumentReference, completion: @escaping (Student?) -> Void) {
         
+    }
+    
+    func changeProfileImage(userFirebaseUID: String, newImage: UIImage, completion: @escaping (Bool) -> Void) {
+        
+        let docData: [String: Any] = [
+            "profileImage" : userFirebaseUID
+        ]
+        let resizedImage = PhotoResizer.ResizeImage(image: newImage, targetSize: CGSize(width: 400, height: 400))
+        let storage = Storage.storage().reference().child(userFirebaseUID)
+        guard let uploadData = resizedImage.pngData() else { return }
+        print(resizedImage.size)
+        storage.putData(uploadData, metadata: nil) {(metaData, error) in
+            if let error = error {
+                print("\(error.localizedDescription)🤬🤬🤬🤬🤬")
+                completion(false)
+                return
+            } else {
+                self.studentRef.document(userFirebaseUID).updateData(docData, completion: { (error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                        completion(false)
+                        return
+                    } else {
+                        completion(true)
+                    }
+                })
+            }
+        }
+    }
+    
+    func loadProfileImageView(userFirebaseUID: String, completion: @escaping (UIImage?) -> Void) {
+        let urlReference = Storage.storage().reference().child(userFirebaseUID)
+        urlReference.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
+            if let error = error {
+                print("Error fetching image from URL :: \(error.localizedDescription)💩💩💩💩💩💩")
+                completion(nil)
+                return
+            }
+            guard let data = data else { return }
+            let image = UIImage(data: data)
+            completion(image)
+            return
+        }
     }
     
 }
