@@ -13,7 +13,19 @@ class StudentSearchTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var introLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
 
+    var teacher: Teacher? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    func updateViews() {
+        guard let teacher = teacher else { return }
+        nameLabel.text = teacher.name
+        locationLabel.text = teacher.location
+        priceLabel.text = "$\(teacher.costForTime)/hr"
+    }
+    
 }

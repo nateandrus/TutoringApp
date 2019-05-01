@@ -43,7 +43,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" id="ebm-fa-7Ak"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toBusinessManagement" id="ebm-fa-7Ak"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUP-a9-aiQ">
@@ -53,7 +53,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" id="nld-89-a8R"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toAccounting" id="nld-89-a8R"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1g-Eb-2xa">
@@ -63,7 +63,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="" id="NBm-Ut-xKn"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toMarketing" id="NBm-Ut-xKn"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -81,7 +81,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="" id="pu1-L8-CxS"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toProductManagement" id="pu1-L8-CxS"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncP-9K-Qgf">
@@ -91,7 +91,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" id="LSq-Dd-0dx"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toEntrepreneurship" id="LSq-Dd-0dx"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJ9-Sg-evX">
@@ -101,7 +101,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" id="g7N-N3-Rcm"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toEconomics" id="g7N-N3-Rcm"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -124,7 +124,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" id="FT8-ym-AlU"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toWebDevelopment" id="FT8-ym-AlU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRL-NI-eUU">
@@ -134,7 +134,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" id="mSz-JF-jIs"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toUXDesign" id="mSz-JF-jIs"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3if-BR-tsF">
@@ -144,7 +144,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" id="um8-5F-gVL"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toIOSDevelopment" id="um8-5F-gVL"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -162,7 +162,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" id="EMU-jb-KqU"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toJavascript" id="EMU-jb-KqU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ir-MU-BHy">
@@ -172,7 +172,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" id="2tg-NH-JeT"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toPython" id="2tg-NH-JeT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ioq-QB-qD8">
@@ -182,7 +182,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Xys-HD-yL4" kind="show" id="xID-uq-UIc"/>
+                                                    <segue destination="Xys-HD-yL4" kind="show" identifier="toSoftwareEngineer" id="xID-uq-UIc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -287,7 +287,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="127" id="bO4-eK-HrW" customClass="StudentSearchTableViewCell" customModule="TutoringApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teacherCell" rowHeight="127" id="bO4-eK-HrW" customClass="StudentSearchTableViewCell" customModule="TutoringApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="127"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bO4-eK-HrW" id="HU3-8m-Akd">
@@ -544,19 +544,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kds-hS-GWj">
                                                 <rect key="frame" x="8" y="132" width="398" height="202.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJE-7j-d1g">
-                                                        <rect key="frame" x="162" y="0.0" width="74.5" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="About me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJE-7j-d1g">
+                                                        <rect key="frame" x="162" y="0.0" width="74.5" height="174"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hHd-pQ-GJO">
-                                                        <rect key="frame" x="0.0" y="28.5" width="398" height="174"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="About Me Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZ7-rZ-rLt">
+                                                        <rect key="frame" x="139" y="182" width="120.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="202.5" id="yc1-zs-5vZ"/>
@@ -565,19 +564,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U9c-gQ-HLV">
                                                 <rect key="frame" x="8" y="358.5" width="398" height="211.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qualifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wf-I5-0FE">
-                                                        <rect key="frame" x="147" y="0.0" width="104" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Qualifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wf-I5-0FE">
+                                                        <rect key="frame" x="147" y="0.0" width="104" height="183"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RUP-n3-oEK">
-                                                        <rect key="frame" x="0.0" y="28.5" width="398" height="183"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Qualifications Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSP-ah-sZr">
+                                                        <rect key="frame" x="124" y="191" width="150" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="211.5" id="XO0-EW-AxL"/>
@@ -638,7 +636,7 @@
                     </view>
                     <size key="freeformSize" width="414" height="1100"/>
                     <connections>
-                        <outlet property="aboutMeTextView" destination="hHd-pQ-GJO" id="UaL-I9-T9s"/>
+                        <outlet property="aboutMeLabel" destination="xZ7-rZ-rLt" id="hEx-QU-2pH"/>
                         <outlet property="fridayTimeLabel" destination="1ny-94-7WD" id="Xiu-At-pe7"/>
                         <outlet property="linkedInLabel" destination="adw-7F-7p7" id="D31-7g-oNe"/>
                         <outlet property="locationLabel" destination="bVM-pe-KQj" id="WFL-Mz-Yhk"/>
@@ -646,7 +644,7 @@
                         <outlet property="nameLabel" destination="JSV-PI-fLd" id="KwQ-2q-bCu"/>
                         <outlet property="priceLabel" destination="jHS-GJ-903" id="A3a-gK-hPu"/>
                         <outlet property="profileImage" destination="8zm-as-dAr" id="cjc-DY-ebx"/>
-                        <outlet property="qualificationsTextView" destination="RUP-n3-oEK" id="MJY-sb-z4a"/>
+                        <outlet property="qualificationsLabel" destination="kSP-ah-sZr" id="eAA-St-bF4"/>
                         <outlet property="saturdayTimeLabel" destination="0Ya-tW-gws" id="D8q-DC-H1j"/>
                         <outlet property="sendMessageButton" destination="ymh-Js-zU1" id="djS-Kd-bTh"/>
                         <outlet property="sundayTimeLabel" destination="sA8-0a-C7q" id="jXS-YN-VLe"/>
@@ -680,6 +678,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pu1-L8-CxS"/>
+        <segue reference="um8-5F-gVL"/>
     </inferredMetricsTieBreakers>
 </document>
