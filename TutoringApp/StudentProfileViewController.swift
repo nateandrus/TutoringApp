@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 
 class StudentProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var studentProfilePicture: UIImageView!
     @IBOutlet weak var studentNameLabel: UILabel!
     @IBOutlet weak var studentEmailLabel: UILabel!
@@ -19,6 +19,12 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
     var profileImage: UIImage? {
         didSet {
             studentProfilePicture.image = profileImage
+            guard let user = StudentController.shared.currentUser, let newImage = profileImage else { return }
+            StudentController.shared.changeProfileImage(userFirebaseUID: user.firebaseUID, newImage: newImage) { (success) in
+                if success {
+                    print("Success uploading photo to firebase storage")
+                }
+            }
         }
     }
     
@@ -27,18 +33,22 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
         guard let currentUser = StudentController.shared.currentUser else { return }
         studentNameLabel.text = currentUser.name
         studentEmailLabel.text = currentUser.email
+        StudentController.shared.loadProfileImageView(userFirebaseUID: currentUser.firebaseUID) { (image) in
+            guard let image = image else { return }
+            self.studentProfilePicture.image = image
+        }
         // Do any additional setup after loading the view.
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     @IBAction func settingsButtonTapped(_ sender: Any) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
@@ -73,10 +83,12 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
         
         let delete = UIAlertAction(title: "Delete Account", style: .destructive) { action in
             self.deleteAlert()
-            guard let user = Auth.auth().currentUser else { return }
-            StudentController.shared.deleteStudent(user: user, completion: { (success) in
+            guard let user = Auth.auth().currentUser,
+                let student = StudentController.shared.currentUser else { return }
+            
+            StudentController.shared.deleteStudent(user: user, student: student, completion: { (success) in
                 if success {
-                    print("SUCCESS ✅✅✅✅✅✅")
+                    print("SUCCESS DELETING USER ✅✅✅✅✅✅")
                 }
             })
         }
