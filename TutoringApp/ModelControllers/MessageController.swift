@@ -19,8 +19,21 @@ class MessageController {
         
     }
     
+    func addMessageToChat(chatRef: DocumentReference, message: Message, completion: @escaping (Bool) -> Void) {
+        let messageRef = chatRef.collection("messages").document()
+        chatRef.collection("messages").document("\(messageRef)").setData(message.dictionary) { (error) in
+            if let error = error {
+                print("Error saving message to chat:: \(error.localizedDescription)")
+                completion(false)
+                return
+            } else {
+                completion(true)
+            }
+        }
+    }
+    
     func isFromCurrentSender(message: Message) -> Bool {
-        if message.fromUserID == Auth.auth().currentUser?.uid {
+        if message.sender.id == Auth.auth().currentUser?.uid {
             return true
         } else {
             return false

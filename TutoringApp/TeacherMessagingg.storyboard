@@ -38,23 +38,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" textLabel="Pxv-nF-h3K" rowHeight="88" style="IBUITableViewCellStyleDefault" id="TUU-eE-mmw">
-                                <rect key="frame" x="0.0" y="28" width="414" height="88"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="111" id="TUU-eE-mmw" customClass="TeacherMessagingTableViewCell" customModule="TutoringApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TUU-eE-mmw" id="p15-6X-fNv">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="87.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="110.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="(StudentWithChat)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pxv-nF-h3K">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="87.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wf9-P6-UVI">
+                                            <rect key="frame" x="16" y="5.5" width="99.5" height="99.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="wf9-P6-UVI" secondAttribute="height" multiplier="1:1" id="gVB-Tt-N7s"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-ay-XSL">
+                                            <rect key="frame" x="131.5" y="5.5" width="66" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(last message)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1l-kw-tkK">
+                                            <rect key="frame" x="131.5" y="45" width="246.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(timestamp)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FC-1k-UVY">
+                                            <rect key="frame" x="304" y="5.5" width="94" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6FC-1k-UVY" firstAttribute="top" secondItem="wf9-P6-UVI" secondAttribute="top" id="7f4-wu-Fq5"/>
+                                        <constraint firstItem="ChX-ay-XSL" firstAttribute="top" secondItem="wf9-P6-UVI" secondAttribute="top" id="9i7-sh-uB7"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="i1l-kw-tkK" secondAttribute="trailing" constant="16" id="BDE-2J-S6O"/>
+                                        <constraint firstItem="wf9-P6-UVI" firstAttribute="leading" secondItem="p15-6X-fNv" secondAttribute="leading" constant="16" id="CSA-Qc-NRB"/>
+                                        <constraint firstItem="i1l-kw-tkK" firstAttribute="leading" secondItem="ChX-ay-XSL" secondAttribute="leading" id="Fq8-Ok-8Js"/>
+                                        <constraint firstAttribute="trailing" secondItem="6FC-1k-UVY" secondAttribute="trailing" constant="16" id="IXC-lT-voQ"/>
+                                        <constraint firstItem="wf9-P6-UVI" firstAttribute="centerY" secondItem="p15-6X-fNv" secondAttribute="centerY" id="SsQ-A9-BYa"/>
+                                        <constraint firstItem="i1l-kw-tkK" firstAttribute="centerY" secondItem="p15-6X-fNv" secondAttribute="centerY" id="h9F-yn-wBK"/>
+                                        <constraint firstItem="wf9-P6-UVI" firstAttribute="height" secondItem="p15-6X-fNv" secondAttribute="height" multiplier="0.9" id="mNH-GY-I9W"/>
+                                        <constraint firstItem="ChX-ay-XSL" firstAttribute="leading" secondItem="wf9-P6-UVI" secondAttribute="trailing" constant="16" id="wen-E7-jMD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="lastMessageLabel" destination="i1l-kw-tkK" id="c5I-1Y-aUE"/>
+                                    <outlet property="messageImageView" destination="wf9-P6-UVI" id="Ysj-x1-G5o"/>
+                                    <outlet property="nameLabel" destination="ChX-ay-XSL" id="CFZ-oi-nY8"/>
+                                    <outlet property="timestampLabel" destination="6FC-1k-UVY" id="TnO-DC-eiy"/>
                                     <segue destination="vAF-Hu-m50" kind="show" identifier="toMessageDetail" id="zg9-8b-SK9"/>
                                 </connections>
                             </tableViewCell>

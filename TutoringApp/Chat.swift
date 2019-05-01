@@ -11,32 +11,32 @@ import Firebase
 
 struct Chat {
     
-    let id: String?
     let studentID: DocumentReference
-    let tutorID: DocumentReference
+    let teacherID: DocumentReference
     let documentRef: DocumentReference
     let messages: CollectionReference
-    
+        
     init(studentID: DocumentReference, tutorID: DocumentReference, documentRef: DocumentReference) {
-        id = nil
         self.studentID = studentID
-        self.tutorID = tutorID
+        self.teacherID = tutorID
         self.documentRef = documentRef
         self.messages = documentRef.collection("messages")
     }
     
-    init?(document: QueryDocumentSnapshot) {
-        let data = document.data()
-        guard let studentID = data["studentID"] as? DocumentReference,
-        let tutorID = data["tutorID"] as? DocumentReference,
-        let documentRef = data["documentRef"] as? DocumentReference,
-        let messages = data["messages"] as? CollectionReference
-        else {
-            return nil
-        }
-        id = document.documentID
+}
+
+extension Chat {
+    
+    init?(from snapshot: DocumentSnapshot) {
+        let snapshot = snapshot.data()
+        
+        guard let studentID = snapshot?["studentID"] as? DocumentReference,
+            let teacherID = snapshot?["teacherID"] as? DocumentReference,
+            let documentRef = snapshot?["documentRef"] as? DocumentReference,
+            let messages = snapshot?["messages"] as? CollectionReference
+            else { return nil }
         self.studentID = studentID
-        self.tutorID = tutorID
+        self.teacherID = teacherID
         self.documentRef = documentRef
         self.messages = messages
     }
@@ -44,6 +44,6 @@ struct Chat {
 
 extension Chat: Equatable {
     static func == (lhs: Chat, rhs: Chat) -> Bool {
-        return lhs.id == rhs.id
+        return lhs.documentRef == rhs.documentRef
     }
 }

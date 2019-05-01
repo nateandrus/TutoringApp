@@ -11,50 +11,41 @@ import MessageKit
 
 class MainMessagingTableViewController: UITableViewController {
     
-    @IBOutlet weak var popoverTableView: UITableView!
-    @IBOutlet var popoverView: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func addChatButtonTapped(_ sender: UIBarButtonItem) {
-        self.view.addSubview(popoverView)
-        self.popoverView.layer.cornerRadius = 20
-        self.popoverView.center = self.view.center
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let user = StudentController.shared.currentUser else { return }
+        if user.messageRefs.count == 0 {
+            noChatsAlertController()
+        } else {
+            ChatController.shared.fetchChats(student: user) { (success) in
+                if success {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
-    @IBAction func popoverCancelButtonTapped(_ sender: UIButton) {
-        self.popoverView.removeFromSuperview()
+    func noChatsAlertController() {
+        let alertController = UIAlertController(title: "You do not have any chats!", message: "To start a chat find a tutor on the home tab and send them a message!", preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(okayAction)
+        present(alertController, animated: true)
     }
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if tableView == popoverTableView {
-//            guard let connections = StudentController.shared.currentUser?.connections else { return 0 }
-//            return connections.count
-//        } else {
-            return ChatController.shared.chats.count
-//        }
+        return ChatController.shared.chats.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if tableView == popoverTableView {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "connectionCell", for: indexPath)
-//            cell.textLabel?.text = StudentController.shared.currentUser?.connections[indexPath.row]
-//            return cell
-//        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath)
-            let index = ChatController.shared.chats[indexPath.row]
-            
-            return cell
-//        }
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tableView == popoverTableView {
-            //start new chat with the person that was selected
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as? StudentMessagingTableViewCell
+        let chat = ChatController.shared.chats[indexPath.row]
+        cell?.chatLanding = chat
+        return cell ?? UITableViewCell()
     }
     
     // MARK: - Navigation
@@ -64,6 +55,7 @@ class MainMessagingTableViewController: UITableViewController {
                 if let destinationVC = segue.destination as? MessageDetailViewController {
                     let chatToSend = ChatController.shared.chats[index.row]
                     destinationVC.chatLanding = chatToSend
+                    destinationVC.fromChat = true
                 }
             }
         }
