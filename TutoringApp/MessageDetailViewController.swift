@@ -9,9 +9,9 @@
 import UIKit
 import MessageKit
 
-class MessageDetailViewController: UIViewController {
+class MessageDetailViewController: MessagesViewController {
 
-    @IBOutlet weak var messagesCollectionView: UICollectionView!
+//    @IBOutlet weak var messagesCollectionView: UICollectionView!
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var bottomTextFieldConstraint: NSLayoutConstraint!
     
@@ -21,15 +21,17 @@ class MessageDetailViewController: UIViewController {
             
         }
     }
+    var teacherLanding: Teacher?
+    var fromChat: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        messagesCollectionView.delegate = self
-        messagesCollectionView.dataSource = self
+        messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messagesLayoutDelegate = self
+        messagesCollectionView.messagesDisplayDelegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(MessageDetailViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MessageDetailViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(UIResponder.keyboardWillShowNotification)
@@ -44,7 +46,6 @@ class MessageDetailViewController: UIViewController {
             self.view.frame.origin.y -= keyboardSize.height - tabBarController!.tabBar.frame.height
         }
     }
-    
     @objc func keyboardWillHide(_ notification:Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             print("Will Hide")
@@ -55,24 +56,37 @@ class MessageDetailViewController: UIViewController {
         }
     }
     
-    
     @IBAction func messageSendButtonTapped(_ sender: UIButton) {
-        
+        if fromChat == false {
+            guard let messageText = messageTextField.text, !messageText.isEmpty, let teacher = teacherLanding, let currentStudent = StudentController.shared.currentUser else { return }
+            let sender = Sender(id: currentStudent.firebaseUID, displayName: currentStudent.name)
+            let uuid = UUID().uuidString
+            let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(messageText))
+            
+            ChatController.shared.createChat(teacherDocRef: teacher.selfDocRef, studentDocRef: currentStudent.selfDocRef, message: message) { (success) in
+                if success {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        } else {
+            guard let chat = chatLanding, let messageText = messageTextField.text, !messageText.isEmpty, let user = StudentController.shared.currentUser else { return }
+            let sender = Sender(id: user.firebaseUID, displayName: user.name)
+            let uuid = UUID().uuidString
+            let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(messageText))
+            
+            MessageController.shared.addMessageToChat(chatRef: chat.documentRef, message: message) { (success) in
+                if success {
+                    MessageController.shared.messages.append(message)
+                    let index = MessageController.shared.messages.count - 1
+                    let indexPath = IndexPath(item: index, section: 0)
+                    self.messagesCollectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
+                }
+            }
+        }
     }
 }
 
-extension MessageDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "messageCell", for: indexPath)
-        
-        return cell
-    }
-}
-
+//MARK: - MessageDisplayDelegate
 extension MessageDetailViewController: MessagesDisplayDelegate {
     private func backgroundColor(for message: Message, at indexPath: IndexPath,
                          in messagesCollectionView: MessagesCollectionView) -> UIColor {
@@ -91,7 +105,6 @@ extension MessageDetailViewController: MessagesDisplayDelegate {
         return .bubbleTail(corner, .curved)
     }
 }
-
 
 // MARK: - MessagesLayoutDelegate
 extension MessageDetailViewController: MessagesLayoutDelegate {
@@ -112,51 +125,37 @@ extension MessageDetailViewController: MessagesLayoutDelegate {
     }
 }
 
-//// MARK: - MessagesDataSource
-//extension MessageDetailViewController: MessagesDataSource {
-//
-//    func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-//        return 1
-//    }
-//
-//    func currentSender() -> Sender {
-//        return Sender(id: user.uid, displayName: AppSettings.displayName)
-//    }
-//
-//    func numberOfMessages(in messagesCollectionView: MessagesCollectionView) -> Int {
-//        return messages.count
-//    }
-//
-//    func messageForItem(at indexPath: IndexPath,
-//                        in messagesCollectionView: MessagesCollectionView) -> MessageType {
-//
-//        return messages[indexPath.section]
-//    }
-//
-//    func cellTopLabelAttributedText(for message: MessageType,
-//                                    at indexPath: IndexPath) -> NSAttributedString? {
-//
-//        let name = message.sender.displayName
-//        return NSAttributedString(
-//            string: name,
-//            attributes: [
-//                .font: UIFont.preferredFont(forTextStyle: .caption1),
-//                .foregroundColor: UIColor(white: 0.3, alpha: 1)
-//            ]
-//        )
-//    }
-//}
+// MARK: - MessagesDataSource
+extension MessageDetailViewController: MessagesDataSource {
 
+    func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
+        return 1
+    }
 
+    func currentSender() -> Sender {
+        return Sender(id: StudentController.shared.currentUser!.firebaseUID, displayName: StudentController.shared.currentUser!.name)
+    }
 
+    func numberOfMessages(in messagesCollectionView: MessagesCollectionView) -> Int {
+        return MessageController.shared.messages.count
+    }
 
-//// MARK: - MessageInputBarDelegate
-//extension MessageDetailViewController: MessageInputBarDelegate {
-//
-//    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-//
-//        let message = Message(user: user, content: text)
-//        save(message)
-//        inputBar.inputTextView.text = ""
-//    }
-//}
+    func messageForItem(at indexPath: IndexPath,
+                        in messagesCollectionView: MessagesCollectionView) -> MessageType {
+
+        return MessageController.shared.messages[indexPath.row]
+    }
+
+    func cellTopLabelAttributedText(for message: MessageType,
+                                    at indexPath: IndexPath) -> NSAttributedString? {
+
+        let name = message.sender.displayName
+        return NSAttributedString(
+            string: name,
+            attributes: [
+                .font: UIFont.preferredFont(forTextStyle: .caption1),
+                .foregroundColor: UIColor(white: 0.3, alpha: 1)
+            ]
+        )
+    }
+}

@@ -7,31 +7,32 @@
 //
 
 import Foundation
+import MessageKit
 
-struct Message {
+struct Message: MessageType {
     
-    let messageText: String
-    let fromUserID: String
-    let timestamp: Double
-    let senderName: String
+    var sender: Sender
+    var messageId: String
+    var sentDate: Date
+    var kind: MessageKind
     
     var dictionary: [String: Any] {
         return [
-            "messageText" : messageText,
-            "fromUserID" : fromUserID,
-            "timestamp" : timestamp,
-            "senderName" : senderName
+            "sender" : sender,
+            "messageID" : messageId,
+            "sentDate" : sentDate,
+            "kind" : kind
         ]
     }
 }
 
 extension Message {
     init?(dictionary: [String: Any]) {
-        guard let messageText = dictionary["messageText"] as? String,
-            let fromUserID = dictionary["fromUserID"] as? String,
-            let timestamp = dictionary["timestamp"] as? Double,
-            let senderName = dictionary["senderName"] as? String
+        guard let messageID = dictionary["messageID"] as? String,
+            let sender = dictionary["sender"] as? Sender,
+            let sentDate = dictionary["sentDate"] as? Date,
+            let kind = dictionary["kind"] as? MessageKind
             else { return nil }
-        self.init(messageText: messageText, fromUserID: fromUserID, timestamp: timestamp, senderName: senderName)
+        self.init(sender: sender, messageId: messageID, sentDate: sentDate, kind: kind)
     }
 }

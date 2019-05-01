@@ -25,14 +25,16 @@
 		ED8AA39C227784F900C477AF /* TeacherMessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39B227784F900C477AF /* TeacherMessageDetailViewController.swift */; };
 		ED8AA39E2277851100C477AF /* TeacherMessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39D2277851100C477AF /* TeacherMessagingTableViewController.swift */; };
 		ED8AA3A02277B10C00C477AF /* PhotoResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */; };
+		ED8AA3A22279F78400C477AF /* TeacherMessagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA3A12279F78400C477AF /* TeacherMessagingTableViewCell.swift */; };
+		ED8AA3A4227A0B3A00C477AF /* StudentMessagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA3A3227A0B3A00C477AF /* StudentMessagingTableViewCell.swift */; };
 		EDCDC009226E391D007051E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC008226E391C007051E3 /* GoogleService-Info.plist */; };
 		EDCDC00B226E3A76007051E3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00A226E3A76007051E3 /* Student.swift */; };
 		EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00C226E3A82007051E3 /* Teacher.swift */; };
 		EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00E226E3A93007051E3 /* StudentController.swift */; };
 		EDCDC011226E3A9C007051E3 /* TeacherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC010226E3A9C007051E3 /* TeacherController.swift */; };
 		EDCDC021226E3D52007051E3 /* MessagingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */; };
-		EDD3053B2272605700F19A20 /* TeacherMessagingg.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD3053A2272605700F19A20 /* TeacherMessagingg.storyboard */; };
 		EDD305392272602C00F19A20 /* TeacherProfile2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD305382272602C00F19A20 /* TeacherProfile2.storyboard */; };
+		EDD3053B2272605700F19A20 /* TeacherMessagingg.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD3053A2272605700F19A20 /* TeacherMessagingg.storyboard */; };
 		EDD3055722739BE500F19A20 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3054F22739BE400F19A20 /* PreferencesViewController.swift */; };
 		EDD3055822739BE500F19A20 /* MainLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3055022739BE500F19A20 /* MainLoginViewController.swift */; };
 		EDD3055922739BE500F19A20 /* DriversLicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3055122739BE500F19A20 /* DriversLicenseViewController.swift */; };
@@ -67,14 +69,16 @@
 		ED8AA39B227784F900C477AF /* TeacherMessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMessageDetailViewController.swift; sourceTree = "<group>"; };
 		ED8AA39D2277851100C477AF /* TeacherMessagingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMessagingTableViewController.swift; sourceTree = "<group>"; };
 		ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResizer.swift; sourceTree = "<group>"; };
+		ED8AA3A12279F78400C477AF /* TeacherMessagingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMessagingTableViewCell.swift; sourceTree = "<group>"; };
+		ED8AA3A3227A0B3A00C477AF /* StudentMessagingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMessagingTableViewCell.swift; sourceTree = "<group>"; };
 		EDCDC008226E391C007051E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDCDC00A226E3A76007051E3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EDCDC00C226E3A82007051E3 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		EDCDC00E226E3A93007051E3 /* StudentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentController.swift; sourceTree = "<group>"; };
 		EDCDC010226E3A9C007051E3 /* TeacherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherController.swift; sourceTree = "<group>"; };
 		EDCDC020226E3D52007051E3 /* MessagingTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MessagingTab.storyboard; sourceTree = "<group>"; };
-		EDD3053A2272605700F19A20 /* TeacherMessagingg.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherMessagingg.storyboard; sourceTree = "<group>"; };
 		EDD305382272602C00F19A20 /* TeacherProfile2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherProfile2.storyboard; sourceTree = "<group>"; };
+		EDD3053A2272605700F19A20 /* TeacherMessagingg.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherMessagingg.storyboard; sourceTree = "<group>"; };
 		EDD3053E22726F9800F19A20 /* ChooseCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCreateViewController.swift; sourceTree = "<group>"; };
 		EDD3054022726FB000F19A20 /* BecomeMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BecomeMentorViewController.swift; sourceTree = "<group>"; };
 		EDD3054622726FFB00F19A20 /* SubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				B999329222737CBB00C1565E /* StudentSearchTableViewCell.swift */,
+				ED8AA3A12279F78400C477AF /* TeacherMessagingTableViewCell.swift */,
+				ED8AA3A3227A0B3A00C477AF /* StudentMessagingTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 				EDD3055722739BE500F19A20 /* PreferencesViewController.swift in Sources */,
 				EDD3055922739BE500F19A20 /* DriversLicenseViewController.swift in Sources */,
 				ED8AA39E2277851100C477AF /* TeacherMessagingTableViewController.swift in Sources */,
+				ED8AA3A22279F78400C477AF /* TeacherMessagingTableViewCell.swift in Sources */,
 				EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */,
 				EDD3055C22739BE500F19A20 /* ChooseCreateViewController.swift in Sources */,
 				B999329E2273841000C1565E /* TeacherProfileViewController.swift in Sources */,
@@ -473,6 +480,7 @@
 				B999328F2273781A00C1565E /* StudentHomeViewController.swift in Sources */,
 				ED8AA39C227784F900C477AF /* TeacherMessageDetailViewController.swift in Sources */,
 				EDD3055822739BE500F19A20 /* MainLoginViewController.swift in Sources */,
+				ED8AA3A4227A0B3A00C477AF /* StudentMessagingTableViewCell.swift in Sources */,
 				EDD3055D22739BE500F19A20 /* SubjectsViewController.swift in Sources */,
 				ED0DD7B62270F4F1004DBE00 /* MessageDetailViewController.swift in Sources */,
 				EDCDC011226E3A9C007051E3 /* TeacherController.swift in Sources */,
