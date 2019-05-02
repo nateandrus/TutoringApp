@@ -24,6 +24,11 @@ class StudentMessagingTableViewCell: UITableViewCell {
     func updateViews() {
         guard let chat = chatLanding else { return }
         nameLabel.text = "\(chat.teacherID)"
-        
+        if let date = chat.timestamp {
+            timestampLabel.text = date.stringWith(dateStyle: .medium, timeStyle: .medium)
+        }
+        if let messagePreview = chat.messagePreview {
+            lastMessageLabel.text = messagePreview
+        }
     }
 }

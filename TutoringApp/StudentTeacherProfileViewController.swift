@@ -19,99 +19,174 @@ class StudentTeacherProfileViewController: UIViewController {
     @IBOutlet weak var linkedInLabel: UILabel!
     @IBOutlet weak var aboutMeLabel: UILabel!
     @IBOutlet weak var qualificationsLabel: UILabel!
-    @IBOutlet weak var mondayTimeLabel: UILabel!
-    @IBOutlet weak var tuesdayTimeLabel: UILabel!
-    @IBOutlet weak var wednesdayTimeLabel: UILabel!
-    @IBOutlet weak var thursdayTimeLabel: UILabel!
-    @IBOutlet weak var fridayTimeLabel: UILabel!
-    @IBOutlet weak var saturdayTimeLabel: UILabel!
-    @IBOutlet weak var sundayTimeLabel: UILabel!
+    
+    @IBOutlet weak var mondayMorningLabel: UILabel!
+    @IBOutlet weak var mondayAfternoonLabel: UILabel!
+    @IBOutlet weak var mondayEveningLabel: UILabel!
+    @IBOutlet weak var tuesdayMorning: UILabel!
+    @IBOutlet weak var tuesdayAfternoonLabel: UILabel!
+    @IBOutlet weak var tuesdayEveningLabel: UILabel!
+    @IBOutlet weak var wednesdayMorningLabel: UILabel!
+    @IBOutlet weak var wednesdayAfternoonLabel: UILabel!
+    @IBOutlet weak var wednesdayEveningLabel: UILabel!
+    @IBOutlet weak var thursdayMorningLabel: UILabel!
+    @IBOutlet weak var thursdayAfternoonLabel: UILabel!
+    @IBOutlet weak var thursdayEveningLabel: UILabel!
+    @IBOutlet weak var fridayMorningLabel: UILabel!
+    @IBOutlet weak var fridayAfternoonLabel: UILabel!
+    @IBOutlet weak var fridayEveningLabel: UILabel!
+    @IBOutlet weak var saturdayMorningLabel: UILabel!
+    @IBOutlet weak var saturdayAfternoonLabel: UILabel!
+    @IBOutlet weak var saturdayEveningLabel: UILabel!
+    @IBOutlet weak var sundayMorningLabel: UILabel!
+    @IBOutlet weak var sundayAfternoonLabel: UILabel!
+    @IBOutlet weak var sundayEveningLabel: UILabel!
+    
+
     @IBOutlet weak var sendMessageButton: UIButton!
     
-    var profilePicture: UIImage? {
-        didSet {
-            profileImage.image = profilePicture
-            guard let user = StudentController.shared.currentUser, let newImage = profilePicture else { return }
-            StudentController.shared.changeProfileImage(userFirebaseUID: user.firebaseUID, newImage: newImage) { (success) in
-                if success {
-                    print("Success uploading photo to firebase storage")
-                }
-            }
-        }
-    }
+    var teacher: Teacher? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let selectedTeacher = TeacherController.shared.currentUser else { return }
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+        guard let selectedTeacher = teacher else { return }
         nameLabel.text = selectedTeacher.name
         locationLabel.text = selectedTeacher.location
-        priceLabel.text = selectedTeacher.costForTime
+        priceLabel.text = "$\(selectedTeacher.costForTime)/hour"
         linkedInLabel.text = selectedTeacher.linkedINLink
         aboutMeLabel.text = selectedTeacher.aboutMe
         qualificationsLabel.text = selectedTeacher.qualifications
-        //        mondayTimeLabel.text = selectedTeacher.schedulePref
-        //        tuesdayTimeLabel.text = selectedTeacher.schedulePref
-        //        wednesdayTimeLabel.text = selectedTeacher.schedulePref
-        //        thursdayTimeLabel.text = selectedTeacher.schedulePref
-        //        fridayTimeLabel.text = selectedTeacher.schedulePref
-        //        saturdayTimeLabel.text = selectedTeacher.schedulePref
-        //        sundayTimeLabel.text = selectedTeacher.schedulePref
-        
+        self.title = selectedTeacher.name
         sendMessageButton.layer.cornerRadius = sendMessageButton.frame.height / 2
         TeacherController.shared.loadProfileImageView(userFirebaseUID: selectedTeacher.firebaseUID) { (image) in
             guard let image = image else { return }
             self.profileImage.image = image
         }
-        
-        // Do any additional setup after loading the view.
+        if selectedTeacher.schedulePref.contains("MondayMorning") {
+            mondayMorningLabel.backgroundColor = .black
+            mondayMorningLabel.textColor = .white
+            mondayMorningLabel.layer.cornerRadius = mondayMorningLabel.frame.height / 2
+        }
+        if selectedTeacher.schedulePref.contains("MondayAfternoon") {
+            mondayAfternoonLabel.backgroundColor = .black
+            mondayAfternoonLabel.textColor = .white
+            mondayAfternoonLabel.layer.cornerRadius = mondayAfternoonLabel.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("MondayEvening") {
+            mondayEveningLabel.backgroundColor = .black
+            mondayEveningLabel.textColor = .white
+            mondayEveningLabel.layer.cornerRadius = mondayEveningLabel.frame.height / 2
+        }
+        if selectedTeacher.schedulePref.contains("TuesdayMorning") {
+            tuesdayMorning.backgroundColor = .black
+            tuesdayMorning.textColor = .white
+            tuesdayMorning.layer.cornerRadius = tuesdayMorning.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("TuesdayAfternoon") {
+            tuesdayAfternoonLabel.backgroundColor = .black
+            tuesdayAfternoonLabel.textColor = .white
+            tuesdayAfternoonLabel.layer.cornerRadius = tuesdayAfternoonLabel.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("TuesdayEvening") {
+            tuesdayEveningLabel.backgroundColor = .black
+            tuesdayEveningLabel.textColor = .white
+            tuesdayEveningLabel.layer.cornerRadius = tuesdayEveningLabel.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("WednesdayMorning") {
+            wednesdayMorningLabel.backgroundColor = .black
+            wednesdayMorningLabel.textColor = .white
+            wednesdayMorningLabel.layer.cornerRadius = wednesdayMorningLabel.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("WednesdayAfternoon") {
+            wednesdayAfternoonLabel.backgroundColor = .black
+            wednesdayAfternoonLabel.textColor = .white
+            wednesdayAfternoonLabel.layer.cornerRadius = wednesdayAfternoonLabel.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("WednesdayEvening") {
+            wednesdayEveningLabel.backgroundColor = .black
+            wednesdayEveningLabel.textColor = .white
+            wednesdayEveningLabel.layer.cornerRadius = wednesdayEveningLabel.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("ThursdayMorning") {
+            thursdayMorningLabel.backgroundColor = .black
+            thursdayMorningLabel.textColor = .white
+            thursdayMorningLabel.layer.cornerRadius = thursdayMorningLabel.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("ThursdayAfternoon") {
+            thursdayAfternoonLabel.backgroundColor = .black
+            thursdayAfternoonLabel.textColor = .white
+            thursdayAfternoonLabel.layer.cornerRadius = thursdayAfternoonLabel.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("ThursdayEvening") {
+            thursdayEveningLabel.backgroundColor = .black
+            thursdayEveningLabel.textColor = .white
+            thursdayEveningLabel.layer.cornerRadius = thursdayEveningLabel.frame.height / 2
+        }
+        if selectedTeacher.schedulePref.contains("FridayMorning") {
+            fridayMorningLabel.backgroundColor = .black
+            fridayMorningLabel.textColor = .white
+            fridayMorningLabel.layer.cornerRadius = fridayMorningLabel.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("FridayAfternoon") {
+            fridayAfternoonLabel.backgroundColor = .black
+            fridayAfternoonLabel.textColor = .white
+            fridayAfternoonLabel.layer.cornerRadius = fridayAfternoonLabel.frame.height / 2
+        }
+        if selectedTeacher.schedulePref.contains("FridayEvening") {
+            fridayEveningLabel.backgroundColor = .black
+            fridayEveningLabel.textColor = .white
+            fridayEveningLabel.layer.cornerRadius = fridayEveningLabel.frame.height / 2
+        }
+        if selectedTeacher.schedulePref.contains("SaturdayMorning") {
+            saturdayMorningLabel.backgroundColor = .black
+            saturdayMorningLabel.textColor = .white
+            saturdayMorningLabel.layer.cornerRadius = saturdayMorningLabel.frame.height / 2
+
+        }
+        if selectedTeacher.schedulePref.contains("SaturdayAfternoon") {
+            saturdayAfternoonLabel.backgroundColor = .black
+            saturdayAfternoonLabel.textColor = .white
+            saturdayAfternoonLabel.layer.cornerRadius = saturdayAfternoonLabel.frame.height / 2
+        }
+        if selectedTeacher.schedulePref.contains("SaturdayEvening") {
+            saturdayEveningLabel.backgroundColor = .black
+            saturdayEveningLabel.textColor = .white
+            saturdayEveningLabel.layer.cornerRadius = saturdayEveningLabel.frame.height / 2
+        }
+        if selectedTeacher.schedulePref.contains("SundayMorning") {
+            sundayMorningLabel.backgroundColor = .black
+            sundayMorningLabel.textColor = .white
+            sundayMorningLabel.layer.cornerRadius = sundayMorningLabel.frame.height / 2
+        }
+        if selectedTeacher.schedulePref.contains("SundayAfternoon") {
+            sundayAfternoonLabel.backgroundColor = .black
+            sundayAfternoonLabel.textColor = .white
+            sundayAfternoonLabel.layer.cornerRadius = sundayAfternoonLabel.frame.height / 2
+        }
+        if selectedTeacher.schedulePref.contains("SundayEvening") {
+            sundayEveningLabel.backgroundColor = .black
+            sundayEveningLabel.textColor = .white
+            sundayEveningLabel.layer.cornerRadius = sundayEveningLabel.frame.height / 2
+        }
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     //Instantiating the MessageViewController
     @IBAction func sendMessageButtonTapped(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "MessagingTab", bundle: nil)
-        let messagingScreen = storyBoard.instantiateViewController(withIdentifier: "messagingScreen")
+        guard let messagingScreen = storyBoard.instantiateViewController(withIdentifier: "messagingScreen") as? MessageDetailViewController, let teacher = teacher else { return }
+        messagingScreen.teacherLanding = teacher
         self.navigationController?.pushViewController(messagingScreen, animated: true)
         
     }
 }
-
-
-
-//po StudentController.shared.searchResults
-//▿ 1 element
-//    ▿ 0 : Teacher
-//- name : "johnny"
-//- email : "johnnyyy@gmail.com"
-//▿ messages : Optional<Array<FIRDocumentReference>>
-//- some : 0 elements
-//- firebaseUID : "gK8ihhAttlPOYWaOMtTed0DoZfu1"
-//▿ linkedINLink : Optional<String>
-//- some : "www.linkedin.com/johnnyyyyy"
-//- costForTime : "33"
-//- qualifications : "How goes it qualificationssssssssss"
-//- location : "highland, Utah "
-//- dateOfBirth : "may "
-//▿ subjects : 2 elements
-//- 0 : "Accounting"
-//- 1 : "Entrepreneurship"
-//▿ schedulePref : 2 elements
-//- 0 : "FridayAfternoon"
-//- 1 : "MondayEvening"
-//- meetingPref : "Both"
-//- aboutMe : "This is an about you johnnnnyyyyyy boy \t"
-//- profileImage : nil
-//▿ profileImageURL : Optional<String>
-//- some : "gK8ihhAttlPOYWaOMtTed0DoZfu1"
-//- selfDocRef : <FIRDocumentReference: 0x6000032e3ee0>

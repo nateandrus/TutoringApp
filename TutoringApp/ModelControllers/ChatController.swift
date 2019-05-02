@@ -17,21 +17,21 @@ class ChatController {
     
     var chats: [Chat] = []
     
-    func createChat(teacherDocRef: DocumentReference, studentDocRef: DocumentReference, message: Message, completion: @escaping (Bool) -> Void) {
+    func createChat(teacherDocRef: DocumentReference, studentDocRef: DocumentReference, message: Message, messageText: String, completion: @escaping (Bool) -> Void) {
         
         let documentRef = DB.document()
-        let chat = Chat(studentID: studentDocRef, tutorID: teacherDocRef, documentRef: documentRef)
+//        let chat = Chat(studentID: studentDocRef, tutorID: teacherDocRef, documentRef: documentRef)
         
-        let docData = [
+        let docData: [String: Any] = [
             "studentFirebaseUID" : studentDocRef,
             "teacherFirebaseUID" : teacherDocRef,
-            "selfDocReference" : documentRef
+            "selfDocReference" : documentRef,
+            "timestamp" :  Date(),
+            "messagePreview" : messageText
         ]
         
         documentRef.setData(docData)
-        
         documentRef.collection("messages").addDocument(data: message.dictionary)
-        
         teacherDocRef.updateData(["messages" : FieldValue.arrayUnion([documentRef])]) { (error) in
             if let error = error {
                 print(error.localizedDescription)
