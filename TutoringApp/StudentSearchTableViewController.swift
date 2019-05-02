@@ -39,26 +39,38 @@ class StudentSearchTableViewController: UITableViewController {
         return StudentController.shared.searchResults.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = self.view.frame.height / 8
+        return height
+    }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teacherCell", for: indexPath) as! StudentSearchTableViewCell
         
         let teacher = StudentController.shared.searchResults[indexPath.row]
-        
+        TeacherController.shared.loadProfileImageView(userFirebaseUID: teacher.firebaseUID) { (image) in
+            guard let image = image else { return }
+            cell.profileImage.image = image
+        }
         cell.teacher = teacher
         
         return cell
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toTeacherDetail" {
+            if let destinationVC = segue.destination as? StudentTeacherProfileViewController {
+                if let index = tableView.indexPathForSelectedRow {
+                    let teacherToSend = StudentController.shared.searchResults[index.row]
+                    destinationVC.teacher = teacherToSend
+                }
+            }
+        }
+    }
+    
     
     @IBAction func filterButtonTapped(_ sender: Any) {
         

@@ -15,6 +15,8 @@ struct Chat {
     let teacherID: DocumentReference
     let documentRef: DocumentReference
     let messages: CollectionReference
+    var messagePreview: String?
+    var timestamp: Date?
         
     init(studentID: DocumentReference, tutorID: DocumentReference, documentRef: DocumentReference) {
         self.studentID = studentID
@@ -22,7 +24,6 @@ struct Chat {
         self.documentRef = documentRef
         self.messages = documentRef.collection("messages")
     }
-    
 }
 
 extension Chat {
@@ -35,10 +36,16 @@ extension Chat {
             let documentRef = snapshot?["documentRef"] as? DocumentReference,
             let messages = snapshot?["messages"] as? CollectionReference
             else { return nil }
+        
+        let messagePreview = snapshot?["messagePreview"] as? String
+        let timestamp = snapshot?["timestamp"] as? Date
+        
         self.studentID = studentID
         self.teacherID = teacherID
         self.documentRef = documentRef
         self.messages = messages
+        self.messagePreview = messagePreview
+        self.timestamp = timestamp
     }
 }
 

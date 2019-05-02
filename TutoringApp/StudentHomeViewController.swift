@@ -25,11 +25,8 @@ class StudentHomeViewController: UIViewController {
     @IBOutlet weak var softwareEngineerButton: UIButton!
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         //navigationController?.navigationBar.isHidden = true
         searchBar.layer.cornerRadius = 50
         businessManagementButton.layer.cornerRadius = businessManagementButton.frame.height / 2
@@ -44,8 +41,6 @@ class StudentHomeViewController: UIViewController {
         javascriptButton.layer.cornerRadius = javascriptButton.frame.height / 2
         pythonButton.layer.cornerRadius = pythonButton.frame.height / 2
         softwareEngineerButton.layer.cornerRadius = softwareEngineerButton.frame.height / 2
-        
-        // Do any additional setup after loading the view.
     }
     
 

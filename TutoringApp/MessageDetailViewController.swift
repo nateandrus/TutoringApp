@@ -13,7 +13,6 @@ class MessageDetailViewController: MessagesViewController {
 
 //    @IBOutlet weak var messagesCollectionView: UICollectionView!
     @IBOutlet weak var messageTextField: UITextField!
-    @IBOutlet weak var bottomTextFieldConstraint: NSLayoutConstraint!
     
     //LandingPad for chat
     var chatLanding: Chat? {
@@ -26,35 +25,16 @@ class MessageDetailViewController: MessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageInputBar.delegate = self
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(MessageDetailViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(MessageDetailViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(UIResponder.keyboardWillShowNotification)
-        NotificationCenter.default.removeObserver(UIResponder.keyboardWillHideNotification)
+        messageInputBar.leftStackView.alignment = .center
+        messageInputBar.setLeftStackViewWidthConstant(to: 50, animated: false)
+        guard let teacher = teacherLanding else { return }
+        self.title = teacher.name
     }
     
-    @objc func keyboardWillShow(_ notification:Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                        print("Will Show")
-            print(keyboardSize.height)
-            print(self.view.frame.origin.y)
-            self.view.frame.origin.y -= keyboardSize.height - tabBarController!.tabBar.frame.height
-        }
-    }
-    @objc func keyboardWillHide(_ notification:Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            print("Will Hide")
-            print(keyboardSize.height)
-            print(self.view.frame.origin.y)
-            self.view.frame.origin.y += keyboardSize.height - tabBarController!.tabBar.frame.height
-            
-        }
-    }
     
     @IBAction func messageSendButtonTapped(_ sender: UIButton) {
         if fromChat == false {
@@ -63,7 +43,7 @@ class MessageDetailViewController: MessagesViewController {
             let uuid = UUID().uuidString
             let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(messageText))
             
-            ChatController.shared.createChat(teacherDocRef: teacher.selfDocRef, studentDocRef: currentStudent.selfDocRef, message: message) { (success) in
+            ChatController.shared.createChat(teacherDocRef: teacher.selfDocRef, studentDocRef: currentStudent.selfDocRef, message: message, messageText: messageText) { (success) in
                 if success {
                     self.navigationController?.popViewController(animated: true)
                 }
@@ -86,7 +66,6 @@ class MessageDetailViewController: MessagesViewController {
     }
 }
 
-//MARK: - MessageDisplayDelegate
 extension MessageDetailViewController: MessagesDisplayDelegate {
     private func backgroundColor(for message: Message, at indexPath: IndexPath,
                          in messagesCollectionView: MessagesCollectionView) -> UIColor {
@@ -129,6 +108,9 @@ extension MessageDetailViewController: MessagesLayoutDelegate {
 extension MessageDetailViewController: MessagesDataSource {
 
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
+        if MessageController.shared.messages.isEmpty {
+            return 0
+        }
         return 1
     }
 
@@ -142,8 +124,7 @@ extension MessageDetailViewController: MessagesDataSource {
 
     func messageForItem(at indexPath: IndexPath,
                         in messagesCollectionView: MessagesCollectionView) -> MessageType {
-
-        return MessageController.shared.messages[indexPath.row]
+            return MessageController.shared.messages[indexPath.row]
     }
 
     func cellTopLabelAttributedText(for message: MessageType,
@@ -159,3 +140,32 @@ extension MessageDetailViewController: MessagesDataSource {
         )
     }
 }
+
+//MARK: - MessageDisplayDelegate
+extension MessageDetailViewController: MessageInputBarDelegate {
+    
+    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        guard let student = StudentController.shared.currentUser else { return }
+        let sender = Sender(id: student.firebaseUID, displayName: student.name)
+        let uuid = UUID().uuidString
+        let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(text))
+        
+        if fromChat == true {
+            guard let chat = chatLanding else { return }
+            MessageController.shared.addMessageToChat(chatRef: chat.documentRef, message: message) { (success) in
+                if success {
+                    
+                }
+            }
+        } else {
+            guard let teacher = teacherLanding else { return }
+            ChatController.shared.createChat(teacherDocRef: teacher.selfDocRef, studentDocRef: student.selfDocRef, message: message, messageText: text) { (success) in
+                if success {
+                    
+                }
+            }
+        }
+        inputBar.inputTextView.text = ""
+    }
+}
+

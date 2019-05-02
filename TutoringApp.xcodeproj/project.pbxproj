@@ -27,6 +27,7 @@
 		ED8AA3A02277B10C00C477AF /* PhotoResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */; };
 		ED8AA3A22279F78400C477AF /* TeacherMessagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA3A12279F78400C477AF /* TeacherMessagingTableViewCell.swift */; };
 		ED8AA3A4227A0B3A00C477AF /* StudentMessagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA3A3227A0B3A00C477AF /* StudentMessagingTableViewCell.swift */; };
+		ED8AA3A6227B51AC00C477AF /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA3A5227B51AC00C477AF /* DateFormatter.swift */; };
 		EDCDC009226E391D007051E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDCDC008226E391C007051E3 /* GoogleService-Info.plist */; };
 		EDCDC00B226E3A76007051E3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00A226E3A76007051E3 /* Student.swift */; };
 		EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDC00C226E3A82007051E3 /* Teacher.swift */; };
@@ -71,6 +72,7 @@
 		ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResizer.swift; sourceTree = "<group>"; };
 		ED8AA3A12279F78400C477AF /* TeacherMessagingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMessagingTableViewCell.swift; sourceTree = "<group>"; };
 		ED8AA3A3227A0B3A00C477AF /* StudentMessagingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMessagingTableViewCell.swift; sourceTree = "<group>"; };
+		ED8AA3A5227B51AC00C477AF /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		EDCDC008226E391C007051E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDCDC00A226E3A76007051E3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EDCDC00C226E3A82007051E3 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				EDE9BB20226E1A8300314FFB /* AppDelegate.swift */,
 				EDCDC008226E391C007051E3 /* GoogleService-Info.plist */,
 				ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */,
+				ED8AA3A5227B51AC00C477AF /* DateFormatter.swift */,
 				EDE9BB27226E1A8300314FFB /* Assets.xcassets */,
 				EDE9BB29226E1A8400314FFB /* LaunchScreen.storyboard */,
 				EDE9BB2C226E1A8400314FFB /* Info.plist */,
@@ -489,6 +492,7 @@
 				ED1B70A2226FA69100EB31F7 /* MessageController.swift in Sources */,
 				B999329522737DE400C1565E /* StudentTeacherProfileViewController.swift in Sources */,
 				EDD3055E22739BE500F19A20 /* BecomeMentorViewController.swift in Sources */,
+				ED8AA3A6227B51AC00C477AF /* DateFormatter.swift in Sources */,
 				ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */,
 				EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */,
 				ED1B70A0226FA2BE00EB31F7 /* Message.swift in Sources */,

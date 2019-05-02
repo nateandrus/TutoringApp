@@ -33,8 +33,10 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
         guard let currentUser = StudentController.shared.currentUser else { return }
         studentNameLabel.text = currentUser.name
         studentEmailLabel.text = currentUser.email
+        self.title = currentUser.name
         StudentController.shared.loadProfileImageView(userFirebaseUID: currentUser.firebaseUID) { (image) in
             guard let image = image else { return }
+            self.studentProfilePicture.layer.cornerRadius = self.studentProfilePicture.frame.height / 2
             self.studentProfilePicture.image = image
         }
         // Do any additional setup after loading the view.
