@@ -106,6 +106,60 @@ class TeacherController {
         }
     }
     
+    func updateTeacherSubjects(teacherDocRef: DocumentReference, subjects: [String], completion: @escaping (Bool) -> Void) {
+        
+        let docData: [String: Any] = [
+            "subjects" : subjects,
+        ]
+        
+        teacherDocRef.updateData(docData) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(false)
+                return
+            } else {
+                completion(true)
+            }
+        }
+    }
+    
+    func updateTeacherPreferences(teacherDocRef: DocumentReference, costPerHour: String, schedulePreference: [String], meetingPreference: String, completion: @escaping (Bool) -> Void) {
+        
+        let docData: [String: Any] = [
+            "costPerHour" : costPerHour,
+            "schedulePreference" : schedulePreference,
+            "meetingPreference" : meetingPreference,
+        ]
+        
+        teacherDocRef.updateData(docData) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(false)
+                return
+            } else {
+                completion(true)
+            }
+        }
+    }
+    
+    func updateTeacherBiography(teacherDocRef: DocumentReference, aboutMe: String, qualifications: String, completion: @escaping (Bool) -> Void) {
+        
+        let docData: [String: Any] = [
+            "aboutMe" : aboutMe,
+            "qualifications" : qualifications
+        ]
+        
+        teacherDocRef.updateData(docData) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(false)
+                return
+            } else {
+                completion(true)
+            }
+        }
+    }
+    
     func deleteTeacher() {
     }
     

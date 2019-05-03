@@ -14,6 +14,9 @@
 		B96F9A08227CBE2000AF2B24 /* CabinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F9A02227CBE1F00AF2B24 /* CabinItalic.ttf */; };
 		B96F9A09227CBE2000AF2B24 /* CabinBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F9A03227CBE1F00AF2B24 /* CabinBoldItalic.ttf */; };
 		B96F9A0A227CBE2000AF2B24 /* CabinBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F9A04227CBE2000AF2B24 /* CabinBold.ttf */; };
+		B990EC49227CE3B300E9CE2B /* TeacherEditSubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B990EC48227CE3B300E9CE2B /* TeacherEditSubjectsViewController.swift */; };
+		B990EC4B227CE3E000E9CE2B /* TeacherEditPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B990EC4A227CE3E000E9CE2B /* TeacherEditPreferencesViewController.swift */; };
+		B990EC4D227CE40F00E9CE2B /* TeacherEditBiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B990EC4C227CE40F00E9CE2B /* TeacherEditBiographyViewController.swift */; };
 		B999328D227376D700C1565E /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999328C227376D700C1565E /* StudentProfileViewController.swift */; };
 		B999328F2273781A00C1565E /* StudentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999328E2273781A00C1565E /* StudentHomeViewController.swift */; };
 		B999329122737BBF00C1565E /* StudentSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329022737BBF00C1565E /* StudentSearchTableViewController.swift */; };
@@ -66,6 +69,9 @@
 		B96F9A02227CBE1F00AF2B24 /* CabinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CabinItalic.ttf; sourceTree = "<group>"; };
 		B96F9A03227CBE1F00AF2B24 /* CabinBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CabinBoldItalic.ttf; sourceTree = "<group>"; };
 		B96F9A04227CBE2000AF2B24 /* CabinBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CabinBold.ttf; sourceTree = "<group>"; };
+		B990EC48227CE3B300E9CE2B /* TeacherEditSubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherEditSubjectsViewController.swift; sourceTree = "<group>"; };
+		B990EC4A227CE3E000E9CE2B /* TeacherEditPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherEditPreferencesViewController.swift; sourceTree = "<group>"; };
+		B990EC4C227CE40F00E9CE2B /* TeacherEditBiographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherEditBiographyViewController.swift; sourceTree = "<group>"; };
 		B999328C227376D700C1565E /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
 		B999328E2273781A00C1565E /* StudentHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentHomeViewController.swift; path = TutoringApp/StudentHomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		B999329022737BBF00C1565E /* StudentSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentSearchTableViewController.swift; path = TutoringApp/StudentSearchTableViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -157,6 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				B999329D2273841000C1565E /* TeacherProfileViewController.swift */,
+				B990EC48227CE3B300E9CE2B /* TeacherEditSubjectsViewController.swift */,
+				B990EC4A227CE3E000E9CE2B /* TeacherEditPreferencesViewController.swift */,
+				B990EC4C227CE40F00E9CE2B /* TeacherEditBiographyViewController.swift */,
 			);
 			name = ProfileTab;
 			sourceTree = "<group>";
@@ -505,6 +514,7 @@
 				ED8AA39E2277851100C477AF /* TeacherMessagingTableViewController.swift in Sources */,
 				ED8AA3A22279F78400C477AF /* TeacherMessagingTableViewCell.swift in Sources */,
 				EDCDC00D226E3A82007051E3 /* Teacher.swift in Sources */,
+				B990EC49227CE3B300E9CE2B /* TeacherEditSubjectsViewController.swift in Sources */,
 				EDD3055C22739BE500F19A20 /* ChooseCreateViewController.swift in Sources */,
 				B999329E2273841000C1565E /* TeacherProfileViewController.swift in Sources */,
 				B999329322737CBB00C1565E /* StudentSearchTableViewCell.swift in Sources */,
@@ -519,6 +529,8 @@
 				ED0DD7B82270FABD004DBE00 /* Chat.swift in Sources */,
 				ED1B70A2226FA69100EB31F7 /* MessageController.swift in Sources */,
 				B999329522737DE400C1565E /* StudentTeacherProfileViewController.swift in Sources */,
+				B990EC4D227CE40F00E9CE2B /* TeacherEditBiographyViewController.swift in Sources */,
+				B990EC4B227CE3E000E9CE2B /* TeacherEditPreferencesViewController.swift in Sources */,
 				EDD3055E22739BE500F19A20 /* BecomeMentorViewController.swift in Sources */,
 				ED8AA3A6227B51AC00C477AF /* DateFormatter.swift in Sources */,
 				ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */,
