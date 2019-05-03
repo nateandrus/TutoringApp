@@ -69,6 +69,23 @@ class ChatController {
         }
     }
     
+    func fetchChatsFor(teacher: Teacher, completion: @escaping (Bool) -> Void) {
+        self.chats.removeAll()
+        Firestore.firestore().collection("chats").whereField("teacherUID", isEqualTo: teacher.firebaseUID).getDocuments { (snapshot, error) in
+            if let error = error {
+                print("that aint gonna work \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            guard let snapshot = snapshot else { completion(false); return }
+            for document in snapshot.documents {
+                guard let chat = Chat(from: document) else { return }
+                self.chats.append(chat)
+            }
+            completion(true)
+        }
+    }
+    
     func deleteChat(completion: @escaping (Bool) -> Void) {
         
     }

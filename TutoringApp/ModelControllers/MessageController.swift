@@ -20,8 +20,11 @@ class MessageController {
     }
     
     func addMessageToChat(chatRef: DocumentReference, message: Message, completion: @escaping (Bool) -> Void) {
+        
         let messageRef = chatRef.collection("messages").document()
-        chatRef.collection("messages").document("\(messageRef)").setData(message.dictionary) { (error) in
+        chatRef.updateData(["messagePreview" : message.content])
+        
+        messageRef.setData(message.dictionary) { (error) in
             if let error = error {
                 print("Error saving message to chat:: \(error.localizedDescription)")
                 completion(false)
@@ -33,17 +36,20 @@ class MessageController {
     }
     
     func fetchMessagesFor(chat: DocumentReference, completion: @escaping (Bool) -> Void) {
-        chat.collection("messages").getDocuments { (snapshot, error) in
+        
+        chat.collection("messages").order(by: "sentDate").getDocuments { (snapshot, error) in
             if let error = error {
                 print("error fetching messages for chat:: \(error.localizedDescription)")
                 completion(false)
                 return
             }
             guard let snapshot = snapshot else { completion(false); return }
+            self.messages.removeAll()
             for document in snapshot.documents {
                 guard let message = Message(dictionary: document.data()) else { return }
                 self.messages.append(message)
             }
+            completion(true)
         }
     }
     
