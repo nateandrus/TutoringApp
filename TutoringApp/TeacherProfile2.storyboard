@@ -224,7 +224,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="FOb-Tt-MpM">
-                                                <rect key="frame" x="16" y="521" width="382" height="674.5"/>
+                                                <rect key="frame" x="16" y="521" width="382" height="654"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z74-pP-mCB">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -235,7 +235,7 @@
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="SXu-vF-MXD">
-                                                        <rect key="frame" x="0.0" y="41" width="382" height="572.5"/>
+                                                        <rect key="frame" x="0.0" y="41" width="382" height="552"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="9B6-mT-ZZP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="95.5"/>
@@ -266,7 +266,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N9n-o3-gPp">
-                                                                <rect key="frame" x="0.0" y="106.5" width="382" height="378.5"/>
+                                                                <rect key="frame" x="0.0" y="106.5" width="382" height="358"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="u4c-cl-5Dl">
                                                                         <rect key="frame" x="139.5" y="0.0" width="242.5" height="20.5"/>
@@ -292,10 +292,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-zy-QnB">
-                                                                        <rect key="frame" x="13" y="28.5" width="369" height="350"/>
+                                                                        <rect key="frame" x="115" y="28.5" width="267" height="329.5"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="dV6-Oe-LvY">
-                                                                                <rect key="frame" x="0.0" y="10.5" width="90" height="329.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="329.5"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m7-g0-I30">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="61.5" height="20.5"/>
@@ -342,10 +342,10 @@
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QbU-4e-nby">
-                                                                                <rect key="frame" x="133" y="0.0" width="50" height="350"/>
+                                                                                <rect key="frame" x="133" y="88" width="16" height="154"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nP8-sQ-r3s">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
@@ -353,7 +353,7 @@
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKU-Nd-Eeb">
-                                                                                        <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="22" width="16" height="22"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
@@ -361,7 +361,7 @@
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFW-6X-HKZ">
-                                                                                        <rect key="frame" x="0.0" y="100" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="44" width="16" height="22"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
@@ -369,7 +369,7 @@
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rE-X7-TEC">
-                                                                                        <rect key="frame" x="0.0" y="150" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="66" width="16" height="22"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
@@ -377,7 +377,7 @@
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pd4-qb-oe5">
-                                                                                        <rect key="frame" x="0.0" y="200" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="88" width="16" height="22"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
@@ -385,7 +385,7 @@
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9an-zK-Tez">
-                                                                                        <rect key="frame" x="0.0" y="250" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="110" width="16" height="22"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
@@ -393,7 +393,7 @@
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6P-mB-shd">
-                                                                                        <rect key="frame" x="0.0" y="300" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="132" width="16" height="22"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
@@ -403,52 +403,52 @@
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GTj-yN-4vd">
-                                                                                <rect key="frame" x="226" y="0.0" width="50" height="350"/>
+                                                                                <rect key="frame" x="192" y="88" width="16" height="154"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADy-Dg-oRK">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="mondayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="O4N-am-zrM"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTI-Xv-Dd0">
-                                                                                        <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="22" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="tuesdayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="5Je-Gg-XY7"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FD-ya-Idf">
-                                                                                        <rect key="frame" x="0.0" y="100" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="44" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="wednesdayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="XIe-CW-rkm"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ6-zj-5ke">
-                                                                                        <rect key="frame" x="0.0" y="150" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="66" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="thursdayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="UWj-qs-ytq"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roj-8S-kuu">
-                                                                                        <rect key="frame" x="0.0" y="200" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="88" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="fridayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="sgw-XL-cfC"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1S-yD-nnX">
-                                                                                        <rect key="frame" x="0.0" y="250" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="110" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="saturdayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="ldF-R4-tj1"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwD-tD-a2F">
-                                                                                        <rect key="frame" x="0.0" y="300" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="132" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="sundayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="8Hs-S2-uMt"/>
@@ -457,52 +457,52 @@
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k3p-U0-xKa">
-                                                                                <rect key="frame" x="319" y="0.0" width="50" height="350"/>
+                                                                                <rect key="frame" x="251" y="88" width="16" height="154"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grl-bm-dci">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="mondayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="9z2-Sr-Rnp"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yB-F2-9Ec">
-                                                                                        <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="22" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="tuesdayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="Rax-Eg-kIo"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJL-Yn-xJh">
-                                                                                        <rect key="frame" x="0.0" y="100" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="44" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="wednesdayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="DVF-jZ-jE7"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KK-g9-drp">
-                                                                                        <rect key="frame" x="0.0" y="150" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="66" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="thursdayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="O1M-12-y2r"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukl-ad-Baj">
-                                                                                        <rect key="frame" x="0.0" y="200" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="88" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="fridayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="rmw-TY-ax5"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbv-88-4ka">
-                                                                                        <rect key="frame" x="0.0" y="250" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="110" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="saturdayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="dx3-SK-MHX"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVh-JV-cFQ">
-                                                                                        <rect key="frame" x="0.0" y="300" width="50" height="50"/>
+                                                                                        <rect key="frame" x="0.0" y="132" width="16" height="22"/>
                                                                                         <state key="normal" image="unchecked"/>
                                                                                         <connections>
                                                                                             <action selector="sundayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="N9C-bk-UIY"/>
@@ -515,7 +515,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="JCZ-In-LI7">
-                                                                <rect key="frame" x="0.0" y="496" width="382" height="76.5"/>
+                                                                <rect key="frame" x="0.0" y="475.5" width="382" height="76.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Meeting Preference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EY9-RJ-S4D">
                                                                         <rect key="frame" x="90" y="0.0" width="202.5" height="20.5"/>
@@ -554,7 +554,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" horizontalHuggingPriority="100" verticalHuggingPriority="100" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VsD-4Z-LkS">
-                                                        <rect key="frame" x="0.0" y="624.5" width="382" height="50"/>
+                                                        <rect key="frame" x="0.0" y="604" width="382" height="50"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
@@ -758,10 +758,10 @@
             </objects>
             <point key="canvasLocation" x="3642" y="348"/>
         </scene>
-        <!--View Controller-->
+        <!--Teacher Edit Subjects View Controller-->
         <scene sceneID="9N9-ib-jKZ">
             <objects>
-                <viewController id="o6q-4e-0vN" sceneMemberID="viewController">
+                <viewController id="o6q-4e-0vN" customClass="TeacherEditSubjectsViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oxI-kS-kYN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -773,7 +773,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="740"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="0Qp-xu-Mw2">
-                                                <rect key="frame" x="16" y="369" width="382" height="102"/>
+                                                <rect key="frame" x="16" y="366.5" width="382" height="102"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kPw-wA-7zg">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="33"/>
@@ -784,6 +784,7 @@
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <state key="normal" title="Android Development"/>
                                                                 <connections>
+                                                                    <action selector="androidDevelopmentButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="xZj-2z-8eo"/>
                                                                     <action selector="softwareEngineerButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="kU3-dK-Gvk"/>
                                                                 </connections>
                                                             </button>
@@ -793,6 +794,7 @@
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <state key="normal" title="HTML"/>
                                                                 <connections>
+                                                                    <action selector="htmlButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="z2S-iZ-5Vt"/>
                                                                     <action selector="pythonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="X3R-jp-JSc"/>
                                                                 </connections>
                                                             </button>
@@ -803,6 +805,7 @@
                                                                 <state key="normal" title="iOS Development"/>
                                                                 <connections>
                                                                     <action selector="iosDevelopmentButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="Sq6-cm-Hb6"/>
+                                                                    <action selector="iosDevelopmentButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="zXF-ZX-GtS"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -817,6 +820,7 @@
                                                                 <state key="normal" title="Javascript"/>
                                                                 <connections>
                                                                     <action selector="javascriptButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="rIp-kH-AaS"/>
+                                                                    <action selector="javascriptButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="spe-Fc-vcX"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwJ-jW-dcx">
@@ -825,6 +829,7 @@
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <state key="normal" title="UX/UI Design"/>
                                                                 <connections>
+                                                                    <action selector="uxDesignButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="3m3-u4-hBp"/>
                                                                     <action selector="uxDesignButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="GHJ-4c-460"/>
                                                                 </connections>
                                                             </button>
@@ -835,6 +840,7 @@
                                                                 <state key="normal" title="Web Development"/>
                                                                 <connections>
                                                                     <action selector="webDevelopmentButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="TIa-Dl-X5D"/>
+                                                                    <action selector="webDevelopmentButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="u4E-k3-bNT"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -842,13 +848,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yt-e4-g83">
-                                                <rect key="frame" x="16" y="148" width="382" height="25.5"/>
+                                                <rect key="frame" x="16" y="145.5" width="382" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mT-36-R7w">
-                                                <rect key="frame" x="16" y="319.5" width="382" height="25.5"/>
+                                                <rect key="frame" x="16" y="317" width="382" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -860,16 +866,11 @@
                                                 <state key="normal" title="Save Changes"/>
                                                 <connections>
                                                     <action selector="saveChangesButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="EE5-ih-pbA"/>
+                                                    <action selector="saveChangesButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="Ivd-J5-32t"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Subjects Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVF-Ny-NNo">
-                                                <rect key="frame" x="16" y="519" width="382" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="y4K-z6-zG8">
-                                                <rect key="frame" x="16" y="197.5" width="382" height="82"/>
+                                                <rect key="frame" x="16" y="195" width="382" height="82"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hXL-uV-z0U">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="33"/>
@@ -880,6 +881,7 @@
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <state key="normal" title="Accounting"/>
                                                                 <connections>
+                                                                    <action selector="accountingButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="Jrw-d1-V0K"/>
                                                                     <action selector="accountingButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="ZdJ-pe-hcG"/>
                                                                 </connections>
                                                             </button>
@@ -889,6 +891,7 @@
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <state key="normal" title="Business Management"/>
                                                                 <connections>
+                                                                    <action selector="businessManagementButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="ruv-Nh-jAz"/>
                                                                     <action selector="businessManagementButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="y4m-dN-xca"/>
                                                                 </connections>
                                                             </button>
@@ -898,6 +901,7 @@
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <state key="normal" title="Economics"/>
                                                                 <connections>
+                                                                    <action selector="economicsButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="1KR-0f-5Tg"/>
                                                                     <action selector="economicsButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="AJC-9J-OcS"/>
                                                                 </connections>
                                                             </button>
@@ -913,6 +917,7 @@
                                                                 <state key="normal" title="Entrepreneurship"/>
                                                                 <connections>
                                                                     <action selector="entrepreneurshipButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="e4B-KZ-Q19"/>
+                                                                    <action selector="entrepreneurshipButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="j1D-EV-LLl"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfz-8A-a7x">
@@ -922,6 +927,7 @@
                                                                 <state key="normal" title="Marketing"/>
                                                                 <connections>
                                                                     <action selector="marketingButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="SfK-6F-AOo"/>
+                                                                    <action selector="marketingButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="rBd-yZ-1Zb"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t91-rp-RqU">
@@ -931,6 +937,7 @@
                                                                 <state key="normal" title="Sales"/>
                                                                 <connections>
                                                                     <action selector="productManagementButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="5Hq-r9-KlC"/>
+                                                                    <action selector="salesButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="Wrz-S0-F2c"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -938,16 +945,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="AZs-Wh-gpK">
-                                                <rect key="frame" x="16" y="24" width="382" height="84"/>
+                                                <rect key="frame" x="16" y="24" width="382" height="81.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subjects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuO-rk-d4z">
-                                                        <rect key="frame" x="132.5" y="0.0" width="117.5" height="39"/>
-                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="136" y="0.0" width="110.5" height="36.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="30"/>
+                                                        <color key="textColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select all that apply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGR-nZ-DtE">
-                                                        <rect key="frame" x="120.5" y="63" width="141" height="21"/>
+                                                        <rect key="frame" x="120.5" y="60.5" width="141" height="21"/>
                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -960,15 +967,12 @@
                                             <constraint firstAttribute="trailing" secondItem="y4K-z6-zG8" secondAttribute="trailing" constant="16" id="4D8-uT-oNa"/>
                                             <constraint firstItem="0Qp-xu-Mw2" firstAttribute="leading" secondItem="FgG-p9-tZX" secondAttribute="leading" constant="16" id="5QU-UE-if0"/>
                                             <constraint firstAttribute="trailing" secondItem="2yt-e4-g83" secondAttribute="trailing" constant="16" id="63R-ad-8TU"/>
-                                            <constraint firstAttribute="trailing" secondItem="jVF-Ny-NNo" secondAttribute="trailing" constant="16" id="72C-Wh-D7C"/>
                                             <constraint firstItem="y4K-z6-zG8" firstAttribute="leading" secondItem="FgG-p9-tZX" secondAttribute="leading" constant="16" id="8z7-fA-kXb"/>
                                             <constraint firstItem="2yt-e4-g83" firstAttribute="top" secondItem="AZs-Wh-gpK" secondAttribute="bottom" constant="40" id="AHX-hP-dRV"/>
-                                            <constraint firstItem="jVF-Ny-NNo" firstAttribute="top" secondItem="0Qp-xu-Mw2" secondAttribute="bottom" constant="48" id="Alr-fA-qJE"/>
                                             <constraint firstAttribute="trailing" secondItem="EkS-4w-zgN" secondAttribute="trailing" constant="16" id="IH3-ky-P5x"/>
                                             <constraint firstAttribute="trailing" secondItem="0Qp-xu-Mw2" secondAttribute="trailing" constant="16" id="Ka5-r5-d4h"/>
                                             <constraint firstItem="AZs-Wh-gpK" firstAttribute="top" secondItem="FgG-p9-tZX" secondAttribute="top" constant="24" id="L3m-I8-9PD"/>
                                             <constraint firstAttribute="bottom" secondItem="EkS-4w-zgN" secondAttribute="bottom" constant="24" id="Ldj-sh-U6M"/>
-                                            <constraint firstItem="jVF-Ny-NNo" firstAttribute="leading" secondItem="FgG-p9-tZX" secondAttribute="leading" constant="16" id="Lsj-E0-9W3"/>
                                             <constraint firstAttribute="trailing" secondItem="AZs-Wh-gpK" secondAttribute="trailing" constant="16" id="Mrm-MZ-SZt"/>
                                             <constraint firstItem="2yt-e4-g83" firstAttribute="leading" secondItem="FgG-p9-tZX" secondAttribute="leading" constant="16" id="Oov-II-Iki"/>
                                             <constraint firstItem="EkS-4w-zgN" firstAttribute="leading" secondItem="FgG-p9-tZX" secondAttribute="leading" constant="16" id="SLC-Es-Ev1"/>
@@ -1000,15 +1004,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3XL-L1-hvP"/>
                     </view>
+                    <connections>
+                        <outlet property="accountingButton" destination="qIT-CV-2BE" id="SjD-hg-apP"/>
+                        <outlet property="androidDevelopmentButton" destination="ZFN-YG-YKd" id="hQf-LK-9w2"/>
+                        <outlet property="businessManagementButton" destination="kRA-ND-Din" id="CRT-Ei-nWd"/>
+                        <outlet property="economicsButton" destination="lpc-ne-rUl" id="oDa-ly-LjA"/>
+                        <outlet property="entrepreneurshipButton" destination="xVH-jM-Diz" id="sKy-LE-0JE"/>
+                        <outlet property="htmlButton" destination="cpj-o8-EZT" id="ZPv-fo-588"/>
+                        <outlet property="iosDevelopmentButton" destination="rVA-Qy-3Xh" id="tpu-ZC-H0g"/>
+                        <outlet property="javascriptButton" destination="HyN-2f-NTc" id="6ht-EQ-Fer"/>
+                        <outlet property="marketingButton" destination="wfz-8A-a7x" id="9H0-VI-egQ"/>
+                        <outlet property="salesButton" destination="t91-rp-RqU" id="ewi-z9-7g9"/>
+                        <outlet property="saveChangesButton" destination="EkS-4w-zgN" id="9mB-I3-ZO1"/>
+                        <outlet property="uxDesignButton" destination="TwJ-jW-dcx" id="0YZ-Xs-Mve"/>
+                        <outlet property="webDevelopmentButton" destination="GhT-2o-WK7" id="D2e-eG-J8k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5t-Iw-HK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2962.3188405797105" y="-404.46428571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Teacher Edit Preferences View Controller-->
         <scene sceneID="JsN-ty-RL3">
             <objects>
-                <viewController id="hn1-pP-6uK" sceneMemberID="viewController">
+                <viewController id="hn1-pP-6uK" customClass="TeacherEditPreferencesViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sgU-Ev-Ezi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1020,13 +1039,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="740"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferences" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftK-qG-ARI">
-                                                <rect key="frame" x="16" y="24" width="382" height="39"/>
-                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="32"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="16" y="24" width="382" height="36.5"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="30"/>
+                                                <color key="textColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Icr-V3-sjT">
-                                                <rect key="frame" x="16" y="87" width="382" height="74.5"/>
+                                                <rect key="frame" x="16" y="84.5" width="382" height="74.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ryv-q4-Hq8">
                                                         <rect key="frame" x="32.5" y="0.0" width="317" height="30"/>
@@ -1041,7 +1060,7 @@
                                                                 <rect key="frame" x="166.5" y="0.0" width="150.5" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -1054,7 +1073,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H11-mW-XpG">
-                                                <rect key="frame" x="16" y="185.5" width="382" height="370.5"/>
+                                                <rect key="frame" x="16" y="183" width="382" height="370.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uPv-uk-koM">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="370.5"/>
@@ -1121,6 +1140,7 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="mondayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="AEY-ZF-mML"/>
+                                                                            <action selector="mondayMorningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="KXb-W7-WmO"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQc-ew-cKY">
@@ -1128,6 +1148,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
+                                                                            <action selector="tuesdayMorningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="7kp-zS-sma"/>
                                                                             <action selector="tuesdayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="L5W-ij-GsG"/>
                                                                         </connections>
                                                                     </button>
@@ -1137,6 +1158,7 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="wednesdayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="2V6-8r-VXz"/>
+                                                                            <action selector="wednesdayMorningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="9cU-Qr-7io"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCS-z3-yDx">
@@ -1145,6 +1167,7 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="thursdayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="SUR-fZ-adv"/>
+                                                                            <action selector="thursdayMorningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="mHK-Pg-cdT"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCW-iY-P5b">
@@ -1152,6 +1175,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
+                                                                            <action selector="fridayMorningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="H7F-Nc-0Q5"/>
                                                                             <action selector="fridayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="oeE-Zr-pTi"/>
                                                                         </connections>
                                                                     </button>
@@ -1160,6 +1184,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
+                                                                            <action selector="saturdayMorningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="Wri-ya-9WO"/>
                                                                             <action selector="saturdayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="g8L-dp-gVJ"/>
                                                                         </connections>
                                                                     </button>
@@ -1169,6 +1194,7 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="sundayMorningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="SLK-eO-MOj"/>
+                                                                            <action selector="sundayMorningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="bzA-yK-ZQL"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -1186,6 +1212,7 @@
                                                                         <rect key="frame" x="21.5" y="20.5" width="50" height="50"/>
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
+                                                                            <action selector="mondayAfternoonButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="3I3-u1-QJS"/>
                                                                             <action selector="mondayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="Jaz-5i-gzC"/>
                                                                         </connections>
                                                                     </button>
@@ -1193,6 +1220,7 @@
                                                                         <rect key="frame" x="21.5" y="70.5" width="50" height="50"/>
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
+                                                                            <action selector="tuesdayAfternoonButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="RHQ-fQ-wqq"/>
                                                                             <action selector="tuesdayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="XhQ-sC-3JG"/>
                                                                         </connections>
                                                                     </button>
@@ -1201,12 +1229,14 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="wednesdayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="Jfn-nb-vPq"/>
+                                                                            <action selector="wednesdayAfternoonButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="NLr-DO-YjR"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TT-5i-ZbG">
                                                                         <rect key="frame" x="21.5" y="170.5" width="50" height="50"/>
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
+                                                                            <action selector="thursdayAfternoonButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="C16-54-ZPR"/>
                                                                             <action selector="thursdayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="gbN-9r-3ZP"/>
                                                                         </connections>
                                                                     </button>
@@ -1214,6 +1244,7 @@
                                                                         <rect key="frame" x="21.5" y="220.5" width="50" height="50"/>
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
+                                                                            <action selector="fridayAfternoonButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="eV1-hT-vpa"/>
                                                                             <action selector="fridayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="k2w-yS-mXo"/>
                                                                         </connections>
                                                                     </button>
@@ -1222,6 +1253,7 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="saturdayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="3be-EX-1Ph"/>
+                                                                            <action selector="saturdayAfternoonButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="cT5-T5-RMO"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ0-3t-B9O">
@@ -1229,6 +1261,7 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="sundayAfternoonButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="8rQ-gI-vrj"/>
+                                                                            <action selector="sundayAfternoonButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="aVJ-uK-eeA"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -1247,6 +1280,7 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="mondayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="E6s-xe-zu8"/>
+                                                                            <action selector="mondayEveningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="fHy-zj-tQj"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlV-EZ-Bkr">
@@ -1254,6 +1288,7 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="tuesdayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="ABC-x4-REV"/>
+                                                                            <action selector="tuesdayEveningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="ndr-Lc-mGc"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZO-Wy-ac1">
@@ -1261,12 +1296,14 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="wednesdayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="Cqm-Ez-be3"/>
+                                                                            <action selector="wednesdayEveningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="mbK-Fb-dkS"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaF-pe-x3y">
                                                                         <rect key="frame" x="14" y="170.5" width="50" height="50"/>
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
+                                                                            <action selector="thursdayEveningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="91N-wc-YyW"/>
                                                                             <action selector="thursdayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="pQY-Jp-2fQ"/>
                                                                         </connections>
                                                                     </button>
@@ -1274,6 +1311,7 @@
                                                                         <rect key="frame" x="14" y="220.5" width="50" height="50"/>
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
+                                                                            <action selector="fridayEveningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="1Dl-Ze-Rqy"/>
                                                                             <action selector="fridayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="DQt-oh-h5u"/>
                                                                         </connections>
                                                                     </button>
@@ -1282,6 +1320,7 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="saturdayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="CVa-S8-DS0"/>
+                                                                            <action selector="saturdayEveningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="cIy-bs-S5V"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9K-zO-6tY">
@@ -1289,6 +1328,7 @@
                                                                         <state key="normal" image="unchecked"/>
                                                                         <connections>
                                                                             <action selector="sundayEveningButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="Ddp-Dq-7lK"/>
+                                                                            <action selector="sundayEveningButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="eeo-hv-ebo"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -1298,7 +1338,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wCi-3z-OQn">
-                                                <rect key="frame" x="16" y="580" width="382" height="76"/>
+                                                <rect key="frame" x="16" y="577.5" width="382" height="76"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Meeting Preference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7B-nG-c0B">
                                                         <rect key="frame" x="90" y="0.0" width="202.5" height="30"/>
@@ -1316,6 +1356,7 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
+                                                                    <action selector="inPersonButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="Jhb-y8-nj8"/>
                                                                     <action selector="localButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="2iZ-kl-e6B"/>
                                                                 </connections>
                                                             </button>
@@ -1327,6 +1368,7 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onlineButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="cez-J8-2FR"/>
+                                                                    <action selector="onlineButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="zLk-aM-ecV"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3S-Am-Hhg">
@@ -1336,6 +1378,7 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
+                                                                    <action selector="bothButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="HoL-jL-UPW"/>
                                                                     <action selector="bothButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="ce4-PW-L86"/>
                                                                 </connections>
                                                             </button>
@@ -1353,6 +1396,7 @@
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="21"/>
                                                 <state key="normal" title="Save Changes"/>
                                                 <connections>
+                                                    <action selector="saveChangesButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="SGI-KD-3l8"/>
                                                     <action selector="saveChangesButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="hgI-fH-Lyp"/>
                                                 </connections>
                                             </button>
@@ -1396,15 +1440,43 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="97u-Y0-tYD"/>
                     </view>
+                    <connections>
+                        <outlet property="bothButton" destination="V3S-Am-Hhg" id="ACV-Pn-zst"/>
+                        <outlet property="fridayAfternoonButton" destination="AVg-3g-h8o" id="ijv-Bn-wUv"/>
+                        <outlet property="fridayEveningButton" destination="Bdc-iy-R8o" id="ibW-RA-zdR"/>
+                        <outlet property="fridayMorningButton" destination="aCW-iY-P5b" id="Qih-Bd-l3Q"/>
+                        <outlet property="inPersonButton" destination="tbn-U5-sWJ" id="ekY-hn-a07"/>
+                        <outlet property="mondayAfternoonButton" destination="gL4-95-OvO" id="bTO-QR-cdf"/>
+                        <outlet property="mondayEveningButton" destination="zjP-fs-V8G" id="Ymv-fZ-JI7"/>
+                        <outlet property="mondayMorningButton" destination="DF4-On-zi9" id="ZeX-bb-xpk"/>
+                        <outlet property="onlineButton" destination="xbj-fO-nqI" id="iXh-6e-HgJ"/>
+                        <outlet property="priceTextfield" destination="PyF-dp-qNS" id="GUR-nW-qRu"/>
+                        <outlet property="saturdayAfternoonButton" destination="BFv-Jq-qIn" id="nvX-Gf-peG"/>
+                        <outlet property="saturdayEveningButton" destination="x9Z-H1-kgq" id="Mbg-gY-kfg"/>
+                        <outlet property="saturdayMorningButton" destination="D17-cm-VEe" id="wL2-HM-dkH"/>
+                        <outlet property="saveChangesButton" destination="0qD-ET-gGn" id="ui4-YC-5Ga"/>
+                        <outlet property="sundayAfternoonButton" destination="dZ0-3t-B9O" id="lL0-JH-U9G"/>
+                        <outlet property="sundayEveningButton" destination="a9K-zO-6tY" id="37k-4Q-P30"/>
+                        <outlet property="sundayMorningButton" destination="pmW-Pv-017" id="FqX-32-Wkn"/>
+                        <outlet property="thursdayAfternoonButton" destination="8TT-5i-ZbG" id="Cb0-Q1-8d5"/>
+                        <outlet property="thursdayEveningButton" destination="FaF-pe-x3y" id="Jrf-TZ-S2O"/>
+                        <outlet property="thursdayMorningButton" destination="WCS-z3-yDx" id="xaA-AE-ecA"/>
+                        <outlet property="tuesdayAfternoonButton" destination="s4o-u8-QkY" id="DVU-Ck-CFE"/>
+                        <outlet property="tuesdayEveningButton" destination="DlV-EZ-Bkr" id="yZG-mL-gXf"/>
+                        <outlet property="tuesdayMorningButton" destination="aQc-ew-cKY" id="eb2-vY-mjU"/>
+                        <outlet property="wednesdayAfternoonButton" destination="gTd-Mt-hMw" id="QZB-ys-fMz"/>
+                        <outlet property="wednesdayEveningButton" destination="XZO-Wy-ac1" id="Wd3-Ru-zP5"/>
+                        <outlet property="wednesdayMorningButton" destination="PH3-BD-c1m" id="S4L-iV-9xj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxZ-GA-pPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2962.3188405797105" y="264.50892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Teacher Edit Biography View Controller-->
         <scene sceneID="oln-Ll-jK6">
             <objects>
-                <viewController id="BgU-T3-rQx" sceneMemberID="viewController">
+                <viewController id="BgU-T3-rQx" customClass="TeacherEditBiographyViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZaB-26-Ms6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1416,7 +1488,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F7t-mF-F4a">
-                                                <rect key="frame" x="16" y="87" width="382" height="236"/>
+                                                <rect key="frame" x="16" y="84.5" width="382" height="236"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvP-qJ-E0j">
                                                         <rect key="frame" x="0.0" y="0.0" width="74.5" height="21"/>
@@ -1431,7 +1503,6 @@
                                                             <constraint firstAttribute="width" constant="374" id="6jq-lI-Hg6"/>
                                                             <constraint firstAttribute="height" constant="120" id="IjX-y9-e4M"/>
                                                         </constraints>
-                                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
@@ -1461,11 +1532,12 @@
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="21"/>
                                                 <state key="normal" title="Save Changes"/>
                                                 <connections>
+                                                    <action selector="saveChangesButtonTapped:" destination="BgU-T3-rQx" eventType="touchUpInside" id="BTa-fC-4UJ"/>
                                                     <action selector="saveChangesButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="R9R-rq-7Cq"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RgC-hH-3fr">
-                                                <rect key="frame" x="16" y="347" width="382" height="207"/>
+                                                <rect key="frame" x="16" y="344.5" width="382" height="207"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qualifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-yv-09P">
                                                         <rect key="frame" x="0.0" y="0.0" width="98" height="21"/>
@@ -1480,7 +1552,6 @@
                                                             <constraint firstAttribute="height" constant="120" id="41w-cU-qSs"/>
                                                             <constraint firstAttribute="width" constant="374" id="rj2-lB-Ypz"/>
                                                         </constraints>
-                                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
@@ -1499,9 +1570,9 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSF-sh-DZa">
-                                                <rect key="frame" x="16" y="24" width="382" height="39"/>
-                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="32"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="16" y="24" width="382" height="36.5"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="30"/>
+                                                <color key="textColor" red="0.027450980392156862" green="0.27058823529411763" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1541,10 +1612,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s6E-Mq-L7Q"/>
                     </view>
+                    <connections>
+                        <outlet property="aboutYouTextView" destination="rVi-st-IF9" id="n6b-AO-xL9"/>
+                        <outlet property="qualificationsTextView" destination="ho3-2m-yJy" id="xgG-jy-sgB"/>
+                        <outlet property="saveChangesButton" destination="tH7-X8-ApJ" id="CSU-Bh-GET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhT-2m-TC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2962.3188405797105" y="1151.7857142857142"/>
+            <point key="canvasLocation" x="2962" y="931"/>
         </scene>
         <!--Teacher Profile View Controller-->
         <scene sceneID="R8U-4h-6cL">
@@ -1580,13 +1656,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPC-fv-2MG">
-                                                <rect key="frame" x="16" y="410" width="382" height="24"/>
+                                                <rect key="frame" x="16" y="413" width="382" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="slU-YU-kS0">
-                                                <rect key="frame" x="16" y="450" width="382" height="239.5"/>
+                                                <rect key="frame" x="16" y="453" width="382" height="239.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Di7-4r-RC0">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="239.5"/>
@@ -1685,7 +1761,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-bA-YAd">
-                                                <rect key="frame" x="16" y="314" width="382" height="64"/>
+                                                <rect key="frame" x="16" y="317" width="382" height="64"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$/hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZk-S6-QUT">
                                                         <rect key="frame" x="0.0" y="0.0" width="59" height="24"/>
@@ -1702,11 +1778,12 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8O4-bn-zND">
-                                                <rect key="frame" x="16" y="200" width="382" height="30"/>
+                                                <rect key="frame" x="16" y="200" width="382" height="33"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgB-81-8uq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="33"/>
+                                                        <color key="backgroundColor" red="0.080838464200000001" green="0.57655972239999997" blue="0.81357341999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                         <state key="normal" title="Business Management">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -1714,11 +1791,12 @@
                                                             <action selector="businessManagementButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="NxH-Nf-772"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQ7-fQ-p1w">
-                                                        <rect key="frame" x="199" y="0.0" width="183" height="30"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQ7-fQ-p1w">
+                                                        <rect key="frame" x="199" y="0.0" width="183" height="33"/>
+                                                        <color key="backgroundColor" red="0.080838464200000001" green="0.57655972239999997" blue="0.81357341999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                         <state key="normal" title="Marketing">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="businessManagementButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="UlU-mn-I0I"/>
@@ -1745,7 +1823,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="scz-JB-sLe">
-                                                <rect key="frame" x="16" y="721.5" width="382" height="36"/>
+                                                <rect key="frame" x="16" y="724.5" width="382" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-oD-lNl">
                                                         <rect key="frame" x="0.0" y="0.0" width="89" height="36"/>
@@ -1764,7 +1842,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-Fm-XKG">
-                                                <rect key="frame" x="16" y="262" width="382" height="36"/>
+                                                <rect key="frame" x="16" y="265" width="382" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ou-HK-kmg">
                                                         <rect key="frame" x="0.0" y="0.0" width="257.5" height="36"/>
@@ -1833,9 +1911,32 @@
                     </view>
                     <navigationItem key="navigationItem" id="SJh-2Q-h9v">
                         <barButtonItem key="backBarButtonItem" title=" " id="Bce-22-SuP"/>
-                        <barButtonItem key="rightBarButtonItem" title="Settings Gear" id="0OF-Vn-L3y"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings Gear" id="0OF-Vn-L3y">
+                            <connections>
+                                <action selector="settingsButtonTapped:" destination="b63-E3-OiU" id="PSZ-1z-0Eu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="900"/>
+                    <connections>
+                        <outlet property="editBiographyButton" destination="eGw-mA-Wln" id="pgS-5o-u51"/>
+                        <outlet property="editPreferencesButton" destination="eSn-xo-3iw" id="h6u-qs-zPD"/>
+                        <outlet property="editSubjectsButton" destination="0qW-xl-by4" id="ECy-J2-noQ"/>
+                        <outlet property="fridayAvailabilityLabel" destination="vf5-ms-sHl" id="cZM-eM-G47"/>
+                        <outlet property="meetingPrefLabel" destination="1Jj-1r-b0L" id="Rki-u3-7gD"/>
+                        <outlet property="mondayAvailabilityLabel" destination="ycL-Xt-iSe" id="v3G-Mc-jf8"/>
+                        <outlet property="nameLabel" destination="P7N-vh-UzM" id="lFN-dJ-2ar"/>
+                        <outlet property="preferencesStackView" destination="KUx-bA-YAd" id="7q9-aI-U4u"/>
+                        <outlet property="priceLabel" destination="sZk-S6-QUT" id="HaZ-PM-xRM"/>
+                        <outlet property="profileImage" destination="wOG-sC-77f" id="R0a-UY-fxz"/>
+                        <outlet property="saturdayAvailabilityLabel" destination="G73-g0-wbP" id="mYN-8r-UMn"/>
+                        <outlet property="settingsButton" destination="0OF-Vn-L3y" id="4Wo-pu-RUr"/>
+                        <outlet property="sundayAvailabilityLabel" destination="S2R-Jz-bOY" id="TNo-d4-aiO"/>
+                        <outlet property="teacherProfileScrollView" destination="TAN-dl-hQe" id="yVY-lI-CDQ"/>
+                        <outlet property="thursdayAvailabilityLabel" destination="xCD-XA-Gcu" id="ed1-w2-byw"/>
+                        <outlet property="tuesdayAvailabilityLabel" destination="edu-0w-9Cw" id="JJL-nZ-hYq"/>
+                        <outlet property="wednesdayAvailabilityLabel" destination="PLS-9v-imu" id="bte-Fp-wm9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQI-Mj-YH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
