@@ -17,7 +17,6 @@ class MainLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.layer.cornerRadius = loginButton.frame.height / 2
     }
 
     //MARK: - Actions

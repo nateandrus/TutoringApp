@@ -93,73 +93,10 @@
                     <view key="view" contentMode="scaleToFill" id="eR8-Nt-vEh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kzg-vE-Gya">
-                                <rect key="frame" x="0.0" y="88" width="414" height="728"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LNF-tY-cH7">
-                                    <size key="itemSize" width="210" height="142"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="messageCell" id="Lqc-hE-5zO">
-                                        <rect key="frame" x="102" y="0.0" width="210" height="142"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="210" height="142"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5D-G0-H3W">
-                                <rect key="frame" x="0.0" y="816" width="414" height="46"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wS2-qe-3Xk">
-                                        <rect key="frame" x="8" y="8" width="398" height="30"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ykw-jR-FU8">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0t-ol-i0v">
-                                                <rect key="frame" x="362" y="0.0" width="36" height="30"/>
-                                                <state key="normal" title="Send">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="wS2-qe-3Xk" firstAttribute="top" secondItem="m5D-G0-H3W" secondAttribute="top" constant="8" id="6BK-mp-IS4"/>
-                                    <constraint firstAttribute="trailing" secondItem="wS2-qe-3Xk" secondAttribute="trailing" constant="8" id="9eK-dl-q3L"/>
-                                    <constraint firstItem="wS2-qe-3Xk" firstAttribute="leading" secondItem="m5D-G0-H3W" secondAttribute="leading" constant="8" id="bAs-MY-HyG"/>
-                                    <constraint firstAttribute="bottom" secondItem="wS2-qe-3Xk" secondAttribute="bottom" constant="8" id="fwq-xQ-yxV"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="m5D-G0-H3W" firstAttribute="bottom" secondItem="shQ-Fm-x0q" secondAttribute="bottom" id="94f-fe-ZQZ"/>
-                            <constraint firstItem="kzg-vE-Gya" firstAttribute="top" secondItem="shQ-Fm-x0q" secondAttribute="top" id="Ov5-ek-LHV"/>
-                            <constraint firstItem="m5D-G0-H3W" firstAttribute="leading" secondItem="shQ-Fm-x0q" secondAttribute="leading" id="cdT-4c-b2x"/>
-                            <constraint firstItem="m5D-G0-H3W" firstAttribute="top" secondItem="kzg-vE-Gya" secondAttribute="bottom" id="eMX-PX-txK"/>
-                            <constraint firstItem="kzg-vE-Gya" firstAttribute="leading" secondItem="shQ-Fm-x0q" secondAttribute="leading" id="oY6-Bw-bIN"/>
-                            <constraint firstItem="shQ-Fm-x0q" firstAttribute="trailing" secondItem="kzg-vE-Gya" secondAttribute="trailing" id="slI-AR-D7h"/>
-                            <constraint firstItem="shQ-Fm-x0q" firstAttribute="trailing" secondItem="m5D-G0-H3W" secondAttribute="trailing" id="y7u-KF-hRu"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="shQ-Fm-x0q"/>
                     </view>
                     <navigationItem key="navigationItem" title="(who?)" id="aWb-Ee-H6u"/>
-                    <connections>
-                        <outlet property="messageTextField" destination="ykw-jR-FU8" id="BSI-oo-2tM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8c-qA-TAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

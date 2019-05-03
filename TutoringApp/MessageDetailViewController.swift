@@ -12,8 +12,6 @@ import MessageInputBar
 
 class MessageDetailViewController: MessagesViewController {
 
-//    @IBOutlet weak var messagesCollectionView: UICollectionView!
-    @IBOutlet weak var messageTextField: UITextField!
     
     //LandingPad for chat
     var chatLanding: Chat? {
@@ -21,7 +19,6 @@ class MessageDetailViewController: MessagesViewController {
             
         }
     }
-    
     
     var teacherLanding: Teacher?
     var fromChat: Bool = false
@@ -41,6 +38,26 @@ class MessageDetailViewController: MessagesViewController {
             self.title = chat.teacherName
         }
         guard let chat = chatLanding else { return }
+        
+        chat.documentRef.addSnapshotListener { documentSnapshot, error in
+            guard let document = documentSnapshot else {
+                print("Error fetching document: \(error!)")
+                return
+            }
+            guard let data = document.data() else {
+                print("Document data was empty.")
+                return
+            }
+            MessageController.shared.fetchMessagesFor(chat: chat.documentRef) { (success) in
+                if success {
+                    self.messagesCollectionView.reloadData()
+                }
+        
+            
+            }
+            
+            print("Current data: \(data)")
+        }
         MessageController.shared.fetchMessagesFor(chat: chat.documentRef) { (success) in
             if success {
                 self.messagesCollectionView.reloadData()
@@ -85,15 +102,15 @@ extension MessageDetailViewController: MessagesDisplayDelegate {
         return MessageController.shared.isFromCurrentSender(message: message) ? UIColor.lightGray : UIColor.green
     }
 
-    func shouldDisplayHeader(for message: Message, at indexPath: IndexPath,
+    func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath,
                              in messagesCollectionView: MessagesCollectionView) -> Bool {
         return false
     }
 
-    private func messageStyle(for message: Message, at indexPath: IndexPath,
+    func messageStyle(for message: MessageType, at indexPath: IndexPath,
                       in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
 
-        let corner: MessageStyle.TailCorner = MessageController.shared.isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
+        let corner: MessageStyle.TailCorner = MessageController.shared.isFromCurrentSender(message: message as! Message) ? .bottomRight : .bottomLeft
         return .bubbleTail(corner, .curved)
     }
 }
@@ -121,10 +138,7 @@ extension MessageDetailViewController: MessagesLayoutDelegate {
 extension MessageDetailViewController: MessagesDataSource {
 
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-        if MessageController.shared.messages.isEmpty {
-            return 0
-        }
-        return 1
+        return MessageController.shared.messages.count
     }
 
     func currentSender() -> Sender {
@@ -137,7 +151,7 @@ extension MessageDetailViewController: MessagesDataSource {
 
     func messageForItem(at indexPath: IndexPath,
                         in messagesCollectionView: MessagesCollectionView) -> MessageType {
-            return MessageController.shared.messages[indexPath.row]
+        return MessageController.shared.messages[indexPath.section]
     }
 
     func cellTopLabelAttributedText(for message: MessageType,
@@ -161,13 +175,16 @@ extension MessageDetailViewController: MessageInputBarDelegate {
         guard let student = StudentController.shared.currentUser else { return }
         let sender = Sender(id: student.firebaseUID, displayName: student.name)
         let uuid = UUID().uuidString
-        let message = Message(sender: sender, messageId: uuid, timestamp: Date().timeIntervalSince1970, kind: .text(text), senderName: student.name, content: text)
-
+        let message = Message(sender: sender, messageId: uuid, timestamp: Date().timeIntervalSince1970, content: text, senderName: student.name)
         if fromChat == true {
             guard let chat = chatLanding else { return }
             MessageController.shared.addMessageToChat(chatRef: chat.documentRef, message: message) { (success) in
                 if success {
-
+                    MessageController.shared.fetchMessagesFor(chat: chat.documentRef, completion: { (success) in
+                        if success {
+                            self.messagesCollectionView.reloadData()
+                        }
+                    })
                 }
             }
         } else {
