@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="efa-X7-83U">
             <objects>
                 <navigationController id="KX4-aq-RkB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Tor-15-yIa"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="Tor-15-yIa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AC3-hN-BBU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

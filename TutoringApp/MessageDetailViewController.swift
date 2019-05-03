@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageKit
+import MessageInputBar
 
 class MessageDetailViewController: MessagesViewController {
 
@@ -20,6 +21,8 @@ class MessageDetailViewController: MessagesViewController {
             
         }
     }
+    
+    
     var teacherLanding: Teacher?
     var fromChat: Bool = false
     
@@ -31,39 +34,49 @@ class MessageDetailViewController: MessagesViewController {
         messagesCollectionView.messagesDisplayDelegate = self
         messageInputBar.leftStackView.alignment = .center
         messageInputBar.setLeftStackViewWidthConstant(to: 50, animated: false)
-        guard let teacher = teacherLanding else { return }
-        self.title = teacher.name
-    }
-    
-    
-    @IBAction func messageSendButtonTapped(_ sender: UIButton) {
-        if fromChat == false {
-            guard let messageText = messageTextField.text, !messageText.isEmpty, let teacher = teacherLanding, let currentStudent = StudentController.shared.currentUser else { return }
-            let sender = Sender(id: currentStudent.firebaseUID, displayName: currentStudent.name)
-            let uuid = UUID().uuidString
-            let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(messageText))
-            
-            ChatController.shared.createChat(teacherDocRef: teacher.selfDocRef, studentDocRef: currentStudent.selfDocRef, message: message, messageText: messageText) { (success) in
-                if success {
-                    self.navigationController?.popViewController(animated: true)
-                }
-            }
-        } else {
-            guard let chat = chatLanding, let messageText = messageTextField.text, !messageText.isEmpty, let user = StudentController.shared.currentUser else { return }
-            let sender = Sender(id: user.firebaseUID, displayName: user.name)
-            let uuid = UUID().uuidString
-            let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(messageText))
-            
-            MessageController.shared.addMessageToChat(chatRef: chat.documentRef, message: message) { (success) in
-                if success {
-                    MessageController.shared.messages.append(message)
-                    let index = MessageController.shared.messages.count - 1
-                    let indexPath = IndexPath(item: index, section: 0)
-                    self.messagesCollectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
-                }
+        if let teacher = teacherLanding {
+            self.title = teacher.name
+        }
+        if let chat = chatLanding {
+            self.title = chat.teacherName
+        }
+        guard let chat = chatLanding else { return }
+        MessageController.shared.fetchMessagesFor(chat: chat.documentRef) { (success) in
+            if success {
+                self.messagesCollectionView.reloadData()
             }
         }
     }
+    
+    
+//    @IBAction func messageSendButtonTapped(_ sender: UIButton) {
+//        if fromChat == false {
+//            guard let messageText = messageTextField.text, !messageText.isEmpty, let teacher = teacherLanding, let currentStudent = StudentController.shared.currentUser else { return }
+//            let sender = Sender(id: currentStudent.firebaseUID, displayName: currentStudent.name)
+//            let uuid = UUID().uuidString
+//            let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(messageText), senderName: currentStudent.name, content: m)
+//
+//            ChatController.shared.createChat(teacherDocRef: teacher.selfDocRef, studentDocRef: currentStudent.selfDocRef, message: message, messageText: messageText) { (success) in
+//                if success {
+//                    self.navigationController?.popViewController(animated: true)
+//                }
+//            }
+//        } else {
+//            guard let chat = chatLanding, let messageText = messageTextField.text, !messageText.isEmpty, let user = StudentController.shared.currentUser else { return }
+//            let sender = Sender(id: user.firebaseUID, displayName: user.name)
+//            let uuid = UUID().uuidString
+//            let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(messageText), senderName: user.name)
+//
+//            MessageController.shared.addMessageToChat(chatRef: chat.documentRef, message: message) { (success) in
+//                if success {
+//                    MessageController.shared.messages.append(message)
+//                    let index = MessageController.shared.messages.count - 1
+//                    let indexPath = IndexPath(item: index, section: 0)
+//                    self.messagesCollectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
+//                }
+//            }
+//        }
+//    }
 }
 
 extension MessageDetailViewController: MessagesDisplayDelegate {
@@ -143,25 +156,25 @@ extension MessageDetailViewController: MessagesDataSource {
 
 //MARK: - MessageDisplayDelegate
 extension MessageDetailViewController: MessageInputBarDelegate {
-    
+
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
         guard let student = StudentController.shared.currentUser else { return }
         let sender = Sender(id: student.firebaseUID, displayName: student.name)
         let uuid = UUID().uuidString
-        let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(text))
-        
+        let message = Message(sender: sender, messageId: uuid, timestamp: Date().timeIntervalSince1970, kind: .text(text), senderName: student.name, content: text)
+
         if fromChat == true {
             guard let chat = chatLanding else { return }
             MessageController.shared.addMessageToChat(chatRef: chat.documentRef, message: message) { (success) in
                 if success {
-                    
+
                 }
             }
         } else {
             guard let teacher = teacherLanding else { return }
-            ChatController.shared.createChat(teacherDocRef: teacher.selfDocRef, studentDocRef: student.selfDocRef, message: message, messageText: text) { (success) in
+            ChatController.shared.createChat(teacher: teacher, student: student, message: message, messageText: text) { (success) in
                 if success {
-                    
+
                 }
             }
         }

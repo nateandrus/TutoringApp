@@ -17,28 +17,31 @@ class ChatController {
     
     var chats: [Chat] = []
     
-    func createChat(teacherDocRef: DocumentReference, studentDocRef: DocumentReference, message: Message, messageText: String, completion: @escaping (Bool) -> Void) {
+    func createChat(teacher: Teacher, student: Student, message: Message, messageText: String, completion: @escaping (Bool) -> Void) {
         
         let documentRef = DB.document()
-//        let chat = Chat(studentID: studentDocRef, tutorID: teacherDocRef, documentRef: documentRef)
         
         let docData: [String: Any] = [
-            "studentFirebaseUID" : studentDocRef,
-            "teacherFirebaseUID" : teacherDocRef,
+            "studentFirebaseUID" : student.selfDocRef,
+            "teacherFirebaseUID" : teacher.selfDocRef,
             "selfDocReference" : documentRef,
-            "timestamp" :  Date(),
-            "messagePreview" : messageText
+            "timestamp" :  Date().timeIntervalSince1970,
+            "messagePreview" : messageText,
+            "studentUID" : student.firebaseUID,
+            "teacherUID" : teacher.firebaseUID,
+            "studentName" : student.name,
+            "teacherName" : teacher.name
         ]
         
         documentRef.setData(docData)
         documentRef.collection("messages").addDocument(data: message.dictionary)
-        teacherDocRef.updateData(["messages" : FieldValue.arrayUnion([documentRef])]) { (error) in
+        teacher.selfDocRef.updateData(["messages" : FieldValue.arrayUnion([documentRef])]) { (error) in
             if let error = error {
                 print(error.localizedDescription)
                 completion(false)
                 return
             }
-            studentDocRef.updateData(["messages" : FieldValue.arrayUnion([documentRef])]) { (error) in
+            student.selfDocRef.updateData(["messageRefs" : FieldValue.arrayUnion([documentRef])]) { (error) in
                 if let error = error {
                     print(error.localizedDescription)
                     completion(false)
@@ -51,14 +54,18 @@ class ChatController {
     
     func fetchChats(student: Student, completion: @escaping (Bool) -> Void) {
         self.chats.removeAll()
-        for docRef in student.messageRefs {
-            docRef.getDocument { (snapshot, error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-                guard let snapshot = snapshot, let chat = Chat(from: snapshot) else { return }
+        Firestore.firestore().collection("chats").whereField("studentUID", isEqualTo: student.firebaseUID).getDocuments { (snapshot, error) in
+            if let error = error {
+                print("that aint gonna work \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            guard let snapshot = snapshot else { completion(false); return }
+            for document in snapshot.documents {
+                guard let chat = Chat(from: document) else { return }
                 self.chats.append(chat)
             }
+            completion(true)
         }
     }
     

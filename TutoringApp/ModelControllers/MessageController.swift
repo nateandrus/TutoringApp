@@ -32,6 +32,21 @@ class MessageController {
         }
     }
     
+    func fetchMessagesFor(chat: DocumentReference, completion: @escaping (Bool) -> Void) {
+        chat.collection("messages").getDocuments { (snapshot, error) in
+            if let error = error {
+                print("error fetching messages for chat:: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            guard let snapshot = snapshot else { completion(false); return }
+            for document in snapshot.documents {
+                guard let message = Message(dictionary: document.data()) else { return }
+                self.messages.append(message)
+            }
+        }
+    }
+    
     func isFromCurrentSender(message: Message) -> Bool {
         if message.sender.id == Auth.auth().currentUser?.uid {
             return true

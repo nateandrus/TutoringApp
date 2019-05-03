@@ -41,9 +41,19 @@ class MainMessagingTableViewController: UITableViewController {
         return ChatController.shared.chats.count
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = self.view.frame.height / 8
+        return height
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as? StudentMessagingTableViewCell
         let chat = ChatController.shared.chats[indexPath.row]
+        TeacherController.shared.loadProfileImageView(userFirebaseUID: chat.teacherUID) { (image) in
+            if let image = image {
+                cell?.messagingImageView.image = image
+            }
+        }
         cell?.chatLanding = chat
         return cell ?? UITableViewCell()
     }
