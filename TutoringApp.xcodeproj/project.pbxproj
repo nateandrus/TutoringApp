@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B96F99FE227CBD4800AF2B24 /* CabinSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F99FD227CBD4700AF2B24 /* CabinSemiBold.ttf */; };
+		B96F9A05227CBE2000AF2B24 /* CabinMediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F99FF227CBE1C00AF2B24 /* CabinMediumItalic.ttf */; };
+		B96F9A06227CBE2000AF2B24 /* CabinRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F9A00227CBE1D00AF2B24 /* CabinRegular.ttf */; };
+		B96F9A07227CBE2000AF2B24 /* CabinMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F9A01227CBE1E00AF2B24 /* CabinMedium.ttf */; };
+		B96F9A08227CBE2000AF2B24 /* CabinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F9A02227CBE1F00AF2B24 /* CabinItalic.ttf */; };
+		B96F9A09227CBE2000AF2B24 /* CabinBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F9A03227CBE1F00AF2B24 /* CabinBoldItalic.ttf */; };
+		B96F9A0A227CBE2000AF2B24 /* CabinBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F9A04227CBE2000AF2B24 /* CabinBold.ttf */; };
 		B999328D227376D700C1565E /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999328C227376D700C1565E /* StudentProfileViewController.swift */; };
 		B999328F2273781A00C1565E /* StudentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999328E2273781A00C1565E /* StudentHomeViewController.swift */; };
 		B999329122737BBF00C1565E /* StudentSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999329022737BBF00C1565E /* StudentSearchTableViewController.swift */; };
@@ -52,6 +59,13 @@
 
 /* Begin PBXFileReference section */
 		B312D90D4A5E7F6F68641AA3 /* Pods-TutoringApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutoringApp.release.xcconfig"; path = "Target Support Files/Pods-TutoringApp/Pods-TutoringApp.release.xcconfig"; sourceTree = "<group>"; };
+		B96F99FD227CBD4700AF2B24 /* CabinSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CabinSemiBold.ttf; sourceTree = "<group>"; };
+		B96F99FF227CBE1C00AF2B24 /* CabinMediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CabinMediumItalic.ttf; sourceTree = "<group>"; };
+		B96F9A00227CBE1D00AF2B24 /* CabinRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CabinRegular.ttf; sourceTree = "<group>"; };
+		B96F9A01227CBE1E00AF2B24 /* CabinMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CabinMedium.ttf; sourceTree = "<group>"; };
+		B96F9A02227CBE1F00AF2B24 /* CabinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CabinItalic.ttf; sourceTree = "<group>"; };
+		B96F9A03227CBE1F00AF2B24 /* CabinBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CabinBoldItalic.ttf; sourceTree = "<group>"; };
+		B96F9A04227CBE2000AF2B24 /* CabinBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CabinBold.ttf; sourceTree = "<group>"; };
 		B999328C227376D700C1565E /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
 		B999328E2273781A00C1565E /* StudentHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentHomeViewController.swift; path = TutoringApp/StudentHomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		B999329022737BBF00C1565E /* StudentSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentSearchTableViewController.swift; path = TutoringApp/StudentSearchTableViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -252,6 +266,13 @@
 		EDE9BB32226E1D6700314FFB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B96F9A04227CBE2000AF2B24 /* CabinBold.ttf */,
+				B96F9A03227CBE1F00AF2B24 /* CabinBoldItalic.ttf */,
+				B96F9A02227CBE1F00AF2B24 /* CabinItalic.ttf */,
+				B96F9A01227CBE1E00AF2B24 /* CabinMedium.ttf */,
+				B96F99FF227CBE1C00AF2B24 /* CabinMediumItalic.ttf */,
+				B96F9A00227CBE1D00AF2B24 /* CabinRegular.ttf */,
+				B96F99FD227CBD4700AF2B24 /* CabinSemiBold.ttf */,
 				EDE9BB20226E1A8300314FFB /* AppDelegate.swift */,
 				EDCDC008226E391C007051E3 /* GoogleService-Info.plist */,
 				ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */,
@@ -389,13 +410,20 @@
 			files = (
 				EDCDC021226E3D52007051E3 /* MessagingTab.storyboard in Resources */,
 				EDE9BB2B226E1A8400314FFB /* LaunchScreen.storyboard in Resources */,
+				B96F9A05227CBE2000AF2B24 /* CabinMediumItalic.ttf in Resources */,
 				EDCDC009226E391D007051E3 /* GoogleService-Info.plist in Resources */,
+				B96F9A0A227CBE2000AF2B24 /* CabinBold.ttf in Resources */,
 				ED0DD7BE22723E36004DBE00 /* StudentHomeTab.storyboard in Resources */,
+				B96F99FE227CBD4800AF2B24 /* CabinSemiBold.ttf in Resources */,
 				EDE9BB28226E1A8300314FFB /* Assets.xcassets in Resources */,
+				B96F9A09227CBE2000AF2B24 /* CabinBoldItalic.ttf in Resources */,
 				EDD3053B2272605700F19A20 /* TeacherMessagingg.storyboard in Resources */,
+				B96F9A06227CBE2000AF2B24 /* CabinRegular.ttf in Resources */,
 				EDD305392272602C00F19A20 /* TeacherProfile2.storyboard in Resources */,
 				ED0DD7C022723E6F004DBE00 /* StudentProfile.storyboard in Resources */,
+				B96F9A07227CBE2000AF2B24 /* CabinMedium.ttf in Resources */,
 				EDE9BB26226E1A8300314FFB /* Main.storyboard in Resources */,
+				B96F9A08227CBE2000AF2B24 /* CabinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
