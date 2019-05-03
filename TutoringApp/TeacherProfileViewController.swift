@@ -85,12 +85,12 @@ class TeacherProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        subjectsStackView.isHidden = true
-        preferencesStackView.isHidden = true
-        biographyStackView.isHidden = true
-        localButton.backgroundColor = .lightGray
-        onlineButton.backgroundColor = .lightGray
-        bothButton.backgroundColor = .lightGray
+        //subjectsStackView.isHidden = true
+        //preferencesStackView.isHidden = true
+        //biographyStackView.isHidden = true
+        //localButton.backgroundColor = .lightGray
+        //onlineButton.backgroundColor = .lightGray
+        //bothButton.backgroundColor = .lightGray
         
         guard let user = TeacherController.shared.currentUser
             else { return }
