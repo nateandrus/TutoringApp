@@ -11,8 +11,6 @@ import UIKit
 class BecomeMentorViewController: UIViewController {
 
     //MARK: - Outlets
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var changePhotoButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -24,23 +22,13 @@ class BecomeMentorViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
-    var profileImage: UIImage? {
-        didSet {
-            profileImageView.image = profileImage
-            changePhotoButton.setTitle("", for: .normal)
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         formatKeyboard()
-        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
-        nextStepButton.layer.cornerRadius = nextStepButton.frame.height / 2
+        nextStepButton.layer.cornerRadius = 10
     }
     
-    @IBAction func changePhotoButtonTapped(_ sender: UIButton) {
-        presentImagePickerActionSheet()
-    }
+
     
     @IBAction func nextStepButtonTapped(_ sender: UIButton) {
         guard let password = passwordTextField.text, !password.isEmpty,
@@ -65,7 +53,6 @@ class BecomeMentorViewController: UIViewController {
             destinationVC.email = emailText
             destinationVC.location = location
             destinationVC.dateOfBirth = dateOfBirth
-            destinationVC.profileImage = self.profileImageView.image
             destinationVC.userFirebaseUID = userFirebaseUID
             self.present(destinationVC, animated: true)
         }
@@ -99,38 +86,3 @@ class BecomeMentorViewController: UIViewController {
     }
 }
 
-///MARK: - UIImagePickerDelegate
-extension BecomeMentorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true, completion: nil)
-        if let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            profileImage = photo
-        }
-    }
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    func presentImagePickerActionSheet() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        let actionSheet = UIAlertController(title: "Select a Photo", message: nil, preferredStyle: .actionSheet)
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-            actionSheet.popoverPresentationController?.sourceView = self.view
-            actionSheet.popoverPresentationController?.sourceRect = CGRect(x: 50, y: self.view.frame.height - 100, width: self.view.frame.width - 100, height: 100)
-            actionSheet.addAction(UIAlertAction(title: "Photos", style: .default, handler: { (_) in
-                imagePickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
-                self.present(imagePickerController, animated: true, completion: nil)
-            }))
-        }
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            actionSheet.popoverPresentationController?.sourceView = self.view
-            actionSheet.popoverPresentationController?.sourceRect = CGRect(x: 50, y: self.view.frame.height - 100, width: self.view.frame.width - 100, height: 100)
-            actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (_) in
-                imagePickerController.sourceType = UIImagePickerController.SourceType.camera
-                self.present(imagePickerController, animated: true, completion: nil)
-            }))
-        }
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        present(actionSheet, animated: true)
-    }
-}

@@ -112,15 +112,15 @@ class StudentController {
         }
     }
     
-    func updatePassword(email: String, completion: @escaping (Bool) -> Void) {
+    func updatePassword(email: String, completion: @escaping (Bool, Error?) -> Void) {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let error = error {
                 print("FAILED TO SEND AN EMAIL TO THE USER \(error.localizedDescription) ❌❌❌❌❌❌")
-                completion(false)
+                completion(false, error)
                 return
             } else {
                 print("SUCCESS SENDING THE EMAIL TO USER ✅✅✅✅✅✅")
-                completion(true)
+                completion(true, nil)
             }
         }
     }

@@ -42,6 +42,7 @@ class TeacherMessageDetailViewController: MessagesViewController {
             MessageController.shared.fetchMessagesFor(chat: chat.documentRef) { (success) in
                 if success {
                     self.messagesCollectionView.reloadData()
+                    self.messagesCollectionView.scrollToBottom()
                 }
             }
             print("Current data: \(data)")
@@ -50,39 +51,10 @@ class TeacherMessageDetailViewController: MessagesViewController {
         MessageController.shared.fetchMessagesFor(chat: chat.documentRef) { (success) in
             if success {
                 self.messagesCollectionView.reloadData()
+                self.messagesCollectionView.scrollToBottom()
             }
         }
     }
-    
-    
-    //    @IBAction func messageSendButtonTapped(_ sender: UIButton) {
-    //        if fromChat == false {
-    //            guard let messageText = messageTextField.text, !messageText.isEmpty, let teacher = teacherLanding, let currentStudent = StudentController.shared.currentUser else { return }
-    //            let sender = Sender(id: currentStudent.firebaseUID, displayName: currentStudent.name)
-    //            let uuid = UUID().uuidString
-    //            let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(messageText), senderName: currentStudent.name, content: m)
-    //
-    //            ChatController.shared.createChat(teacherDocRef: teacher.selfDocRef, studentDocRef: currentStudent.selfDocRef, message: message, messageText: messageText) { (success) in
-    //                if success {
-    //                    self.navigationController?.popViewController(animated: true)
-    //                }
-    //            }
-    //        } else {
-    //            guard let chat = chatLanding, let messageText = messageTextField.text, !messageText.isEmpty, let user = StudentController.shared.currentUser else { return }
-    //            let sender = Sender(id: user.firebaseUID, displayName: user.name)
-    //            let uuid = UUID().uuidString
-    //            let message = Message(sender: sender, messageId: uuid, sentDate: Date(), kind: .text(messageText), senderName: user.name)
-    //
-    //            MessageController.shared.addMessageToChat(chatRef: chat.documentRef, message: message) { (success) in
-    //                if success {
-    //                    MessageController.shared.messages.append(message)
-    //                    let index = MessageController.shared.messages.count - 1
-    //                    let indexPath = IndexPath(item: index, section: 0)
-    //                    self.messagesCollectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
-    //                }
-    //            }
-    //        }
-    //    }
 }
 
 extension TeacherMessageDetailViewController: MessagesDisplayDelegate {
@@ -171,6 +143,7 @@ extension TeacherMessageDetailViewController: MessageInputBarDelegate {
                 MessageController.shared.fetchMessagesFor(chat: chat.documentRef, completion: { (success) in
                     if success {
                         self.messagesCollectionView.reloadData()
+                        self.messagesCollectionView.scrollToBottom()
                     }
                 })
             }

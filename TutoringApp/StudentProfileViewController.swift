@@ -64,7 +64,7 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
         
         let changePassword = UIAlertAction(title: "Change Password", style: .default) { action in
             guard let user = StudentController.shared.currentUser else { return }
-            StudentController.shared.updatePassword(email: user.email, completion: { (success) in
+            StudentController.shared.updatePassword(email: user.email, completion: { (success, error) in
                 if success {
                     print("SUCCESS SENDING PASSWORD RESET VERIFICATION EMAIL ✅✅✅✅✅✅")
                 } else {
