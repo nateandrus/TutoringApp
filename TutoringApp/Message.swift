@@ -11,17 +11,25 @@ import MessageKit
 
 struct Message: MessageType {
     
+    
+    
     var sender: Sender
     var messageId: String
-    var sentDate: Date
+    var sentDate: Date {
+        return Date(timeIntervalSince1970: timestamp)
+    }
+    var timestamp: Double
     var kind: MessageKind
+    var senderName: String
+    var content: String
     
     var dictionary: [String: Any] {
         return [
-            "sender" : sender,
+            "sender" : sender.id,
             "messageID" : messageId,
             "sentDate" : sentDate,
-            "kind" : kind
+            "content" : content,
+            "senderName" : senderName
         ]
     }
 }
@@ -29,10 +37,18 @@ struct Message: MessageType {
 extension Message {
     init?(dictionary: [String: Any]) {
         guard let messageID = dictionary["messageID"] as? String,
-            let sender = dictionary["sender"] as? Sender,
-            let sentDate = dictionary["sentDate"] as? Date,
+            let senderID = dictionary["sender"] as? String,
+            let timestamp = dictionary["sentDate"] as? Double,
+            let senderName = dictionary["senderName"] as? String,
+            let content = dictionary["content"] as? String,
             let kind = dictionary["kind"] as? MessageKind
             else { return nil }
-        self.init(sender: sender, messageId: messageID, sentDate: sentDate, kind: kind)
+        
+        self.timestamp = timestamp
+        self.messageId = messageID
+        self.kind = kind
+        self.senderName = senderName
+        self.content = content
+        self.sender = Sender(id: senderID, displayName: senderName)
     }
 }

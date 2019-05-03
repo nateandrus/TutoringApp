@@ -1431,8 +1431,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="JXc-g1-Lbu" kind="relationship" relationship="viewControllers" id="pAG-hi-ai3"/>
                         <segue destination="BHY-o0-KDE" kind="relationship" relationship="viewControllers" id="xv0-HK-Teg"/>
+                        <segue destination="JXc-g1-Lbu" kind="relationship" relationship="viewControllers" id="pAG-hi-ai3"/>
                         <segue destination="Xvo-dF-NHT" kind="relationship" relationship="viewControllers" id="ZbR-xi-nDd"/>
                     </connections>
                 </tabBarController>

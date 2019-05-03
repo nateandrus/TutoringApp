@@ -28,6 +28,7 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z2k-q5-i7n">
                                             <rect key="frame" x="16" y="6" width="114.5" height="114"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Z2k-q5-i7n" secondAttribute="height" multiplier="1:1" id="NgW-m9-jQh"/>
                                             </constraints>
@@ -130,9 +131,6 @@
                                                 <state key="normal" title="Send">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="messageSendButtonTapped:" destination="Zeb-g0-eaL" eventType="touchUpInside" id="DMi-0C-ttQ"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -167,11 +165,11 @@
             </objects>
             <point key="canvasLocation" x="2960.8695652173915" y="-273.21428571428572"/>
         </scene>
-        <!--Item-->
+        <!--Messages-->
         <scene sceneID="sL4-CR-wuL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ng-a5-OUP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="t3w-Ss-IxU"/>
+                    <tabBarItem key="tabBarItem" title="Messages" id="t3w-Ss-IxU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XyM-99-W8H">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

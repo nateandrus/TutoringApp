@@ -22,11 +22,12 @@ class StudentMessagingTableViewCell: UITableViewCell {
     }
     
     func updateViews() {
-        guard let chat = chatLanding else { return }
-        nameLabel.text = "\(chat.teacherID)"
+        guard let chat = chatLanding, let teachername = chatLanding?.teacherName else { return }
+        nameLabel.text = teachername
         if let date = chat.timestamp {
-            timestampLabel.text = date.stringWith(dateStyle: .medium, timeStyle: .medium)
+            timestampLabel.text = "\(Date(timeIntervalSince1970: date).stringWith(dateStyle: .none, timeStyle: .short)) >"
         }
+        messagingImageView.layer.cornerRadius = messagingImageView.frame.height / 2 
         if let messagePreview = chat.messagePreview {
             lastMessageLabel.text = messagePreview
         }
