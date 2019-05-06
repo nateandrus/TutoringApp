@@ -1866,13 +1866,13 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="v6k-Bn-7a7">
                                                                 <rect key="frame" x="0.0" y="322" width="373" height="54.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-Ss-qIH">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zipcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-Ss-qIH">
                                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City, State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-aW-1mo">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zipcode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-aW-1mo">
                                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1994,7 +1994,7 @@
         <segue reference="eYJ-15-NcS"/>
         <segue reference="E2D-Tv-sYX"/>
         <segue reference="Ibe-oR-FtS"/>
-        <segue reference="KG9-XR-VyQ"/>
+        <segue reference="azB-NG-dQR"/>
         <segue reference="W9Z-mG-kys"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,8 +9,8 @@
 import UIKit
 
 class StudentHomeViewController: UIViewController {
-
-    @IBOutlet weak var searchBar: UISearchBar!
+    
+    @IBOutlet weak var zipcodeTextField: UITextField!
     @IBOutlet weak var businessManagementButton: UIButton!
     @IBOutlet weak var accountingButton: UIButton!
     @IBOutlet weak var marketingButton: UIButton!
@@ -21,80 +21,105 @@ class StudentHomeViewController: UIViewController {
     @IBOutlet weak var uxDesignButton: UIButton!
     @IBOutlet weak var iosDevelopmentButton: UIButton!
     @IBOutlet weak var javascriptButton: UIButton!
-    @IBOutlet weak var pythonButton: UIButton!
-    @IBOutlet weak var softwareEngineerButton: UIButton!
+    @IBOutlet weak var androidDevelopmentButton: UIButton!
+    @IBOutlet weak var htmlButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationController?.navigationBar.isHidden = true
-        searchBar.layer.cornerRadius = 50
-        businessManagementButton.layer.cornerRadius = businessManagementButton.frame.height / 2
-        accountingButton.layer.cornerRadius = accountingButton.frame.height / 2
-        marketingButton.layer.cornerRadius = marketingButton.frame.height / 2
-        productManagementButton.layer.cornerRadius = productManagementButton.frame.height / 2
-        entrepreneurshipButton.layer.cornerRadius = entrepreneurshipButton.frame.height / 2
-        economicsButton.layer.cornerRadius = economicsButton.frame.height / 2
-        webDevelopmentButton.layer.cornerRadius = webDevelopmentButton.frame.height / 2
-        uxDesignButton.layer.cornerRadius = uxDesignButton.frame.height / 2
-        iosDevelopmentButton.layer.cornerRadius = iosDevelopmentButton.frame.height / 2
-        javascriptButton.layer.cornerRadius = javascriptButton.frame.height / 2
-        pythonButton.layer.cornerRadius = pythonButton.frame.height / 2
-        softwareEngineerButton.layer.cornerRadius = softwareEngineerButton.frame.height / 2
+        zipcodeTextField.layer.borderWidth = 2
+        zipcodeTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        businessManagementButton.layer.cornerRadius = 5
+        accountingButton.layer.cornerRadius = 5
+        marketingButton.layer.cornerRadius = 5
+        productManagementButton.layer.cornerRadius = 5
+        entrepreneurshipButton.layer.cornerRadius = 5
+        economicsButton.layer.cornerRadius = 5
+        webDevelopmentButton.layer.cornerRadius = 5
+        uxDesignButton.layer.cornerRadius = 5
+        iosDevelopmentButton.layer.cornerRadius = 5
+        javascriptButton.layer.cornerRadius = 5
+        androidDevelopmentButton.layer.cornerRadius = 5
+        htmlButton.layer.cornerRadius = 5
+    }
+
+    // MARK: - Navigation
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard let locationText = zipcodeTextField.text, !locationText.isEmpty else {
+            zipcodeAlertController()
+            return false
+        }
+        return true
     }
     
-
-    
-    // MARK: - Navigation
+    func zipcodeAlertController() {
+        let alertcontroller = UIAlertController(title: "Don't forget your zipcode", message: "Enter your zipcode so we can search your area for mentors in the given category!", preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+        alertcontroller.addAction(okayAction)
+        present(alertcontroller, animated: true)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toSoftwareEngineer" {
+        guard let locationText = zipcodeTextField.text, !locationText.isEmpty else { return }
+        if segue.identifier == "toHTML" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
-            destinationVC?.subject = "Software Development"
+            destinationVC?.subject = "HTML"
+            destinationVC?.location = locationText
         }
         if segue.identifier == "toAccounting" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
             destinationVC?.subject = "Accounting"
+            destinationVC?.location = locationText
         }
-        if segue.identifier == "toPython" {
+        if segue.identifier == "toAndroidDevelopment" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
-            destinationVC?.subject = "Python"
+            destinationVC?.subject = "Android Development"
+            destinationVC?.location = locationText
         }
         if segue.identifier == "toMarketing" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
             destinationVC?.subject = "Marketing"
+            destinationVC?.location = locationText
         }
         if segue.identifier == "toEconomics" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
             destinationVC?.subject = "Economics"
+            destinationVC?.location = locationText
         }
         if segue.identifier == "toEntrepreneurship" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
             destinationVC?.subject = "Entrepreneurship"
+            destinationVC?.location = locationText
         }
         if segue.identifier == "toWebDevelopment" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
             destinationVC?.subject = "Web Development"
+            destinationVC?.location = locationText
         }
         if segue.identifier == "toUXDesign" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
             destinationVC?.subject = "UX Design"
+            destinationVC?.location = locationText
         }
         if segue.identifier == "toBusinessManagement" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
             destinationVC?.subject = "Business Management"
+            destinationVC?.location = locationText
         }
-        if segue.identifier == "toProductManagement" {
+        if segue.identifier == "toSales" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
-            destinationVC?.subject = "Product Management"
+            destinationVC?.subject = "Sales"
+            destinationVC?.location = locationText
         }
         if segue.identifier == "toJavascript" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
             destinationVC?.subject = "Javascript"
+            destinationVC?.location = locationText
         }
         if segue.identifier == "toIOSDevelopment" {
             let destinationVC = segue.destination as? StudentSearchTableViewController
             destinationVC?.subject = "iOS Development"
+            destinationVC?.location = locationText
         }
     }
 }
