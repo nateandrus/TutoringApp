@@ -27,11 +27,8 @@ class TeacherEditBiographyViewController: UIViewController {
         guard let user = TeacherController.shared.currentUser, let newAboutMe = aboutYouTextView.text, !newAboutMe.isEmpty, let qualifications = qualificationsTextView.text, !qualifications.isEmpty else { return }
         TeacherController.shared.updateTeacherBiography(teacherDocRef: user.selfDocRef, aboutMe: newAboutMe, qualifications: qualifications) { (success) in
             if success {
-                UIView.animate(withDuration: 0.3) {
-                    
-                }
+                self.navigationController?.popViewController(animated: true)
             }
         }
     }
-
 }
