@@ -1956,11 +1956,10 @@
         <image name="unchecked" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C9W-ue-4JO"/>
         <segue reference="eYJ-15-NcS"/>
         <segue reference="9Zd-t5-A7O"/>
         <segue reference="Ibe-oR-FtS"/>
-        <segue reference="azB-NG-dQR"/>
+        <segue reference="KG9-XR-VyQ"/>
         <segue reference="W9Z-mG-kys"/>
     </inferredMetricsTieBreakers>
 </document>

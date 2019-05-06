@@ -291,10 +291,8 @@ class TeacherEditSubjectsViewController: UIViewController {
         guard let user = TeacherController.shared.currentUser else { return }
         TeacherController.shared.updateTeacherSubjects(teacherDocRef: user.selfDocRef, subjects: subjects) { (success) in
             if success {
-                UIView.animate(withDuration: 0.3) {
-                }
+                self.navigationController?.popViewController(animated: true)
             }
         }
     }
-    
 }

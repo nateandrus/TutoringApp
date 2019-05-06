@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class TeacherProfileViewController: UIViewController {
     
@@ -35,7 +37,7 @@ class TeacherProfileViewController: UIViewController {
     var subjects: [String] = []
     var schedulePreference: [String] = []
     var meetingPreference: String = ""
-    
+        
     var changedProfileImage: UIImage? {
         didSet {
             profileImage.image = changedProfileImage
@@ -50,14 +52,13 @@ class TeacherProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let user = TeacherController.shared.currentUser
-            else { return }
+        guard let user = TeacherController.shared.currentUser else { return }
         TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
             guard let image = image else { return }
             self.profileImage.image = image
         }
         
-        priceLabel.text = user.costForTime
+        priceLabel.text = ("$\(user.costForTime)/hour")
         meetingPreference = user.meetingPref
         nameLabel.text = user.name
         self.subjects = user.subjects
@@ -71,6 +72,29 @@ class TeacherProfileViewController: UIViewController {
         }
         if meetingPreference == "Both" {
             meetingPrefLabel.text = "In Person, Online"
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let id = Auth.auth().currentUser?.uid else { return }
+        TeacherController.shared.initializeTeacher(firebaseUID: id) { (success) in
+            if success {
+                guard let user = TeacherController.shared.currentUser else { return }
+                self.profileImage
+                self.nameLabel
+                self.priceLabel.text = ("$\(user.costForTime)/hour")
+                self.meetingPrefLabel
+                self.mondayAvailabilityLabel
+                self.tuesdayAvailabilityLabel
+                self.wednesdayAvailabilityLabel
+                self.thursdayAvailabilityLabel
+                self.fridayAvailabilityLabel
+                self.saturdayAvailabilityLabel
+                self.sundayAvailabilityLabel
+                self.preferencesStackView
+                
+            }
         }
     }
     

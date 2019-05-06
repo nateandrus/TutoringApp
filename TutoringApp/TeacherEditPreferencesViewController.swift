@@ -180,6 +180,8 @@ class TeacherEditPreferencesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
 
     /*
     // MARK: - Navigation
@@ -439,10 +441,8 @@ class TeacherEditPreferencesViewController: UIViewController {
         guard let user = TeacherController.shared.currentUser, let priceChange = priceTextfield.text, !priceChange.isEmpty else { return }
         TeacherController.shared.updateTeacherPreferences(teacherDocRef: user.selfDocRef, costPerHour: priceChange, schedulePreference: schedulePreference, meetingPreference: meetingPreference) { (success) in
             if success {
-                UIView.animate(withDuration: 0.3) {
-                }
+                self.navigationController?.popViewController(animated: true)
             }
         }
     }
-    
 }
