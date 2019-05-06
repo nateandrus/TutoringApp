@@ -16,6 +16,19 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var settingsButton: UIBarButtonItem!
+    @IBOutlet weak var subjectsStackView: UIStackView!
+    @IBOutlet weak var subjectBox1: UIButton!
+    @IBOutlet weak var subjectBox2: UIButton!
+    @IBOutlet weak var subjectBox3: UIButton!
+    @IBOutlet weak var subjectBox4: UIButton!
+    @IBOutlet weak var subjectBox5: UIButton!
+    @IBOutlet weak var subjectBox6: UIButton!
+    @IBOutlet weak var subjectBox7: UIButton!
+    @IBOutlet weak var subjectBox8: UIButton!
+    @IBOutlet weak var subjectBox9: UIButton!
+    @IBOutlet weak var subjectBox10: UIButton!
+    @IBOutlet weak var subjectBox11: UIButton!
+    @IBOutlet weak var subjectBox12: UIButton!
     
     @IBOutlet weak var editSubjectsButton: UIButton!
     
@@ -37,6 +50,11 @@ class TeacherProfileViewController: UIViewController {
     var subjects: [String] = []
     var schedulePreference: [String] = []
     var meetingPreference: String = ""
+    
+    var morning = "Morning"
+    var afternoon = "Afternoon"
+    var evening = "Evening"
+    var blank = ""
         
     var changedProfileImage: UIImage? {
         didSet {
@@ -58,10 +76,12 @@ class TeacherProfileViewController: UIViewController {
             self.profileImage.image = image
         }
         
+        nameLabel.text = user.name
+        subjects = user.subjects
+        subjectBox1.titleLabel?.text = "iOS"
+        subjectBox2.titleLabel?.text = "Android"
         priceLabel.text = ("$\(user.costForTime)/hour")
         meetingPreference = user.meetingPref
-        nameLabel.text = user.name
-        self.subjects = user.subjects
         schedulePreference = user.schedulePref
         
         if meetingPreference == "In Person" {
@@ -73,6 +93,69 @@ class TeacherProfileViewController: UIViewController {
         if meetingPreference == "Both" {
             meetingPrefLabel.text = "In Person, Online"
         }
+        if schedulePreference.contains("MondayMorning") {
+            mondayAvailabilityLabel.text = "Morning"
+        }
+        if schedulePreference.contains("MondayAfternoon") {
+            mondayAvailabilityLabel.text = "Afternoon"
+        }
+        if schedulePreference.contains("MondayEvening") {
+            mondayAvailabilityLabel.text = "Evening"
+        }
+        if schedulePreference.contains("TuesdayMorning") {
+            tuesdayAvailabilityLabel.text = "Morning"
+        }
+        if schedulePreference.contains("TuesdayAfternoon") {
+            tuesdayAvailabilityLabel.text = "Afternoon"
+        }
+        if schedulePreference.contains("TuesdayEvening") {
+            tuesdayAvailabilityLabel.text = "Evening"
+        }
+        if schedulePreference.contains("WednesdayMorning") {
+            wednesdayAvailabilityLabel.text = "Morning"
+        }
+        if schedulePreference.contains("WednesdayAfternoon") {
+            wednesdayAvailabilityLabel.text = "Afternoon"
+        }
+        if schedulePreference.contains("WednesdayEvening") {
+            wednesdayAvailabilityLabel.text = "Evening"
+        }
+        if schedulePreference.contains("ThursdayMorning") {
+            thursdayAvailabilityLabel.text = "Morning"
+        }
+        if schedulePreference.contains("ThursdayAfternoon") {
+            thursdayAvailabilityLabel.text = "Afternoon"
+        }
+        if schedulePreference.contains("ThursdayEvening") {
+            thursdayAvailabilityLabel.text = "Evening"
+        }
+        if schedulePreference.contains("FridayMorning") {
+            fridayAvailabilityLabel.text = "Morning"
+        }
+        if schedulePreference.contains("FridayAfternoon") {
+            fridayAvailabilityLabel.text = "Afternoon"
+        }
+        if schedulePreference.contains("FridayEvening") {
+            fridayAvailabilityLabel.text = "Evening"
+        }
+        if schedulePreference.contains("SaturdayMorning") {
+            saturdayAvailabilityLabel.text = "Morning"
+        }
+        if schedulePreference.contains("SaturdayAfternoon") {
+            saturdayAvailabilityLabel.text = "Afternoon"
+        }
+        if schedulePreference.contains("SaturdayEvening") {
+            saturdayAvailabilityLabel.text = "Evening"
+        }
+        if schedulePreference.contains("SundayMorning") {
+            sundayAvailabilityLabel.text = "Morning"
+        }
+        if schedulePreference.contains("SundayAfternoon") {
+            sundayAvailabilityLabel.text = "Afternoon"
+        }
+        if schedulePreference.contains("SundayEvening") {
+            sundayAvailabilityLabel.text = "Evening"
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,18 +164,169 @@ class TeacherProfileViewController: UIViewController {
         TeacherController.shared.initializeTeacher(firebaseUID: id) { (success) in
             if success {
                 guard let user = TeacherController.shared.currentUser else { return }
+                TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
+                    guard let image = image else { return }
+                    self.profileImage.image = image
+                }
                 self.profileImage.image = user.profileImage
                 self.nameLabel.text = user.name
+                self.subjects = user.subjects
+                self.subjectBox1.titleLabel?.text = "IOS"
                 self.priceLabel.text = ("$\(user.costForTime)/hour")
-//                self.meetingPrefLabel
-//                self.mondayAvailabilityLabel
-//                self.tuesdayAvailabilityLabel
-//                self.wednesdayAvailabilityLabel
-//                self.thursdayAvailabilityLabel
-//                self.fridayAvailabilityLabel
-//                self.saturdayAvailabilityLabel
-//                self.sundayAvailabilityLabel
-//                self.preferencesStackView
+                self.meetingPrefLabel.text = user.meetingPref
+                self.schedulePreference = user.schedulePref
+                
+                if user.meetingPref == "Both" {
+                    self.meetingPrefLabel.text = "In Person/Online"
+                }
+                
+                if self.schedulePreference.contains("MondayMorning") {
+                    self.mondayAvailabilityLabel.text = self.morning
+                }
+                if self.schedulePreference.contains("MondayAfternoon") {
+                    self.mondayAvailabilityLabel.text = self.afternoon
+                }
+                if self.schedulePreference.contains("MondayEvening") {
+                    self.mondayAvailabilityLabel.text = self.evening
+                }
+                if self.schedulePreference.contains("MondayMorning") && self.schedulePreference.contains("MondayAfternoon") {
+                    self.mondayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)"
+                }
+                if self.schedulePreference.contains("MondayMorning") && self.schedulePreference.contains("MondayEvening") {
+                    self.mondayAvailabilityLabel.text = "\(self.morning)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("MondayAfternoon") && self.schedulePreference.contains("MondayEvening") {
+                    self.mondayAvailabilityLabel.text = "\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("MondayMorning") && self.schedulePreference.contains("MondayAfternoon") && self.schedulePreference.contains("MondayEvening") {
+                    self.mondayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("TuesdayMorning") {
+                    self.tuesdayAvailabilityLabel.text = self.morning
+                }
+                if self.schedulePreference.contains("TuesdayAfternoon") {
+                    self.tuesdayAvailabilityLabel.text = self.afternoon
+                }
+                if self.schedulePreference.contains("TuesdayEvening") {
+                    self.tuesdayAvailabilityLabel.text = self.evening
+                }
+                if self.schedulePreference.contains("TuesdayMorning") && self.schedulePreference.contains("TuesdayAfternoon") {
+                    self.tuesdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)"
+                }
+                if self.schedulePreference.contains("TuesdayMorning") && self.schedulePreference.contains("TuesdayEvening") {
+                    self.tuesdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("TuesdayAfternoon") && self.schedulePreference.contains("TuesdayEvening") {
+                    self.tuesdayAvailabilityLabel.text = "\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("TuesdayMorning") && self.schedulePreference.contains("TuesdayAfternoon") && self.schedulePreference.contains("TuesdayEvening") {
+                    self.tuesdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("WednesdayMorning") {
+                    self.wednesdayAvailabilityLabel.text = self.morning
+                }
+                if self.schedulePreference.contains("WednesdayAfternoon") {
+                    self.wednesdayAvailabilityLabel.text = self.afternoon
+                }
+                if self.schedulePreference.contains("WednesdayEvening") {
+                    self.wednesdayAvailabilityLabel.text = self.evening
+                }
+                if self.schedulePreference.contains("WednesdayMorning") && self.schedulePreference.contains("WednesdayAfternoon") {
+                    self.wednesdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)"
+                }
+                if self.schedulePreference.contains("WednesdayMorning") && self.schedulePreference.contains("WednesdayEvening") {
+                    self.wednesdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("WednesdayAfternoon") && self.schedulePreference.contains("WednesdayEvening") {
+                    self.wednesdayAvailabilityLabel.text = "\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("WednesdayMorning") && self.schedulePreference.contains("WednesdayAfternoon") && self.schedulePreference.contains("WednesdayEvening") {
+                    self.wednesdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("ThursdayMorning") {
+                    self.thursdayAvailabilityLabel.text = self.morning
+                }
+                if self.schedulePreference.contains("ThursdayAfternoon") {
+                    self.thursdayAvailabilityLabel.text = self.afternoon
+                }
+                if self.schedulePreference.contains("ThursdayEvening") {
+                    self.thursdayAvailabilityLabel.text = self.evening
+                }
+                if self.schedulePreference.contains("ThursdayMorning") && self.schedulePreference.contains("ThursdayAfternoon") {
+                    self.thursdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)"
+                }
+                if self.schedulePreference.contains("ThursdayMorning") && self.schedulePreference.contains("ThursdayEvening") {
+                    self.thursdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("ThursdayAfternoon") && self.schedulePreference.contains("ThursdayEvening") {
+                    self.thursdayAvailabilityLabel.text = "\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("ThursdayMorning") && self.schedulePreference.contains("ThursdayAfternoon") && self.schedulePreference.contains("ThursdayEvening") {
+                    self.thursdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("FridayMorning") {
+                    self.fridayAvailabilityLabel.text = self.morning
+                }
+                if self.schedulePreference.contains("FridayAfternoon") {
+                    self.fridayAvailabilityLabel.text = self.afternoon
+                }
+                if self.schedulePreference.contains("FridayEvening") {
+                    self.fridayAvailabilityLabel.text = self.evening
+                }
+                if self.schedulePreference.contains("FridayMorning") && self.schedulePreference.contains("FridayAfternoon") {
+                    self.fridayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)"
+                }
+                if self.schedulePreference.contains("FridayMorning") && self.schedulePreference.contains("FridayEvening") {
+                    self.fridayAvailabilityLabel.text = "\(self.morning)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("FridayAfternoon") && self.schedulePreference.contains("FridayEvening") {
+                    self.fridayAvailabilityLabel.text = "\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("FridayMorning") && self.schedulePreference.contains("FridayAfternoon") && self.schedulePreference.contains("FridayEvening") {
+                    self.fridayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("SaturdayMorning") {
+                    self.saturdayAvailabilityLabel.text = self.morning
+                }
+                if self.schedulePreference.contains("SaturdayAfternoon") {
+                    self.saturdayAvailabilityLabel.text = self.afternoon
+                }
+                if self.schedulePreference.contains("SaturdayEvening") {
+                    self.saturdayAvailabilityLabel.text = self.evening
+                }
+                if self.schedulePreference.contains("SaturdayMorning") && self.schedulePreference.contains("SaturdayAfternoon") {
+                    self.saturdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)"
+                }
+                if self.schedulePreference.contains("SaturdayMorning") && self.schedulePreference.contains("SaturdayEvening") {
+                    self.saturdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("SaturdayAfternoon") && self.schedulePreference.contains("SaturdayEvening") {
+                    self.saturdayAvailabilityLabel.text = "\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("SaturdayMorning") && self.schedulePreference.contains("SaturdayAfternoon") && self.schedulePreference.contains("SaturdayEvening") {
+                    self.saturdayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("SundayMorning") {
+                    self.sundayAvailabilityLabel.text = self.morning
+                }
+                if self.schedulePreference.contains("SundayAfternoon") {
+                    self.sundayAvailabilityLabel.text = self.afternoon
+                }
+                if self.schedulePreference.contains("SundayEvening") {
+                    self.sundayAvailabilityLabel.text = self.evening
+                }
+                if self.schedulePreference.contains("SundayMorning") && self.schedulePreference.contains("SundayAfternoon") {
+                    self.sundayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)"
+                }
+                if self.schedulePreference.contains("SundayMorning") && self.schedulePreference.contains("SundayEvening") {
+                    self.sundayAvailabilityLabel.text = "\(self.morning)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("SundayAfternoon") && self.schedulePreference.contains("SundayEvening") {
+                    self.sundayAvailabilityLabel.text = "\(self.afternoon)" + "/\(self.evening)"
+                }
+                if self.schedulePreference.contains("SundayMorning") && self.schedulePreference.contains("SundayAfternoon") && self.schedulePreference.contains("SundayEvening") {
+                    self.sundayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)" + "/\(self.evening)"
+                }
                 
             }
         }
