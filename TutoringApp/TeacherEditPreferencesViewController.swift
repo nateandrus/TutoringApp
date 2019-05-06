@@ -40,6 +40,8 @@ class TeacherEditPreferencesViewController: UIViewController {
     var schedulePreference: [String] = []
     var meetingPreference: String = ""
     
+    static let shared = TeacherEditPreferencesViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let user = TeacherController.shared.currentUser
