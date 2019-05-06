@@ -15,6 +15,7 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var studentProfilePicture: UIImageView!
     @IBOutlet weak var studentNameLabel: UILabel!
     @IBOutlet weak var studentEmailLabel: UILabel!
+    @IBOutlet weak var changeProfileButton: UIButton!
     
     var profileImage: UIImage? {
         didSet {
@@ -34,57 +35,57 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
         studentNameLabel.text = currentUser.name
         studentEmailLabel.text = currentUser.email
         self.title = currentUser.name
+        changeProfileButton.layer.cornerRadius = changeProfileButton.frame.height / 2 
         StudentController.shared.loadProfileImageView(userFirebaseUID: currentUser.firebaseUID) { (image) in
             guard let image = image else { return }
             self.studentProfilePicture.layer.cornerRadius = self.studentProfilePicture.frame.height / 2
             self.studentProfilePicture.image = image
         }
-        // Do any additional setup after loading the view.
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    @IBAction func settingsButtonTapped(_ sender: Any) {
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+    @IBAction func changeProfileImageButtonTapped(_ sender: UIButton) {
+        self.presentImagePickerActionSheet()
+        guard let studentFirebaseUID = StudentController.shared.currentUser?.firebaseUID else { return }
+        StudentController.shared.changeProfilePicture(userFirebaseUID: studentFirebaseUID, profileImage: self.profileImage)
+    }
+    
+    @IBAction func changePasswordButtonClicked(_ sender: UIButton) {
+        guard let user = StudentController.shared.currentUser else { return }
+        StudentController.shared.updatePassword(email: user.email, completion: { (success, error) in
+            if success {
+                self.passwordAlertSuccess()
+                print("SUCCESS SENDING PASSWORD RESET VERIFICATION EMAIL ✅✅✅✅✅✅")
+            } else {
+                print("FAILED SENDING PASSWORD RESET VERIFICATION EMAIL ❌❌❌❌❌❌")
+            }
+        })
         
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        let changeProfilePicture = UIAlertAction(title: "Change Profile Picture", style: .default) { action in
-            self.presentImagePickerActionSheet()
-            guard let studentFirebaseUID = StudentController.shared.currentUser?.firebaseUID else { return }
-            StudentController.shared.changeProfilePicture(userFirebaseUID: studentFirebaseUID, profileImage: self.profileImage)
-        }
-        
-        let changePassword = UIAlertAction(title: "Change Password", style: .default) { action in
-            guard let user = StudentController.shared.currentUser else { return }
-            StudentController.shared.updatePassword(email: user.email, completion: { (success, error) in
-                if success {
-                    print("SUCCESS SENDING PASSWORD RESET VERIFICATION EMAIL ✅✅✅✅✅✅")
-                } else {
-                    print("FAILED SENDING PASSWORD RESET VERIFICATION EMAIL ❌❌❌❌❌❌")
-                }
-            })
-        }
-        
-        let logOut = UIAlertAction(title: "Log Out", style: .default) { action in
-            StudentController.shared.signOutStudent(completion: { (success) in
-                if success {
-                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                    let loginScreen = storyBoard.instantiateViewController(withIdentifier: "loginScreen")
-                    self.present(loginScreen, animated: true)
-                }
-            })
-        }
-        
-        let delete = UIAlertAction(title: "Delete Account", style: .destructive) { action in
-            self.deleteAlert()
+    }
+    
+    @IBAction func logoutButtonTapped(_ sender: UIButton) {
+        StudentController.shared.signOutStudent(completion: { (success) in
+            if success {
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let loginScreen = storyBoard.instantiateViewController(withIdentifier: "loginScreen")
+                self.present(loginScreen, animated: true)
+            }
+        })
+    }
+    
+    @IBAction func deleteAccountButtonTapped(_ sender: UIButton) {
+        self.deleteAlert()
+    }
+    
+    func passwordAlertSuccess() {
+        let alertController = UIAlertController(title: "Success", message: "An email has been sent to you with steps to reset your password!", preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+        alertController.addAction(okayAction)
+        present(alertController, animated: true)
+    }
+    
+    func deleteAlert() {
+        let alert = UIAlertController(title: "Confirm Deletion", message: "Are you sure you want to delete your account?", preferredStyle: .alert)
+        let confirmDelete = UIAlertAction(title: "Confirm Delete", style: .destructive) { (_) in
             guard let user = Auth.auth().currentUser,
                 let student = StudentController.shared.currentUser else { return }
             
@@ -94,19 +95,6 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
                 }
             })
         }
-        
-        actionSheet.addAction(changePassword)
-        actionSheet.addAction(changeProfilePicture)
-        actionSheet.addAction(logOut)
-        actionSheet.addAction(delete)
-        actionSheet.addAction(cancel)
-        
-        present(actionSheet, animated: true, completion: nil)
-    }
-    
-    func deleteAlert() {
-        let alert = UIAlertController(title: "Confirm Deletion", message: "Are you sure you want to delete your account?", preferredStyle: .alert)
-        let confirmDelete = UIAlertAction(title: "Delete", style: .destructive, handler: nil)
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         alert.addAction(confirmDelete)
@@ -114,15 +102,9 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
         
         present(alert, animated: true)
     }
-    
-    @IBAction func changeProfilePictureButtonTapped(_ sender: Any) {
-    }
-    
-    @IBAction func changePasswordButtonTapped(_ sender: Any) {
-    }
 }
 
-extension StudentProfileViewController { //UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension StudentProfileViewController {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         if let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {

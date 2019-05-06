@@ -15,6 +15,7 @@ class StudentSearchTableViewController: UITableViewController {
     
     var teachers: [Teacher] = []
     var subject: String?
+    var location: String? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +29,24 @@ class StudentSearchTableViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        segmentedControl.index(ofAccessibilityElement: 0)
-        segmentedControl.index(ofAccessibilityElement: 1)
+    
+    @IBAction func segmentedControllerChanged(_ sender: UISegmentedControl) {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            self.tableView.reloadData()
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            guard let location = location else { return }
+            StudentController.shared.sortTeachersByZipcode(location: location)
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return StudentController.shared.searchResults.count
+        if segmentedControl.selectedSegmentIndex == 0 {
+            return StudentController.shared.searchResults.count
+        } else {
+            return StudentController.shared.locationSearchResults.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -47,15 +57,29 @@ class StudentSearchTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teacherCell", for: indexPath) as! StudentSearchTableViewCell
-        
-        let teacher = StudentController.shared.searchResults[indexPath.row]
-        TeacherController.shared.loadProfileImageView(userFirebaseUID: teacher.firebaseUID) { (image) in
-            guard let image = image else { return }
-            cell.profileImage.image = image
+        if segmentedControl.selectedSegmentIndex == 0 {
+            let teacher = StudentController.shared.searchResults[indexPath.row]
+            TeacherController.shared.loadProfileImageView(userFirebaseUID: teacher.firebaseUID) { (image) in
+                if let image = image {
+                    cell.profileImage.image = image
+                } else {
+                    cell.profileImage.image = #imageLiteral(resourceName: "default user icon")
+                }
+            }
+            cell.teacher = teacher
+            return cell
+        } else {
+            let teacher = StudentController.shared.locationSearchResults[indexPath.row]
+            TeacherController.shared.loadProfileImageView(userFirebaseUID: teacher.firebaseUID) { (image) in
+                if let image = image {
+                    cell.profileImage.image = image
+                } else {
+                    cell.profileImage.image = #imageLiteral(resourceName: "default user icon")
+                }
+            }
+            cell.teacher = teacher
+            return cell
         }
-        cell.teacher = teacher
-        
-        return cell
     }
     
     
@@ -85,30 +109,3 @@ extension StudentSearchTableViewController: UISearchBarDelegate {
         }
     }
 }
-
-//po StudentController.shared.searchResults
-//▿ 1 element
-//    ▿ 0 : Teacher
-//- name : "johnny"
-//- email : "johnnyyy@gmail.com"
-//▿ messages : Optional<Array<FIRDocumentReference>>
-//- some : 0 elements
-//- firebaseUID : "gK8ihhAttlPOYWaOMtTed0DoZfu1"
-//▿ linkedINLink : Optional<String>
-//- some : "www.linkedin.com/johnnyyyyy"
-//- costForTime : "33"
-//- qualifications : "How goes it qualificationssssssssss"
-//- location : "highland, Utah "
-//- dateOfBirth : "may "
-//▿ subjects : 2 elements
-//- 0 : "Accounting"
-//- 1 : "Entrepreneurship"
-//▿ schedulePref : 2 elements
-//- 0 : "FridayAfternoon"
-//- 1 : "MondayEvening"
-//- meetingPref : "Both"
-//- aboutMe : "This is an about you johnnnnyyyyyy boy \t"
-//- profileImage : nil
-//▿ profileImageURL : Optional<String>
-//- some : "gK8ihhAttlPOYWaOMtTed0DoZfu1"
-//- selfDocRef : <FIRDocumentReference: 0x6000032e3ee0>

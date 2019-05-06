@@ -52,6 +52,8 @@ class MainMessagingTableViewController: UITableViewController {
         TeacherController.shared.loadProfileImageView(userFirebaseUID: chat.teacherUID) { (image) in
             if let image = image {
                 cell?.messagingImageView.image = image
+            } else {
+                cell?.messagingImageView.image = #imageLiteral(resourceName: "default user icon")
             }
         }
         cell?.chatLanding = chat

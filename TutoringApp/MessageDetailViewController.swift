@@ -68,7 +68,7 @@ class MessageDetailViewController: MessagesViewController {
 extension MessageDetailViewController: MessagesDisplayDelegate {
     private func backgroundColor(for message: Message, at indexPath: IndexPath,
                          in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return MessageController.shared.isFromCurrentSender(message: message) ? UIColor.lightGray : UIColor.green
+        return MessageController.shared.isFromCurrentSender(message: message) ? UIColor.lightGray : #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
     }
 
     func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath,
