@@ -81,18 +81,18 @@ class TeacherProfileViewController: UIViewController {
         TeacherController.shared.initializeTeacher(firebaseUID: id) { (success) in
             if success {
                 guard let user = TeacherController.shared.currentUser else { return }
-                self.profileImage
-                self.nameLabel
+                self.profileImage.image = user.profileImage
+                self.nameLabel.text = user.name
                 self.priceLabel.text = ("$\(user.costForTime)/hour")
-                self.meetingPrefLabel
-                self.mondayAvailabilityLabel
-                self.tuesdayAvailabilityLabel
-                self.wednesdayAvailabilityLabel
-                self.thursdayAvailabilityLabel
-                self.fridayAvailabilityLabel
-                self.saturdayAvailabilityLabel
-                self.sundayAvailabilityLabel
-                self.preferencesStackView
+//                self.meetingPrefLabel
+//                self.mondayAvailabilityLabel
+//                self.tuesdayAvailabilityLabel
+//                self.wednesdayAvailabilityLabel
+//                self.thursdayAvailabilityLabel
+//                self.fridayAvailabilityLabel
+//                self.saturdayAvailabilityLabel
+//                self.sundayAvailabilityLabel
+//                self.preferencesStackView
                 
             }
         }
