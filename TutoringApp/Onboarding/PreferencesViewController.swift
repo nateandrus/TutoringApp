@@ -52,13 +52,17 @@ class PreferencesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        localButton.layer.cornerRadius = localButton.frame.height / 2
-        onlineButton.layer.cornerRadius = onlineButton.frame.height / 2
-        bothButton.layer.cornerRadius = bothButton.frame.height / 2
-        nextStepButton.layer.cornerRadius = nextStepButton.frame.height / 2
-        localButton.backgroundColor = .lightGray
-        onlineButton.backgroundColor = .lightGray
-        bothButton.backgroundColor = .lightGray
+        localButton.layer.cornerRadius = 5
+        localButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        localButton.layer.borderWidth = 2
+        onlineButton.layer.cornerRadius = 5
+        onlineButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        onlineButton.layer.borderWidth = 2
+        bothButton.layer.cornerRadius = 5
+        bothButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        bothButton.layer.borderWidth = 2
+        nextStepButton.layer.cornerRadius = 5
+        
     }
     
     //Scheduling Booleans
@@ -393,13 +397,14 @@ class PreferencesViewController: UIViewController {
     }
     
     func turnOnPreference(button: UIButton) {
-        button.backgroundColor = .black
+        button.backgroundColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
         button.setTitleColor(.white, for: .normal)
     }
     func turnOffPreference(button: UIButton) {
         button.backgroundColor = .white
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .lightGray
+        button.setTitleColor(#colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1), for: .normal)
+        button.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        button.layer.borderWidth = 2
     }
     
     // MARK: - Navigation

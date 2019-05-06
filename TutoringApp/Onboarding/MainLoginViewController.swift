@@ -17,6 +17,15 @@ class MainLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.borderStyle = .line
+        emailTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        emailTextField.layer.borderWidth = 2
+        emailTextField.layer.cornerRadius = 5
+        passwordTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        passwordTextField.layer.borderWidth = 2
+        passwordTextField.layer.cornerRadius = 5 
+        passwordTextField.borderStyle = .line
+        loginButton.layer.cornerRadius = 5
     }
 
     //MARK: - Actions
