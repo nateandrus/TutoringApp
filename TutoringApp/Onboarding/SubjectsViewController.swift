@@ -14,15 +14,15 @@ class SubjectsViewController: UIViewController {
     @IBOutlet weak var businessManagementButton: UIButton!
     @IBOutlet weak var accountingButton: UIButton!
     @IBOutlet weak var marketingButton: UIButton!
-    @IBOutlet weak var productManagementButton: UIButton!
+    @IBOutlet weak var salesButton: UIButton!
     @IBOutlet weak var entrepreneurshipButton: UIButton!
     @IBOutlet weak var economicsButton: UIButton!
     @IBOutlet weak var webdevelopmentButton: UIButton!
     @IBOutlet weak var uxdesignButton: UIButton!
     @IBOutlet weak var iosDevelopementButton: UIButton!
     @IBOutlet weak var javascriptButton: UIButton!
-    @IBOutlet weak var pythonButton: UIButton!
-    @IBOutlet weak var softwareEngineerButton: UIButton!
+    @IBOutlet weak var htmlButton: UIButton!
+    @IBOutlet weak var androidDevelopmentButton: UIButton!
     @IBOutlet weak var numberSelectedLabel: UILabel!
     @IBOutlet weak var nextStepButton: UIButton!
     
@@ -40,47 +40,59 @@ class SubjectsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        businessManagementButton.backgroundColor = .lightGray
-        marketingButton.backgroundColor = .lightGray
-        productManagementButton.backgroundColor = .lightGray
-        entrepreneurshipButton.backgroundColor = .lightGray
-        economicsButton.backgroundColor = .lightGray
-        webdevelopmentButton.backgroundColor = .lightGray
-        uxdesignButton.backgroundColor = .lightGray
-        iosDevelopementButton.backgroundColor = .lightGray
-        javascriptButton.backgroundColor = .lightGray
-        pythonButton.backgroundColor = .lightGray
-        softwareEngineerButton.backgroundColor = .lightGray
-        accountingButton.backgroundColor = .lightGray
         numberSelectedLabel.text = "0 Selected"
-        businessManagementButton.layer.cornerRadius = businessManagementButton.frame.height / 2
-        accountingButton.layer.cornerRadius = accountingButton.frame.height / 2
-        marketingButton.layer.cornerRadius = marketingButton.frame.height / 2
-        productManagementButton.layer.cornerRadius = productManagementButton.frame.height / 2
-        entrepreneurshipButton.layer.cornerRadius = entrepreneurshipButton.frame.height / 2
-        economicsButton.layer.cornerRadius = economicsButton.frame.height / 2
-        webdevelopmentButton.layer.cornerRadius = webdevelopmentButton.frame.height / 2
-        uxdesignButton.layer.cornerRadius = uxdesignButton.frame.height / 2
-        iosDevelopementButton.layer.cornerRadius = iosDevelopementButton.frame.height / 2
-        javascriptButton.layer.cornerRadius = javascriptButton.frame.height / 2
-        pythonButton.layer.cornerRadius = pythonButton.frame.height / 2
-        softwareEngineerButton.layer.cornerRadius = softwareEngineerButton.frame.height / 2
-        nextStepButton.layer.cornerRadius = nextStepButton.frame.height / 2
+        businessManagementButton.layer.cornerRadius = 4
+        accountingButton.layer.cornerRadius = 4
+        marketingButton.layer.cornerRadius = 4
+        salesButton.layer.cornerRadius = 4
+        entrepreneurshipButton.layer.cornerRadius = 4
+        economicsButton.layer.cornerRadius = 4
+        webdevelopmentButton.layer.cornerRadius = 4
+        uxdesignButton.layer.cornerRadius = 4
+        iosDevelopementButton.layer.cornerRadius = 4
+        javascriptButton.layer.cornerRadius = 4
+        htmlButton.layer.cornerRadius = 4
+        androidDevelopmentButton.layer.cornerRadius = 4
+        nextStepButton.layer.cornerRadius = 5
+        businessManagementButton.layer.borderWidth = 2
+        businessManagementButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        accountingButton.layer.borderWidth = 2
+        accountingButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        marketingButton.layer.borderWidth = 2
+        marketingButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        salesButton.layer.borderWidth = 2
+        salesButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        entrepreneurshipButton.layer.borderWidth = 2
+        entrepreneurshipButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        economicsButton.layer.borderWidth = 2
+        economicsButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        webdevelopmentButton.layer.borderWidth = 2
+        webdevelopmentButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        uxdesignButton.layer.borderWidth = 2
+        uxdesignButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        iosDevelopementButton.layer.borderWidth = 2
+        iosDevelopementButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        javascriptButton.layer.borderWidth = 2
+        javascriptButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        htmlButton.layer.borderWidth = 2
+        htmlButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        androidDevelopmentButton.layer.borderWidth = 2
+        androidDevelopmentButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
     }
     
     //Subject Booleans
     var businessManagement: Bool = false
     var accounting: Bool = false
     var marketing: Bool = false
-    var productManagement: Bool = false
+    var sales: Bool = false
     var entrepreneurship: Bool = false
     var economics: Bool = false
     var webDevelopement: Bool = false
     var uxDesign: Bool = false
     var iosDevelopement: Bool = false
     var javascript: Bool = false
-    var python: Bool = false
-    var softwareDevelopement: Bool = false
+    var html: Bool = false
+    var androidDevelopement: Bool = false
     
     //MARK: - Actions
     @IBAction func businessManagementButtonTapped(_ sender: UIButton) {
@@ -123,15 +135,15 @@ class SubjectsViewController: UIViewController {
         }
     }
     @IBAction func productManagementButtonTapped(_ sender: UIButton) {
-        if productManagement == false {
-            turnButtonOn(button: productManagementButton)
-            productManagement = true
-            self.subjects.append("Product Management")
+        if sales == false {
+            turnButtonOn(button: salesButton)
+            sales = true
+            self.subjects.append("Sales")
             print(subjects)
         } else {
-            turnButtonOff(button: productManagementButton)
-            productManagement = false
-            self.subjects.removeAll(where: {$0 == "Product Management"})
+            turnButtonOff(button: salesButton)
+            sales = false
+            self.subjects.removeAll(where: {$0 == "Sales"})
             print(subjects)
         }
     }
@@ -214,42 +226,42 @@ class SubjectsViewController: UIViewController {
         }
     }
     @IBAction func pythonButtonTapped(_ sender: UIButton) {
-        if python == false {
-            turnButtonOn(button: pythonButton)
-            python = true
-            self.subjects.append("Python")
+        if html == false {
+            turnButtonOn(button: htmlButton)
+            html = true
+            self.subjects.append("HTML")
             print(subjects)
         } else {
-            turnButtonOff(button: pythonButton)
-            python = false
-            self.subjects.removeAll(where: {$0 == "Python"})
+            turnButtonOff(button: htmlButton)
+            html = false
+            self.subjects.removeAll(where: {$0 == "HTML"})
             print(subjects)
         }
     }
     @IBAction func softwareEngineerButtonTapped(_ sender: UIButton) {
-        if softwareDevelopement == false {
-            turnButtonOn(button: softwareEngineerButton)
-            softwareDevelopement = true
-            self.subjects.append("Software Development")
+        if androidDevelopement == false {
+            turnButtonOn(button: androidDevelopmentButton)
+            androidDevelopement = true
+            self.subjects.append("Android Development")
             print(subjects)
         } else {
-            turnButtonOff(button: softwareEngineerButton)
-            softwareDevelopement = false
-            self.subjects.removeAll(where: {$0 == "Software Development"})
+            turnButtonOff(button: androidDevelopmentButton)
+            androidDevelopement = false
+            self.subjects.removeAll(where: {$0 == "Android Development"})
             print(subjects)
         }
     }
     
     func turnButtonOn(button: UIButton) {
-        button.backgroundColor = .black
+        button.backgroundColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
         button.setTitleColor(.white, for: .normal)
         self.counting = counting + 1
         self.numberSelectedLabel.text = "\(counting) Selected"
     }
     
     func turnButtonOff(button: UIButton) {
-        button.backgroundColor = .lightGray
-        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .white
+        button.setTitleColor(#colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1), for: .normal)
         self.counting = counting - 1
         self.numberSelectedLabel.text = "\(counting) Selected"
     }

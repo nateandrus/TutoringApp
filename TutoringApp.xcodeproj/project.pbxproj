@@ -56,6 +56,7 @@
 		EDD3055E22739BE500F19A20 /* BecomeMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3055622739BE500F19A20 /* BecomeMentorViewController.swift */; };
 		EDE10E3B227CD3CA00CFAB51 /* ScrollExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE10E3A227CD3CA00CFAB51 /* ScrollExtension.swift */; };
 		EDE10E3D227CE5DD00CFAB51 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE10E3C227CE5DD00CFAB51 /* ForgotPasswordViewController.swift */; };
+		EDE10E3F22808D6900CFAB51 /* ColorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE10E3E22808D6900CFAB51 /* ColorFormatter.swift */; };
 		EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9BB20226E1A8300314FFB /* AppDelegate.swift */; };
 		EDE9BB26226E1A8300314FFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE9BB24226E1A8300314FFB /* Main.storyboard */; };
 		EDE9BB28226E1A8300314FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE9BB27226E1A8300314FFB /* Assets.xcassets */; };
@@ -116,6 +117,7 @@
 		EDD3055622739BE500F19A20 /* BecomeMentorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BecomeMentorViewController.swift; sourceTree = "<group>"; };
 		EDE10E3A227CD3CA00CFAB51 /* ScrollExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollExtension.swift; sourceTree = "<group>"; };
 		EDE10E3C227CE5DD00CFAB51 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		EDE10E3E22808D6900CFAB51 /* ColorFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFormatter.swift; sourceTree = "<group>"; };
 		EDE9BB1D226E1A8300314FFB /* TutoringApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutoringApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE9BB20226E1A8300314FFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE9BB25226E1A8300314FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				EDCDC008226E391C007051E3 /* GoogleService-Info.plist */,
 				ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */,
 				ED8AA3A5227B51AC00C477AF /* DateFormatter.swift */,
+				EDE10E3E22808D6900CFAB51 /* ColorFormatter.swift */,
 				EDE10E3A227CD3CA00CFAB51 /* ScrollExtension.swift */,
 				EDE9BB27226E1A8300314FFB /* Assets.xcassets */,
 				EDE9BB29226E1A8400314FFB /* LaunchScreen.storyboard */,
@@ -541,6 +544,7 @@
 				EDD3055E22739BE500F19A20 /* BecomeMentorViewController.swift in Sources */,
 				ED8AA3A6227B51AC00C477AF /* DateFormatter.swift in Sources */,
 				ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */,
+				EDE10E3F22808D6900CFAB51 /* ColorFormatter.swift in Sources */,
 				EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */,
 				ED1B70A0226FA2BE00EB31F7 /* Message.swift in Sources */,
 				EDE9BB21226E1A8300314FFB /* AppDelegate.swift in Sources */,

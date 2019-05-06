@@ -34,9 +34,13 @@ class BiographyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         formatKeyboard()
-        aboutMeTextView.layer.cornerRadius = 15
-        qualificationsTextView.layer.cornerRadius = 15
-        nextStepButton.layer.cornerRadius = nextStepButton.frame.height / 2
+        aboutMeTextView.layer.cornerRadius = 5
+        aboutMeTextView.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        aboutMeTextView.layer.borderWidth = 2
+        qualificationsTextView.layer.cornerRadius = 5
+        qualificationsTextView.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        qualificationsTextView.layer.borderWidth = 2
+        nextStepButton.layer.cornerRadius = 5
     }
 
     func formatKeyboard() {

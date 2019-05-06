@@ -25,7 +25,19 @@ class BecomeMentorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         formatKeyboard()
-        nextStepButton.layer.cornerRadius = 10
+        nextStepButton.layer.cornerRadius = 5
+        nameTextField.layer.borderWidth = 2
+        nameTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        emailTextField.layer.borderWidth = 2
+        emailTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        passwordTextField.layer.borderWidth = 2
+        passwordTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        confirmPasswordTextfield.layer.borderWidth = 2
+        confirmPasswordTextfield.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        cityTextField.layer.borderWidth = 2
+        cityTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        DateOfBirthTextField.layer.borderWidth = 2
+        DateOfBirthTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
     }
     
 
