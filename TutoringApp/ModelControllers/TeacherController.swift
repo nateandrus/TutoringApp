@@ -233,3 +233,8 @@ class TeacherController {
         }
     }
 }
+
+extension UIColor {
+    static let protegeBlue = UIColor(named: "protegeBlue")!
+    static let protegeGray = UIColor(named: "protegeGray")!
+}

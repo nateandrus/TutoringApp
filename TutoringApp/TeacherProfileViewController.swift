@@ -17,18 +17,23 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     @IBOutlet weak var subjectsStackView: UIStackView!
-    @IBOutlet weak var subjectBox1: UIButton!
-    @IBOutlet weak var subjectBox2: UIButton!
-    @IBOutlet weak var subjectBox3: UIButton!
-    @IBOutlet weak var subjectBox4: UIButton!
-    @IBOutlet weak var subjectBox5: UIButton!
-    @IBOutlet weak var subjectBox6: UIButton!
-    @IBOutlet weak var subjectBox7: UIButton!
-    @IBOutlet weak var subjectBox8: UIButton!
-    @IBOutlet weak var subjectBox9: UIButton!
-    @IBOutlet weak var subjectBox10: UIButton!
-    @IBOutlet weak var subjectBox11: UIButton!
-    @IBOutlet weak var subjectBox12: UIButton!
+    @IBOutlet weak var subjectsStackView1: UIStackView!
+    @IBOutlet weak var subjectsStackView2: UIStackView!
+    @IBOutlet weak var subjectsStackView3: UIStackView!
+    @IBOutlet weak var subjectsStackView4: UIStackView!
+    
+    @IBOutlet weak var accountingButton: UIButton!
+    @IBOutlet weak var businessManagementButton: UIButton!
+    @IBOutlet weak var economicsButton: UIButton!
+    @IBOutlet weak var entrepreneurshipButton: UIButton!
+    @IBOutlet weak var marketingButton: UIButton!
+    @IBOutlet weak var salesButton: UIButton!
+    @IBOutlet weak var androidDevelopmentButton: UIButton!
+    @IBOutlet weak var htmlButton: UIButton!
+    @IBOutlet weak var iosDevelopmentButton: UIButton!
+    @IBOutlet weak var javascriptButton: UIButton!
+    @IBOutlet weak var uxDesignButton: UIButton!
+    @IBOutlet weak var webDevelopmentButton: UIButton!
     
     @IBOutlet weak var editSubjectsButton: UIButton!
     
@@ -47,6 +52,8 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var editBiographyButton: UIButton!
     @IBOutlet weak var preferencesStackView: UIStackView!
     
+    static let shared = TeacherProfileViewController()
+    
     var subjects: [String] = []
     var schedulePreference: [String] = []
     var meetingPreference: String = ""
@@ -55,7 +62,7 @@ class TeacherProfileViewController: UIViewController {
     var afternoon = "Afternoon"
     var evening = "Evening"
     var blank = ""
-        
+    
     var changedProfileImage: UIImage? {
         didSet {
             profileImage.image = changedProfileImage
@@ -70,19 +77,39 @@ class TeacherProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //zipcodeTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        //changeProfileButton.layer.cornerRadius = changeProfileButton.frame.height / 2
+        accountingButton.layer.cornerRadius = 5
+        businessManagementButton.layer.cornerRadius = 5
+        economicsButton.layer.cornerRadius = 5
+        entrepreneurshipButton.layer.cornerRadius = 5
+        marketingButton.layer.cornerRadius = 5
+        salesButton.layer.cornerRadius = 5
+        androidDevelopmentButton.layer.cornerRadius = 5
+        htmlButton.layer.cornerRadius = 5
+        iosDevelopmentButton.layer.cornerRadius = 5
+        javascriptButton.layer.cornerRadius = 5
+        uxDesignButton.layer.cornerRadius = 5
+        webDevelopmentButton.layer.cornerRadius = 5
         guard let user = TeacherController.shared.currentUser else { return }
         TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
             guard let image = image else { return }
+            self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
             self.profileImage.image = image
         }
         
+        self.title = user.name
         nameLabel.text = user.name
         subjects = user.subjects
-        subjectBox1.titleLabel?.text = "iOS"
-        subjectBox2.titleLabel?.text = "Android"
         priceLabel.text = ("$\(user.costForTime)/hour")
         meetingPreference = user.meetingPref
         schedulePreference = user.schedulePref
+        
+        if subjects.contains("Accounting") {
+            accountingButton.isHidden = false
+        } else {
+            accountingButton.isHidden = true
+        }
         
         if meetingPreference == "In Person" {
             meetingPrefLabel.text = "In Person"
@@ -171,10 +198,91 @@ class TeacherProfileViewController: UIViewController {
                 self.profileImage.image = user.profileImage
                 self.nameLabel.text = user.name
                 self.subjects = user.subjects
-                self.subjectBox1.titleLabel?.text = "IOS"
                 self.priceLabel.text = ("$\(user.costForTime)/hour")
                 self.meetingPrefLabel.text = user.meetingPref
                 self.schedulePreference = user.schedulePref
+                
+                if self.subjects.contains("Accounting") {
+                    self.accountingButton.isHidden = false
+                } else {
+                    self.accountingButton.isHidden = true
+                }
+                if self.subjects.contains("Business Management") {
+                    self.businessManagementButton.isHidden = false
+                } else {
+                    self.businessManagementButton.isHidden = true
+                }
+                if self.subjects.contains("Economics") {
+                    self.economicsButton.isHidden = false
+                } else {
+                    self.economicsButton.isHidden = true
+                }
+                if self.subjects.contains("Accounting") || self.subjects.contains("Business Management") || self.subjects.contains("Economics") {
+                    self.subjectsStackView1.isHidden = false
+                } else {
+                    self.subjectsStackView1.isHidden = true
+                }
+                if self.subjects.contains("Entrepreneurship") {
+                    self.entrepreneurshipButton.isHidden = false
+                } else {
+                    self.entrepreneurshipButton.isHidden = true
+                }
+                if self.subjects.contains("Marketing") {
+                    self.marketingButton.isHidden = false
+                } else {
+                    self.marketingButton.isHidden = true
+                }
+                if self.subjects.contains("Sales") {
+                    self.salesButton.isHidden = false
+                } else {
+                    self.salesButton.isHidden = true
+                }
+                if self.subjects.contains("Entrepreneurship") || self.subjects.contains("Marketing") || self.subjects.contains("Sales") {
+                    self.subjectsStackView2.isHidden = false
+                } else {
+                    self.subjectsStackView2.isHidden = true
+                }
+                if self.subjects.contains("Android Development") {
+                    self.androidDevelopmentButton.isHidden = false
+                } else {
+                    self.androidDevelopmentButton.isHidden = true
+                }
+                if self.subjects.contains("HTML") {
+                    self.htmlButton.isHidden = false
+                } else {
+                    self.htmlButton.isHidden = true
+                }
+                if self.subjects.contains("iOS Development") {
+                    self.iosDevelopmentButton.isHidden = false
+                } else {
+                    self.iosDevelopmentButton.isHidden = true
+                }
+                if self.subjects.contains("Android Development") || self.subjects.contains("HTML") || self.subjects.contains("iOS Development") {
+                    self.subjectsStackView3.isHidden = false
+                } else {
+                    self.subjectsStackView3.isHidden = true
+                }
+                if self.subjects.contains("Javascript") {
+                    self.javascriptButton.isHidden = false
+                } else {
+                    self.javascriptButton.isHidden = true
+                }
+                if self.subjects.contains("UX Design") {
+                    self.uxDesignButton.isHidden = false
+                } else {
+                    self.uxDesignButton.isHidden = true
+                }
+                if self.subjects.contains("Web Development") {
+                    self.webDevelopmentButton.isHidden = false
+                } else {
+                    self.webDevelopmentButton.isHidden = true
+                }
+                if self.subjects.contains("Javascript") || self.subjects.contains("UX Design") || self.subjects.contains("Web Development") {
+                    self.subjectsStackView4.isHidden = false
+                } else {
+                    self.subjectsStackView4.isHidden = true
+                }
+                
                 
                 if user.meetingPref == "Both" {
                     self.meetingPrefLabel.text = "In Person/Online"
@@ -335,6 +443,12 @@ class TeacherProfileViewController: UIViewController {
     @IBAction func settingsButtonTapped(_ sender: Any) {
         settingsActionSheet()
     }
+    
+//    @IBAction func changeProfileImageButtonTapped(_ sender: UIButton) {
+//        self.presentImagePickerActionSheet()
+//        guard let teacherFirebaseUID = TeacherController.shared.currentUser?.firebaseUID else { return }
+//        TeacherController.shared.changeProfileImage(userFirebaseUID: teacherFirebaseUID, newImage: self.changedProfileImage)
+//    }
     
     func settingsActionSheet() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)

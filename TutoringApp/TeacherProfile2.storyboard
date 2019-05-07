@@ -1661,18 +1661,20 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0mL-1j-Wvz">
-                                                <rect key="frame" x="16" y="148" width="382" height="36"/>
+                                                <rect key="frame" x="16" y="176" width="382" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subjects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvd-dm-kaz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="231" height="36"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="224.5" height="36"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                                        <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qW-xl-by4">
-                                                        <rect key="frame" x="247" y="0.0" width="135" height="36"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <state key="normal" title="Edit"/>
+                                                        <rect key="frame" x="240.5" y="0.0" width="141.5" height="36"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                                        <state key="normal" title="Edit">
+                                                            <color key="titleColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="o6q-4e-0vN" kind="show" id="rxe-QE-JOl"/>
                                                         </connections>
@@ -1680,59 +1682,61 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPC-fv-2MG">
-                                                <rect key="frame" x="16" y="594" width="382" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <rect key="frame" x="16" y="597" width="382" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                                <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-bA-YAd">
-                                                <rect key="frame" x="16" y="498" width="382" height="64"/>
+                                                <rect key="frame" x="16" y="502" width="382" height="63"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$/hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZk-S6-QUT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="24"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online/Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jj-1r-b0L">
-                                                        <rect key="frame" x="0.0" y="40" width="110" height="24"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <rect key="frame" x="0.0" y="39.5" width="106.5" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jMJ-f5-97e">
-                                                <rect key="frame" x="16" y="16" width="382" height="100"/>
+                                                <rect key="frame" x="16" y="16" width="382" height="128"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wOG-sC-77f">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wOG-sC-77f">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="c1i-3q-zCE"/>
-                                                            <constraint firstAttribute="height" constant="100" id="yC1-h2-HJc"/>
+                                                            <constraint firstAttribute="width" constant="128" id="c1i-3q-zCE"/>
+                                                            <constraint firstAttribute="height" constant="128" id="yC1-h2-HJc"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7N-vh-UzM">
-                                                        <rect key="frame" x="116" y="0.0" width="266" height="100"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <rect key="frame" x="144" y="0.0" width="238" height="128"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="33"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="scz-JB-sLe">
-                                                <rect key="frame" x="16" y="905.5" width="382" height="36"/>
+                                                <rect key="frame" x="16" y="929" width="382" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-oD-lNl">
                                                         <rect key="frame" x="0.0" y="0.0" width="89" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGw-mA-Wln">
                                                         <rect key="frame" x="105" y="0.0" width="277" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <state key="normal" title="Edit"/>
+                                                        <state key="normal" title="Edit">
+                                                            <color key="titleColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="BgU-T3-rQx" kind="show" id="h0W-Bd-yEy"/>
                                                         </connections>
@@ -1740,18 +1744,20 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-Fm-XKG">
-                                                <rect key="frame" x="16" y="446" width="382" height="36"/>
+                                                <rect key="frame" x="16" y="450" width="382" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ou-HK-kmg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="257.5" height="36"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="253.5" height="36"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                                        <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSn-xo-3iw">
-                                                        <rect key="frame" x="273.5" y="0.0" width="108.5" height="36"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <state key="normal" title="Edit"/>
+                                                        <rect key="frame" x="269.5" y="0.0" width="112.5" height="36"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                                        <state key="normal" title="Edit">
+                                                            <color key="titleColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="hn1-pP-6uK" kind="show" id="sD0-4q-9Q2"/>
                                                         </connections>
@@ -1759,27 +1765,27 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="HtH-yW-ogb">
-                                                <rect key="frame" x="16" y="216" width="382" height="198"/>
+                                                <rect key="frame" x="16" y="244" width="382" height="174"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ukj-OE-dNd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="33"/>
+                                                    <stackView opaque="NO" contentMode="left" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ukj-OE-dNd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="27"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SE-7h-Gfb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="117.5" height="33"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="1">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="Accounting">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="businessManagementButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="cG2-ub-unW"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2a-Lm-n0D">
-                                                                <rect key="frame" x="132.5" y="0.0" width="117" height="33"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="M2a-Lm-n0D">
+                                                                <rect key="frame" x="131.5" y="0.0" width="119" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="2">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="Business Management">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1787,10 +1793,10 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usx-3u-bWU">
-                                                                <rect key="frame" x="264.5" y="0.0" width="117.5" height="33"/>
+                                                                <rect key="frame" x="262.5" y="0.0" width="119.5" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="3">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="Economics">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1799,14 +1805,14 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yUK-F7-N6B">
-                                                        <rect key="frame" x="0.0" y="55" width="382" height="33"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yUK-F7-N6B">
+                                                        <rect key="frame" x="0.0" y="49" width="382" height="27"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuh-YT-h89">
-                                                                <rect key="frame" x="0.0" y="0.0" width="117.5" height="33"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="4">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="Entrepreneurship">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1814,10 +1820,10 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gh4-nb-wuJ">
-                                                                <rect key="frame" x="132.5" y="0.0" width="117" height="33"/>
+                                                                <rect key="frame" x="131.5" y="0.0" width="119" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="5">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="Marketing">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1825,10 +1831,10 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOm-nI-exf">
-                                                                <rect key="frame" x="264.5" y="0.0" width="117.5" height="33"/>
+                                                                <rect key="frame" x="262.5" y="0.0" width="119.5" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="6">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="Sales">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1837,14 +1843,14 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XIt-1g-JuG">
-                                                        <rect key="frame" x="0.0" y="110" width="382" height="33"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XIt-1g-JuG">
+                                                        <rect key="frame" x="0.0" y="98" width="382" height="27"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIM-KK-nyo">
-                                                                <rect key="frame" x="0.0" y="0.0" width="117.5" height="33"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wIM-KK-nyo">
+                                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="7">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="Android Development">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1852,10 +1858,10 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCp-bd-yQu">
-                                                                <rect key="frame" x="132.5" y="0.0" width="117" height="33"/>
+                                                                <rect key="frame" x="131.5" y="0.0" width="119" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="8">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="HTML">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1863,10 +1869,10 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WC7-fr-Zh0">
-                                                                <rect key="frame" x="264.5" y="0.0" width="117.5" height="33"/>
+                                                                <rect key="frame" x="262.5" y="0.0" width="119.5" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="9">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="iOS Development">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1875,14 +1881,14 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KRJ-IH-v5z">
-                                                        <rect key="frame" x="0.0" y="165" width="382" height="33"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KRJ-IH-v5z">
+                                                        <rect key="frame" x="0.0" y="147" width="382" height="27"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brz-jn-TuF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="117.5" height="33"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="10">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="Javascript">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1890,21 +1896,21 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRt-pS-dgH">
-                                                                <rect key="frame" x="132.5" y="0.0" width="117" height="33"/>
+                                                                <rect key="frame" x="131.5" y="0.0" width="119" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="11">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="UX/UI Design">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="businessManagementButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="m6a-aZ-tuc"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCj-EK-qYn">
-                                                                <rect key="frame" x="264.5" y="0.0" width="117.5" height="33"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aCj-EK-qYn">
+                                                                <rect key="frame" x="262.5" y="0.0" width="119.5" height="27"/>
                                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.27058823529999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                                <state key="normal" title="12">
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="12"/>
+                                                                <state key="normal" title="Web Development">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1916,97 +1922,97 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="slU-YU-kS0">
-                                                <rect key="frame" x="16" y="634" width="382" height="239.5"/>
+                                                <rect key="frame" x="16" y="636.5" width="382" height="260.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Di7-4r-RC0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="239.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="260.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VF-yI-K05">
-                                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="65.5" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLB-1I-L4K">
-                                                                <rect key="frame" x="0.0" y="36.5" width="64.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="39.5" width="65" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHc-Ny-nUu">
-                                                                <rect key="frame" x="0.0" y="73" width="90" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="79" width="95.5" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnm-FC-bIM">
-                                                                <rect key="frame" x="0.0" y="109.5" width="72" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="118.5" width="73.5" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmu-q6-mSp">
-                                                                <rect key="frame" x="0.0" y="146" width="47" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="158" width="48.5" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E25-3c-grl">
-                                                                <rect key="frame" x="0.0" y="182.5" width="68.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="197.5" width="71.5" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-c9-Mmt">
-                                                                <rect key="frame" x="0.0" y="219" width="57.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="237" width="60.5" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="XTW-sA-XNd">
-                                                        <rect key="frame" x="106" y="0.0" width="276" height="239.5"/>
+                                                        <rect key="frame" x="111.5" y="0.0" width="270.5" height="260.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Not Available" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycL-Xt-iSe">
-                                                                <rect key="frame" x="176.5" y="0.0" width="99.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="164.5" y="0.0" width="106" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Not Available" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edu-0w-9Cw">
-                                                                <rect key="frame" x="176.5" y="36.5" width="99.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="164.5" y="39.5" width="106" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Not Available" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLS-9v-imu">
-                                                                <rect key="frame" x="176.5" y="73" width="99.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="164.5" y="79" width="106" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Not Available" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCD-XA-Gcu">
-                                                                <rect key="frame" x="176.5" y="109.5" width="99.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="164.5" y="118.5" width="106" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Not Available" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vf5-ms-sHl">
-                                                                <rect key="frame" x="176.5" y="146" width="99.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="164.5" y="158" width="106" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Not Available" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G73-g0-wbP">
-                                                                <rect key="frame" x="176.5" y="182.5" width="99.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="164.5" y="197.5" width="106" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Not Available" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2R-Jz-bOY">
-                                                                <rect key="frame" x="176.5" y="219" width="99.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="164.5" y="237" width="106" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -2073,35 +2079,39 @@
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1100"/>
                     <connections>
+                        <outlet property="accountingButton" destination="6SE-7h-Gfb" id="oxz-0I-RWp"/>
+                        <outlet property="androidDevelopmentButton" destination="wIM-KK-nyo" id="iXt-v1-B9N"/>
+                        <outlet property="businessManagementButton" destination="M2a-Lm-n0D" id="hKN-Hu-h73"/>
+                        <outlet property="economicsButton" destination="Usx-3u-bWU" id="vgv-dy-f78"/>
                         <outlet property="editBiographyButton" destination="eGw-mA-Wln" id="pgS-5o-u51"/>
                         <outlet property="editPreferencesButton" destination="eSn-xo-3iw" id="h6u-qs-zPD"/>
                         <outlet property="editSubjectsButton" destination="0qW-xl-by4" id="ECy-J2-noQ"/>
+                        <outlet property="entrepreneurshipButton" destination="fuh-YT-h89" id="SgM-4J-Z90"/>
                         <outlet property="fridayAvailabilityLabel" destination="vf5-ms-sHl" id="cZM-eM-G47"/>
+                        <outlet property="htmlButton" destination="TCp-bd-yQu" id="lOy-7C-SQM"/>
+                        <outlet property="iosDevelopmentButton" destination="WC7-fr-Zh0" id="BO6-eW-9jV"/>
+                        <outlet property="javascriptButton" destination="Brz-jn-TuF" id="aom-Fs-gYh"/>
+                        <outlet property="marketingButton" destination="Gh4-nb-wuJ" id="JFY-kP-AjH"/>
                         <outlet property="meetingPrefLabel" destination="1Jj-1r-b0L" id="Rki-u3-7gD"/>
                         <outlet property="mondayAvailabilityLabel" destination="ycL-Xt-iSe" id="v3G-Mc-jf8"/>
                         <outlet property="nameLabel" destination="P7N-vh-UzM" id="lFN-dJ-2ar"/>
                         <outlet property="preferencesStackView" destination="KUx-bA-YAd" id="7q9-aI-U4u"/>
                         <outlet property="priceLabel" destination="sZk-S6-QUT" id="HaZ-PM-xRM"/>
                         <outlet property="profileImage" destination="wOG-sC-77f" id="R0a-UY-fxz"/>
+                        <outlet property="salesButton" destination="zOm-nI-exf" id="1Wp-5J-lfa"/>
                         <outlet property="saturdayAvailabilityLabel" destination="G73-g0-wbP" id="mYN-8r-UMn"/>
                         <outlet property="settingsButton" destination="0OF-Vn-L3y" id="4Wo-pu-RUr"/>
-                        <outlet property="subjectBox1" destination="6SE-7h-Gfb" id="oxz-0I-RWp"/>
-                        <outlet property="subjectBox10" destination="Brz-jn-TuF" id="aom-Fs-gYh"/>
-                        <outlet property="subjectBox11" destination="dRt-pS-dgH" id="mkW-55-Vs3"/>
-                        <outlet property="subjectBox12" destination="aCj-EK-qYn" id="FOC-Sp-1Li"/>
-                        <outlet property="subjectBox2" destination="M2a-Lm-n0D" id="hKN-Hu-h73"/>
-                        <outlet property="subjectBox3" destination="Usx-3u-bWU" id="vgv-dy-f78"/>
-                        <outlet property="subjectBox4" destination="fuh-YT-h89" id="SgM-4J-Z90"/>
-                        <outlet property="subjectBox5" destination="Gh4-nb-wuJ" id="JFY-kP-AjH"/>
-                        <outlet property="subjectBox6" destination="zOm-nI-exf" id="1Wp-5J-lfa"/>
-                        <outlet property="subjectBox7" destination="wIM-KK-nyo" id="iXt-v1-B9N"/>
-                        <outlet property="subjectBox8" destination="TCp-bd-yQu" id="lOy-7C-SQM"/>
-                        <outlet property="subjectBox9" destination="WC7-fr-Zh0" id="BO6-eW-9jV"/>
                         <outlet property="subjectsStackView" destination="HtH-yW-ogb" id="5Cg-Vz-Y3J"/>
+                        <outlet property="subjectsStackView1" destination="Ukj-OE-dNd" id="uVd-Tk-klI"/>
+                        <outlet property="subjectsStackView2" destination="yUK-F7-N6B" id="RtH-b8-Nba"/>
+                        <outlet property="subjectsStackView3" destination="XIt-1g-JuG" id="z1c-kp-2LT"/>
+                        <outlet property="subjectsStackView4" destination="KRJ-IH-v5z" id="0U4-wj-bzI"/>
                         <outlet property="sundayAvailabilityLabel" destination="S2R-Jz-bOY" id="TNo-d4-aiO"/>
                         <outlet property="teacherProfileScrollView" destination="TAN-dl-hQe" id="yVY-lI-CDQ"/>
                         <outlet property="thursdayAvailabilityLabel" destination="xCD-XA-Gcu" id="ed1-w2-byw"/>
                         <outlet property="tuesdayAvailabilityLabel" destination="edu-0w-9Cw" id="JJL-nZ-hYq"/>
+                        <outlet property="uxDesignButton" destination="dRt-pS-dgH" id="mkW-55-Vs3"/>
+                        <outlet property="webDevelopmentButton" destination="aCj-EK-qYn" id="FOC-Sp-1Li"/>
                         <outlet property="wednesdayAvailabilityLabel" destination="PLS-9v-imu" id="bte-Fp-wm9"/>
                     </connections>
                 </viewController>
