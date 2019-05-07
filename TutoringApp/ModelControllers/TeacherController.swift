@@ -30,7 +30,7 @@ class TeacherController {
         }
     }
     
-    func createTeacher(name: String, email: String, location: String, messages: [DocumentReference], dateOfBirth: String, subjects: [String], costPerHour: String, schedulePreference: [String], meetingPreference: String, aboutMe: String, qualifications: String, linkedInLink: String, userFirebaseUID: String, profileImage: UIImage?, completion: @escaping (Bool) -> Void) {
+    func createTeacher(name: String, email: String, location: String, messages: [DocumentReference], dateOfBirth: String, subjects: [String], costPerHour: Int, schedulePreference: [String], meetingPreference: String, aboutMe: String, qualifications: String, linkedInLink: String, userFirebaseUID: String, profileImage: UIImage?, completion: @escaping (Bool) -> Void) {
         
         let docRef = teacherRef.document(userFirebaseUID)
         

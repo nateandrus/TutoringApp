@@ -26,7 +26,7 @@ class BiographyViewController: UIViewController {
     var location: String?
     var dateOfBirth: String?
     var subjectsLanding: [String]?
-    var costPerHour: String?
+    var costPerHour: Int?
     var schedulePreference: [String]?
     var meetingPreference: String?
     var userFirebaseUID: String?
