@@ -22,6 +22,7 @@ class StudentController {
     //Source of Truth
     var searchResults: [Teacher] = []
     var locationSearchResults: [Teacher] = []
+    var onlineSearchResults: [Teacher] = []
     
     func createStudent(name: String, email: String, password: String, messages: [DocumentReference], completion: @escaping (Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (authData, error) in
@@ -224,12 +225,27 @@ class StudentController {
         }
     }
     
-    func sortTeachersByZipcode(location: String) {
+    func sortTeachersByZipcode(location: String, completion: @escaping (Bool) -> Void) {
         self.locationSearchResults.removeAll()
+        self.onlineSearchResults.removeAll()
         for teacher in searchResults {
-            if teacher.location == location {
-                self.locationSearchResults.append(teacher)
+            if teacher.meetingPref == "Both" {
+                self.onlineSearchResults.append(teacher)
+                if teacher.location == location {
+                    self.locationSearchResults.append(teacher)
+                }
+            } else if teacher.meetingPref == "Online" {
+                self.onlineSearchResults.append(teacher)
+            } else if teacher.meetingPref == "Local" {
+                if teacher.location == location {
+                    self.locationSearchResults.append(teacher)
+                }
             }
+            completion(true)
         }
+    }
+    
+    func applyFiltersOnSearch(priceRange: Int, distance: Int) {
+        
     }
 }

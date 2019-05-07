@@ -27,20 +27,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z2k-q5-i7n">
-                                            <rect key="frame" x="16" y="6" width="114.5" height="114"/>
+                                            <rect key="frame" x="16" y="6" width="114" height="113.5"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Z2k-q5-i7n" secondAttribute="height" multiplier="1:1" id="NgW-m9-jQh"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJX-CM-q7Z">
-                                            <rect key="frame" x="146.5" y="36" width="148" height="24"/>
+                                            <rect key="frame" x="146" y="36" width="148.5" height="24"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(lastmessage)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbY-Y3-MsK">
-                                            <rect key="frame" x="146.5" y="80" width="247.5" height="18"/>
+                                            <rect key="frame" x="146" y="80" width="248" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -96,7 +96,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="shQ-Fm-x0q"/>
                     </view>
-                    <navigationItem key="navigationItem" title="(who?)" id="aWb-Ee-H6u"/>
+                    <navigationItem key="navigationItem" title="(who?)" id="aWb-Ee-H6u">
+                        <barButtonItem key="rightBarButtonItem" image="checked" id="ukq-ns-IPQ">
+                            <connections>
+                                <action selector="barButtonItemTapped:" destination="Zeb-g0-eaL" id="IcL-mI-RSY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8c-qA-TAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,6 +129,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checked" width="50" height="50"/>
         <image name="message-square" width="38" height="38"/>
     </resources>
 </document>
