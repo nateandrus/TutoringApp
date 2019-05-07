@@ -451,7 +451,7 @@ class TeacherEditPreferencesViewController: UIViewController {
     }
 
     @IBAction func saveChangesButtonTapped(_ sender: Any) {
-        guard let user = TeacherController.shared.currentUser, let priceChange = priceTextfield.text, !priceChange.isEmpty else { return }
+        guard let user = TeacherController.shared.currentUser, let priceChange = Int(priceTextfield.text!) else { return }
         TeacherController.shared.updateTeacherPreferences(teacherDocRef: user.selfDocRef, costPerHour: priceChange, schedulePreference: schedulePreference, meetingPreference: meetingPreference) { (success) in
             if success {
                 print("SUCCESSFULLY SAVED✅✅✅✅✅✅✅")
