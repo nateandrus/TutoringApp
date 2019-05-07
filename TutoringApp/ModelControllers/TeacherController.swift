@@ -79,6 +79,7 @@ class TeacherController {
             if docSnapshot.exists {
                 let teacher = Teacher(dictionary: docSnapshot.data()!)
                 self.currentUser = teacher
+                print("INITIALIZED A TEACHER✅✅✅✅✅✅✅")
                 completion(true)
             }
         }
@@ -101,6 +102,7 @@ class TeacherController {
                 completion(false)
                 return
             } else {
+                print("UPDATED A TEACHER✅✅✅✅✅✅✅")
                 completion(true)
             }
         }
@@ -118,6 +120,7 @@ class TeacherController {
                 completion(false)
                 return
             } else {
+                print("UPDATED TEACHER SUBJECTS✅✅✅✅✅✅✅")
                 completion(true)
             }
         }
@@ -137,6 +140,7 @@ class TeacherController {
                 completion(false)
                 return
             } else {
+                print("UPDATED TEACHER PREFERENCES✅✅✅✅✅✅✅")
                 completion(true)
             }
         }
@@ -155,6 +159,7 @@ class TeacherController {
                 completion(false)
                 return
             } else {
+                print("UPDATED TEACHER BIOGRAPHY✅✅✅✅✅✅✅")
                 completion(true)
             }
         }

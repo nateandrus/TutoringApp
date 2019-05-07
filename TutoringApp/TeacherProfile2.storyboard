@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,6 +31,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q1a-tE-HFQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="protegeBlue"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -873,9 +875,11 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkS-4w-zgN">
                                                 <rect key="frame" x="16" y="678" width="382" height="38"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="protegeBlue"/>
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="21"/>
-                                                <state key="normal" title="Save Changes"/>
+                                                <state key="normal" title="Save Changes">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="saveChangesButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="EE5-ih-pbA"/>
                                                     <action selector="saveChangesButtonTapped:" destination="o6q-4e-0vN" eventType="touchUpInside" id="Ivd-J5-32t"/>
@@ -1082,6 +1086,7 @@
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PyF-dp-qNS">
                                                                 <rect key="frame" x="166.5" y="0.0" width="150.5" height="30"/>
+                                                                <color key="tintColor" name="protegeBlue"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -1416,9 +1421,11 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qD-ET-gGn">
                                                 <rect key="frame" x="16" y="678" width="382" height="38"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="protegeBlue"/>
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="21"/>
-                                                <state key="normal" title="Save Changes"/>
+                                                <state key="normal" title="Save Changes">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="saveChangesButtonTapped:" destination="hn1-pP-6uK" eventType="touchUpInside" id="SGI-KD-3l8"/>
                                                     <action selector="saveChangesButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="hgI-fH-Lyp"/>
@@ -1512,12 +1519,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F7t-mF-F4a">
-                                                <rect key="frame" x="16" y="84.5" width="382" height="236"/>
+                                                <rect key="frame" x="16" y="84.5" width="382" height="225.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvP-qJ-E0j">
                                                         <rect key="frame" x="0.0" y="0.0" width="74.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rVi-st-IF9">
@@ -1527,46 +1534,49 @@
                                                             <constraint firstAttribute="width" constant="374" id="6jq-lI-Hg6"/>
                                                             <constraint firstAttribute="height" constant="120" id="IjX-y9-e4M"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
+                                                        <color key="textColor" name="protegeGray"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like future mentees to know about you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6p-hU-X1c">
-                                                        <rect key="frame" x="0.0" y="157" width="382" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="157" width="332" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
+                                                        <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your teaching style?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHU-3y-dli">
-                                                        <rect key="frame" x="0.0" y="186" width="199.5" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="182.5" width="164.5" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
+                                                        <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you looking for in a mentee?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGZ-CP-P29">
-                                                        <rect key="frame" x="0.0" y="215" width="271.5" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="208" width="223.5" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
+                                                        <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tH7-X8-ApJ">
                                                 <rect key="frame" x="16" y="638" width="382" height="38"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="protegeBlue"/>
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="21"/>
-                                                <state key="normal" title="Save Changes"/>
+                                                <state key="normal" title="Save Changes">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="saveChangesButtonTapped:" destination="BgU-T3-rQx" eventType="touchUpInside" id="BTa-fC-4UJ"/>
                                                     <action selector="saveChangesButtonTapped:" destination="ox2-Tx-nUS" eventType="touchUpInside" id="R9R-rq-7Cq"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RgC-hH-3fr">
-                                                <rect key="frame" x="16" y="344.5" width="382" height="207"/>
+                                                <rect key="frame" x="16" y="334" width="382" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qualifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-yv-09P">
                                                         <rect key="frame" x="0.0" y="0.0" width="98" height="21"/>
                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ho3-2m-yJy">
@@ -1576,19 +1586,20 @@
                                                             <constraint firstAttribute="height" constant="120" id="41w-cU-qSs"/>
                                                             <constraint firstAttribute="width" constant="374" id="rj2-lB-Ypz"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
+                                                        <color key="textColor" name="protegeGray"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What work experience or expertise do you have?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fow-KE-o0P">
-                                                        <rect key="frame" x="0.0" y="157" width="346" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="157" width="285" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
+                                                        <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any certifications or degrees?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3q-dA-nmE">
-                                                        <rect key="frame" x="0.0" y="186" width="209.5" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="182.5" width="172.5" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
+                                                        <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -2071,7 +2082,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SJh-2Q-h9v">
                         <barButtonItem key="backBarButtonItem" title=" " id="Bce-22-SuP"/>
-                        <barButtonItem key="rightBarButtonItem" title="Settings Gear" id="0OF-Vn-L3y">
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="0OF-Vn-L3y">
                             <connections>
                                 <action selector="settingsButtonTapped:" destination="b63-E3-OiU" id="PSZ-1z-0Eu"/>
                             </connections>
@@ -2121,6 +2132,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="settings" width="32" height="32"/>
         <image name="unchecked" width="50" height="50"/>
+        <namedColor name="protegeBlue">
+            <color red="0.027450980392156862" green="0.27058823529411763" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="protegeGray">
+            <color red="0.41568627450980394" green="0.41568627450980394" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

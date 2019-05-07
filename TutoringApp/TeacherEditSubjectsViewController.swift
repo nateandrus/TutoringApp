@@ -40,6 +40,8 @@ class TeacherEditSubjectsViewController: UIViewController {
         javascriptButton.layer.cornerRadius = 5
         uxDesignButton.layer.cornerRadius = 5
         webDevelopmentButton.layer.cornerRadius = 5
+        saveChangesButton.layer.cornerRadius = 5
+        
         guard let user = TeacherController.shared.currentUser
             else { return }
         self.subjects = user.subjects
