@@ -39,11 +39,25 @@ class TeacherEditPreferencesViewController: UIViewController {
     
     var schedulePreference: [String] = []
     var meetingPreference: String = ""
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        priceTextfield.layer.cornerRadius = 5
+        priceTextfield.layer.borderWidth = 2
+        priceTextfield.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
+        inPersonButton.layer.cornerRadius = 5
+        inPersonButton.layer.borderWidth = 2
+        inPersonButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
+        onlineButton.layer.cornerRadius = 5
+        onlineButton.layer.borderWidth = 2
+        onlineButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
+        bothButton.layer.cornerRadius = 5
+        bothButton.layer.borderWidth = 2
+        bothButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
+        saveChangesButton.layer.cornerRadius = 5
         guard let user = TeacherController.shared.currentUser
             else { return }
+        print("ASDUFASDJGADFGKSDMFKGF")
         priceTextfield.text = "\(user.costForTime)"
         meetingPreference = user.meetingPref
         schedulePreference = user.schedulePref
@@ -153,27 +167,27 @@ class TeacherEditPreferencesViewController: UIViewController {
             sundayEveningButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
         }
         if meetingPreference == "In Person" {
-            inPersonButton.backgroundColor = .black
+            inPersonButton.backgroundColor = .protegeBlue
             inPersonButton.setTitleColor(.white, for: .normal)
-            onlineButton.backgroundColor = .lightGray
-            onlineButton.setTitleColor(.black, for: .normal)
-            bothButton.backgroundColor = .lightGray
-            bothButton.setTitleColor(.black, for: .normal)
+            onlineButton.backgroundColor = .white
+            onlineButton.setTitleColor(.protegeBlue, for: .normal)
+            bothButton.backgroundColor = .white
+            bothButton.setTitleColor(.protegeBlue, for: .normal)
         }
         if meetingPreference == "Online" {
-            inPersonButton.backgroundColor = .lightGray
-            inPersonButton.setTitleColor(.black, for: .normal)
-            onlineButton.backgroundColor = .black
+            inPersonButton.backgroundColor = .white
+            inPersonButton.setTitleColor(.protegeBlue, for: .normal)
+            onlineButton.backgroundColor = .protegeBlue
             onlineButton.setTitleColor(.white, for: .normal)
-            bothButton.backgroundColor = .lightGray
-            bothButton.setTitleColor(.black, for: .normal)
+            bothButton.backgroundColor = .white
+            bothButton.setTitleColor(.protegeBlue, for: .normal)
         }
         if meetingPreference == "Both" {
-            inPersonButton.backgroundColor = .lightGray
-            inPersonButton.setTitleColor(.black, for: .normal)
-            onlineButton.backgroundColor = .lightGray
-            onlineButton.setTitleColor(.black, for: .normal)
-            bothButton.backgroundColor = .black
+            inPersonButton.backgroundColor = .white
+            inPersonButton.setTitleColor(.protegeBlue, for: .normal)
+            onlineButton.backgroundColor = .white
+            onlineButton.setTitleColor(.protegeBlue, for: .normal)
+            bothButton.backgroundColor = .protegeBlue
             bothButton.setTitleColor(.white, for: .normal)
         }
 
@@ -427,21 +441,23 @@ class TeacherEditPreferencesViewController: UIViewController {
     }
     
     func turnOnPreference(button: UIButton) {
-        button.backgroundColor = .black
+        button.backgroundColor = .protegeBlue
         button.setTitleColor(.white, for: .normal)
     }
     
     func turnOffPreference(button: UIButton) {
         button.backgroundColor = .white
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .lightGray
+        button.setTitleColor(.protegeBlue, for: .normal)
     }
 
     @IBAction func saveChangesButtonTapped(_ sender: Any) {
         guard let user = TeacherController.shared.currentUser, let priceChange = priceTextfield.text, !priceChange.isEmpty else { return }
         TeacherController.shared.updateTeacherPreferences(teacherDocRef: user.selfDocRef, costPerHour: priceChange, schedulePreference: schedulePreference, meetingPreference: meetingPreference) { (success) in
             if success {
+                print("SUCCESSFULLY SAVED✅✅✅✅✅✅✅")
                 self.navigationController?.popViewController(animated: true)
+            } else {
+                print("FAILED TO SAVE SHIT❌❌❌❌❌❌")
             }
         }
     }
