@@ -31,7 +31,7 @@ class MainLoginViewController: UIViewController {
     //MARK: - Actions
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
-        StudentController.shared.loginUser(email: email, password: password) { (firebaseUID, error) in
+        StudentController.shared.loginUser(email: "jennifer@gmail.com", password: "jjjjjj") { (firebaseUID, error) in
             guard let firebaseUID = firebaseUID else { return }
             StudentController.shared.initializeStudent(firebaseUID: firebaseUID, completion: { (success) in
                 if success {

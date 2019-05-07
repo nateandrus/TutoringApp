@@ -63,6 +63,35 @@ class MessageDetailViewController: MessagesViewController {
             }
         }
     }
+    
+    @IBAction func barButtonItemTapped(_ sender: UIBarButtonItem) {
+    }
+    
+    func barButtonAlertController(name: String) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let deleteMessagesAction = UIAlertAction(title: "Delete messages", style: .default) { (_) in
+            
+        }
+        let blockAction = UIAlertAction(title: "Block User", style: .destructive) { (_) in
+            
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteMessagesAction)
+        alertController.addAction(blockAction)
+        present(alertController, animated: true)
+    }
+    
+    func deleteMessagesAlertController() {
+        let alertController = UIAlertController(title: "Delete messages?", message: "Deleting messages will get delete this chat forever.", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
+            
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteAction)
+        present(alertController, animated: true)
+    }
 }
 
 extension MessageDetailViewController: MessagesDisplayDelegate {

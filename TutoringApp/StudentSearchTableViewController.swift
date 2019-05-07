@@ -12,6 +12,12 @@ class StudentSearchTableViewController: UITableViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
+    //Outlets from popover view
+    @IBOutlet var popoverView: UIView!
+    @IBOutlet weak var priceSlider: UISlider!
+    @IBOutlet weak var priceFilterLabel: UILabel!
+    @IBOutlet weak var distanceSlider: UISlider!
+    @IBOutlet weak var distanceFromLabel: UILabel!
     
     var teachers: [Teacher] = []
     var subject: String?
@@ -21,21 +27,60 @@ class StudentSearchTableViewController: UITableViewController {
         super.viewDidLoad()
         searchBar.delegate = self
         segmentedControl.layer.cornerRadius = 6
-        guard let subject = subject else { return }
+        guard let subject = subject, let location = location else { return }
         StudentController.shared.searchBySubject(subject: subject) { (success) in
             if success {
-                self.tableView.reloadData()
+                StudentController.shared.sortTeachersByZipcode(location: location, completion: { (success) in
+                    if success {
+                        self.tableView.reloadData()
+                    }
+                })
             }
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+           popoverView.removeFromSuperview()
+    }
+    
+    @IBAction func priceSlider(_ sender: UISlider) {
+        priceSlider.isContinuous = true
+        priceFilterLabel.text = "Max rate: $\(Int(Double(priceSlider.value)))/hr"
+    }
+    
+    @IBAction func distanceSlider(_ sender: UISlider) {
+        distanceSlider.isContinuous = true
+        distanceFromLabel.text = "\(Int(Double(distanceSlider.value))) Miles"
+    }
+    
+    @IBAction func applyButtontapped(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        self.popoverView.removeFromSuperview()
+    }
+    
+    @IBAction func filterButtonTapped(_ sender: Any) {
+        self.navigationController?.view.addSubview(popoverView)
+        popoverView.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        popoverView.layer.borderWidth = 2
+        popoverView.layer.cornerRadius = 15
+        constrainFilterView()
+    }
+    
+    func constrainFilterView() {
+        popoverView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint(item: popoverView!, attribute: .bottom, relatedBy: .equal, toItem: self.tableView, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: popoverView!, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 0.5, constant: 0).isActive = true
+        NSLayoutConstraint(item: popoverView!, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 1, constant: 0).isActive = true
+    }
     
     @IBAction func segmentedControllerChanged(_ sender: UISegmentedControl) {
         if segmentedControl.selectedSegmentIndex == 0 {
             self.tableView.reloadData()
         } else if segmentedControl.selectedSegmentIndex == 1 {
-            guard let location = location else { return }
-            StudentController.shared.sortTeachersByZipcode(location: location)
             self.tableView.reloadData()
         }
     }
@@ -43,7 +88,7 @@ class StudentSearchTableViewController: UITableViewController {
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if segmentedControl.selectedSegmentIndex == 0 {
-            return StudentController.shared.searchResults.count
+            return StudentController.shared.onlineSearchResults.count
         } else {
             return StudentController.shared.locationSearchResults.count
         }
@@ -54,11 +99,10 @@ class StudentSearchTableViewController: UITableViewController {
         return height
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teacherCell", for: indexPath) as! StudentSearchTableViewCell
         if segmentedControl.selectedSegmentIndex == 0 {
-            let teacher = StudentController.shared.searchResults[indexPath.row]
+            let teacher = StudentController.shared.onlineSearchResults[indexPath.row]
             TeacherController.shared.loadProfileImageView(userFirebaseUID: teacher.firebaseUID) { (image) in
                 if let image = image {
                     cell.profileImage.image = image
@@ -82,7 +126,6 @@ class StudentSearchTableViewController: UITableViewController {
         }
     }
     
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTeacherDetail" {
@@ -93,11 +136,6 @@ class StudentSearchTableViewController: UITableViewController {
                 }
             }
         }
-    }
-    
-    
-    @IBAction func filterButtonTapped(_ sender: Any) {
-        
     }
 }
 

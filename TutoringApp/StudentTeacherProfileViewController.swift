@@ -60,8 +60,11 @@ class StudentTeacherProfileViewController: UIViewController {
         self.title = selectedTeacher.name
         sendMessageButton.layer.cornerRadius = sendMessageButton.frame.height / 2
         TeacherController.shared.loadProfileImageView(userFirebaseUID: selectedTeacher.firebaseUID) { (image) in
-            guard let image = image else { return }
-            self.profileImage.image = image
+            if let image = image {
+                self.profileImage.image = image
+            } else {
+                self.profileImage.image = #imageLiteral(resourceName: "default user icon")
+            }
         }
         if selectedTeacher.schedulePref.contains("MondayMorning") {
             mondayMorningLabel.backgroundColor = .black
