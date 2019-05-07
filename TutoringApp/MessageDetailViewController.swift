@@ -65,16 +65,17 @@ class MessageDetailViewController: MessagesViewController {
     }
     
     @IBAction func barButtonItemTapped(_ sender: UIBarButtonItem) {
+        barButtonAlertController()
     }
     
-    func barButtonAlertController(name: String) {
+    func barButtonAlertController() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let deleteMessagesAction = UIAlertAction(title: "Delete messages", style: .default) { (_) in
-            
+            self.deleteMessagesAlertController()
         }
         let blockAction = UIAlertAction(title: "Block User", style: .destructive) { (_) in
-            
+            self.blockAlertController()
         }
         alertController.addAction(cancelAction)
         alertController.addAction(deleteMessagesAction)
@@ -90,6 +91,17 @@ class MessageDetailViewController: MessagesViewController {
         }
         alertController.addAction(cancelAction)
         alertController.addAction(deleteAction)
+        present(alertController, animated: true)
+    }
+    
+    func blockAlertController() {
+        let alertController = UIAlertController(title: "Block User?", message: "The user will not be notified that you blocked them but they will be unable to contact you moving forward.", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let blockAction = UIAlertAction(title: "Block", style: .destructive) { (_) in
+            
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(blockAction)
         present(alertController, animated: true)
     }
 }

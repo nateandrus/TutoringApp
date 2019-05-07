@@ -55,6 +55,14 @@ class StudentSearchTableViewController: UITableViewController {
     }
     
     @IBAction func applyButtontapped(_ sender: UIButton) {
+        let priceChange = Int(Double(priceSlider.value))
+        let distanceChange = Int(Double(priceSlider.value)) 
+        StudentController.shared.applyFiltersOnSearch(priceRange: priceChange, distance: distanceChange) { (success) in
+            if success {
+                self.popoverView.removeFromSuperview()
+                self.tableView.reloadData()
+            }
+        }
     }
     
     
