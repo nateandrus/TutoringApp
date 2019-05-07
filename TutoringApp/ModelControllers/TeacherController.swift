@@ -126,7 +126,7 @@ class TeacherController {
         }
     }
     
-    func updateTeacherPreferences(teacherDocRef: DocumentReference, costPerHour: String, schedulePreference: [String], meetingPreference: String, completion: @escaping (Bool) -> Void) {
+    func updateTeacherPreferences(teacherDocRef: DocumentReference, costPerHour: Int, schedulePreference: [String], meetingPreference: String, completion: @escaping (Bool) -> Void) {
         
         let docData: [String: Any] = [
             "costPerHour" : costPerHour,
