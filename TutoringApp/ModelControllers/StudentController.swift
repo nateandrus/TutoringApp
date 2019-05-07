@@ -175,8 +175,12 @@ class StudentController {
             self.searchResults.removeAll()
             
             for document in snapshots!.documents {
-                guard let teacher = Teacher(dictionary: document.data()) else { return }
+                guard let teacher = Teacher(dictionary: document.data()) else {
+                    print("🤬")
+                    return
+                }
                 self.searchResults.append(teacher)
+                print("\(document == snapshots?.documents.last)")
             }
             completion(true)
         }
@@ -241,11 +245,21 @@ class StudentController {
                     self.locationSearchResults.append(teacher)
                 }
             }
-            completion(true)
         }
+        completion(true)
     }
     
-    func applyFiltersOnSearch(priceRange: Int, distance: Int) {
-        
+    func applyFiltersOnSearch(priceRange: Int, distance: Int, completion: @escaping (Bool) -> Void) {
+        for teacher in locationSearchResults {
+            if teacher.costForTime > priceRange {
+                self.locationSearchResults.removeAll(where:{$0.firebaseUID == teacher.firebaseUID})
+            }
+        }
+        for teacher in onlineSearchResults {
+            if teacher.costForTime > priceRange {
+                self.onlineSearchResults.removeAll(where:{$0.firebaseUID == teacher.firebaseUID})
+            }
+        }
+        completion(true)
     }
 }
