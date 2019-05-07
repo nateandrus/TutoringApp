@@ -410,7 +410,7 @@ class PreferencesViewController: UIViewController {
     // MARK: - Navigation
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "toBiography" {
-            guard schedulePreferences != [], let costPerHour = hourlyRateTextField.text, !costPerHour.isEmpty, meetingPreference != "" else {
+            guard schedulePreferences != [], let costPerHour = Int(hourlyRateTextField.text!), meetingPreference != "" else {
                 alertController()
                 return false
             }
@@ -425,7 +425,7 @@ class PreferencesViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toBiography" {
-            guard let name = nameLandingPad, let email = email, let location = location, let dateofBirth = dateOfBirth, let subjects = subjectsLanding, let costPerHour = hourlyRateTextField.text, let userFirebaseUID = userFirebaseUID else { return }
+            guard let name = nameLandingPad, let email = email, let location = location, let dateofBirth = dateOfBirth, let subjects = subjectsLanding, let costPerHour = Int(hourlyRateTextField.text!), let userFirebaseUID = userFirebaseUID else { return }
             if let destinationVC = segue.destination as? BiographyViewController {
                 destinationVC.nameLandingPad = name
                 destinationVC.email = email

@@ -16,7 +16,7 @@ struct Teacher {
     var messages: [DocumentReference]?
     let firebaseUID: String
     let linkedINLink: String?
-    var costForTime: String
+    var costForTime: Int
     var qualifications: String
     var location: String
     var dateOfBirth: String
@@ -56,7 +56,7 @@ extension Teacher {
             let aboutMe = dictionary["aboutMe"] as? String,
             let firebaseUID = dictionary["userFirebaseUID"] as? String,
             let linkedInLink = dictionary["linkedInLink"] as? String,
-            let costForTime = dictionary["costPerHour"] as? String,
+            let costForTime = dictionary["costPerHour"] as? Int,
             let qualifications = dictionary["qualifications"] as? String,
             let location = dictionary["location"] as? String,
             let meetingPreference = dictionary["meetingPreference"] as? String,

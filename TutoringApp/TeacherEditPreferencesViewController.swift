@@ -44,7 +44,7 @@ class TeacherEditPreferencesViewController: UIViewController {
         super.viewDidLoad()
         guard let user = TeacherController.shared.currentUser
             else { return }
-        priceTextfield.text = user.costForTime
+        priceTextfield.text = "\(user.costForTime)"
         meetingPreference = user.meetingPref
         schedulePreference = user.schedulePref
         if schedulePreference.contains("MondayMorning") {
