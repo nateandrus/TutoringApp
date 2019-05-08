@@ -12,8 +12,6 @@ import MessageInputBar
 
 class TeacherMessageDetailViewController: MessagesViewController {
     
-    
-    
     //LandingPad for chat
     var chatLanding: Chat? {
         didSet {
@@ -27,6 +25,10 @@ class TeacherMessageDetailViewController: MessagesViewController {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+            layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
+            layout.textMessageSizeCalculator.incomingAvatarSize = .zero
+        }
         messageInputBar.leftStackView.alignment = .center
         messageInputBar.setLeftStackViewWidthConstant(to: 50, animated: false)
         guard let chat = chatLanding, let studentName = chat.studentName else { return }
@@ -58,9 +60,13 @@ class TeacherMessageDetailViewController: MessagesViewController {
 }
 
 extension TeacherMessageDetailViewController: MessagesDisplayDelegate {
-    private func backgroundColor(for message: Message, at indexPath: IndexPath,
+    internal func backgroundColor(for message: MessageType, at indexPath: IndexPath,
                                  in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return MessageController.shared.isFromCurrentSender(message: message) ? UIColor.lightGray : UIColor.green
+        return MessageController.shared.isFromCurrentSender(message: message as! Message) ? #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1) : .lightGray
+    }
+    
+    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        avatarView.isHidden = true
     }
     
     func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath,
