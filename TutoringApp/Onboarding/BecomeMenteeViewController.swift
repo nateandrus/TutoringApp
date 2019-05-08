@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BecomeMenteeViewController: UIViewController {
+class BecomeMenteeViewController: UIViewController, UITextFieldDelegate {
 
     //MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
@@ -28,7 +28,15 @@ class BecomeMenteeViewController: UIViewController {
         passwordTextField.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         confirmPasswordTextField.layer.borderWidth = 2
         confirmPasswordTextField.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
-        
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     //MARK: - Actions

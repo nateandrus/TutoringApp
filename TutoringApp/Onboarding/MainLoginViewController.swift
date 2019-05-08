@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainLoginViewController: UIViewController {
+class MainLoginViewController: UIViewController, UITextFieldDelegate {
 
     //MARK: - Outlets
     @IBOutlet weak var emailTextField: UITextField!
@@ -17,6 +17,8 @@ class MainLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         emailTextField.borderStyle = .line
         emailTextField.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         emailTextField.layer.borderWidth = 2
@@ -26,6 +28,11 @@ class MainLoginViewController: UIViewController {
         passwordTextField.layer.cornerRadius = 5 
         passwordTextField.borderStyle = .line
         loginButton.layer.cornerRadius = 5
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     //MARK: - Actions

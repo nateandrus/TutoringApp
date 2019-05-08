@@ -13,6 +13,7 @@ import MessageInputBar
 protocol StudentHomeTabMessagingViewControllerDelegate: class {
     func messageSent()
 }
+
 class StudentHomeTabMessagingViewController: MessagesViewController {
     
     var teacherLanding: Teacher?

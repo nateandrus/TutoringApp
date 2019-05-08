@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BecomeMentorViewController: UIViewController {
+class BecomeMentorViewController: UIViewController, UITextFieldDelegate {
 
     //MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
@@ -38,9 +38,19 @@ class BecomeMentorViewController: UIViewController {
         cityTextField.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         DateOfBirthTextField.layer.borderWidth = 2
         DateOfBirthTextField.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextfield.delegate = self
+        cityTextField.delegate = self
+        DateOfBirthTextField.delegate = self
     }
     
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
     @IBAction func nextStepButtonTapped(_ sender: UIButton) {
         guard let password = passwordTextField.text, !password.isEmpty,
