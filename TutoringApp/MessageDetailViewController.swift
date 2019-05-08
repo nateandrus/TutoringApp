@@ -29,6 +29,10 @@ class MessageDetailViewController: MessagesViewController {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+            layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
+            layout.textMessageSizeCalculator.incomingAvatarSize = .zero
+        }
         messageInputBar.leftStackView.alignment = .center
         messageInputBar.setLeftStackViewWidthConstant(to: 50, animated: false)
         if let teacher = teacherLanding {
@@ -74,12 +78,8 @@ class MessageDetailViewController: MessagesViewController {
         let deleteMessagesAction = UIAlertAction(title: "Delete messages", style: .default) { (_) in
             self.deleteMessagesAlertController()
         }
-        let blockAction = UIAlertAction(title: "Block User", style: .destructive) { (_) in
-            self.blockAlertController()
-        }
         alertController.addAction(cancelAction)
         alertController.addAction(deleteMessagesAction)
-        alertController.addAction(blockAction)
         present(alertController, animated: true)
     }
     
@@ -87,29 +87,27 @@ class MessageDetailViewController: MessagesViewController {
         let alertController = UIAlertController(title: "Delete messages?", message: "Deleting messages will get delete this chat forever.", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
-            
+            guard let chat = self.chatLanding else { return }
+            ChatController.shared.deleteChat(chatDocRef: chat.documentRef, completion: { (success) in
+                if success {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            })
         }
         alertController.addAction(cancelAction)
         alertController.addAction(deleteAction)
         present(alertController, animated: true)
     }
-    
-    func blockAlertController() {
-        let alertController = UIAlertController(title: "Block User?", message: "The user will not be notified that you blocked them but they will be unable to contact you moving forward.", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let blockAction = UIAlertAction(title: "Block", style: .destructive) { (_) in
-            
-        }
-        alertController.addAction(cancelAction)
-        alertController.addAction(blockAction)
-        present(alertController, animated: true)
-    }
 }
 
 extension MessageDetailViewController: MessagesDisplayDelegate {
-    private func backgroundColor(for message: Message, at indexPath: IndexPath,
+    internal func backgroundColor(for message: MessageType, at indexPath: IndexPath,
                          in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return MessageController.shared.isFromCurrentSender(message: message) ? UIColor.lightGray : #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        return MessageController.shared.isFromCurrentSender(message: message as! Message) ? #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1) : UIColor.lightGray
+    }
+    
+    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        avatarView.isHidden = true
     }
 
     func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath,

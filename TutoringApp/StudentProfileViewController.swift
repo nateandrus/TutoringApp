@@ -31,6 +31,7 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = ""
         guard let currentUser = StudentController.shared.currentUser else { return }
         studentNameLabel.text = currentUser.name
         studentEmailLabel.text = currentUser.email

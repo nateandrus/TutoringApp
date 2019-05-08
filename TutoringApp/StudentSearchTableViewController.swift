@@ -89,8 +89,22 @@ class StudentSearchTableViewController: UITableViewController {
         if segmentedControl.selectedSegmentIndex == 0 {
             self.tableView.reloadData()
         } else if segmentedControl.selectedSegmentIndex == 1 {
-            self.tableView.reloadData()
+            if StudentController.shared.locationSearchResults.isEmpty {
+                guard let subject = subject else { return }
+                noLocalMentorsAlertController(subject: subject)
+            } else {
+                self.tableView.reloadData()
+            }
         }
+    }
+    
+    func noLocalMentorsAlertController(subject: String) {
+        let alertController = UIAlertController(title: "This is embarassing...", message: "There are no \(subject) mentors in your area.", preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "It's okay", style: .default) { (_) in
+            self.segmentedControl.selectedSegmentIndex = 0
+        }
+        alertController.addAction(okayAction)
+        present(alertController, animated: true)
     }
     
     // MARK: - Table view data source

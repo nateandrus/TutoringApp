@@ -97,7 +97,8 @@
                         <viewLayoutGuide key="safeArea" id="shQ-Fm-x0q"/>
                     </view>
                     <navigationItem key="navigationItem" title="(who?)" id="aWb-Ee-H6u">
-                        <barButtonItem key="rightBarButtonItem" image="checked" id="ukq-ns-IPQ">
+                        <barButtonItem key="rightBarButtonItem" image="info" id="ukq-ns-IPQ">
+                            <color key="tintColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="barButtonItemTapped:" destination="Zeb-g0-eaL" id="IcL-mI-RSY"/>
                             </connections>
@@ -129,7 +130,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checked" width="50" height="50"/>
+        <image name="info" width="35" height="35"/>
         <image name="message-square" width="38" height="38"/>
     </resources>
 </document>
