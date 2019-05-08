@@ -39,6 +39,10 @@ class MainLoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
         StudentController.shared.loginUser(email: email, password: password) { (firebaseUID, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                self.errorAlertController(error: error.localizedDescription)
+            }
             guard let firebaseUID = firebaseUID else { return }
             StudentController.shared.initializeStudent(firebaseUID: firebaseUID, completion: { (success) in
                 if success {
