@@ -15,6 +15,7 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var teacherProfileScrollView: UIScrollView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var linkedInLabel: UILabel!
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     @IBOutlet weak var subjectsStackView: UIStackView!
     @IBOutlet weak var subjectsStackView1: UIStackView!
@@ -37,6 +38,7 @@ class TeacherProfileViewController: UIViewController {
     
     @IBOutlet weak var editSubjectsButton: UIButton!
     
+    @IBOutlet weak var preferencesStackView: UIStackView!
     @IBOutlet weak var editPreferencesButton: UIButton!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var meetingPrefLabel: UILabel!
@@ -50,9 +52,13 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var sundayAvailabilityLabel: UILabel!
     
     @IBOutlet weak var editBiographyButton: UIButton!
-    @IBOutlet weak var preferencesStackView: UIStackView!
+    @IBOutlet weak var aboutYouLabel: UILabel!
+    @IBOutlet weak var qualificationsLabel: UILabel!
+    
     
     static let shared = TeacherProfileViewController()
+    
+    var isChangingProfileImage: Bool = false
     
     var subjects: [String] = []
     var schedulePreference: [String] = []
@@ -65,11 +71,14 @@ class TeacherProfileViewController: UIViewController {
     
     var changedProfileImage: UIImage? {
         didSet {
-            profileImage.image = changedProfileImage
             guard let user = TeacherController.shared.currentUser, let newImage = changedProfileImage else { return }
+            self.isChangingProfileImage = true
             TeacherController.shared.changeProfileImage(userFirebaseUID: user.firebaseUID, newImage: newImage) { (success) in
                 if success {
-                    print("Success uploading photo to firebase storage")
+                    DispatchQueue.main.async {
+                        self.profileImage.image = self.changedProfileImage
+                        print("Success uploading photo to firebase storage")
+                    }
                 }
             }
         }
@@ -92,18 +101,23 @@ class TeacherProfileViewController: UIViewController {
         uxDesignButton.layer.cornerRadius = 5
         webDevelopmentButton.layer.cornerRadius = 5
         guard let user = TeacherController.shared.currentUser else { return }
-        TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
-            guard let image = image else { return }
-            self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
-            self.profileImage.image = image
+        if isChangingProfileImage == false {
+            TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
+                guard let image = image else { return }
+                self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
+                self.profileImage.image = image
+            }
         }
         
-        self.title = user.name
+        self.navigationItem.title = "Profile"
         nameLabel.text = user.name
+        linkedInLabel.text = user.linkedINLink
         subjects = user.subjects
         priceLabel.text = ("$\(user.costForTime)/hour")
         meetingPreference = user.meetingPref
         schedulePreference = user.schedulePref
+        aboutYouLabel.text = user.aboutMe
+        qualificationsLabel.text = user.qualifications
         
         if subjects.contains("Accounting") {
             accountingButton.isHidden = false
@@ -191,10 +205,12 @@ class TeacherProfileViewController: UIViewController {
         TeacherController.shared.initializeTeacher(firebaseUID: id) { (success) in
             if success {
                 guard let user = TeacherController.shared.currentUser else { return }
-                TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
-                    guard let image = image else { return }
-                    self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
-                    self.profileImage.image = image
+                if self.isChangingProfileImage == false {
+                    TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
+                        guard let image = image else { return }
+                        self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
+                        self.profileImage.image = image
+                    }
                 }
                 self.profileImage.image = user.profileImage
                 self.nameLabel.text = user.name
@@ -202,6 +218,8 @@ class TeacherProfileViewController: UIViewController {
                 self.priceLabel.text = ("$\(user.costForTime)/hour")
                 self.meetingPrefLabel.text = user.meetingPref
                 self.schedulePreference = user.schedulePref
+                self.aboutYouLabel.text = user.aboutMe
+                self.qualificationsLabel.text = user.qualifications
                 
                 if self.subjects.contains("Accounting") {
                     self.accountingButton.isHidden = false
@@ -441,6 +459,11 @@ class TeacherProfileViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        isChangingProfileImage = false
+    }
+    
     @IBAction func settingsButtonTapped(_ sender: Any) {
         settingsActionSheet()
     }
@@ -464,6 +487,7 @@ class TeacherProfileViewController: UIViewController {
         }
         let changeProfileImageAction = UIAlertAction(title: "Change profile image", style: .default) { (_) in
             self.presentImagePickerActionSheet()
+            
         }
         let logoutAction = UIAlertAction(title: "Logout", style: .default) { (_) in
             TeacherController.shared.logoutTeacher(completion: { (success) in

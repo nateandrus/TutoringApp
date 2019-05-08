@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Messaging-->
+        <!--Navigation Controller-->
         <scene sceneID="Jpa-k0-yop">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gZ3-yM-16R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messaging" id="J4s-ve-Pgm"/>
+                    <tabBarItem key="tabBarItem" title="" image="message-square" id="J4s-ve-Pgm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6iY-U5-vqf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -120,4 +120,7 @@
             <point key="canvasLocation" x="2875" y="498"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="message-square" width="30" height="30"/>
+    </resources>
 </document>
