@@ -193,6 +193,7 @@ class TeacherProfileViewController: UIViewController {
                 guard let user = TeacherController.shared.currentUser else { return }
                 TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
                     guard let image = image else { return }
+                    self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
                     self.profileImage.image = image
                 }
                 self.profileImage.image = user.profileImage
