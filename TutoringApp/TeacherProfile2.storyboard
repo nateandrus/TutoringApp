@@ -251,7 +251,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ip8-7P-WHn">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ip8-7P-WHn" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                                                 <rect key="frame" x="162.5" y="0.0" width="150.5" height="30"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1084,7 +1084,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PyF-dp-qNS">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PyF-dp-qNS" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                                 <rect key="frame" x="157.5" y="0.0" width="141.5" height="30"/>
                                                                 <color key="tintColor" name="protegeBlue"/>
                                                                 <color key="textColor" name="protegeBlue"/>
@@ -1527,7 +1527,7 @@
                                                         <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rVi-st-IF9">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rVi-st-IF9" customClass="NPTextView" customModule="TutoringApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="29" width="374" height="120"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <constraints>
@@ -1579,7 +1579,7 @@
                                                         <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ho3-2m-yJy">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ho3-2m-yJy" customClass="NPTextView" customModule="TutoringApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="29" width="374" height="120"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <constraints>

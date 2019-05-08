@@ -34,7 +34,7 @@
                                         <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azC-p2-SNc">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azC-p2-SNc" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="25.5" width="382" height="35"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -51,7 +51,7 @@
                                         <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfj-mX-FNb">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfj-mX-FNb" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="382" height="35"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -256,7 +256,7 @@
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Full name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-jw-WyQ">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Full name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-jw-WyQ" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="29"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -273,7 +273,7 @@
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Voo-1D-mIT">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Voo-1D-mIT" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="29"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -290,7 +290,7 @@
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qer-Mw-6Wf">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qer-Mw-6Wf" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="29"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -307,7 +307,7 @@
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Re-Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQp-j2-yp0">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Re-Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQp-j2-yp0" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="29"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -709,7 +709,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="738" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WUp-17-Mp5">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="738" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WUp-17-Mp5" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                         <rect key="frame" x="196" y="0.0" width="53" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1286,7 +1286,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-XM-3hj">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-XM-3hj" customClass="NPTextView" customModule="TutoringApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28.5" width="393" height="128.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1326,7 +1326,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cfv-gX-SNU">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cfv-gX-SNU" customClass="NPTextView" customModule="TutoringApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28.5" width="393" height="128.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1360,7 +1360,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter link" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ToR-ye-lIs">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter link" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ToR-ye-lIs" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="487" width="393" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="sAO-DH-Fem"/>
@@ -1807,7 +1807,7 @@
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQh-E6-pWe">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQh-E6-pWe" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1824,7 +1824,7 @@
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxy-I2-O66">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxy-I2-O66" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1841,7 +1841,7 @@
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91S-XM-Z2y">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91S-XM-Z2y" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1858,7 +1858,7 @@
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-T4-FeP">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-T4-FeP" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1875,7 +1875,7 @@
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zipcode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-aW-1mo">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zipcode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-aW-1mo" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1892,7 +1892,7 @@
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p69-Z4-7qH">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p69-Z4-7qH" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1998,9 +1998,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eYJ-15-NcS"/>
-        <segue reference="E2D-Tv-sYX"/>
+        <segue reference="9Zd-t5-A7O"/>
         <segue reference="abm-y5-OFv"/>
-        <segue reference="KG9-XR-VyQ"/>
+        <segue reference="Uyc-ue-tQ7"/>
         <segue reference="RUb-6C-w2s"/>
     </inferredMetricsTieBreakers>
 </document>
