@@ -86,10 +86,15 @@ class ChatController {
         }
     }
     
-    func deleteChat(completion: @escaping (Bool) -> Void) {
-        
+    func deleteChat(chatDocRef: DocumentReference, completion: @escaping (Bool) -> Void) {
+        chatDocRef.delete { (error) in
+            if let error = error {
+                print("Error deleting the chat:: \(error.localizedDescription)")
+                completion(false)
+                return
+            } else {
+                completion(true)
+            }
+        }
     }
-    
-    
-    
 }

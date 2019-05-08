@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--               -->
         <scene sceneID="tie-Xl-TbA">
             <objects>
                 <viewController id="fcI-1Q-SRX" customClass="StudentProfileViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,8 +149,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dvh-xv-9w8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="user" id="QNx-6k-8B8"/>
-                    <navigationItem key="navigationItem" title="Title" id="4I5-o3-5ac">
+                    <tabBarItem key="tabBarItem" title="               " image="user" id="QNx-6k-8B8"/>
+                    <navigationItem key="navigationItem" id="4I5-o3-5ac">
                         <barButtonItem key="rightBarButtonItem" title="Settings Gear" id="JDj-vs-K4b">
                             <connections>
                                 <action selector="settingsButtonTapped:" destination="fcI-1Q-SRX" id="1CP-Yh-OdV"/>
@@ -170,6 +170,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="user" width="33" height="37"/>
+        <image name="user" width="28" height="31"/>
     </resources>
 </document>
