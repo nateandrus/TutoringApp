@@ -33,6 +33,8 @@
 		ED1B70A0226FA2BE00EB31F7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B709F226FA2BE00EB31F7 /* Message.swift */; };
 		ED1B70A2226FA69100EB31F7 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B70A1226FA69000EB31F7 /* MessageController.swift */; };
 		ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B70A7226FACF600EB31F7 /* MainMessagingTableViewController.swift */; };
+		ED3236A12283782400B2F5F5 /* NPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3236A02283782400B2F5F5 /* NPTextField.swift */; };
+		ED3236A32283789A00B2F5F5 /* NPTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3236A22283789900B2F5F5 /* NPTextView.swift */; };
 		ED8AA39C227784F900C477AF /* TeacherMessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39B227784F900C477AF /* TeacherMessageDetailViewController.swift */; };
 		ED8AA39E2277851100C477AF /* TeacherMessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39D2277851100C477AF /* TeacherMessagingTableViewController.swift */; };
 		ED8AA3A02277B10C00C477AF /* PhotoResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */; };
@@ -93,6 +95,8 @@
 		ED1B709F226FA2BE00EB31F7 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED1B70A1226FA69000EB31F7 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		ED1B70A7226FACF600EB31F7 /* MainMessagingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagingTableViewController.swift; sourceTree = "<group>"; };
+		ED3236A02283782400B2F5F5 /* NPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPTextField.swift; sourceTree = "<group>"; };
+		ED3236A22283789900B2F5F5 /* NPTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPTextView.swift; sourceTree = "<group>"; };
 		ED8AA39B227784F900C477AF /* TeacherMessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMessageDetailViewController.swift; sourceTree = "<group>"; };
 		ED8AA39D2277851100C477AF /* TeacherMessagingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMessagingTableViewController.swift; sourceTree = "<group>"; };
 		ED8AA39F2277B10C00C477AF /* PhotoResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResizer.swift; sourceTree = "<group>"; };
@@ -368,6 +372,8 @@
 				B999329222737CBB00C1565E /* StudentSearchTableViewCell.swift */,
 				ED8AA3A12279F78400C477AF /* TeacherMessagingTableViewCell.swift */,
 				ED8AA3A3227A0B3A00C477AF /* StudentMessagingTableViewCell.swift */,
+				ED3236A02283782400B2F5F5 /* NPTextField.swift */,
+				ED3236A22283789900B2F5F5 /* NPTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -525,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD3055A22739BE500F19A20 /* BiographyViewController.swift in Sources */,
+				ED3236A32283789A00B2F5F5 /* NPTextView.swift in Sources */,
 				EDD3055722739BE500F19A20 /* PreferencesViewController.swift in Sources */,
 				EDE10E3D227CE5DD00CFAB51 /* ForgotPasswordViewController.swift in Sources */,
 				EDD3055922739BE500F19A20 /* DriversLicenseViewController.swift in Sources */,
@@ -552,6 +559,7 @@
 				EDD3055E22739BE500F19A20 /* BecomeMentorViewController.swift in Sources */,
 				ED8AA3A6227B51AC00C477AF /* DateFormatter.swift in Sources */,
 				ED1B70A8226FACF600EB31F7 /* MainMessagingTableViewController.swift in Sources */,
+				ED3236A12283782400B2F5F5 /* NPTextField.swift in Sources */,
 				EDE10E3F22808D6900CFAB51 /* ColorFormatter.swift in Sources */,
 				EDCDC00F226E3A93007051E3 /* StudentController.swift in Sources */,
 				ED1B70A0226FA2BE00EB31F7 /* Message.swift in Sources */,

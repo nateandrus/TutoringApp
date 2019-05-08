@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BiographyViewController: UIViewController {
+class BiographyViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
 
     //MARK: - Outlets
     @IBOutlet weak var aboutMeTextView: UITextView!
@@ -41,7 +41,21 @@ class BiographyViewController: UIViewController {
         qualificationsTextView.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         qualificationsTextView.layer.borderWidth = 2
         nextStepButton.layer.cornerRadius = 5
+        aboutMeTextView.delegate = self
+        qualificationsTextView.delegate = self
+        linkedInTextField.delegate = self
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
+        return true
+    }
+    
 
     func formatKeyboard() {
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in

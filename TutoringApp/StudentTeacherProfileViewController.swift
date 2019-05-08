@@ -19,7 +19,6 @@ class StudentTeacherProfileViewController: UIViewController {
     @IBOutlet weak var linkedInLabel: UILabel!
     @IBOutlet weak var aboutMeLabel: UILabel!
     @IBOutlet weak var qualificationsLabel: UILabel!
-    
     @IBOutlet weak var mondayMorningLabel: UILabel!
     @IBOutlet weak var mondayAfternoonLabel: UILabel!
     @IBOutlet weak var mondayEveningLabel: UILabel!
