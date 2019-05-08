@@ -22,11 +22,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Profile-->
+        <!--Navigation Controller-->
         <scene sceneID="gjJ-wO-azb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kDt-ia-0H6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="PJT-fc-a7P"/>
+                    <tabBarItem key="tabBarItem" title="" image="user" id="PJT-fc-a7P"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q1a-tE-HFQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1662,14 +1662,14 @@
             <objects>
                 <viewController id="b63-E3-OiU" customClass="TeacherProfileViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nR7-Af-7bu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAN-dl-hQe">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1012"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="1112"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4M-eV-Syc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0mL-1j-Wvz">
                                                 <rect key="frame" x="16" y="176" width="382" height="36"/>
@@ -1725,12 +1725,23 @@
                                                             <constraint firstAttribute="height" constant="128" id="yC1-h2-HJc"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7N-vh-UzM">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xe3-Qn-Gkl">
                                                         <rect key="frame" x="144" y="0.0" width="238" height="128"/>
-                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="33"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7N-vh-UzM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="238" height="64"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="33"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Linked In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQq-lQ-dtv">
+                                                                <rect key="frame" x="0.0" y="64" width="238" height="64"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="scz-JB-sLe">
@@ -2031,19 +2042,39 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-Wf-B7P">
+                                                <rect key="frame" x="16" y="981" width="382" height="63"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSA-G8-CWp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qualifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gn-Yg-RSV">
+                                                        <rect key="frame" x="0.0" y="39.5" width="382" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="scz-JB-sLe" firstAttribute="leading" secondItem="M4M-eV-Syc" secondAttribute="leading" constant="16" id="2A4-v2-Nfx"/>
                                             <constraint firstAttribute="trailing" secondItem="scz-JB-sLe" secondAttribute="trailing" constant="16" id="4a8-ns-UJq"/>
+                                            <constraint firstItem="Ib7-Wf-B7P" firstAttribute="top" secondItem="scz-JB-sLe" secondAttribute="bottom" constant="16" id="6SN-Ht-6Iz"/>
                                             <constraint firstItem="slU-YU-kS0" firstAttribute="leading" secondItem="M4M-eV-Syc" secondAttribute="leading" constant="16" id="6eq-7i-xUx"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ib7-Wf-B7P" secondAttribute="trailing" constant="16" id="96s-Qr-McF"/>
                                             <constraint firstItem="jMJ-f5-97e" firstAttribute="top" secondItem="M4M-eV-Syc" secondAttribute="top" constant="16" id="D3U-g3-40D"/>
                                             <constraint firstAttribute="trailing" secondItem="zPC-fv-2MG" secondAttribute="trailing" constant="16" id="DfS-dQ-fu0"/>
                                             <constraint firstItem="0mL-1j-Wvz" firstAttribute="top" secondItem="jMJ-f5-97e" secondAttribute="bottom" constant="32" id="Kby-fF-B11"/>
                                             <constraint firstAttribute="trailing" secondItem="slU-YU-kS0" secondAttribute="trailing" constant="16" id="Kpv-om-6lt"/>
-                                            <constraint firstAttribute="height" constant="1000" id="NfQ-6o-FcC"/>
+                                            <constraint firstAttribute="height" constant="1100" id="NfQ-6o-FcC"/>
                                             <constraint firstItem="JAN-Fm-XKG" firstAttribute="leading" secondItem="M4M-eV-Syc" secondAttribute="leading" constant="16" id="REn-vO-Rbf"/>
                                             <constraint firstItem="HtH-yW-ogb" firstAttribute="leading" secondItem="M4M-eV-Syc" secondAttribute="leading" constant="16" id="RJy-Yw-ifR"/>
+                                            <constraint firstItem="Ib7-Wf-B7P" firstAttribute="leading" secondItem="M4M-eV-Syc" secondAttribute="leading" constant="16" id="RoP-Ig-Eec"/>
                                             <constraint firstAttribute="trailing" secondItem="JAN-Fm-XKG" secondAttribute="trailing" constant="16" id="ZJt-u1-Tn1"/>
                                             <constraint firstItem="scz-JB-sLe" firstAttribute="top" secondItem="slU-YU-kS0" secondAttribute="bottom" constant="32" id="a9l-XJ-mUq"/>
                                             <constraint firstItem="zPC-fv-2MG" firstAttribute="top" secondItem="KUx-bA-YAd" secondAttribute="bottom" constant="32" id="crI-pu-nKu"/>
@@ -2088,8 +2119,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="414" height="1100"/>
+                    <size key="freeformSize" width="414" height="1200"/>
                     <connections>
+                        <outlet property="aboutYouLabel" destination="QSA-G8-CWp" id="uFs-SF-kol"/>
                         <outlet property="accountingButton" destination="6SE-7h-Gfb" id="oxz-0I-RWp"/>
                         <outlet property="androidDevelopmentButton" destination="wIM-KK-nyo" id="iXt-v1-B9N"/>
                         <outlet property="businessManagementButton" destination="M2a-Lm-n0D" id="hKN-Hu-h73"/>
@@ -2102,6 +2134,7 @@
                         <outlet property="htmlButton" destination="TCp-bd-yQu" id="lOy-7C-SQM"/>
                         <outlet property="iosDevelopmentButton" destination="WC7-fr-Zh0" id="BO6-eW-9jV"/>
                         <outlet property="javascriptButton" destination="Brz-jn-TuF" id="aom-Fs-gYh"/>
+                        <outlet property="linkedInLabel" destination="PQq-lQ-dtv" id="NCW-Mz-d0z"/>
                         <outlet property="marketingButton" destination="Gh4-nb-wuJ" id="JFY-kP-AjH"/>
                         <outlet property="meetingPrefLabel" destination="1Jj-1r-b0L" id="Rki-u3-7gD"/>
                         <outlet property="mondayAvailabilityLabel" destination="ycL-Xt-iSe" id="v3G-Mc-jf8"/>
@@ -2109,6 +2142,7 @@
                         <outlet property="preferencesStackView" destination="KUx-bA-YAd" id="7q9-aI-U4u"/>
                         <outlet property="priceLabel" destination="sZk-S6-QUT" id="HaZ-PM-xRM"/>
                         <outlet property="profileImage" destination="wOG-sC-77f" id="R0a-UY-fxz"/>
+                        <outlet property="qualificationsLabel" destination="2gn-Yg-RSV" id="4TU-Jj-CN5"/>
                         <outlet property="salesButton" destination="zOm-nI-exf" id="1Wp-5J-lfa"/>
                         <outlet property="saturdayAvailabilityLabel" destination="G73-g0-wbP" id="mYN-8r-UMn"/>
                         <outlet property="settingsButton" destination="0OF-Vn-L3y" id="4Wo-pu-RUr"/>
@@ -2134,6 +2168,7 @@
     <resources>
         <image name="settings" width="32" height="32"/>
         <image name="unchecked" width="50" height="50"/>
+        <image name="user" width="28" height="31"/>
         <namedColor name="protegeBlue">
             <color red="0.027450980392156862" green="0.27058823529411763" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

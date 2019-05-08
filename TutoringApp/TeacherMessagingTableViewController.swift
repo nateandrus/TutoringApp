@@ -56,7 +56,7 @@ class TeacherMessagingTableViewController: UITableViewController {
             if let image = image {
                 cell?.messageImageView.image = image
             } else {
-                //return default image
+                cell?.messageImageView.image = #imageLiteral(resourceName: "default user icon")
             }
         }
         cell?.chatLanding = chat
