@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protoégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-IO-EzB">
-                                <rect key="frame" x="123" y="194" width="168.5" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-IO-EzB">
+                                <rect key="frame" x="134.5" y="194" width="145.5" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -198,8 +198,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protoégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzT-Wo-PzP">
-                                <rect key="frame" x="125" y="194" width="164.5" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzT-Wo-PzP">
+                                <rect key="frame" x="136" y="194" width="142" height="47"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                                 <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1574,8 +1574,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protoégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8A-1q-yfX">
-                                <rect key="frame" x="131" y="194" width="152.5" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8A-1q-yfX">
+                                <rect key="frame" x="141.5" y="194" width="131.5" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1993,10 +1993,10 @@
         <image name="unchecked" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eYJ-15-NcS"/>
+        <segue reference="Ixo-HP-3pK"/>
         <segue reference="E2D-Tv-sYX"/>
         <segue reference="Ibe-oR-FtS"/>
         <segue reference="KG9-XR-VyQ"/>
-        <segue reference="W9Z-mG-kys"/>
+        <segue reference="RUb-6C-w2s"/>
     </inferredMetricsTieBreakers>
 </document>
