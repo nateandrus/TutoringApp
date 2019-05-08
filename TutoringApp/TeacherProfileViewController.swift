@@ -490,7 +490,14 @@ class TeacherProfileViewController: UIViewController {
         let alertController = UIAlertController(title: "Are you sure you want to delete your account?", message: "Deleting your account will erase all memory that you ever existed!", preferredStyle: .alert)
         let dontDeleteAction = UIAlertAction(title: "Don't delete", style: .cancel, handler: nil)
         let deleteAction = UIAlertAction(title: "Delete Account", style: .destructive) { (_) in
-            
+            guard let user = Auth.auth().currentUser, let teacher = TeacherController.shared.currentUser else { return }
+            TeacherController.shared.deleteTeacher(user: user, teacher: teacher, completion: { (success) in
+                if success {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let destinationVC = storyboard.instantiateViewController(withIdentifier: "loginScreen")
+                    self.present(destinationVC, animated: true)
+                }
+            })
         }
         alertController.addAction(dontDeleteAction)
         alertController.addAction(deleteAction)

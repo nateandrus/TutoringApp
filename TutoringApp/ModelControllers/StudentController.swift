@@ -135,6 +135,9 @@ class StudentController {
                 completion(false)
                 return
             } else {
+                for chat in student.messageRefs {
+                    chat.delete()
+                }
                 student.selfDocRef.delete(completion: { (error) in
                     if let error = error {
                         print("THERE WAS AN ERROR DELETING THE USER \(error.localizedDescription) ❌❌❌❌❌❌")

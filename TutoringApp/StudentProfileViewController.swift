@@ -32,15 +32,27 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = ""
-        guard let currentUser = StudentController.shared.currentUser else { return }
-        studentNameLabel.text = currentUser.name
-        studentEmailLabel.text = currentUser.email
-        self.title = currentUser.name
-        changeProfileButton.layer.cornerRadius = changeProfileButton.frame.height / 2 
-        StudentController.shared.loadProfileImageView(userFirebaseUID: currentUser.firebaseUID) { (image) in
-            guard let image = image else { return }
-            self.studentProfilePicture.layer.cornerRadius = self.studentProfilePicture.frame.height / 2
-            self.studentProfilePicture.image = image
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let userFirebaseUID = Auth.auth().currentUser?.uid else { return }
+        StudentController.shared.initializeStudent(firebaseUID: userFirebaseUID) { (success) in
+            if success {
+                guard let currentUser = StudentController.shared.currentUser else { return }
+                self.studentNameLabel.text = currentUser.name
+                self.studentEmailLabel.text = currentUser.email
+                self.title = currentUser.name
+                self.changeProfileButton.layer.cornerRadius = self.changeProfileButton.frame.height / 2
+                StudentController.shared.loadProfileImageView(userFirebaseUID: currentUser.firebaseUID) { (image) in
+                    self.studentProfilePicture.layer.cornerRadius = self.studentProfilePicture.frame.height / 2
+                    if let image = image {
+                        self.studentProfilePicture.image = image
+                    } else {
+                        self.studentProfilePicture.image = #imageLiteral(resourceName: "default user icon")
+                    }
+                }
+            }
         }
     }
     
@@ -92,6 +104,9 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
             
             StudentController.shared.deleteStudent(user: user, student: student, completion: { (success) in
                 if success {
+                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    let loginScreen = storyBoard.instantiateViewController(withIdentifier: "loginScreen")
+                    self.present(loginScreen, animated: true)
                     print("SUCCESS DELETING USER ✅✅✅✅✅✅")
                 }
             })

@@ -293,7 +293,7 @@
                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="29"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -310,7 +310,7 @@
                                                         <rect key="frame" x="0.0" y="24.5" width="373" height="29"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -1996,7 +1996,7 @@
         <segue reference="Ixo-HP-3pK"/>
         <segue reference="E2D-Tv-sYX"/>
         <segue reference="Ibe-oR-FtS"/>
-        <segue reference="KG9-XR-VyQ"/>
-        <segue reference="RUb-6C-w2s"/>
+        <segue reference="azB-NG-dQR"/>
+        <segue reference="W9Z-mG-kys"/>
     </inferredMetricsTieBreakers>
 </document>
