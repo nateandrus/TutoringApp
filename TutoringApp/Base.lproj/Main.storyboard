@@ -10,6 +10,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CabinBold.ttf">
+            <string>Cabin-Bold</string>
+        </array>
+        <array key="CabinRegular.ttf">
+            <string>Cabin-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Splash Screen View Controller-->
         <scene sceneID="gtj-Fe-IOD">
@@ -20,8 +28,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHV-PJ-Vzx">
-                                <rect key="frame" x="134.5" y="194" width="145.5" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <rect key="frame" x="115.5" y="194" width="183" height="64.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="47"/>
                                 <color key="textColor" name="protegeBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -57,19 +65,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXL-77-ZYF">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-IO-EzB">
-                                                <rect key="frame" x="134.5" y="150" width="145.5" height="48"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-IO-EzB">
+                                                <rect key="frame" x="115.5" y="150" width="183" height="64.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="47"/>
                                                 <color key="textColor" name="protegeBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teL-nJ-2rF">
-                                                <rect key="frame" x="16" y="492" width="382" height="50"/>
+                                                <rect key="frame" x="16" y="527.5" width="382" height="50"/>
                                                 <color key="backgroundColor" name="protegeBlue"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="vhE-2d-KOt"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -78,8 +86,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fME-HA-JkP">
-                                                <rect key="frame" x="275" y="414" width="123" height="30"/>
-                                                <state key="normal" title="Forgot password?">
+                                                <rect key="frame" x="279" y="447.5" width="119" height="32"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <state key="normal" title="Forgot Password?">
                                                     <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
@@ -87,52 +96,52 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="2sG-Kn-Lba">
-                                                <rect key="frame" x="16" y="354.5" width="382" height="59.5"/>
+                                                <rect key="frame" x="16" y="379" width="382" height="68.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwJ-l3-PXM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="29.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="24"/>
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfj-mX-FNb" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="24.5" width="382" height="35"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfj-mX-FNb" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="33.5" width="382" height="35"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="25"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Jj6-Te-5cL">
-                                                <rect key="frame" x="16" y="262" width="382" height="60.5"/>
+                                                <rect key="frame" x="16" y="278.5" width="382" height="68.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDa-VC-a3I">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="21.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="29.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="24"/>
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azC-p2-SNc" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="25.5" width="382" height="35"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azC-p2-SNc" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="33.5" width="382" height="35"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="25"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="h7n-EE-Ceh">
-                                                <rect key="frame" x="66" y="574" width="282" height="33"/>
+                                                <rect key="frame" x="61.5" y="609.5" width="291.5" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Sign up" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-db-rgH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="241" height="33"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="250.5" height="36"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZQ-Uw-Jvr">
-                                                        <rect key="frame" x="245" y="0.0" width="37" height="33"/>
+                                                        <rect key="frame" x="254.5" y="0.0" width="37" height="36"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="19"/>
                                                         <state key="normal" title="here">
                                                             <color key="titleColor" name="protegeBlue"/>
                                                         </state>
@@ -203,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="Mhz-8Q-DSP">
-                                <rect key="frame" x="20.5" y="336" width="373" height="175"/>
+                                <rect key="frame" x="20.5" y="353.5" width="373" height="175"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEn-SQ-nKH">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="60"/>
@@ -236,17 +245,17 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hpg-px-MAY">
-                                <rect key="frame" x="64" y="611" width="286.5" height="33"/>
+                                <rect key="frame" x="59" y="628.5" width="296" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLf-1P-5Ox">
-                                        <rect key="frame" x="0.0" y="6.5" width="242.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="6.5" width="251" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                         <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnl-rM-I22">
-                                        <rect key="frame" x="250.5" y="0.0" width="36" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <rect key="frame" x="259" y="0.0" width="37" height="36"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="19"/>
                                         <state key="normal" title="here">
                                             <color key="titleColor" name="protegeBlue"/>
                                         </state>
@@ -257,8 +266,8 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzT-Wo-PzP">
-                                <rect key="frame" x="136" y="194" width="142" height="47"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                <rect key="frame" x="115.5" y="194" width="183" height="64.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="47"/>
                                 <color key="textColor" name="protegeBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -293,81 +302,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="pCJ-ms-xff">
-                                <rect key="frame" x="0.0" y="221" width="414" height="454"/>
+                                <rect key="frame" x="0.0" y="210" width="414" height="476.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Become a Protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrb-jb-AsQ">
-                                        <rect key="frame" x="104" y="0.0" width="206.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <rect key="frame" x="89.5" y="0.0" width="235" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="30"/>
                                         <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="rOz-vI-YdK">
-                                        <rect key="frame" x="20.5" y="71" width="373" height="292"/>
+                                        <rect key="frame" x="20.5" y="77.5" width="373" height="308"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HMA-JZ-kZD">
-                                                <rect key="frame" x="0.0" y="0.0" width="373" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="373" height="57.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-Xc-6eb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Full name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-jw-WyQ" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="24.5" width="373" height="29"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-jw-WyQ" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8T1-wS-761">
-                                                <rect key="frame" x="0.0" y="79.5" width="373" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="83.5" width="373" height="57.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEI-4l-ath">
-                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Voo-1D-mIT" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="24.5" width="373" height="29"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Voo-1D-mIT" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ecn-zk-2iN">
-                                                <rect key="frame" x="0.0" y="159" width="373" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="167" width="373" height="57.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdL-98-xvr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qer-Mw-6Wf" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="24.5" width="373" height="29"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qer-Mw-6Wf" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="KLh-zS-wsh">
-                                                <rect key="frame" x="0.0" y="238.5" width="373" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="250.5" width="373" height="57.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcG-gC-6eK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                         <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Re-Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQp-j2-yp0" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="24.5" width="373" height="29"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQp-j2-yp0" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
@@ -375,11 +384,12 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRA-jd-lta">
-                                        <rect key="frame" x="20.5" y="404" width="373" height="50"/>
+                                        <rect key="frame" x="20.5" y="426.5" width="373" height="50"/>
                                         <color key="backgroundColor" name="protegeBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="X1C-V7-KWd"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="21"/>
                                         <state key="normal" title="Create account">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -394,8 +404,8 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIb-9l-rbL">
-                                <rect key="frame" x="16" y="60" width="53" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="60" width="55" height="55"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="protegeBlue"/>
                                 </state>
@@ -1633,23 +1643,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8A-1q-yfX">
-                                <rect key="frame" x="141.5" y="194" width="131.5" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <rect key="frame" x="115.5" y="194" width="183" height="64.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="47"/>
                                 <color key="textColor" name="protegeBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't worry, we've got you covered! Please enter your email address below and we will send you a link to reset your password." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjH-z6-HUN">
-                                <rect key="frame" x="41.5" y="441" width="331" height="86"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="41.5" y="464.5" width="331" height="62"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DT1-qE-HiH">
-                                <rect key="frame" x="41.5" y="671.5" width="331" height="52"/>
+                                <rect key="frame" x="41.5" y="685" width="331" height="52"/>
                                 <color key="backgroundColor" name="protegeBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="dO2-ex-65k"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                 <state key="normal" title="Send email">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1658,23 +1669,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJn-rw-tmA">
-                                <rect key="frame" x="108" y="337" width="198" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="104.5" y="358.5" width="205.5" height="26"/>
+                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvO-A8-4hR">
-                                <rect key="frame" x="149" y="763.5" width="116.5" height="30"/>
+                                <rect key="frame" x="145" y="777" width="124.5" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return to " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f8-1e-gSK">
-                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="36"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                        <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Eb-4T-4o1">
-                                        <rect key="frame" x="75.5" y="0.0" width="41" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <rect key="frame" x="79.5" y="0.0" width="45" height="36"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="19"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" name="protegeBlue"/>
                                         </state>
@@ -1685,18 +1696,18 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="17A-zB-Wvm">
-                                <rect key="frame" x="41.5" y="567" width="331" height="54.5"/>
+                                <rect key="frame" x="41.5" y="566.5" width="331" height="68.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dj-yU-YGi">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="24"/>
+                                        <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SW-5r-AP7">
-                                        <rect key="frame" x="0.0" y="24.5" width="331" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SW-5r-AP7">
+                                        <rect key="frame" x="0.0" y="33.5" width="331" height="35"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -1834,8 +1845,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQa-pQ-kf0">
-                                                <rect key="frame" x="20.5" y="8" width="53" height="57.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="20.5" y="8" width="55" height="57.5"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" name="protegeBlue"/>
                                                 </state>
@@ -1844,115 +1855,115 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="FJR-DD-Pbv">
-                                                <rect key="frame" x="0.0" y="89.5" width="414" height="620.5"/>
+                                                <rect key="frame" x="0.0" y="89.5" width="414" height="643.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Become a Mentor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bz-8b-nB1">
-                                                        <rect key="frame" x="103.5" y="0.0" width="207" height="31.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="93" y="0.0" width="228.5" height="36.5"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="30"/>
+                                                        <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="V4w-ft-WAd">
-                                                        <rect key="frame" x="20.5" y="72.5" width="373" height="457"/>
+                                                        <rect key="frame" x="20.5" y="77.5" width="373" height="475"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="v6X-O5-RPU">
-                                                                <rect key="frame" x="0.0" y="0.0" width="373" height="54.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="373" height="57.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOW-e5-LBR">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQh-E6-pWe" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQh-E6-pWe" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="2bt-p4-oD4">
-                                                                <rect key="frame" x="0.0" y="80.5" width="373" height="54.5"/>
+                                                                <rect key="frame" x="0.0" y="83.5" width="373" height="57.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOI-Op-yjg">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxy-I2-O66" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxy-I2-O66" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qOD-7z-w1U">
-                                                                <rect key="frame" x="0.0" y="161" width="373" height="54.5"/>
+                                                                <rect key="frame" x="0.0" y="167" width="373" height="57.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsI-fe-xdZ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91S-XM-Z2y" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91S-XM-Z2y" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="iB7-XI-FPy">
-                                                                <rect key="frame" x="0.0" y="241.5" width="373" height="54.5"/>
+                                                                <rect key="frame" x="0.0" y="250.5" width="373" height="57.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeU-UE-2GZ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-T4-FeP" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-T4-FeP" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="v6k-Bn-7a7">
-                                                                <rect key="frame" x="0.0" y="322" width="373" height="54.5"/>
+                                                                <rect key="frame" x="0.0" y="334" width="373" height="57.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zipcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-Ss-qIH">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zipcode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-aW-1mo" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-aW-1mo" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7Tg-tX-0l8">
-                                                                <rect key="frame" x="0.0" y="402.5" width="373" height="54.5"/>
+                                                                <rect key="frame" x="0.0" y="417.5" width="373" height="57.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6z-43-8yP">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p69-Z4-7qH" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="24.5" width="373" height="30"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p69-Z4-7qH" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
@@ -1960,12 +1971,12 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-z1-Pu2">
-                                                        <rect key="frame" x="20.5" y="570.5" width="373" height="50"/>
+                                                        <rect key="frame" x="20.5" y="593.5" width="373" height="50"/>
                                                         <color key="backgroundColor" name="protegeBlue"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="2fC-2E-mAp"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="21"/>
                                                         <state key="normal" title="Next Step">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -2054,7 +2065,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eYJ-15-NcS"/>
+        <segue reference="Ixo-HP-3pK"/>
         <segue reference="9Zd-t5-A7O"/>
         <segue reference="abm-y5-OFv"/>
         <segue reference="KG9-XR-VyQ"/>
