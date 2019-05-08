@@ -31,7 +31,7 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = ""
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +42,6 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
                 guard let currentUser = StudentController.shared.currentUser else { return }
                 self.studentNameLabel.text = currentUser.name
                 self.studentEmailLabel.text = currentUser.email
-                self.title = currentUser.name
                 self.changeProfileButton.layer.cornerRadius = self.changeProfileButton.frame.height / 2
                 StudentController.shared.loadProfileImageView(userFirebaseUID: currentUser.firebaseUID) { (image) in
                     self.studentProfilePicture.layer.cornerRadius = self.studentProfilePicture.frame.height / 2

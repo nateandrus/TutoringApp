@@ -41,8 +41,6 @@ class StudentTeacherProfileViewController: UIViewController {
     @IBOutlet weak var sundayMorningLabel: UILabel!
     @IBOutlet weak var sundayAfternoonLabel: UILabel!
     @IBOutlet weak var sundayEveningLabel: UILabel!
-    
-
     @IBOutlet weak var sendMessageButton: UIButton!
     
     var teacher: Teacher? 
@@ -184,12 +182,22 @@ class StudentTeacherProfileViewController: UIViewController {
         }
     }
     
-    //Instantiating the MessageViewController
-    @IBAction func sendMessageButtonTapped(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "MessagingTab", bundle: nil)
-        guard let messagingScreen = storyBoard.instantiateViewController(withIdentifier: "messagingScreen") as? MessageDetailViewController, let teacher = teacher else { return }
-        messagingScreen.teacherLanding = teacher
-        self.navigationController?.pushViewController(messagingScreen, animated: true)
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMessageController" {
+            guard let teacher = teacher else { return }
+            if let destinationVC = segue.destination as? StudentHomeTabMessagingViewController {
+                destinationVC.teacherLanding = teacher
+                destinationVC.delegate = self
+            }
+        }
+    }
+}
+
+extension StudentTeacherProfileViewController: StudentHomeTabMessagingViewControllerDelegate {
+    
+    func messageSent() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tabBarController?.selectedIndex = 1
+        }
     }
 }

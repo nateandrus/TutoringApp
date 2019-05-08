@@ -17,7 +17,7 @@ class ChooseCreateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mentorButton.layer.borderWidth = 2
-        mentorButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        mentorButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         menteeButton.layer.cornerRadius = 5
         mentorButton.layer.cornerRadius = 5
     }
