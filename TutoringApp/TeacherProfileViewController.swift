@@ -477,6 +477,9 @@ class TeacherProfileViewController: UIViewController {
     func settingsActionSheet() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//        let changeLinkedInAction = UIAlertAction(title: "Change LinkedIn Link", style: .default) { (_) in
+//            guard let
+//        }
         let changePasswordAction = UIAlertAction(title: "Change password", style: .default) { (_) in
             guard let teacher = TeacherController.shared.currentUser else { return }
             TeacherController.shared.changePassword(email: teacher.email, completion: { (success) in
