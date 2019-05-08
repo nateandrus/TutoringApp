@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +22,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-IO-EzB">
                                 <rect key="frame" x="134.5" y="194" width="145.5" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="protegeBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Jj6-Te-5cL">
@@ -30,7 +31,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDa-VC-a3I">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azC-p2-SNc">
@@ -47,7 +48,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwJ-l3-PXM">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfj-mX-FNb">
@@ -61,7 +62,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fME-HA-JkP">
                                 <rect key="frame" x="275" y="512" width="123" height="30"/>
                                 <state key="normal" title="Forgot password?">
-                                    <color key="titleColor" red="0.16740076631344913" green="0.45714005967713289" blue="0.55982312817258884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" name="protegeBlue"/>
                                 </state>
                                 <connections>
                                     <segue destination="LPC-ca-pMK" kind="show" identifier="" id="2Bc-Lz-fHH"/>
@@ -69,7 +70,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teL-nJ-2rF">
                                 <rect key="frame" x="16" y="562" width="382" height="50"/>
-                                <color key="backgroundColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="protegeBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vhE-2d-KOt"/>
                                 </constraints>
@@ -87,7 +88,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Sign up" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-db-rgH">
                                         <rect key="frame" x="0.0" y="6.5" width="241" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZQ-Uw-Jvr">
@@ -95,7 +96,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="here">
-                                            <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="protegeBlue"/>
                                         </state>
                                         <connections>
                                             <segue destination="kSy-hP-lGT" kind="show" id="KG9-XR-VyQ"/>
@@ -149,7 +150,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEn-SQ-nKH">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="60"/>
-                                        <color key="backgroundColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="protegeBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="6CD-ic-NDr"/>
                                         </constraints>
@@ -169,7 +170,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Become a protégé   ➤">
-                                            <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="protegeBlue"/>
                                         </state>
                                         <connections>
                                             <segue destination="oCa-TH-XIo" kind="show" id="4cL-eR-sQo"/>
@@ -183,14 +184,14 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLf-1P-5Ox">
                                         <rect key="frame" x="0.0" y="6.5" width="242.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnl-rM-I22">
                                         <rect key="frame" x="250.5" y="0.0" width="36" height="33"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <state key="normal" title="here">
-                                            <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="protegeBlue"/>
                                         </state>
                                         <connections>
                                             <segue destination="PxK-Ue-TyG" kind="show" id="W9Z-mG-kys"/>
@@ -201,7 +202,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzT-Wo-PzP">
                                 <rect key="frame" x="136" y="194" width="142" height="47"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
-                                <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="protegeBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -240,7 +241,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Become a Protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrb-jb-AsQ">
                                         <rect key="frame" x="104" y="0.0" width="206.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="rOz-vI-YdK">
@@ -252,7 +253,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-Xc-6eb">
                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Full name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-jw-WyQ">
@@ -269,7 +270,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEI-4l-ath">
                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Voo-1D-mIT">
@@ -286,7 +287,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdL-98-xvr">
                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qer-Mw-6Wf">
@@ -303,7 +304,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcG-gC-6eK">
                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Re-Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQp-j2-yp0">
@@ -318,7 +319,7 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRA-jd-lta">
                                         <rect key="frame" x="20.5" y="404" width="373" height="50"/>
-                                        <color key="backgroundColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="protegeBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="X1C-V7-KWd"/>
                                         </constraints>
@@ -339,7 +340,7 @@
                                 <rect key="frame" x="16" y="60" width="53" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" name="protegeBlue"/>
                                 </state>
                                 <connections>
                                     <segue destination="kSy-hP-lGT" kind="show" id="Uyc-ue-tQ7"/>
@@ -382,7 +383,7 @@
                                 <rect key="frame" x="16" y="60" width="36" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="←">
-                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" name="protegeBlue"/>
                                 </state>
                                 <connections>
                                     <segue destination="GBE-ww-esG" kind="show" id="eYJ-15-NcS"/>
@@ -391,7 +392,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subjects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dI4-Km-Dqq">
                                 <rect key="frame" x="153.5" y="144" width="107.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="protegeBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select all that apply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ri-eQ-ARY">
@@ -417,7 +418,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Accounting">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="accountingButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="PTI-MH-Dqf"/>
@@ -428,7 +429,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Business Management">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="businessManagementButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="MTZ-8b-APP"/>
@@ -439,7 +440,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Economics">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="economicsButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="XO1-LF-4KS"/>
@@ -458,7 +459,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Entrepreneurship">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="entrprenuershipButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="Uh0-Jp-Dbs"/>
@@ -469,7 +470,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Marketing">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="marketingButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="K2J-3o-7Wa"/>
@@ -480,7 +481,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Sales">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="productManagementButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="b9o-Hs-pqo"/>
@@ -510,7 +511,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Android Development">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="softwareEngineerButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="iqx-km-dPg"/>
@@ -521,7 +522,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="HTML">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="pythonButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="1MR-4l-Ma4"/>
@@ -532,7 +533,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="iOS Development">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="iosDevelopmentButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="5cF-ry-rho"/>
@@ -551,7 +552,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Javascript">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="javascriptButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="221-Ay-wke"/>
@@ -562,7 +563,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="UX Design">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="uxDesignButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="w0C-Xm-ysz"/>
@@ -573,7 +574,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Web Development">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="webdevelopmentButtonTapped:" destination="c9g-P9-pUf" eventType="touchUpInside" id="FuL-Vb-MBV"/>
@@ -589,12 +590,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(number selected)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Goz-au-CBe">
                                 <rect key="frame" x="132.5" y="636" width="149" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="protegeBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDu-Jq-WAe">
                                 <rect key="frame" x="41.5" y="689.5" width="331" height="50"/>
-                                <color key="backgroundColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="protegeBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ms3-Of-rhW"/>
                                 </constraints>
@@ -612,13 +613,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2 of 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQD-Mh-1sA">
                                         <rect key="frame" x="0.0" y="0.0" width="224" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="fCR-v4-LIm">
                                         <rect key="frame" x="0.0" y="23.5" width="224" height="2"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="progressTintColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="progressTintColor" name="protegeBlue"/>
                                     </progressView>
                                 </subviews>
                             </stackView>
@@ -687,7 +688,7 @@
                                 <rect key="frame" x="16" y="60" width="36" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="←">
-                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" name="protegeBlue"/>
                                 </state>
                                 <connections>
                                     <segue destination="c9g-P9-pUf" kind="show" id="C9W-ue-4JO"/>
@@ -696,7 +697,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cJ-BM-3pt">
                                 <rect key="frame" x="133.5" y="144" width="147.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="protegeBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-Y4-pKM">
@@ -1116,7 +1117,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Local">
-                                            <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="protegeBlue"/>
                                         </state>
                                         <connections>
                                             <action selector="localButtontapped:" destination="tFP-Z4-Kmw" eventType="touchUpInside" id="A3B-7b-eIg"/>
@@ -1130,7 +1131,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Online">
-                                            <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="protegeBlue"/>
                                         </state>
                                         <connections>
                                             <action selector="onlineButtonTapped:" destination="tFP-Z4-Kmw" eventType="touchUpInside" id="Zk1-7q-WxM"/>
@@ -1144,7 +1145,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Both">
-                                            <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="protegeBlue"/>
                                         </state>
                                         <connections>
                                             <action selector="bothButtonTapped:" destination="tFP-Z4-Kmw" eventType="touchUpInside" id="yCR-B8-gYk"/>
@@ -1154,7 +1155,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2B-DL-5FB">
                                 <rect key="frame" x="41.5" y="792" width="331" height="50"/>
-                                <color key="backgroundColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="protegeBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cm3-cR-Y6T"/>
                                 </constraints>
@@ -1172,13 +1173,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3 of 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za8-TP-ioA">
                                         <rect key="frame" x="0.0" y="0.0" width="224" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="qc3-eG-rFK">
                                         <rect key="frame" x="0.0" y="23.5" width="224" height="2"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="progressTintColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="progressTintColor" name="protegeBlue"/>
                                     </progressView>
                                 </subviews>
                             </stackView>
@@ -1261,7 +1262,7 @@
                                                 <rect key="frame" x="16" y="16" width="30" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="←">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="tFP-Z4-Kmw" kind="show" id="abm-y5-OFv"/>
@@ -1270,7 +1271,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-3b-b6M">
                                                 <rect key="frame" x="145" y="100" width="124.5" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                                <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" name="protegeBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mF0-yf-3oU">
@@ -1370,7 +1371,7 @@
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVz-0R-PPJ">
                                                         <rect key="frame" x="0.0" y="533" width="393" height="50"/>
-                                                        <color key="backgroundColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" name="protegeBlue"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="jSz-ts-iQ6"/>
                                                         </constraints>
@@ -1396,13 +1397,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 4 of 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stU-EQ-k7J">
                                                         <rect key="frame" x="0.0" y="0.0" width="224" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="fYs-NR-wRB">
                                                         <rect key="frame" x="0.0" y="23.5" width="224" height="2"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="progressTintColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="progressTintColor" name="protegeBlue"/>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -1464,7 +1465,7 @@
                                 <rect key="frame" x="16" y="60" width="36" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="←">
-                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" name="protegeBlue"/>
                                 </state>
                                 <connections>
                                     <segue destination="ScU-N8-WRX" kind="show" id="E2D-Tv-sYX"/>
@@ -1484,7 +1485,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKI-Sq-4gE">
                                 <rect key="frame" x="41.5" y="565.5" width="331" height="50"/>
-                                <color key="backgroundColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="protegeBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bgw-Of-ruW"/>
                                 </constraints>
@@ -1522,13 +1523,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 5 of 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZV-4X-wWj">
                                         <rect key="frame" x="0.0" y="0.0" width="224" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="protegeBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="z8c-LO-S62">
                                         <rect key="frame" x="0.0" y="23.5" width="224" height="2"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="progressTintColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="progressTintColor" name="protegeBlue"/>
                                     </progressView>
                                 </subviews>
                             </stackView>
@@ -1577,7 +1578,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="protégé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8A-1q-yfX">
                                 <rect key="frame" x="141.5" y="194" width="131.5" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="protegeBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't worry, we've got you covered! Please enter your email address below and we will send you a link to reset your password." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjH-z6-HUN">
@@ -1588,7 +1589,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DT1-qE-HiH">
                                 <rect key="frame" x="41.5" y="671.5" width="331" height="52"/>
-                                <color key="backgroundColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="protegeBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="dO2-ex-65k"/>
                                 </constraints>
@@ -1618,7 +1619,7 @@
                                         <rect key="frame" x="75.5" y="0.0" width="41" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Login">
-                                            <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="protegeBlue"/>
                                         </state>
                                         <connections>
                                             <segue destination="PxK-Ue-TyG" kind="show" id="RUb-6C-w2s"/>
@@ -1779,7 +1780,7 @@
                                                 <rect key="frame" x="20.5" y="8" width="53" height="57.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Cancel">
-                                                    <color key="titleColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="kSy-hP-lGT" kind="show" id="azB-NG-dQR"/>
@@ -1803,7 +1804,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOW-e5-LBR">
                                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQh-E6-pWe">
@@ -1820,7 +1821,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOI-Op-yjg">
                                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxy-I2-O66">
@@ -1837,7 +1838,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsI-fe-xdZ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91S-XM-Z2y">
@@ -1854,7 +1855,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeU-UE-2GZ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-T4-FeP">
@@ -1871,7 +1872,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zipcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-Ss-qIH">
                                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zipcode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-aW-1mo">
@@ -1888,7 +1889,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6z-43-8yP">
                                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p69-Z4-7qH">
@@ -1903,7 +1904,7 @@
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-z1-Pu2">
                                                         <rect key="frame" x="20.5" y="570.5" width="373" height="50"/>
-                                                        <color key="backgroundColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" name="protegeBlue"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="2fC-2E-mAp"/>
                                                         </constraints>
@@ -1927,13 +1928,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1 of 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1V-Mv-Gbb">
                                                         <rect key="frame" x="0.0" y="0.0" width="224" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="protegeBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="uDh-Qi-RKg">
                                                         <rect key="frame" x="0.0" y="23.5" width="224" height="2"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="progressTintColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="progressTintColor" name="protegeBlue"/>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -1991,12 +1992,15 @@
     </scenes>
     <resources>
         <image name="unchecked" width="50" height="50"/>
+        <namedColor name="protegeBlue">
+            <color red="0.027450980392156862" green="0.27058823529411763" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ixo-HP-3pK"/>
+        <segue reference="eYJ-15-NcS"/>
         <segue reference="E2D-Tv-sYX"/>
-        <segue reference="Ibe-oR-FtS"/>
-        <segue reference="azB-NG-dQR"/>
-        <segue reference="W9Z-mG-kys"/>
+        <segue reference="abm-y5-OFv"/>
+        <segue reference="KG9-XR-VyQ"/>
+        <segue reference="RUb-6C-w2s"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -55,29 +55,29 @@ class SubjectsViewController: UIViewController {
         androidDevelopmentButton.layer.cornerRadius = 4
         nextStepButton.layer.cornerRadius = 5
         businessManagementButton.layer.borderWidth = 2
-        businessManagementButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        businessManagementButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         accountingButton.layer.borderWidth = 2
-        accountingButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        accountingButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         marketingButton.layer.borderWidth = 2
-        marketingButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        marketingButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         salesButton.layer.borderWidth = 2
-        salesButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        salesButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         entrepreneurshipButton.layer.borderWidth = 2
-        entrepreneurshipButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        entrepreneurshipButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         economicsButton.layer.borderWidth = 2
-        economicsButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        economicsButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         webdevelopmentButton.layer.borderWidth = 2
-        webdevelopmentButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        webdevelopmentButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         uxdesignButton.layer.borderWidth = 2
-        uxdesignButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        uxdesignButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         iosDevelopementButton.layer.borderWidth = 2
-        iosDevelopementButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        iosDevelopementButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         javascriptButton.layer.borderWidth = 2
-        javascriptButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        javascriptButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         htmlButton.layer.borderWidth = 2
-        htmlButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        htmlButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         androidDevelopmentButton.layer.borderWidth = 2
-        androidDevelopmentButton.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        androidDevelopmentButton.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
     }
     
     //Subject Booleans
@@ -253,7 +253,7 @@ class SubjectsViewController: UIViewController {
     }
     
     func turnButtonOn(button: UIButton) {
-        button.backgroundColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
         button.setTitleColor(.white, for: .normal)
         self.counting = counting + 1
         self.numberSelectedLabel.text = "\(counting) Selected"
@@ -261,7 +261,7 @@ class SubjectsViewController: UIViewController {
     
     func turnButtonOff(button: UIButton) {
         button.backgroundColor = .white
-        button.setTitleColor(#colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1), for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1), for: .normal)
         self.counting = counting - 1
         self.numberSelectedLabel.text = "\(counting) Selected"
     }

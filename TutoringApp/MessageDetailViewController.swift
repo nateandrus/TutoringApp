@@ -14,17 +14,18 @@ class MessageDetailViewController: MessagesViewController {
 
     
     //LandingPad for chat
-    var chatLanding: Chat? {
-        didSet {
-            
-        }
-    }
+    var chatLanding: Chat?
     
     var teacherLanding: Teacher?
     var fromChat: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollsToBottomOnKeyboardBeginsEditing = true
+        messageInputBar.convert(messageInputBar.bounds, to: view)
+        print(messageInputBar.frame)
+        print(messageInputBar.bounds.height)
+        print(messageInputBar.frame.height)
         messageInputBar.delegate = self
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
@@ -191,7 +192,6 @@ extension MessageDetailViewController: MessageInputBarDelegate {
                     MessageController.shared.fetchMessagesFor(chat: chat.documentRef, completion: { (success) in
                         if success {
                             self.messagesCollectionView.reloadData()
-                            self.messagesCollectionView.scrollToBottom()
                         }
                     })
                 }

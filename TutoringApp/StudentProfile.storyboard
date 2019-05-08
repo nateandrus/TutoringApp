@@ -6,11 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--profile-->
+        <!--Student Profile View Controller-->
         <scene sceneID="tie-Xl-TbA">
             <objects>
                 <viewController id="fcI-1Q-SRX" customClass="StudentProfileViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,7 +69,9 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="257" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEO-C0-k4j">
                                                 <rect key="frame" x="259" y="0.0" width="123" height="30"/>
-                                                <state key="normal" title="Change Password"/>
+                                                <state key="normal" title="Change Password">
+                                                    <color key="titleColor" name="protegeBlue"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="changePasswordButtonClicked:" destination="fcI-1Q-SRX" eventType="touchUpInside" id="uLt-pq-hnS"/>
                                                 </connections>
@@ -149,7 +152,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dvh-xv-9w8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="profile" image="user" id="QNx-6k-8B8"/>
+                    <tabBarItem key="tabBarItem" title="" image="user" id="QNx-6k-8B8"/>
                     <navigationItem key="navigationItem" id="4I5-o3-5ac">
                         <barButtonItem key="rightBarButtonItem" title="Settings Gear" id="JDj-vs-K4b">
                             <connections>
@@ -171,5 +174,8 @@
     </scenes>
     <resources>
         <image name="user" width="28" height="31"/>
+        <namedColor name="protegeBlue">
+            <color red="0.027450980392156862" green="0.27058823529411763" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
