@@ -53,7 +53,7 @@ class TeacherController {
             }
         }
         
-        let newTeacher = Teacher(name: name, email: email, messages: messages, firebaseUID: userFirebaseUID, linkedINLink: linkedInLink, costForTime: costPerHour, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: nil, profileImageURL: userFirebaseUID, selfDocRef: docRef)
+        let newTeacher = Teacher(name: name, email: email, messages: [], firebaseUID: userFirebaseUID, linkedINLink: linkedInLink, costForTime: costPerHour, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: nil, profileImageURL: userFirebaseUID, selfDocRef: docRef)
         
         Firestore.firestore().collection("teachers").document(userFirebaseUID).setData(newTeacher.dictionary) { err in
             if let error = err {
@@ -165,13 +165,37 @@ class TeacherController {
         }
     }
     
-    func deleteTeacher() {
+    func deleteTeacher(user: User, teacher: Teacher, completion: @escaping (Bool) -> Void) {
+        
+        user.delete { (error) in
+            if let error = error {
+                print("THERE WAS AN ERROR DELETING THE USER \(error.localizedDescription) ❌❌❌❌❌❌")
+                completion(false)
+                return
+            } else {
+                for chat in teacher.messages {
+                    chat.delete()
+                }
+                
+                teacher.selfDocRef.delete(completion: { (error) in
+                    if let error = error {
+                        print("THERE WAS AN ERROR DELETING THE USER \(error.localizedDescription) ❌❌❌❌❌❌")
+                        completion(false)
+                        return
+                    } else {
+                        print("SUCCESS DELETING USER ✅✅✅✅✅✅")
+                        completion(true)
+                    }
+                })
+            }
+        }
     }
     
     func logoutTeacher(completion: @escaping (Bool) -> Void) {
         do {
             try Auth.auth().signOut()
             print("success logging out user!")
+            self.currentUser = nil
             completion(true)
             return
         } catch {

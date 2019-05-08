@@ -13,7 +13,7 @@ struct Teacher {
     
     var name: String
     var email: String
-    var messages: [DocumentReference]?
+    var messages: [DocumentReference]
     let firebaseUID: String
     let linkedINLink: String?
     var costForTime: Int
@@ -63,10 +63,10 @@ extension Teacher {
             let schedulePreference = dictionary["schedulePreference"] as? [String],
             let subjects = dictionary["subjects"] as? [String],
             let dateOfBirth = dictionary["dateOfBirth"] as? String,
+            let messages = dictionary["messages"] as? [DocumentReference],
             let selfDocRef = dictionary["selfDocRef"] as? DocumentReference
             else { return nil }
         
-        let messages = dictionary["messages"] as? [DocumentReference]
         let profileImage = dictionary["profileImage"] as? String
         
         self.init(name: name, email: email, messages: messages, firebaseUID: firebaseUID, linkedINLink: linkedInLink, costForTime: costForTime, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: nil, profileImageURL: profileImage, selfDocRef: selfDocRef)

@@ -18,11 +18,11 @@ class MainMessagingTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let user = StudentController.shared.currentUser else { return }
-        if user.messageRefs.count == 0 {
-            noChatsAlertController()
-        } else {
-            ChatController.shared.fetchChats(student: user) { (success) in
-                if success {
+        ChatController.shared.fetchChats(student: user) { (success) in
+            if success {
+                if ChatController.shared.chats.isEmpty {
+                    self.noChatsAlertController()
+                } else {
                     self.tableView.reloadData()
                 }
             }
