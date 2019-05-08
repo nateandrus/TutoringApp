@@ -15,25 +15,27 @@ class TeacherMessagingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         guard let teacher = TeacherController.shared.currentUser else { return }
-        if teacher.messages!.isEmpty {
-            noChatsAlertController()
-        } else {
             ChatController.shared.fetchChatsFor(teacher: teacher) { (success) in
                 if success {
+                    if ChatController.shared.chats.isEmpty {
+                        self.noChatsAlertController()
+                    } else {
                     self.tableView.reloadData()
                 }
             }
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     func noChatsAlertController() {
         let alertController = UIAlertController(title: "You do not have any chats!", message: "To start a chat find a tutor on the home tab and send them a message!", preferredStyle: .alert)
-        let okayAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        let okayAction = UIAlertAction(title: "You have no chats", style: .default) { (_) in
+            self.tabBarController?.selectedIndex = 1
+        }
         alertController.addAction(okayAction)
         present(alertController, animated: true)
     }
