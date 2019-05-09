@@ -182,7 +182,7 @@ class StudentController {
                     return
                 }
                 if teacher.blockedUsersFirebase.contains(studentFirebaseUID) {
-                    return
+                    continue
                 } else {
                     self.searchResults.append(teacher)
                     print("\(document == snapshots?.documents.last)")
