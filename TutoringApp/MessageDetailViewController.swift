@@ -104,7 +104,7 @@ class MessageDetailViewController: MessagesViewController {
 extension MessageDetailViewController: MessagesDisplayDelegate {
     internal func backgroundColor(for message: MessageType, at indexPath: IndexPath,
                          in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return MessageController.shared.isFromCurrentSender(message: message as! Message) ? #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1) : UIColor.lightGray
+        return MessageController.shared.isFromCurrentSender(message: message as! Message) ? #colorLiteral(red: 0, green: 0.6235294118, blue: 0.6156862745, alpha: 1) : UIColor.lightGray
     }
     
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {

@@ -271,7 +271,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wnn-Q3-0jb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Protégé" id="35W-TS-eu8"/>
+                    <navigationItem key="navigationItem" id="35W-TS-eu8">
+                        <barButtonItem key="backBarButtonItem" title=" " id="cNs-oN-vkb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="accountingButton" destination="VUP-a9-aiQ" id="COp-pk-UlX"/>
                         <outlet property="androidDevelopmentButton" destination="2Ir-MU-BHy" id="KU0-uF-Pey"/>
@@ -351,7 +353,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="251" text="$/hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ua1-aV-8nN">
                                             <rect key="frame" x="349" y="9.5" width="57" height="23.5"/>
                                             <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
-                                            <color key="textColor" name="protegeBlue"/>
+                                            <color key="textColor" red="0.0" green="0.62352941179999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -384,8 +386,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="1TR-Va-lzp">
                         <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="GBb-ty-nAg"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="aww-QO-U4d">
-                            <rect key="frame" x="146.5" y="7" width="121" height="30"/>
+                            <rect key="frame" x="135.5" y="7" width="143" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Online"/>
@@ -565,7 +568,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$/hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHS-GJ-903">
                                                 <rect key="frame" x="349" y="8" width="57" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
-                                                <color key="textColor" name="protegeBlue"/>
+                                                <color key="textColor" red="0.0" green="0.62352941179999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dq6-52-dk3">
