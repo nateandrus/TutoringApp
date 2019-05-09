@@ -168,22 +168,25 @@ class StudentController {
         }
     }
     
-    func searchBySubject(subject: String, completion: @escaping (Bool) -> Void) {
+    func searchBySubject(subject: String, studentFirebaseUID: String, completion: @escaping (Bool) -> Void) {
         Firestore.firestore().collection("teachers").whereField("subjects", arrayContains: subject).getDocuments { (snapshots, error) in
             if let error = error {
-                print("THERE WAS AN ERROR SEARCHING FOR USER ❌❌❌❌❌❌")
+                print("THERE WAS AN ERROR SEARCHING FOR USER ❌❌❌❌❌❌\(error)")
                 completion(false)
                 return
             }
             self.searchResults.removeAll()
-            
             for document in snapshots!.documents {
                 guard let teacher = Teacher(dictionary: document.data()) else {
                     print("🤬")
                     return
                 }
-                self.searchResults.append(teacher)
-                print("\(document == snapshots?.documents.last)")
+                if teacher.blockedUsersFirebase.contains(studentFirebaseUID) {
+                    return
+                } else {
+                    self.searchResults.append(teacher)
+                    print("\(document == snapshots?.documents.last)")
+                }
             }
             completion(true)
         }

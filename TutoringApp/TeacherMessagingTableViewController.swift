@@ -24,6 +24,7 @@ class TeacherMessagingTableViewController: UITableViewController {
             if success {
                 if ChatController.shared.chats.isEmpty {
                     self.noChatsAlertController()
+                    self.tableView.reloadData()
                 } else {
                     self.tableView.reloadData()
                 }
