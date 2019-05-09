@@ -100,7 +100,6 @@ class TeacherProfileViewController: UIViewController {
         } else {
             accountingButton.isHidden = true
         }
-        
         if meetingPreference == "In Person" {
             meetingPrefLabel.text = "In Person"
         }

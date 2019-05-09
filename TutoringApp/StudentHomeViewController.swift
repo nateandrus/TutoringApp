@@ -24,8 +24,6 @@ class StudentHomeViewController: UIViewController {
     @IBOutlet weak var androidDevelopmentButton: UIButton!
     @IBOutlet weak var htmlButton: UIButton!
     
-    var navigationBarAppearance = UINavigationBar.appearance()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         zipcodeTextField.layer.cornerRadius = 5
@@ -44,14 +42,9 @@ class StudentHomeViewController: UIViewController {
         androidDevelopmentButton.layer.cornerRadius = 5
         htmlButton.layer.cornerRadius = 5
         
-        //navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.protegeBlue]
-        //navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 37.5)]
-        //navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 37.5)!]
-        
-        self.navigationItem.title = "protégé"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 37.5)!]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 37.5)]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.protegeBlue]
+        let logo = UIImage(named: "protégé")
+        let imageView = UIImageView(image: logo)
+        self.navigationItem.titleView = imageView
     }
 
     // MARK: - Navigation
