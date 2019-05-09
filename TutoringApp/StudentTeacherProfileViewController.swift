@@ -48,8 +48,7 @@ class StudentTeacherProfileViewController: UIViewController {
         aboutMeLabel.text = selectedTeacher.aboutMe
         qualificationsLabel.text = selectedTeacher.qualifications
         schedulePreference = selectedTeacher.schedulePref
-        //self.title = selectedTeacher.name
-        sendMessageButton.layer.cornerRadius = sendMessageButton.frame.height / 2
+        sendMessageButton.layer.cornerRadius = 3
         TeacherController.shared.loadProfileImageView(userFirebaseUID: selectedTeacher.firebaseUID) { (image) in
             if let image = image {
                 self.profileImage.image = image

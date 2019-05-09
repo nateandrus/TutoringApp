@@ -535,8 +535,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaF-4R-XA5">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="aZv-OD-dXj">
-                                                <rect key="frame" x="116" y="8" width="94" height="107.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aZv-OD-dXj">
+                                                <rect key="frame" x="124" y="8" width="94" height="75.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSV-PI-fLd">
                                                         <rect key="frame" x="0.0" y="0.0" width="49" height="23.5"/>
@@ -545,13 +545,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, ST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVM-pe-KQj">
-                                                        <rect key="frame" x="0.0" y="41.5" width="38.5" height="15"/>
+                                                        <rect key="frame" x="0.0" y="25.5" width="38.5" height="15"/>
                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="12"/>
                                                         <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxr-Ih-J0M">
-                                                        <rect key="frame" x="0.0" y="74.5" width="94" height="33"/>
+                                                        <rect key="frame" x="0.0" y="42.5" width="94" height="33"/>
                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                         <state key="normal" title="LinkedIn Link">
                                                             <color key="titleColor" name="protegeBlue"/>
@@ -568,20 +568,6 @@
                                                 <color key="textColor" name="protegeBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymh-Js-zU1">
-                                                <rect key="frame" x="8" y="552" width="398" height="40"/>
-                                                <color key="backgroundColor" name="protegeBlue"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="2V7-zb-XrC"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
-                                                <state key="normal" title="Send a Message">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="N3J-cF-C4W" kind="show" identifier="toMessageController" id="s5F-gL-9qc"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dq6-52-dk3">
                                                 <rect key="frame" x="8" y="277.5" width="398" height="24.5"/>
                                                 <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="20"/>
@@ -753,31 +739,45 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymh-Js-zU1">
+                                                <rect key="frame" x="124" y="84" width="274" height="24"/>
+                                                <color key="backgroundColor" name="protegeBlue"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="bxt-mK-65k"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="17"/>
+                                                <state key="normal" title="Send a message">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="N3J-cF-C4W" kind="show" identifier="toMessageController" id="s5F-gL-9qc"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="qua-ua-weS" firstAttribute="leading" secondItem="MaF-4R-XA5" secondAttribute="leading" constant="8" id="12u-F1-Th1"/>
+                                            <constraint firstItem="ymh-Js-zU1" firstAttribute="bottom" secondItem="8zm-as-dAr" secondAttribute="bottom" id="2WA-2f-YuU"/>
                                             <constraint firstItem="8zm-as-dAr" firstAttribute="top" secondItem="MaF-4R-XA5" secondAttribute="top" constant="8" id="5ZX-yx-kv1"/>
                                             <constraint firstAttribute="trailing" secondItem="jHS-GJ-903" secondAttribute="trailing" constant="8" id="5jx-rx-RGn"/>
                                             <constraint firstItem="U9c-gQ-HLV" firstAttribute="leading" secondItem="MaF-4R-XA5" secondAttribute="leading" constant="8" id="7YF-sV-rhL"/>
                                             <constraint firstAttribute="height" constant="1100" id="9rI-qB-dpv"/>
                                             <constraint firstAttribute="trailing" secondItem="Dq6-52-dk3" secondAttribute="trailing" constant="8" id="B1J-cg-n2E"/>
-                                            <constraint firstAttribute="trailing" secondItem="ymh-Js-zU1" secondAttribute="trailing" constant="8" id="KGU-Rw-juU"/>
+                                            <constraint firstAttribute="trailing" secondItem="ymh-Js-zU1" secondAttribute="trailing" constant="16" id="FeK-39-NMq"/>
                                             <constraint firstItem="jHS-GJ-903" firstAttribute="top" secondItem="MaF-4R-XA5" secondAttribute="top" constant="8" id="KTY-cc-hD6"/>
                                             <constraint firstItem="qua-ua-weS" firstAttribute="top" secondItem="Dq6-52-dk3" secondAttribute="bottom" constant="24" id="Oet-Id-iyA"/>
                                             <constraint firstItem="8zm-as-dAr" firstAttribute="leading" secondItem="MaF-4R-XA5" secondAttribute="leading" constant="8" id="XrY-bT-rvG"/>
+                                            <constraint firstItem="ymh-Js-zU1" firstAttribute="leading" secondItem="8zm-as-dAr" secondAttribute="trailing" constant="16" id="ale-kw-qfx"/>
                                             <constraint firstItem="U9c-gQ-HLV" firstAttribute="top" secondItem="kds-hS-GWj" secondAttribute="bottom" constant="24" id="d57-Wm-rqZ"/>
                                             <constraint firstItem="Dq6-52-dk3" firstAttribute="leading" secondItem="MaF-4R-XA5" secondAttribute="leading" constant="8" id="hkw-0F-KpO"/>
                                             <constraint firstItem="aZv-OD-dXj" firstAttribute="top" secondItem="MaF-4R-XA5" secondAttribute="top" constant="8" id="iyc-w9-dN0"/>
                                             <constraint firstAttribute="trailing" secondItem="qua-ua-weS" secondAttribute="trailing" constant="8" id="mSp-Cb-Sx2"/>
-                                            <constraint firstItem="aZv-OD-dXj" firstAttribute="leading" secondItem="8zm-as-dAr" secondAttribute="trailing" constant="8" id="niz-S9-5yw"/>
+                                            <constraint firstItem="aZv-OD-dXj" firstAttribute="leading" secondItem="8zm-as-dAr" secondAttribute="trailing" constant="16" id="niz-S9-5yw"/>
                                             <constraint firstAttribute="trailing" secondItem="U9c-gQ-HLV" secondAttribute="trailing" constant="8" id="pav-Du-GfD"/>
                                             <constraint firstItem="kds-hS-GWj" firstAttribute="top" secondItem="8zm-as-dAr" secondAttribute="bottom" constant="24" id="pkU-yu-KhW"/>
                                             <constraint firstAttribute="trailing" secondItem="kds-hS-GWj" secondAttribute="trailing" constant="8" id="qGi-De-wDy"/>
                                             <constraint firstItem="kds-hS-GWj" firstAttribute="leading" secondItem="MaF-4R-XA5" secondAttribute="leading" constant="8" id="qXL-d6-qrp"/>
-                                            <constraint firstItem="ymh-Js-zU1" firstAttribute="top" secondItem="qua-ua-weS" secondAttribute="bottom" constant="24" id="sRL-Re-iJP"/>
                                             <constraint firstItem="Dq6-52-dk3" firstAttribute="top" secondItem="U9c-gQ-HLV" secondAttribute="bottom" constant="16" id="vs0-d4-9gK"/>
-                                            <constraint firstItem="ymh-Js-zU1" firstAttribute="leading" secondItem="MaF-4R-XA5" secondAttribute="leading" constant="8" id="z9a-l1-nQG"/>
                                         </constraints>
                                     </view>
                                 </subviews>
