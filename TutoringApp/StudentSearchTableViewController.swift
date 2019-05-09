@@ -125,11 +125,15 @@ class StudentSearchTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teacherCell", for: indexPath) as! StudentSearchTableViewCell
         if segmentedControl.selectedSegmentIndex == 0 {
             let teacher = StudentController.shared.onlineSearchResults[indexPath.row]
-            TeacherController.shared.loadProfileImageView(userFirebaseUID: teacher.firebaseUID) { (image) in
-                if let image = image {
-                    cell.profileImage.image = image
-                } else {
-                    cell.profileImage.image = #imageLiteral(resourceName: "default user icon")
+            DispatchQueue.main.async {
+                TeacherController.shared.loadProfileImageView(userFirebaseUID: teacher.firebaseUID) { (image) in
+                    if let image = image {
+                        cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height / 2
+                        cell.profileImage.image = image
+                    } else {
+                        cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height / 2
+                        cell.profileImage.image = #imageLiteral(resourceName: "default user icon")
+                    }
                 }
             }
             cell.teacher = teacher

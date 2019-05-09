@@ -27,7 +27,6 @@ class StudentMessagingTableViewCell: UITableViewCell {
         if let date = chat.timestamp {
             timestampLabel.text = "\(Date(timeIntervalSince1970: date).stringWith(dateStyle: .none, timeStyle: .short)) >"
         }
-        messagingImageView.layer.cornerRadius = messagingImageView.frame.height / 2
         if let messagePreview = chat.messagePreview {
             lastMessageLabel.text = messagePreview
         }

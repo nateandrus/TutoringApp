@@ -26,6 +26,5 @@ class TeacherMessagingTableViewCell: UITableViewCell {
         nameLabel.text = chat.studentName
         lastMessageLabel.text = chat.messagePreview
         timestampLabel.text = "\(Date(timeIntervalSince1970: date).stringWith(dateStyle: .none, timeStyle: .short)) >"
-        messageImageView.layer.cornerRadius = messageImageView.frame.height / 2 
     }
 }
