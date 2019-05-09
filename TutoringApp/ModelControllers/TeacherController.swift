@@ -146,11 +146,12 @@ class TeacherController {
         }
     }
     
-    func updateTeacherBiography(teacherDocRef: DocumentReference, aboutMe: String, qualifications: String, completion: @escaping (Bool) -> Void) {
+    func updateTeacherBiography(teacherDocRef: DocumentReference, aboutMe: String, qualifications: String, linkedINLink: String, completion: @escaping (Bool) -> Void) {
         
         let docData: [String: Any] = [
             "aboutMe" : aboutMe,
-            "qualifications" : qualifications
+            "qualifications" : qualifications,
+            "linkedInLink" : linkedINLink
         ]
         
         teacherDocRef.updateData(docData) { (error) in
@@ -241,6 +242,27 @@ class TeacherController {
                         return
                     } else {
                         completion(true)
+                    }
+                })
+            }
+        }
+    }
+    
+    func changeProfilePicture(userFirebaseUID: String, profileImage: UIImage?) {
+        if let image = profileImage {
+            let resizedImage = PhotoResizer.ResizeImage(image: image, targetSize: CGSize(width: 400, height: 400))
+            let storage = Storage.storage().reference().child(userFirebaseUID)
+            guard let uploadData = resizedImage.pngData() else { return }
+            print(resizedImage.size)
+            storage.putData(uploadData, metadata: nil) {(metaData, error) in
+                if let error = error {
+                    print("\(error.localizedDescription)🤬🤬🤬🤬🤬")
+                    return
+                }
+                storage.downloadURL(completion: {(url, error) in
+                    if let error = error {
+                        print("\(error.localizedDescription)🤬🤬🤬🤬🤬🤬")
+                        return
                     }
                 })
             }
