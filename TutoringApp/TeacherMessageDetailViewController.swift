@@ -13,11 +13,8 @@ import MessageInputBar
 class TeacherMessageDetailViewController: MessagesViewController {
     
     //LandingPad for chat
-    var chatLanding: Chat? {
-        didSet {
-            
-        }
-    }
+    var chatLanding: Chat?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +54,38 @@ class TeacherMessageDetailViewController: MessagesViewController {
             }
         }
     }
+    
+    @IBAction func infoBarButtonTapped(_ sender: UIBarButtonItem) {
+        barButtonAlertController()
+    }
+    
+    func barButtonAlertController() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let deleteMessagesAction = UIAlertAction(title: "Delete messages", style: .default) { (_) in
+            self.deleteMessagesAlertController()
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteMessagesAction)
+        present(alertController, animated: true)
+    }
+    
+    func deleteMessagesAlertController() {
+        let alertController = UIAlertController(title: "Delete messages?", message: "Deleting messages will get delete this chat forever.", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
+            guard let chat = self.chatLanding else { return }
+            ChatController.shared.deleteChat(chatDocRef: chat.documentRef, completion: { (success) in
+                if success {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            })
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteAction)
+        present(alertController, animated: true)
+    }
+    
 }
 
 extension TeacherMessageDetailViewController: MessagesDisplayDelegate {

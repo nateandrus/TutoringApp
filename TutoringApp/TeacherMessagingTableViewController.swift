@@ -15,20 +15,20 @@ class TeacherMessagingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let teacher = TeacherController.shared.currentUser else { return }
-            ChatController.shared.fetchChatsFor(teacher: teacher) { (success) in
-                if success {
-                    if ChatController.shared.chats.isEmpty {
-                        self.noChatsAlertController()
-                    } else {
-                    self.tableView.reloadData()
-                }
-            }
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        guard let teacher = TeacherController.shared.currentUser else { return }
+        ChatController.shared.fetchChatsFor(teacher: teacher) { (success) in
+            if success {
+                if ChatController.shared.chats.isEmpty {
+                    self.noChatsAlertController()
+                } else {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
     func noChatsAlertController() {

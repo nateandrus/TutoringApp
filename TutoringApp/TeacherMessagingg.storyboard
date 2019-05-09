@@ -52,34 +52,34 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-ay-XSL">
-                                            <rect key="frame" x="131.5" y="5.5" width="66" height="24"/>
+                                            <rect key="frame" x="131.5" y="23.5" width="66" height="24"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(last message)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1l-kw-tkK">
-                                            <rect key="frame" x="131.5" y="45" width="246.5" height="20.5"/>
+                                            <rect key="frame" x="131.5" y="63.5" width="246.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(timestamp)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FC-1k-UVY">
-                                            <rect key="frame" x="304" y="5.5" width="94" height="21"/>
+                                            <rect key="frame" x="304" y="23.5" width="94" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="6FC-1k-UVY" firstAttribute="top" secondItem="wf9-P6-UVI" secondAttribute="top" id="7f4-wu-Fq5"/>
-                                        <constraint firstItem="ChX-ay-XSL" firstAttribute="top" secondItem="wf9-P6-UVI" secondAttribute="top" id="9i7-sh-uB7"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="i1l-kw-tkK" secondAttribute="trailing" constant="16" id="BDE-2J-S6O"/>
                                         <constraint firstItem="wf9-P6-UVI" firstAttribute="leading" secondItem="p15-6X-fNv" secondAttribute="leading" constant="16" id="CSA-Qc-NRB"/>
                                         <constraint firstItem="i1l-kw-tkK" firstAttribute="leading" secondItem="ChX-ay-XSL" secondAttribute="leading" id="Fq8-Ok-8Js"/>
                                         <constraint firstAttribute="trailing" secondItem="6FC-1k-UVY" secondAttribute="trailing" constant="16" id="IXC-lT-voQ"/>
                                         <constraint firstItem="wf9-P6-UVI" firstAttribute="centerY" secondItem="p15-6X-fNv" secondAttribute="centerY" id="SsQ-A9-BYa"/>
-                                        <constraint firstItem="i1l-kw-tkK" firstAttribute="centerY" secondItem="p15-6X-fNv" secondAttribute="centerY" id="h9F-yn-wBK"/>
+                                        <constraint firstItem="6FC-1k-UVY" firstAttribute="top" secondItem="ChX-ay-XSL" secondAttribute="top" id="b5J-XK-LdI"/>
+                                        <constraint firstItem="ChX-ay-XSL" firstAttribute="centerY" secondItem="wf9-P6-UVI" secondAttribute="centerY" constant="-20" id="ezt-vZ-X56"/>
                                         <constraint firstItem="wf9-P6-UVI" firstAttribute="height" secondItem="p15-6X-fNv" secondAttribute="height" multiplier="0.9" id="mNH-GY-I9W"/>
+                                        <constraint firstItem="i1l-kw-tkK" firstAttribute="top" secondItem="ChX-ay-XSL" secondAttribute="bottom" constant="16" id="rn7-bZ-OhN"/>
                                         <constraint firstItem="ChX-ay-XSL" firstAttribute="leading" secondItem="wf9-P6-UVI" secondAttribute="trailing" constant="16" id="wen-E7-jMD"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -113,7 +113,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="t1b-9S-eEx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="(who?)" id="fcO-xf-69i"/>
+                    <navigationItem key="navigationItem" title="(who?)" id="fcO-xf-69i">
+                        <barButtonItem key="rightBarButtonItem" image="info" id="fp8-eC-LdE">
+                            <connections>
+                                <action selector="infoBarButtonTapped:" destination="vAF-Hu-m50" id="sZG-4S-nZn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L61-fN-fAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,6 +127,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="info" width="35" height="35"/>
         <image name="message-square" width="30" height="30"/>
     </resources>
 </document>
