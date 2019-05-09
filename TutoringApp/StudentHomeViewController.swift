@@ -28,6 +28,7 @@ class StudentHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        zipcodeTextField.layer.cornerRadius = 5
         zipcodeTextField.layer.borderWidth = 2
         zipcodeTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
         businessManagementButton.layer.cornerRadius = 5
