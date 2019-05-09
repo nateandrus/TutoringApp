@@ -227,7 +227,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <color key="textColor" name="protegeBlue"/>
                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -324,18 +324,24 @@
                                             <rect key="frame" x="123.5" y="9.5" width="209.5" height="107.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK6-zP-eW1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="209.5" height="54"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="209.5" height="36"/>
                                                     <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtN-Vv-l0n">
-                                                    <rect key="frame" x="0.0" y="54" width="209.5" height="53.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, ST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WM-mU-7RZ">
+                                                    <rect key="frame" x="0.0" y="36" width="209.5" height="35.5"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="12"/>
+                                                    <color key="textColor" name="protegeGray"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xtN-Vv-l0n">
+                                                    <rect key="frame" x="0.0" y="71.5" width="209.5" height="36"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, ST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WM-mU-7RZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="209.5" height="53.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SF8-kX-6j1">
+                                                            <rect key="frame" x="0.0" y="0.0" width="209.5" height="36"/>
                                                             <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="12"/>
-                                                            <color key="textColor" name="protegeGray"/>
+                                                            <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -362,6 +368,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="aboutLabel" destination="SF8-kX-6j1" id="jbw-HO-bOK"/>
                                     <outlet property="locationLabel" destination="4WM-mU-7RZ" id="ANK-AB-FrM"/>
                                     <outlet property="nameLabel" destination="pK6-zP-eW1" id="x9y-3c-jGt"/>
                                     <outlet property="priceLabel" destination="ua1-aV-8nN" id="5cd-KE-nKR"/>
@@ -607,7 +614,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qualifications Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSP-ah-sZr">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qualifications Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSP-ah-sZr">
                                                         <rect key="frame" x="0.0" y="32.5" width="398" height="15"/>
                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="12"/>
                                                         <nil key="textColor"/>

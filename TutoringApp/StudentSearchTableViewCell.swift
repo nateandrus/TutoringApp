@@ -14,7 +14,8 @@ class StudentSearchTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-
+    @IBOutlet weak var aboutLabel: UILabel!
+    
     var teacher: Teacher? {
         didSet {
             updateViews()
@@ -26,6 +27,7 @@ class StudentSearchTableViewCell: UITableViewCell {
         nameLabel.text = teacher.name
         locationLabel.text = teacher.location
         priceLabel.text = "$\(teacher.costForTime)/hr"
+        aboutLabel.text = teacher.aboutMe
         profileImage.layer.cornerRadius = profileImage.frame.height / 2 
     }
 }
