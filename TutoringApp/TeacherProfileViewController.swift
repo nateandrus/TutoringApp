@@ -68,7 +68,6 @@ class TeacherProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         accountingButton.layer.cornerRadius = 5
         businessManagementButton.layer.cornerRadius = 5
         economicsButton.layer.cornerRadius = 5
@@ -83,12 +82,14 @@ class TeacherProfileViewController: UIViewController {
         webDevelopmentButton.layer.cornerRadius = 5
         guard let user = TeacherController.shared.currentUser else { return }
         TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
-            guard let image = image else { return }
-            self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
-            self.profileImage.image = image
+            if let image = image {
+                self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
+                self.profileImage.image = image
+            } else {
+                self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
+                self.profileImage.image = #imageLiteral(resourceName: "default user icon")
+            }
         }
-        
-        
         self.navigationItem.title = "Profile"
         nameLabel.text = user.name
         subjects = user.subjects
@@ -97,7 +98,6 @@ class TeacherProfileViewController: UIViewController {
         schedulePreference = user.schedulePref
         aboutYouLabel.text = user.aboutMe
         qualificationsLabel.text = user.qualifications
-        
         if subjects.contains("Accounting") {
             accountingButton.isHidden = false
         } else {
