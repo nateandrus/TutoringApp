@@ -54,10 +54,6 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var aboutYouLabel: UILabel!
     @IBOutlet weak var qualificationsLabel: UILabel!
     
-    
-    
-    
-    
     var subjects: [String] = []
     var schedulePreference: [String] = []
     var meetingPreference: String = ""
@@ -98,6 +94,7 @@ class TeacherProfileViewController: UIViewController {
         schedulePreference = user.schedulePref
         aboutYouLabel.text = user.aboutMe
         qualificationsLabel.text = user.qualifications
+        
         if subjects.contains("Accounting") {
             accountingButton.isHidden = false
         } else {
@@ -281,7 +278,6 @@ class TeacherProfileViewController: UIViewController {
                     self.subjectsStackView4.isHidden = true
                 }
                 
-                
                 if user.meetingPref == "Both" {
                     self.meetingPrefLabel.text = "In Person/Online"
                 }
@@ -454,10 +450,8 @@ class TeacherProfileViewController: UIViewController {
                 if self.schedulePreference.contains("SundayMorning") == false && self.schedulePreference.contains("SundayAfternoon") == false && self.schedulePreference.contains("SundayEvening") == false {
                     self.sundayAvailabilityLabel.text = "Not Available"
                 }
-                
             }
         }
     }
-   
 }
 

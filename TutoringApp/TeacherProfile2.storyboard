@@ -633,20 +633,21 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wCi-3z-OQn">
-                                                <rect key="frame" x="16" y="557" width="382" height="76"/>
+                                                <rect key="frame" x="16" y="557" width="382" height="82"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Meeting Preference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7B-nG-c0B">
-                                                        <rect key="frame" x="97" y="0.0" width="188.5" height="30"/>
+                                                        <rect key="frame" x="97" y="0.0" width="188.5" height="33"/>
                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                         <color key="textColor" name="protegeGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vAL-fM-78j">
-                                                        <rect key="frame" x="16" y="46" width="350" height="30"/>
+                                                        <rect key="frame" x="16" y="49" width="350" height="33"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbn-U5-sWJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
-                                                                <color key="backgroundColor" red="0.080838464200000001" green="0.57655972239999997" blue="0.81357341999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="106" height="33"/>
+                                                                <color key="backgroundColor" name="protegeBlue"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <state key="normal" title="In Person">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -655,8 +656,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbj-fO-nqI">
-                                                                <rect key="frame" x="122" y="0.0" width="106" height="30"/>
-                                                                <color key="backgroundColor" red="0.080838464200000001" green="0.57655972239999997" blue="0.81357341999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <rect key="frame" x="122" y="0.0" width="106" height="33"/>
+                                                                <color key="backgroundColor" name="protegeBlue"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <state key="normal" title="Online">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -665,8 +667,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3S-Am-Hhg">
-                                                                <rect key="frame" x="244" y="0.0" width="106" height="30"/>
-                                                                <color key="backgroundColor" red="0.080838464200000001" green="0.57655972239999997" blue="0.81357341999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <rect key="frame" x="244" y="0.0" width="106" height="33"/>
+                                                                <color key="backgroundColor" name="protegeBlue"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <state key="normal" title="Both">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -861,6 +864,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGM-6x-16v">
+                                <rect key="frame" x="152" y="762" width="110" height="36"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" name="protegeBlue"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mXt-Jq-g2a" kind="show" id="tQi-EJ-Azn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -876,8 +889,10 @@
                             <constraint firstItem="vVI-Ve-WBj" firstAttribute="top" secondItem="ITm-d1-R3B" secondAttribute="bottom" constant="32" id="Lwj-iE-dVX"/>
                             <constraint firstItem="nhL-kZ-6gP" firstAttribute="trailing" secondItem="HKj-VZ-Udx" secondAttribute="trailing" constant="16" id="M0M-Ar-dfO"/>
                             <constraint firstItem="vVI-Ve-WBj" firstAttribute="leading" secondItem="nhL-kZ-6gP" secondAttribute="leading" constant="16" id="PXG-k8-Xki"/>
+                            <constraint firstItem="nhL-kZ-6gP" firstAttribute="bottom" secondItem="NGM-6x-16v" secondAttribute="bottom" constant="64" id="Tyx-GM-ZP3"/>
                             <constraint firstItem="7qT-Rq-mKM" firstAttribute="leading" secondItem="nhL-kZ-6gP" secondAttribute="leading" constant="16" id="XU4-1I-zOP"/>
                             <constraint firstItem="nhL-kZ-6gP" firstAttribute="trailing" secondItem="vVI-Ve-WBj" secondAttribute="trailing" constant="16" id="baA-Hb-1HK"/>
+                            <constraint firstItem="NGM-6x-16v" firstAttribute="centerX" secondItem="efn-uo-LQh" secondAttribute="centerX" id="boV-qA-ujT"/>
                             <constraint firstItem="nhL-kZ-6gP" firstAttribute="trailing" secondItem="YP8-Fo-clh" secondAttribute="trailing" constant="16" id="cBL-If-9D4"/>
                             <constraint firstItem="7Rg-a5-vAI" firstAttribute="trailing" secondItem="T87-UX-H44" secondAttribute="trailing" id="jiW-0G-pkY"/>
                             <constraint firstItem="HKj-VZ-Udx" firstAttribute="leading" secondItem="T87-UX-H44" secondAttribute="trailing" constant="16" id="mGz-yb-k5q"/>
@@ -886,7 +901,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nhL-kZ-6gP"/>
                     </view>
-                    <navigationItem key="navigationItem" id="c8B-Qy-Kbt"/>
+                    <navigationItem key="navigationItem" id="c8B-Qy-Kbt">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Wjq-Dw-SBo"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="changePasswordButton" destination="td0-cb-wrd" id="ZWc-hp-oQa"/>
                         <outlet property="changeProfileImageButton" destination="7Rg-a5-vAI" id="g9d-M6-CBR"/>
@@ -900,6 +917,120 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdV-N5-BWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3801" y="265"/>
+        </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="ZQe-OF-8zY">
+            <objects>
+                <viewController id="mXt-Jq-g2a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NjY-yf-dlK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3q-Fp-E9I">
+                                <rect key="frame" x="0.0" y="88" width="414" height="2878"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDc-87-lKP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61V-4d-Z4a">
+                                                <rect key="frame" x="16" y="16" width="382" height="2968"/>
+                                                <mutableString key="text">Nathan Andrus built the Protégé app as a Free app. This SERVICE is provided by Nathan Andrus at no cost and is intended for use as is.
+
+This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
+
+If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.
+
+The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Protégé unless otherwise defined in this Privacy Policy.
+
+Information Collection and Use
+
+For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information, including but not limited to Name, Email, Date of Birth, Zipcode. The information that I request will be retained on your device and is not collected by me in any way.
+
+The app does use third party services that may collect information used to identify you.
+
+Link to privacy policy of third party service providers used by the app
+
+Google Play Services
+Log Data
+
+I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.
+
+Cookies
+
+Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
+
+This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.
+
+Service Providers
+
+I may employ third-party companies and individuals due to the following reasons:
+
+To facilitate our Service;
+To provide the Service on our behalf;
+To perform Service-related services; or
+To assist us in analyzing how our Service is used.
+I want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
+
+Security
+
+I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.
+
+Links to Other Sites
+
+This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+
+Children’s Privacy
+
+These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do necessary actions.
+
+Changes to This Privacy Policy
+
+I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
+
+Contact Us
+
+If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at psyco_soccer@hotmail.com.
+
+This privacy policy page was created at privacypolicytemplate.net and modified/generated by App Privacy Policy Generator</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="61V-4d-Z4a" secondAttribute="trailing" constant="16" id="Qip-rJ-db6"/>
+                                            <constraint firstAttribute="height" constant="3000" id="fAf-1b-jiN"/>
+                                            <constraint firstItem="61V-4d-Z4a" firstAttribute="leading" secondItem="LDc-87-lKP" secondAttribute="leading" constant="16" id="sLk-bp-Fhk"/>
+                                            <constraint firstAttribute="bottom" secondItem="61V-4d-Z4a" secondAttribute="bottom" constant="16" id="sM2-7y-UHE"/>
+                                            <constraint firstItem="61V-4d-Z4a" firstAttribute="top" secondItem="LDc-87-lKP" secondAttribute="top" constant="16" id="t68-10-eEE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LDc-87-lKP" secondAttribute="trailing" id="367-xb-3J0"/>
+                                    <constraint firstItem="LDc-87-lKP" firstAttribute="leading" secondItem="I3q-Fp-E9I" secondAttribute="leading" id="Mo8-Gi-tOe"/>
+                                    <constraint firstAttribute="bottom" secondItem="LDc-87-lKP" secondAttribute="bottom" id="Sng-wv-9dD"/>
+                                    <constraint firstItem="LDc-87-lKP" firstAttribute="top" secondItem="I3q-Fp-E9I" secondAttribute="top" id="YfF-IF-Cid"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LDc-87-lKP" firstAttribute="width" secondItem="NjY-yf-dlK" secondAttribute="width" id="GlV-Yk-AQg"/>
+                            <constraint firstItem="I3q-Fp-E9I" firstAttribute="leading" secondItem="DdL-Ix-Apf" secondAttribute="leading" id="QEg-Tg-62Q"/>
+                            <constraint firstItem="DdL-Ix-Apf" firstAttribute="bottom" secondItem="I3q-Fp-E9I" secondAttribute="bottom" id="X0o-26-XrX"/>
+                            <constraint firstItem="I3q-Fp-E9I" firstAttribute="top" secondItem="DdL-Ix-Apf" secondAttribute="top" id="cLs-gS-tMR"/>
+                            <constraint firstItem="DdL-Ix-Apf" firstAttribute="trailing" secondItem="I3q-Fp-E9I" secondAttribute="trailing" id="ppg-Kx-Bf1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DdL-Ix-Apf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Privacy Policy" id="iPs-Ln-77r"/>
+                    <size key="freeformSize" width="414" height="3000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DA3-X4-pYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4546" y="281"/>
         </scene>
         <!--Teacher Edit Biography View Controller-->
         <scene sceneID="oln-Ll-jK6">
