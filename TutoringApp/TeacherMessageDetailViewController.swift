@@ -65,8 +65,12 @@ class TeacherMessageDetailViewController: MessagesViewController {
         let deleteMessagesAction = UIAlertAction(title: "Delete messages", style: .default) { (_) in
             self.deleteMessagesAlertController()
         }
+        let blockAction = UIAlertAction(title: "Block", style: .destructive) { (_) in
+            self.blockUserAlertController()
+        }
         alertController.addAction(cancelAction)
         alertController.addAction(deleteMessagesAction)
+        alertController.addAction(blockAction)
         present(alertController, animated: true)
     }
     
@@ -83,6 +87,27 @@ class TeacherMessageDetailViewController: MessagesViewController {
         }
         alertController.addAction(cancelAction)
         alertController.addAction(deleteAction)
+        present(alertController, animated: true)
+    }
+    
+    func blockUserAlertController() {
+        let alertController = UIAlertController(title: "Block user?", message: "The user will not be alerted you blocked them but they will no longer be able to view your profile or message you.", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let blockAction = UIAlertAction(title: "Block", style: .destructive) { (_) in
+            guard let teacher = TeacherController.shared.currentUser, let student = self.chatLanding?.studentUID else { return }
+            TeacherController.shared.blockStudent(studentFirebaseUID: student, for: teacher.selfDocRef, completion: { (success) in
+                if success {
+                    guard let chat = self.chatLanding else { return }
+                    ChatController.shared.deleteChat(chatDocRef: chat.documentRef, completion: { (success) in
+                        if success {
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                    })
+                }
+            })
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(blockAction)
         present(alertController, animated: true)
     }
     

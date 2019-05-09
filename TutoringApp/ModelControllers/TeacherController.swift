@@ -53,7 +53,7 @@ class TeacherController {
             }
         }
         
-        let newTeacher = Teacher(name: name, email: email, messages: [], firebaseUID: userFirebaseUID, linkedINLink: linkedInLink, costForTime: costPerHour, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: nil, profileImageURL: userFirebaseUID, selfDocRef: docRef)
+        let newTeacher = Teacher(name: name, email: email, messages: [], firebaseUID: userFirebaseUID, linkedINLink: linkedInLink, costForTime: costPerHour, qualifications: qualifications, location: location, dateOfBirth: dateOfBirth, subjects: subjects, schedulePref: schedulePreference, meetingPref: meetingPreference, aboutMe: aboutMe, profileImage: nil, profileImageURL: userFirebaseUID, selfDocRef: docRef, blockedUsersFirebase: [])
         
         Firestore.firestore().collection("teachers").document(userFirebaseUID).setData(newTeacher.dictionary) { err in
             if let error = err {
@@ -281,6 +281,19 @@ class TeacherController {
             let image = UIImage(data: data)
             completion(image)
             return
+        }
+    }
+    
+    func blockStudent(studentFirebaseUID: String, for teacherDocRef: DocumentReference, completion: @escaping (Bool) -> Void) {
+        
+        teacherDocRef.updateData(["blockedUsersFirebase" : FieldValue.arrayUnion([studentFirebaseUID])]) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(false)
+                return
+            } else {
+                completion(true)
+            }
         }
     }
 }

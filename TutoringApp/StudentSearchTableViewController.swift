@@ -27,8 +27,8 @@ class StudentSearchTableViewController: UITableViewController {
         super.viewDidLoad()
         searchBar.delegate = self
         segmentedControl.layer.cornerRadius = 6
-        guard let subject = subject, let location = location else { return }
-        StudentController.shared.searchBySubject(subject: subject) { (success) in
+        guard let subject = subject, let location = location, let user = StudentController.shared.currentUser else { return }
+        StudentController.shared.searchBySubject(subject: subject, studentFirebaseUID: user.firebaseUID) { (success) in
             if success {
                 StudentController.shared.sortTeachersByZipcode(location: location, completion: { (success) in
                     if success {
