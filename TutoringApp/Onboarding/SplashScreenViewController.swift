@@ -11,12 +11,11 @@ import Firebase
 
 class SplashScreenViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         findUser()
     }
-    
+ 
     func findUser() {
         if Auth.auth().currentUser != nil {
             let uid = Auth.auth().currentUser?.uid
@@ -37,9 +36,9 @@ class SplashScreenViewController: UIViewController {
                 }
             })
         } else {
-            let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginScreen")
-            self.present(mainVC, animated: true)
-            return
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "toLoginVC", sender: nil)
+            }
         }
     }
 }
