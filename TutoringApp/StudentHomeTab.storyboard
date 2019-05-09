@@ -321,7 +321,7 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PM4-7B-YGO">
-                                            <rect key="frame" x="123.5" y="9.5" width="209.5" height="107.5"/>
+                                            <rect key="frame" x="123.5" y="9.5" width="211" height="107.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK6-zP-eW1">
                                                     <rect key="frame" x="0.0" y="0.0" width="209.5" height="36"/>
@@ -329,6 +329,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, ST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WM-mU-7RZ">
                                                     <rect key="frame" x="0.0" y="36" width="209.5" height="35.5"/>
                                                     <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="12"/>
@@ -349,7 +350,7 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="251" text="$/hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ua1-aV-8nN">
-                                            <rect key="frame" x="349" y="9.5" width="57" height="23.5"/>
+                                            <rect key="frame" x="350.5" y="9.5" width="55.5" height="22.5"/>
                                             <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                             <color key="textColor" name="protegeBlue"/>
                                             <nil key="highlightedColor"/>
