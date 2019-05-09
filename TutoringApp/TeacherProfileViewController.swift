@@ -15,7 +15,6 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var teacherProfileScrollView: UIScrollView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var linkedInLabel: UILabel!
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     @IBOutlet weak var subjectsStackView: UIStackView!
     @IBOutlet weak var subjectsStackView1: UIStackView!
@@ -56,9 +55,8 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var qualificationsLabel: UILabel!
     
     
-    static let shared = TeacherProfileViewController()
     
-    var isChangingProfileImage: Bool = false
+    
     
     var subjects: [String] = []
     var schedulePreference: [String] = []
@@ -67,27 +65,10 @@ class TeacherProfileViewController: UIViewController {
     var morning = "Morning"
     var afternoon = "Afternoon"
     var evening = "Evening"
-    var blank = ""
-    
-    var changedProfileImage: UIImage? {
-        didSet {
-            guard let user = TeacherController.shared.currentUser, let newImage = changedProfileImage else { return }
-            self.isChangingProfileImage = true
-            TeacherController.shared.changeProfileImage(userFirebaseUID: user.firebaseUID, newImage: newImage) { (success) in
-                if success {
-                    DispatchQueue.main.async {
-                        self.profileImage.image = self.changedProfileImage
-                        print("Success uploading photo to firebase storage")
-                    }
-                }
-            }
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //zipcodeTextField.layer.borderColor = #colorLiteral(red: 0.1674007663, green: 0.4571400597, blue: 0.5598231282, alpha: 1)
-        //changeProfileButton.layer.cornerRadius = changeProfileButton.frame.height / 2
+        
         accountingButton.layer.cornerRadius = 5
         businessManagementButton.layer.cornerRadius = 5
         economicsButton.layer.cornerRadius = 5
@@ -101,17 +82,15 @@ class TeacherProfileViewController: UIViewController {
         uxDesignButton.layer.cornerRadius = 5
         webDevelopmentButton.layer.cornerRadius = 5
         guard let user = TeacherController.shared.currentUser else { return }
-        if isChangingProfileImage == false {
-            TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
-                guard let image = image else { return }
-                self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
-                self.profileImage.image = image
-            }
+        TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
+            guard let image = image else { return }
+            self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
+            self.profileImage.image = image
         }
+        
         
         self.navigationItem.title = "Profile"
         nameLabel.text = user.name
-        linkedInLabel.text = user.linkedINLink
         subjects = user.subjects
         priceLabel.text = ("$\(user.costForTime)/hour")
         meetingPreference = user.meetingPref
@@ -205,13 +184,13 @@ class TeacherProfileViewController: UIViewController {
         TeacherController.shared.initializeTeacher(firebaseUID: id) { (success) in
             if success {
                 guard let user = TeacherController.shared.currentUser else { return }
-                if self.isChangingProfileImage == false {
-                    TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
-                        guard let image = image else { return }
-                        self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
-                        self.profileImage.image = image
-                    }
+                
+                TeacherController.shared.loadProfileImageView(userFirebaseUID: user.firebaseUID) { (image) in
+                    guard let image = image else { return }
+                    self.profileImage.layer.cornerRadius = self.profileImage.frame.height / 2
+                    self.profileImage.image = image
                 }
+                
                 self.profileImage.image = user.profileImage
                 self.nameLabel.text = user.name
                 self.subjects = user.subjects
@@ -454,124 +433,31 @@ class TeacherProfileViewController: UIViewController {
                 if self.schedulePreference.contains("SundayMorning") && self.schedulePreference.contains("SundayAfternoon") && self.schedulePreference.contains("SundayEvening") {
                     self.sundayAvailabilityLabel.text = "\(self.morning)" + "/\(self.afternoon)" + "/\(self.evening)"
                 }
+                if self.schedulePreference.contains("MondayMorning") == false && self.schedulePreference.contains("MondayAfternoon") == false && self.schedulePreference.contains("MondayEvening") == false {
+                    self.mondayAvailabilityLabel.text = "Not Available"
+                }
+                if self.schedulePreference.contains("TuesdayMorning") == false && self.schedulePreference.contains("TuesdayAfternoon") == false && self.schedulePreference.contains("TuesdayEvening") == false {
+                    self.tuesdayAvailabilityLabel.text = "Not Available"
+                }
+                if self.schedulePreference.contains("WednesdayMorning") == false && self.schedulePreference.contains("WednesdayAfternoon") == false && self.schedulePreference.contains("WednesdayEvening") == false {
+                    self.wednesdayAvailabilityLabel.text = "Not Available"
+                }
+                if self.schedulePreference.contains("ThursdayMorning") == false && self.schedulePreference.contains("ThursdayAfternoon") == false && self.schedulePreference.contains("ThursdayEvening") == false {
+                    self.thursdayAvailabilityLabel.text = "Not Available"
+                }
+                if self.schedulePreference.contains("FridayMorning") == false && self.schedulePreference.contains("FridayAfternoon") == false && self.schedulePreference.contains("FridayEvening") == false {
+                    self.fridayAvailabilityLabel.text = "Not Available"
+                }
+                if self.schedulePreference.contains("SaturdayMorning") == false && self.schedulePreference.contains("SaturdayAfternoon") == false && self.schedulePreference.contains("SaturdayEvening") == false {
+                    self.saturdayAvailabilityLabel.text = "Not Available"
+                }
+                if self.schedulePreference.contains("SundayMorning") == false && self.schedulePreference.contains("SundayAfternoon") == false && self.schedulePreference.contains("SundayEvening") == false {
+                    self.sundayAvailabilityLabel.text = "Not Available"
+                }
                 
             }
         }
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        isChangingProfileImage = false
-    }
-    
-    @IBAction func settingsButtonTapped(_ sender: Any) {
-        settingsActionSheet()
-    }
-    
-//    @IBAction func changeProfileImageButtonTapped(_ sender: UIButton) {
-//        self.presentImagePickerActionSheet()
-//        guard let teacherFirebaseUID = TeacherController.shared.currentUser?.firebaseUID else { return }
-//        TeacherController.shared.changeProfileImage(userFirebaseUID: teacherFirebaseUID, newImage: self.changedProfileImage)
-//    }
-    
-    func settingsActionSheet() {
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//        let changeLinkedInAction = UIAlertAction(title: "Change LinkedIn Link", style: .default) { (_) in
-//            guard let
-//        }
-        let changePasswordAction = UIAlertAction(title: "Change password", style: .default) { (_) in
-            guard let teacher = TeacherController.shared.currentUser else { return }
-            TeacherController.shared.changePassword(email: teacher.email, completion: { (success) in
-                if success {
-                    self.changePasswordEmailSent()
-                }
-            })
-        }
-        let changeProfileImageAction = UIAlertAction(title: "Change profile image", style: .default) { (_) in
-            self.presentImagePickerActionSheet()
-            
-        }
-        let logoutAction = UIAlertAction(title: "Logout", style: .default) { (_) in
-            TeacherController.shared.logoutTeacher(completion: { (success) in
-                if success {
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let destinationVC = storyboard.instantiateViewController(withIdentifier: "loginScreen")
-                    self.present(destinationVC, animated: true)
-                }
-            })
-        }
-        let deleteAccountAction = UIAlertAction(title: "Delete Account", style: .destructive) { (_) in
-            self.deleteAccountAlertController()
-        }
-        
-        actionSheet.addAction(cancelAction)
-        actionSheet.addAction(changePasswordAction)
-        actionSheet.addAction(changeProfileImageAction)
-        actionSheet.addAction(logoutAction)
-        actionSheet.addAction(deleteAccountAction)
-        present(actionSheet, animated: true)
-    }
-    
-    func deleteAccountAlertController() {
-        let alertController = UIAlertController(title: "Are you sure you want to delete your account?", message: "Deleting your account will erase all memory that you ever existed!", preferredStyle: .alert)
-        let dontDeleteAction = UIAlertAction(title: "Don't delete", style: .cancel, handler: nil)
-        let deleteAction = UIAlertAction(title: "Delete Account", style: .destructive) { (_) in
-            guard let user = Auth.auth().currentUser, let teacher = TeacherController.shared.currentUser else { return }
-            TeacherController.shared.deleteTeacher(user: user, teacher: teacher, completion: { (success) in
-                if success {
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let destinationVC = storyboard.instantiateViewController(withIdentifier: "loginScreen")
-                    self.present(destinationVC, animated: true)
-                }
-            })
-        }
-        alertController.addAction(dontDeleteAction)
-        alertController.addAction(deleteAction)
-        present(alertController, animated: true)
-    }
-    
-    func changePasswordEmailSent() {
-        let alertController = UIAlertController(title: "Email sent!", message: "We have sent you an email with a link to change/reset your password.", preferredStyle: .alert)
-        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
-        alertController.addAction(okayAction)
-        present(alertController, animated: true)
-    }
-    
+   
 }
 
-///MARK: - UIImagePickerDelegate
-extension TeacherProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true, completion: nil)
-        if let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            changedProfileImage = photo
-        }
-    }
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    func presentImagePickerActionSheet() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        let actionSheet = UIAlertController(title: "Select a Photo", message: nil, preferredStyle: .actionSheet)
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-            actionSheet.popoverPresentationController?.sourceView = self.view
-            actionSheet.popoverPresentationController?.sourceRect = CGRect(x: 50, y: self.view.frame.height - 100, width: self.view.frame.width - 100, height: 100)
-            actionSheet.addAction(UIAlertAction(title: "Photos", style: .default, handler: { (_) in
-                imagePickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
-                self.present(imagePickerController, animated: true, completion: nil)
-            }))
-        }
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            actionSheet.popoverPresentationController?.sourceView = self.view
-            actionSheet.popoverPresentationController?.sourceRect = CGRect(x: 50, y: self.view.frame.height - 100, width: self.view.frame.width - 100, height: 100)
-            actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (_) in
-                imagePickerController.sourceType = UIImagePickerController.SourceType.camera
-                self.present(imagePickerController, animated: true, completion: nil)
-            }))
-        }
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        present(actionSheet, animated: true)
-    }
-}

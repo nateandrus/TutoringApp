@@ -10,6 +10,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CabinBold.ttf">
+            <string>Cabin-Bold</string>
+        </array>
+        <array key="CabinRegular.ttf">
+            <string>Cabin-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Student Profile View Controller-->
         <scene sceneID="tie-Xl-TbA">
@@ -27,48 +35,49 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N64-AM-KXs">
-                                <rect key="frame" x="176" y="136.5" width="222" height="39.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <rect key="frame" x="176" y="136" width="222" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="3jr-xs-H9o">
-                                <rect key="frame" x="16" y="284" width="382" height="230.5"/>
+                                <rect key="frame" x="16" y="284" width="382" height="246"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlS-nH-c5o">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="27"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="7el-oR-Iwi">
-                                        <rect key="frame" x="0.0" y="48" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="51" width="382" height="27"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gz-2S-yVs">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="27"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="22"/>
+                                                <color key="textColor" name="protegeGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fat-PM-7bm">
-                                                <rect key="frame" x="65" y="0.0" width="317" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="76" y="0.0" width="306" height="27"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="22"/>
+                                                <color key="textColor" name="protegeGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-Q6-b4h">
-                                        <rect key="frame" x="0.0" y="92.5" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="102" width="382" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMh-BK-EE4">
-                                                <rect key="frame" x="0.0" y="0.0" width="235" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="216" height="36"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="22"/>
+                                                <color key="textColor" name="protegeGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="257" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEO-C0-k4j">
-                                                <rect key="frame" x="259" y="0.0" width="123" height="30"/>
+                                                <rect key="frame" x="240" y="0.0" width="142" height="36"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                 <state key="normal" title="Change Password">
                                                     <color key="titleColor" name="protegeBlue"/>
                                                 </state>
@@ -79,19 +88,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdJ-ML-n2i">
-                                        <rect key="frame" x="0.0" y="146.5" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="162" width="382" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InF-UY-WLh">
-                                                <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                 <state key="normal" title="Logout">
-                                                    <color key="titleColor" red="0.7210302982233503" green="0.091390690967119576" blue="0.042139784067255097" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.72156862745098038" green="0.090196078431372548" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="logoutButtonTapped:" destination="fcI-1Q-SRX" eventType="touchUpInside" id="8qg-Ce-q6O"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJa-J5-qG3">
-                                                <rect key="frame" x="48" y="0.0" width="334" height="30"/>
+                                                <rect key="frame" x="57" y="0.0" width="325" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -100,10 +110,11 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdJ-s1-iw7">
-                                        <rect key="frame" x="0.0" y="200.5" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="216" width="382" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="257" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5p3-O2-4kL">
-                                                <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                 <state key="normal" title="Delete Account">
                                                     <color key="titleColor" red="0.72103029819999997" green="0.091390690969999994" blue="0.042139784069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -112,7 +123,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed1-CU-zWP">
-                                                <rect key="frame" x="105" y="0.0" width="277" height="30"/>
+                                                <rect key="frame" x="124" y="0.0" width="258" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -176,6 +187,9 @@
         <image name="user" width="28" height="31"/>
         <namedColor name="protegeBlue">
             <color red="0.027450980392156862" green="0.27058823529411763" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="protegeGray">
+            <color red="0.41568627450980394" green="0.41568627450980394" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
