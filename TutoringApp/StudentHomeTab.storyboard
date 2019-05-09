@@ -396,7 +396,7 @@
                                 <action selector="segmentedControllerChanged:" destination="Xys-HD-yL4" eventType="valueChanged" id="Enl-1p-haM"/>
                             </connections>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="4xW-Sr-tRr">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Blue Filter Icon" id="4xW-Sr-tRr">
                             <connections>
                                 <action selector="filterButtonTapped:" destination="Xys-HD-yL4" id="FE2-tM-5D6"/>
                             </connections>
@@ -859,6 +859,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Blue Filter Icon" width="25" height="26"/>
         <image name="Rectangle" width="414" height="141"/>
         <image name="Rounded" width="30" height="30"/>
         <namedColor name="protegeBlue">
