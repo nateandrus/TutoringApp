@@ -319,7 +319,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HMA-JZ-kZD">
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="57.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-Xc-6eb">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-Xc-6eb">
                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                         <color key="textColor" name="protegeBlue"/>
@@ -1460,9 +1460,8 @@
                                                     <constraint firstItem="HQG-7K-tqM" firstAttribute="top" secondItem="mF0-yf-3oU" secondAttribute="top" constant="407" id="k5B-hF-SKs"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-tf-l6B">
-                                                <rect key="frame" x="88" y="26" width="224" height="27"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-tf-l6B">
+                                                <rect key="frame" x="95" y="32" width="224" height="27"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 4 of 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stU-EQ-k7J">
                                                         <rect key="frame" x="0.0" y="0.0" width="224" height="22"/>
@@ -1485,8 +1484,10 @@
                                             <constraint firstItem="gBN-6y-ppC" firstAttribute="leading" secondItem="NF2-vb-rjA" secondAttribute="leading" constant="16" id="TN4-RK-rIu"/>
                                             <constraint firstItem="mF0-yf-3oU" firstAttribute="centerX" secondItem="NF2-vb-rjA" secondAttribute="centerX" id="WQq-Uo-3nt"/>
                                             <constraint firstItem="e9S-3b-b6M" firstAttribute="centerX" secondItem="NF2-vb-rjA" secondAttribute="centerX" id="bd8-GB-4PM"/>
+                                            <constraint firstItem="zLv-tf-l6B" firstAttribute="top" secondItem="NF2-vb-rjA" secondAttribute="top" constant="32" id="e66-vF-9Lx"/>
                                             <constraint firstItem="gBN-6y-ppC" firstAttribute="top" secondItem="NF2-vb-rjA" secondAttribute="top" constant="16" id="eVl-TS-QE4"/>
                                             <constraint firstItem="e9S-3b-b6M" firstAttribute="top" secondItem="NF2-vb-rjA" secondAttribute="top" constant="100" id="kyi-1s-Vqp"/>
+                                            <constraint firstItem="zLv-tf-l6B" firstAttribute="centerX" secondItem="NF2-vb-rjA" secondAttribute="centerX" id="v5f-i2-Icq"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1587,9 +1588,8 @@
                                     <action selector="addLicensePhotoButtonTapped:" destination="WOO-Fc-p5v" eventType="touchUpInside" id="G5K-ty-caH"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iL7-Ff-1zY">
-                                <rect key="frame" x="95" y="70" width="224" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iL7-Ff-1zY">
+                                <rect key="frame" x="95" y="76" width="224" height="27"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 5 of 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZV-4X-wWj">
                                         <rect key="frame" x="0.0" y="0.0" width="224" height="22"/>
@@ -1604,6 +1604,16 @@
                                     </progressView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxf-FU-slZ">
+                                <rect key="frame" x="158" y="719" width="98" height="33"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" name="protegeBlue"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DUA-mP-UUj" kind="show" id="WPz-gD-pQZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1611,6 +1621,7 @@
                             <constraint firstItem="PQ4-SE-56k" firstAttribute="top" secondItem="D0D-ql-iNc" secondAttribute="bottom" constant="175" id="2oc-sx-Xn3"/>
                             <constraint firstItem="D0D-ql-iNc" firstAttribute="width" secondItem="D0D-ql-iNc" secondAttribute="height" multiplier="1:1" id="Bu0-9v-VBQ"/>
                             <constraint firstItem="x9L-6d-z70" firstAttribute="centerX" secondItem="yyk-zf-Rvm" secondAttribute="centerX" id="ChB-bd-Y7f"/>
+                            <constraint firstItem="iL7-Ff-1zY" firstAttribute="centerX" secondItem="yyk-zf-Rvm" secondAttribute="centerX" id="Nd7-P3-dKH"/>
                             <constraint firstItem="PQ4-SE-56k" firstAttribute="centerX" secondItem="yyk-zf-Rvm" secondAttribute="centerX" id="QCr-Ie-jrr"/>
                             <constraint firstItem="D0D-ql-iNc" firstAttribute="top" secondItem="eDP-zx-ihR" secondAttribute="top" constant="16" id="Wek-23-dEe"/>
                             <constraint firstItem="D0D-ql-iNc" firstAttribute="leading" secondItem="eDP-zx-ihR" secondAttribute="leading" constant="16" id="ZAY-HM-lLh"/>
@@ -1619,11 +1630,14 @@
                             <constraint firstItem="RnE-in-3fH" firstAttribute="bottom" secondItem="eDk-gD-gl4" secondAttribute="bottom" id="dji-NA-kZ5"/>
                             <constraint firstItem="PQ4-SE-56k" firstAttribute="width" secondItem="yyk-zf-Rvm" secondAttribute="width" multiplier="0.8" id="hfs-xv-O8o"/>
                             <constraint firstItem="QKI-Sq-4gE" firstAttribute="width" secondItem="PQ4-SE-56k" secondAttribute="width" id="ikH-gt-8J4"/>
+                            <constraint firstItem="bxf-FU-slZ" firstAttribute="top" secondItem="x9L-6d-z70" secondAttribute="bottom" constant="40" id="kDl-Kn-JDT"/>
                             <constraint firstItem="RnE-in-3fH" firstAttribute="top" secondItem="eDk-gD-gl4" secondAttribute="top" id="mbX-b3-Flf"/>
                             <constraint firstItem="x9L-6d-z70" firstAttribute="top" secondItem="QKI-Sq-4gE" secondAttribute="bottom" constant="32" id="p7u-a1-rIx"/>
+                            <constraint firstItem="bxf-FU-slZ" firstAttribute="centerX" secondItem="yyk-zf-Rvm" secondAttribute="centerX" id="pe3-f2-xjh"/>
                             <constraint firstItem="RnE-in-3fH" firstAttribute="leading" secondItem="eDk-gD-gl4" secondAttribute="leading" id="rHF-rj-wrd"/>
                             <constraint firstItem="QKI-Sq-4gE" firstAttribute="top" secondItem="eDk-gD-gl4" secondAttribute="bottom" constant="24" id="sXH-lK-u6G"/>
                             <constraint firstItem="QKI-Sq-4gE" firstAttribute="centerX" secondItem="yyk-zf-Rvm" secondAttribute="centerX" id="t26-V4-yjF"/>
+                            <constraint firstItem="iL7-Ff-1zY" firstAttribute="top" secondItem="eDP-zx-ihR" secondAttribute="top" constant="32" id="y9V-Sv-vyK"/>
                             <constraint firstItem="eDk-gD-gl4" firstAttribute="centerX" secondItem="yyk-zf-Rvm" secondAttribute="centerX" id="zl0-4W-YAT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eDP-zx-ihR"/>
@@ -1637,6 +1651,140 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqN-he-Jy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4223.188405797102" y="-1957.3660714285713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RiT-gL-GUn">
+            <objects>
+                <viewController id="DUA-mP-UUj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WLM-2y-lFp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yY6-Rx-6gT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="2922"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wf4-aM-uxv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnq-Ps-8ff">
+                                                <rect key="frame" x="16" y="16" width="382" height="2968"/>
+                                                <mutableString key="text">Nathan Andrus built the Protégé app as a Free app. This SERVICE is provided by Nathan Andrus at no cost and is intended for use as is.
+
+This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
+
+If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.
+
+The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Protégé unless otherwise defined in this Privacy Policy.
+
+Information Collection and Use
+
+For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information, including but not limited to Name, Email, Date of Birth, Zipcode. The information that I request will be retained on your device and is not collected by me in any way.
+
+The app does use third party services that may collect information used to identify you.
+
+Link to privacy policy of third party service providers used by the app
+
+Google Play Services
+Log Data
+
+I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.
+
+Cookies
+
+Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
+
+This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.
+
+Service Providers
+
+I may employ third-party companies and individuals due to the following reasons:
+
+To facilitate our Service;
+To provide the Service on our behalf;
+To perform Service-related services; or
+To assist us in analyzing how our Service is used.
+I want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
+
+Security
+
+I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.
+
+Links to Other Sites
+
+This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+
+Children’s Privacy
+
+These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do necessary actions.
+
+Changes to This Privacy Policy
+
+I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
+
+Contact Us
+
+If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at psyco_soccer@hotmail.com.
+
+This privacy policy page was created at privacypolicytemplate.net and modified/generated by App Privacy Policy Generator</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqh-i1-VIa">
+                                                <rect key="frame" x="16" y="16" width="36" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="←">
+                                                    <color key="titleColor" name="protegeBlue"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="WOO-Fc-p5v" kind="show" id="0vY-Be-vON"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMR-Kg-gEd">
+                                                <rect key="frame" x="140.5" y="54" width="133.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3000" id="KZ9-cC-ABc"/>
+                                            <constraint firstItem="Fnq-Ps-8ff" firstAttribute="leading" secondItem="wf4-aM-uxv" secondAttribute="leading" constant="16" id="Nxo-DA-fE6"/>
+                                            <constraint firstItem="cqh-i1-VIa" firstAttribute="width" secondItem="cqh-i1-VIa" secondAttribute="height" multiplier="1:1" id="Qhp-2Z-DLg"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fnq-Ps-8ff" secondAttribute="trailing" constant="16" id="SEm-jC-nBn"/>
+                                            <constraint firstItem="Fnq-Ps-8ff" firstAttribute="top" secondItem="wf4-aM-uxv" secondAttribute="top" constant="16" id="VGi-Z4-gWP"/>
+                                            <constraint firstItem="cqh-i1-VIa" firstAttribute="leading" secondItem="wf4-aM-uxv" secondAttribute="leading" constant="16" id="VQS-Dm-hcs"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fnq-Ps-8ff" secondAttribute="bottom" constant="16" id="aEJ-Vr-67i"/>
+                                            <constraint firstItem="qMR-Kg-gEd" firstAttribute="centerX" secondItem="wf4-aM-uxv" secondAttribute="centerX" id="emw-ZK-kzU"/>
+                                            <constraint firstItem="qMR-Kg-gEd" firstAttribute="top" secondItem="wf4-aM-uxv" secondAttribute="top" constant="54" id="ihK-5X-L9B"/>
+                                            <constraint firstItem="cqh-i1-VIa" firstAttribute="top" secondItem="wf4-aM-uxv" secondAttribute="top" constant="16" id="pOd-q4-wPI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wf4-aM-uxv" firstAttribute="top" secondItem="yY6-Rx-6gT" secondAttribute="top" id="30u-wT-Utu"/>
+                                    <constraint firstItem="wf4-aM-uxv" firstAttribute="leading" secondItem="yY6-Rx-6gT" secondAttribute="leading" id="U1K-Ew-eLE"/>
+                                    <constraint firstAttribute="bottom" secondItem="wf4-aM-uxv" secondAttribute="bottom" id="WOV-Uc-uiP"/>
+                                    <constraint firstAttribute="trailing" secondItem="wf4-aM-uxv" secondAttribute="trailing" id="xJd-bQ-lJC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0lh-TC-sgS" firstAttribute="trailing" secondItem="yY6-Rx-6gT" secondAttribute="trailing" id="CyS-Lm-f8b"/>
+                            <constraint firstItem="wf4-aM-uxv" firstAttribute="width" secondItem="WLM-2y-lFp" secondAttribute="width" id="Sa6-6D-ZLX"/>
+                            <constraint firstItem="yY6-Rx-6gT" firstAttribute="leading" secondItem="0lh-TC-sgS" secondAttribute="leading" id="Wt6-cV-dRN"/>
+                            <constraint firstItem="0lh-TC-sgS" firstAttribute="bottom" secondItem="yY6-Rx-6gT" secondAttribute="bottom" id="lLu-Ph-Yz7"/>
+                            <constraint firstItem="yY6-Rx-6gT" firstAttribute="top" secondItem="0lh-TC-sgS" secondAttribute="top" id="vW0-fU-lWf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0lh-TC-sgS"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="3000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgy-sD-1YL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5121" y="-1955"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="Cim-xU-tGm">
@@ -1754,7 +1902,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.1674007663" green="0.45714005969999999" blue="0.55982312820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.62352941176470589" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BHY-o0-KDE" kind="relationship" relationship="viewControllers" id="xv0-HK-Teg"/>
@@ -1784,6 +1932,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.62352941179999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="FCl-zt-b3q" kind="relationship" relationship="viewControllers" id="cEi-uG-wz9"/>
@@ -1873,7 +2022,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="v6X-O5-RPU">
                                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="57.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOW-e5-LBR">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOW-e5-LBR">
                                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
                                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                         <color key="textColor" name="protegeBlue"/>
@@ -1941,7 +2090,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="v6k-Bn-7a7">
                                                                 <rect key="frame" x="0.0" y="334" width="373" height="57.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zipcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-Ss-qIH">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zip Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-Ss-qIH">
                                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
                                                                         <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                                                         <color key="textColor" name="protegeBlue"/>
@@ -1964,7 +2113,7 @@
                                                                         <color key="textColor" name="protegeBlue"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p69-Z4-7qH" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/DD/YYYY" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p69-Z4-7qH" customClass="NPTextField" customModule="TutoringApp" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="27.5" width="373" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="21"/>
@@ -2063,7 +2212,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="unchecked" width="50" height="50"/>
+        <image name="unchecked" width="21" height="20"/>
         <namedColor name="protegeBlue">
             <color red="0.027450980392156862" green="0.27058823529411763" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -2072,10 +2221,11 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ixo-HP-3pK"/>
-        <segue reference="9Zd-t5-A7O"/>
+        <segue reference="eYJ-15-NcS"/>
+        <segue reference="xby-MN-RsH"/>
+        <segue reference="E2D-Tv-sYX"/>
         <segue reference="abm-y5-OFv"/>
-        <segue reference="KG9-XR-VyQ"/>
-        <segue reference="YgT-7n-ZtI"/>
+        <segue reference="azB-NG-dQR"/>
+        <segue reference="W9Z-mG-kys"/>
     </inferredMetricsTieBreakers>
 </document>

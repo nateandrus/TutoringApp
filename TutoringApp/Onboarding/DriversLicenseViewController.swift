@@ -39,7 +39,7 @@ class DriversLicenseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        submitButton.layer.cornerRadius = submitButton.frame.height / 2 
+        submitButton.layer.cornerRadius = 3
     }
     
     @IBAction func addLicensePhotoButtonTapped(_ sender: UIButton) {
