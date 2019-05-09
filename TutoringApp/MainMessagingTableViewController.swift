@@ -59,11 +59,15 @@ class MainMessagingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as? StudentMessagingTableViewCell
         let chat = ChatController.shared.chats[indexPath.row]
-        TeacherController.shared.loadProfileImageView(userFirebaseUID: chat.teacherUID) { (image) in
-            if let image = image {
-                cell?.messagingImageView.image = image
-            } else {
-                cell?.messagingImageView.image = #imageLiteral(resourceName: "default user icon")
+        DispatchQueue.main.async {
+            TeacherController.shared.loadProfileImageView(userFirebaseUID: chat.teacherUID) { (image) in
+                if let image = image {
+                    cell?.messagingImageView.layer.cornerRadius = (cell?.messagingImageView.frame.height)! / 2
+                    cell?.messagingImageView.image = image
+                } else {
+                    cell?.messagingImageView.layer.cornerRadius = (cell?.messagingImageView.frame.height)! / 2 
+                    cell?.messagingImageView.image = #imageLiteral(resourceName: "default user icon")
+                }
             }
         }
         cell?.chatLanding = chat

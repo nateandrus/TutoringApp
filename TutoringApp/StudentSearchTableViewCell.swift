@@ -28,6 +28,5 @@ class StudentSearchTableViewCell: UITableViewCell {
         locationLabel.text = teacher.location
         priceLabel.text = "$\(teacher.costForTime)/hr"
         aboutLabel.text = teacher.aboutMe
-        profileImage.layer.cornerRadius = profileImage.frame.height / 2 
     }
 }
