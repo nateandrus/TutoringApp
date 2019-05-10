@@ -16,9 +16,13 @@ class BecomeMenteeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var createAccountButton: UIButton!
+    @IBOutlet weak var scroll: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        formatKeyboard()
         createAccountButton.layer.cornerRadius = 5
         nameTextField.layer.borderWidth = 2
         nameTextField.layer.borderColor = #colorLiteral(red: 0.02745098039, green: 0.2705882353, blue: 0.4352941176, alpha: 1)
@@ -56,5 +60,20 @@ class BecomeMenteeViewController: UIViewController, UITextFieldDelegate {
         let okayAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         alertController.addAction(okayAction)
         present(alertController, animated: true)
+    }
+    
+    func formatKeyboard() {
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
+            guard let userInfo = notification.userInfo,
+                let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+            self.bottomConstraint.constant += keyboardFrame.height
+            self.view.layoutSubviews()
+            let frameInContentView = self.emailTextField.convert(self.emailTextField.bounds, to: self.contentView)
+            let offSetPoint = CGPoint(x: self.contentView.frame.origin.x, y: frameInContentView.origin.y - frameInContentView.height)
+            self.scroll.setContentOffset(offSetPoint, animated: true)
+        }
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
+            self.bottomConstraint.constant = 0
+        }
     }
 }

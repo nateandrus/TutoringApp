@@ -18,6 +18,8 @@ class BecomeMentorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var DateOfBirthTextField: UITextField!
     @IBOutlet weak var nextStepButton: UIButton!
+    
+    //Pull these Outlets for the Scroll Views Keyboards to auto-adjust
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
