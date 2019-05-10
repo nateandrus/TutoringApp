@@ -10,6 +10,8 @@ target 'TutoringApp' do
  pod 'Firebase/Auth'
  pod 'Firebase/Storage'
  pod 'Firebase/Messaging'
- 
+ pod 'Firebase/Firestore'
+ pod 'MessageKit'
+ pod 'MessageInputBar'
 
 end

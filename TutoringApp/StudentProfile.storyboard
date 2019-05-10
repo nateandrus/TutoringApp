@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nyd-uI-1d6">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CabinBold.ttf">
+            <string>Cabin-Bold</string>
+        </array>
+        <array key="CabinRegular.ttf">
+            <string>Cabin-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Student Profile View Controller-->
+        <scene sceneID="tie-Xl-TbA">
+            <objects>
+                <viewController id="fcI-1Q-SRX" customClass="StudentProfileViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oi5-aZ-dRI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGf-QQ-WzS">
+                                <rect key="frame" x="24" y="112" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SGf-QQ-WzS" secondAttribute="height" multiplier="1:1" id="I2j-jG-Be4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N64-AM-KXs">
+                                <rect key="frame" x="172" y="157" width="226" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="3jr-xs-H9o">
+                                <rect key="frame" x="16" y="300" width="382" height="275"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlS-nH-c5o">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="27"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="7el-oR-Iwi">
+                                        <rect key="frame" x="0.0" y="46" width="382" height="27"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gz-2S-yVs">
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="27"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="22"/>
+                                                <color key="textColor" name="protegeGray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fat-PM-7bm">
+                                                <rect key="frame" x="76" y="0.0" width="306" height="27"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="22"/>
+                                                <color key="textColor" name="protegeGray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-Q6-b4h">
+                                        <rect key="frame" x="0.0" y="92" width="382" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMh-BK-EE4">
+                                                <rect key="frame" x="0.0" y="0.0" width="216" height="36"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="22"/>
+                                                <color key="textColor" name="protegeGray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="257" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEO-C0-k4j">
+                                                <rect key="frame" x="240" y="0.0" width="142" height="36"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                                <state key="normal" title="Change Password">
+                                                    <color key="titleColor" name="protegeBlue"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changePasswordButtonClicked:" destination="fcI-1Q-SRX" eventType="touchUpInside" id="uLt-pq-hnS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdJ-ML-n2i">
+                                        <rect key="frame" x="0.0" y="147" width="382" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InF-UY-WLh">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                                <state key="normal" title="Logout">
+                                                    <color key="titleColor" red="0.72156862745098038" green="0.090196078431372548" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logoutButtonTapped:" destination="fcI-1Q-SRX" eventType="touchUpInside" id="8qg-Ce-q6O"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zA0-zg-THA">
+                                                <rect key="frame" x="57" y="0.0" width="325" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Fqp-0G-Jcq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lq-4I-KSs">
+                                        <rect key="frame" x="0.0" y="196" width="382" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="257" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5p3-O2-4kL">
+                                                <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
+                                                <state key="normal" title="Delete Account">
+                                                    <color key="titleColor" red="0.72103029819999997" green="0.091390690969999994" blue="0.042139784069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deleteAccountButtonTapped:" destination="fcI-1Q-SRX" eventType="touchUpInside" id="kOZ-uC-d6I"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTW-zp-bKa">
+                                                <rect key="frame" x="124" y="0.0" width="258" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="H2y-GZ-lSJ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTc-Py-LC7">
+                                        <rect key="frame" x="0.0" y="245" width="382" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="262" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPf-cU-lZV">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="30"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
+                                                <state key="normal" title="Privacy Policy">
+                                                    <color key="titleColor" name="protegeBlue"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="boB-1v-7oT" kind="show" id="a8F-Rj-PMX"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRm-hw-xzE">
+                                                <rect key="frame" x="98" y="0.0" width="284" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bQN-cP-kpY"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg9-Gy-Kmg">
+                                <rect key="frame" x="118" y="206" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dg9-Gy-Kmg" secondAttribute="height" multiplier="1:1" id="RPq-bH-vvk"/>
+                                </constraints>
+                                <state key="normal" title="✚">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeProfileImageButtonTapped:" destination="fcI-1Q-SRX" eventType="touchUpInside" id="yRT-Qi-gEL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dvh-xv-9w8" firstAttribute="trailing" secondItem="N64-AM-KXs" secondAttribute="trailing" constant="16" id="7JL-ty-yyu"/>
+                            <constraint firstItem="N64-AM-KXs" firstAttribute="centerY" secondItem="SGf-QQ-WzS" secondAttribute="centerY" id="Afj-QA-Z6w"/>
+                            <constraint firstItem="dg9-Gy-Kmg" firstAttribute="trailing" secondItem="SGf-QQ-WzS" secondAttribute="trailing" id="Jj6-Nh-g6e"/>
+                            <constraint firstItem="SGf-QQ-WzS" firstAttribute="leading" secondItem="Dvh-xv-9w8" secondAttribute="leading" constant="24" id="N0c-Lh-L3K"/>
+                            <constraint firstItem="SGf-QQ-WzS" firstAttribute="width" secondItem="Oi5-aZ-dRI" secondAttribute="width" multiplier="0.3" id="QOj-l6-BrQ"/>
+                            <constraint firstItem="3jr-xs-H9o" firstAttribute="top" secondItem="SGf-QQ-WzS" secondAttribute="bottom" constant="64" id="RF2-Hi-a1x"/>
+                            <constraint firstItem="SGf-QQ-WzS" firstAttribute="top" secondItem="Dvh-xv-9w8" secondAttribute="top" constant="24" id="Us2-zx-REh"/>
+                            <constraint firstItem="Dvh-xv-9w8" firstAttribute="trailing" secondItem="3jr-xs-H9o" secondAttribute="trailing" constant="16" id="edR-uF-6W2"/>
+                            <constraint firstItem="3jr-xs-H9o" firstAttribute="centerX" secondItem="Oi5-aZ-dRI" secondAttribute="centerX" id="fUS-4K-Rhy"/>
+                            <constraint firstItem="dg9-Gy-Kmg" firstAttribute="bottom" secondItem="SGf-QQ-WzS" secondAttribute="bottom" id="hT0-33-uiG"/>
+                            <constraint firstItem="3jr-xs-H9o" firstAttribute="leading" secondItem="Dvh-xv-9w8" secondAttribute="leading" constant="16" id="iZU-cp-dJN"/>
+                            <constraint firstItem="N64-AM-KXs" firstAttribute="leading" secondItem="SGf-QQ-WzS" secondAttribute="trailing" constant="24" id="zws-3j-UJo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dvh-xv-9w8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4I5-o3-5ac"/>
+                    <connections>
+                        <outlet property="changeProfileButton" destination="dg9-Gy-Kmg" id="RH7-vR-fun"/>
+                        <outlet property="studentEmailLabel" destination="fat-PM-7bm" id="Avz-Zr-f9P"/>
+                        <outlet property="studentNameLabel" destination="N64-AM-KXs" id="f5e-Lp-Hvs"/>
+                        <outlet property="studentProfilePicture" destination="SGf-QQ-WzS" id="9c0-TB-3da"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6g-lT-Feb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2863.768115942029" y="-188.16964285714286"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1xy-WE-ncj">
+            <objects>
+                <viewController id="boB-1v-7oT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nQ0-ac-Ch9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VsE-Ej-d38">
+                                <rect key="frame" x="0.0" y="88" width="414" height="2878"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjE-EJ-YjH">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2W-fB-p8R">
+                                                <rect key="frame" x="16" y="16" width="382" height="2968"/>
+                                                <string key="text">Nathan Andrus built the Protégé app as a Free app. This SERVICE is provided by Nathan Andrus at no cost and is intended for use as is.
+
+This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
+
+If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.
+
+The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Protégé unless otherwise defined in this Privacy Policy.
+
+Information Collection and Use
+
+For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information, including but not limited to Name, Email, Date of Birth, Zipcode. The information that I request will be retained on your device and is not collected by me in any way.
+
+The app does use third party services that may collect information used to identify you.
+
+Link to privacy policy of third party service providers used by the app
+
+Google Play Services
+Log Data
+
+I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.
+
+Cookies
+
+Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
+
+This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.
+
+Service Providers
+
+I may employ third-party companies and individuals due to the following reasons:
+
+To facilitate our Service;
+To provide the Service on our behalf;
+To perform Service-related services; or
+To assist us in analyzing how our Service is used.
+I want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
+
+Security
+
+I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.
+
+Links to Other Sites
+
+This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+
+Children’s Privacy
+
+These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do necessary actions.
+
+Changes to This Privacy Policy
+
+I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
+
+Contact Us
+
+If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at psyco_soccer@hotmail.com.
+
+This privacy policy page was created at privacypolicytemplate.net and modified/generated by App Privacy Policy Generator</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="y2W-fB-p8R" firstAttribute="leading" secondItem="LjE-EJ-YjH" secondAttribute="leading" constant="16" id="Fqf-gC-oOY"/>
+                                            <constraint firstAttribute="height" constant="3000" id="Hep-dd-7FL"/>
+                                            <constraint firstAttribute="trailing" secondItem="y2W-fB-p8R" secondAttribute="trailing" constant="16" id="O3m-fa-CXQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="y2W-fB-p8R" secondAttribute="bottom" constant="16" id="S3N-9v-bcP"/>
+                                            <constraint firstItem="y2W-fB-p8R" firstAttribute="top" secondItem="LjE-EJ-YjH" secondAttribute="top" constant="16" id="ZpQ-7T-pki"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LjE-EJ-YjH" firstAttribute="leading" secondItem="VsE-Ej-d38" secondAttribute="leading" id="XOP-Ey-JfV"/>
+                                    <constraint firstAttribute="trailing" secondItem="LjE-EJ-YjH" secondAttribute="trailing" id="alT-xe-0Sx"/>
+                                    <constraint firstAttribute="bottom" secondItem="LjE-EJ-YjH" secondAttribute="bottom" id="ogI-8S-ewI"/>
+                                    <constraint firstItem="LjE-EJ-YjH" firstAttribute="top" secondItem="VsE-Ej-d38" secondAttribute="top" id="pID-Tr-LgN"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="acU-Q6-OqR" firstAttribute="bottom" secondItem="VsE-Ej-d38" secondAttribute="bottom" id="Jzh-zi-btd"/>
+                            <constraint firstItem="LjE-EJ-YjH" firstAttribute="width" secondItem="nQ0-ac-Ch9" secondAttribute="width" id="Wd6-Y0-n5c"/>
+                            <constraint firstItem="VsE-Ej-d38" firstAttribute="top" secondItem="acU-Q6-OqR" secondAttribute="top" id="Weg-7t-LZY"/>
+                            <constraint firstItem="VsE-Ej-d38" firstAttribute="leading" secondItem="acU-Q6-OqR" secondAttribute="leading" id="pAv-0c-HI3"/>
+                            <constraint firstItem="acU-Q6-OqR" firstAttribute="trailing" secondItem="VsE-Ej-d38" secondAttribute="trailing" id="x87-Jf-mVO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="acU-Q6-OqR"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="3000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="roK-nd-k0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3580" y="516"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gv8-hR-1Om">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nyd-uI-1d6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="user" id="QNx-6k-8B8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zu9-jU-2lY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fcI-1Q-SRX" kind="relationship" relationship="rootViewController" id="rb8-RP-Isf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fn-0Z-ZXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2136" y="-188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="user" width="28" height="31"/>
+        <namedColor name="protegeBlue">
+            <color red="0.027450980392156862" green="0.27058823529411763" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="protegeGray">
+            <color red="0.41568627450980394" green="0.41568627450980394" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gZ3-yM-16R">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Jpa-k0-yop">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gZ3-yM-16R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="message-square" id="J4s-ve-Pgm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6iY-U5-vqf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zTe-yJ-pUN" kind="relationship" relationship="rootViewController" id="OeO-3U-5ul"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRg-JZ-OV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401.449275362319" y="502.90178571428567"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="SRd-8F-U6H">
+            <objects>
+                <tableViewController id="zTe-yJ-pUN" customClass="TeacherMessagingTableViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eSF-z8-Jdp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="111" id="TUU-eE-mmw" customClass="TeacherMessagingTableViewCell" customModule="TutoringApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="111"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TUU-eE-mmw" id="p15-6X-fNv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="110.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wf9-P6-UVI">
+                                            <rect key="frame" x="16" y="5.5" width="99.5" height="99.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="wf9-P6-UVI" secondAttribute="height" multiplier="1:1" id="gVB-Tt-N7s"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-ay-XSL">
+                                            <rect key="frame" x="131.5" y="23.5" width="66" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(last message)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1l-kw-tkK">
+                                            <rect key="frame" x="131.5" y="63.5" width="246.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(timestamp)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FC-1k-UVY">
+                                            <rect key="frame" x="304" y="23.5" width="94" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="i1l-kw-tkK" secondAttribute="trailing" constant="16" id="BDE-2J-S6O"/>
+                                        <constraint firstItem="wf9-P6-UVI" firstAttribute="leading" secondItem="p15-6X-fNv" secondAttribute="leading" constant="16" id="CSA-Qc-NRB"/>
+                                        <constraint firstItem="i1l-kw-tkK" firstAttribute="leading" secondItem="ChX-ay-XSL" secondAttribute="leading" id="Fq8-Ok-8Js"/>
+                                        <constraint firstAttribute="trailing" secondItem="6FC-1k-UVY" secondAttribute="trailing" constant="16" id="IXC-lT-voQ"/>
+                                        <constraint firstItem="wf9-P6-UVI" firstAttribute="centerY" secondItem="p15-6X-fNv" secondAttribute="centerY" id="SsQ-A9-BYa"/>
+                                        <constraint firstItem="6FC-1k-UVY" firstAttribute="top" secondItem="ChX-ay-XSL" secondAttribute="top" id="b5J-XK-LdI"/>
+                                        <constraint firstItem="ChX-ay-XSL" firstAttribute="centerY" secondItem="wf9-P6-UVI" secondAttribute="centerY" constant="-20" id="ezt-vZ-X56"/>
+                                        <constraint firstItem="wf9-P6-UVI" firstAttribute="height" secondItem="p15-6X-fNv" secondAttribute="height" multiplier="0.9" id="mNH-GY-I9W"/>
+                                        <constraint firstItem="i1l-kw-tkK" firstAttribute="top" secondItem="ChX-ay-XSL" secondAttribute="bottom" constant="16" id="rn7-bZ-OhN"/>
+                                        <constraint firstItem="ChX-ay-XSL" firstAttribute="leading" secondItem="wf9-P6-UVI" secondAttribute="trailing" constant="16" id="wen-E7-jMD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lastMessageLabel" destination="i1l-kw-tkK" id="c5I-1Y-aUE"/>
+                                    <outlet property="messageImageView" destination="wf9-P6-UVI" id="Ysj-x1-G5o"/>
+                                    <outlet property="nameLabel" destination="ChX-ay-XSL" id="CFZ-oi-nY8"/>
+                                    <outlet property="timestampLabel" destination="6FC-1k-UVY" id="TnO-DC-eiy"/>
+                                    <segue destination="vAF-Hu-m50" kind="show" identifier="toMessageDetail" id="zg9-8b-SK9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zTe-yJ-pUN" id="zgc-WJ-oEX"/>
+                            <outlet property="delegate" destination="zTe-yJ-pUN" id="Lf0-2n-3mW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chats" id="Sdn-Qt-Rex"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUW-0X-zhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2127.536231884058" y="497.54464285714283"/>
+        </scene>
+        <!--(who?)-->
+        <scene sceneID="a5t-ek-X62">
+            <objects>
+                <viewController id="vAF-Hu-m50" customClass="TeacherMessageDetailViewController" customModule="TutoringApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qnh-XF-Jjr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="t1b-9S-eEx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="(who?)" id="fcO-xf-69i">
+                        <barButtonItem key="rightBarButtonItem" image="info" id="fp8-eC-LdE">
+                            <connections>
+                                <action selector="infoBarButtonTapped:" destination="vAF-Hu-m50" id="sZG-4S-nZn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L61-fN-fAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2875" y="498"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info" width="35" height="35"/>
+        <image name="message-square" width="30" height="30"/>
+    </resources>
+</document>
