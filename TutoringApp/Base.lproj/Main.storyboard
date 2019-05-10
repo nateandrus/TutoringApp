@@ -279,17 +279,29 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9o-VV-RqQ">
+                                                <rect key="frame" x="158" y="665.5" width="98" height="33"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
+                                                <state key="normal" title="Privacy Policy">
+                                                    <color key="titleColor" name="protegeBlue"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="DUA-mP-UUj" kind="show" id="DsQ-Tp-axv"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Mhz-8Q-DSP" firstAttribute="top" secondItem="qzT-Wo-PzP" secondAttribute="bottom" constant="88" id="9PR-MM-jq1"/>
                                             <constraint firstItem="Hpg-px-MAY" firstAttribute="centerX" secondItem="IkG-rH-usj" secondAttribute="centerX" id="GKV-0D-atS"/>
+                                            <constraint firstItem="w9o-VV-RqQ" firstAttribute="centerX" secondItem="IkG-rH-usj" secondAttribute="centerX" id="QeT-Ug-wLW"/>
                                             <constraint firstItem="Mhz-8Q-DSP" firstAttribute="leading" secondItem="IkG-rH-usj" secondAttribute="leading" constant="32" id="RNo-MD-dCC"/>
                                             <constraint firstItem="qzT-Wo-PzP" firstAttribute="centerX" secondItem="IkG-rH-usj" secondAttribute="centerX" id="TZb-ij-AfP"/>
                                             <constraint firstAttribute="trailing" secondItem="Mhz-8Q-DSP" secondAttribute="trailing" constant="32" id="adC-zO-6DD"/>
                                             <constraint firstAttribute="height" constant="818" id="hgH-yf-acO"/>
                                             <constraint firstItem="qzT-Wo-PzP" firstAttribute="top" secondItem="IkG-rH-usj" secondAttribute="top" constant="150" id="klj-0f-GSu"/>
                                             <constraint firstItem="Hpg-px-MAY" firstAttribute="top" secondItem="Mhz-8Q-DSP" secondAttribute="bottom" constant="88" id="rOx-WS-g8d"/>
+                                            <constraint firstItem="w9o-VV-RqQ" firstAttribute="top" secondItem="Hpg-px-MAY" secondAttribute="bottom" constant="64" id="ywm-Pa-QEC"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1682,18 +1694,8 @@
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxf-FU-slZ">
-                                                <rect key="frame" x="158" y="586.5" width="98" height="33"/>
-                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
-                                                <state key="normal" title="Privacy Policy">
-                                                    <color key="titleColor" name="protegeBlue"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="DUA-mP-UUj" kind="show" id="WPz-gD-pQZ"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKI-Sq-4gE">
-                                                <rect key="frame" x="16" y="715.5" width="382" height="38"/>
+                                                <rect key="frame" x="16" y="586.5" width="382" height="38"/>
                                                 <color key="backgroundColor" name="protegeBlue"/>
                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="21"/>
                                                 <state key="normal" title="Submit">
@@ -1721,17 +1723,16 @@
                                         <constraints>
                                             <constraint firstItem="x9L-6d-z70" firstAttribute="centerX" secondItem="Oso-5H-cii" secondAttribute="centerX" id="1je-Kf-VZ9"/>
                                             <constraint firstItem="RnE-in-3fH" firstAttribute="leading" secondItem="Oso-5H-cii" secondAttribute="leading" constant="16" id="6b5-iO-abo"/>
-                                            <constraint firstItem="QKI-Sq-4gE" firstAttribute="top" secondItem="bxf-FU-slZ" secondAttribute="bottom" constant="96" id="8lB-hO-pv4"/>
                                             <constraint firstItem="PQ4-SE-56k" firstAttribute="leading" secondItem="Oso-5H-cii" secondAttribute="leading" constant="16" id="BZQ-mx-1bu"/>
                                             <constraint firstItem="PQ4-SE-56k" firstAttribute="top" secondItem="iL7-Ff-1zY" secondAttribute="bottom" constant="144" id="DtN-Ty-4b1"/>
                                             <constraint firstItem="D0D-ql-iNc" firstAttribute="top" secondItem="Oso-5H-cii" secondAttribute="top" constant="16" id="LjQ-Bw-M0S"/>
-                                            <constraint firstItem="bxf-FU-slZ" firstAttribute="top" secondItem="x9L-6d-z70" secondAttribute="bottom" constant="64" id="PsT-HM-L5h"/>
                                             <constraint firstAttribute="trailing" secondItem="QKI-Sq-4gE" secondAttribute="trailing" constant="16" id="VA7-dk-Mpi"/>
                                             <constraint firstItem="RnE-in-3fH" firstAttribute="top" secondItem="PQ4-SE-56k" secondAttribute="bottom" constant="48" id="YSV-Gd-wfn"/>
                                             <constraint firstItem="iL7-Ff-1zY" firstAttribute="centerX" secondItem="Oso-5H-cii" secondAttribute="centerX" id="bVH-fw-lJV"/>
                                             <constraint firstItem="eDk-gD-gl4" firstAttribute="trailing" secondItem="RnE-in-3fH" secondAttribute="trailing" id="eWl-tW-fEW"/>
                                             <constraint firstItem="eDk-gD-gl4" firstAttribute="leading" secondItem="RnE-in-3fH" secondAttribute="leading" id="f2P-bD-hUo"/>
                                             <constraint firstItem="iL7-Ff-1zY" firstAttribute="top" secondItem="Oso-5H-cii" secondAttribute="top" constant="32" id="gxa-FX-EjV"/>
+                                            <constraint firstItem="QKI-Sq-4gE" firstAttribute="top" secondItem="x9L-6d-z70" secondAttribute="bottom" constant="64" id="hq1-Cj-sCy"/>
                                             <constraint firstAttribute="trailing" secondItem="PQ4-SE-56k" secondAttribute="trailing" constant="16" id="iOa-Ij-AGA"/>
                                             <constraint firstItem="QKI-Sq-4gE" firstAttribute="leading" secondItem="Oso-5H-cii" secondAttribute="leading" constant="16" id="kqH-jZ-fLE"/>
                                             <constraint firstItem="D0D-ql-iNc" firstAttribute="leading" secondItem="Oso-5H-cii" secondAttribute="leading" constant="16" id="meT-Fr-K4e"/>
@@ -1739,7 +1740,6 @@
                                             <constraint firstAttribute="trailing" secondItem="RnE-in-3fH" secondAttribute="trailing" constant="16" id="snr-b9-75h"/>
                                             <constraint firstItem="eDk-gD-gl4" firstAttribute="bottom" secondItem="RnE-in-3fH" secondAttribute="bottom" id="t04-9x-JwA"/>
                                             <constraint firstAttribute="height" constant="818" id="uUX-WP-Aa4"/>
-                                            <constraint firstItem="bxf-FU-slZ" firstAttribute="centerX" secondItem="Oso-5H-cii" secondAttribute="centerX" id="vxz-oS-vDa"/>
                                             <constraint firstItem="eDk-gD-gl4" firstAttribute="top" secondItem="RnE-in-3fH" secondAttribute="top" id="zlR-W8-0LX"/>
                                         </constraints>
                                     </view>
@@ -1857,7 +1857,7 @@ This privacy policy page was created at privacypolicytemplate.net and modified/g
                                                     <color key="titleColor" name="protegeBlue"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="WOO-Fc-p5v" kind="show" id="0vY-Be-vON"/>
+                                                    <segue destination="kSy-hP-lGT" kind="show" id="iGT-Ne-AiY"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMR-Kg-gEd">
@@ -1904,7 +1904,7 @@ This privacy policy page was created at privacypolicytemplate.net and modified/g
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgy-sD-1YL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5121" y="-1955"/>
+            <point key="canvasLocation" x="1952" y="-538"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="Cim-xU-tGm">
@@ -2364,11 +2364,12 @@ This privacy policy page was created at privacypolicytemplate.net and modified/g
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eYJ-15-NcS"/>
-        <segue reference="0vY-Be-vON"/>
+        <segue reference="DsQ-Tp-axv"/>
+        <segue reference="xby-MN-RsH"/>
+        <segue reference="Ixo-HP-3pK"/>
         <segue reference="E2D-Tv-sYX"/>
         <segue reference="abm-y5-OFv"/>
-        <segue reference="azB-NG-dQR"/>
-        <segue reference="RUb-6C-w2s"/>
+        <segue reference="iGT-Ne-AiY"/>
+        <segue reference="W9Z-mG-kys"/>
     </inferredMetricsTieBreakers>
 </document>
