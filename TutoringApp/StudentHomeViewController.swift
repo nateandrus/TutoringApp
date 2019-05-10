@@ -10,6 +10,9 @@ import UIKit
 
 class StudentHomeViewController: UIViewController {
     
+    
+    @IBOutlet weak var homePageScrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var zipcodeTextField: UITextField!
     @IBOutlet weak var businessManagementButton: UIButton!
     @IBOutlet weak var accountingButton: UIButton!
@@ -41,10 +44,15 @@ class StudentHomeViewController: UIViewController {
         javascriptButton.layer.cornerRadius = 5
         androidDevelopmentButton.layer.cornerRadius = 5
         htmlButton.layer.cornerRadius = 5
-        
         let logo = UIImage(named: "protégé")
         let imageView = UIImageView(image: logo)
         self.navigationItem.titleView = imageView
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.homePageScrollView.contentSize = CGSize(width: contentView.frame.width, height: 600)
+        print(contentView.frame.height, "dddddddd")
     }
 
     // MARK: - Navigation
